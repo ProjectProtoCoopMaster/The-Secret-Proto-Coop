@@ -11,6 +11,7 @@ namespace Gameplay.Networking
         static PhotonView photonView;
         [SerializeField] private Vector3Variable playerVRPosition;
 
+
         private void OnEnable()
         {
             photonView = GetComponent<PhotonView>();
@@ -22,6 +23,7 @@ namespace Gameplay.Networking
 
         [PunRPC]
         private void SendVector3(Vector3 position) => playerVRPosition.Value = position;
+
     }
 }
 
