@@ -8,17 +8,12 @@ namespace Gameplay.Networking
 
     public class TransmitterManager : MonoBehaviour
     {
-        static PhotonView photonView;
+        [SerializeField] private PhotonView photonView;
         [SerializeField] private Vector3Variable playerVRPosition;
 
-
-        private void OnEnable()
+        public void SendPlayerVRPosToOthers(Vector3Variable playerVRPosition)
         {
-            photonView = GetComponent<PhotonView>();
-        }
-        public static void SendPlayerVRPosToOthers(Vector3 playerVRPos)
-        {
-            photonView.RPC("SendVector3", RpcTarget.Others, playerVRPos);
+            photonView.RPC("SendVector3", RpcTarget.Others, playerVRPosition.Value);
         }
 
         [PunRPC]
