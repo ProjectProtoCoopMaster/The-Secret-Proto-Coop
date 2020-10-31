@@ -17,7 +17,6 @@ namespace Gameplay.VR
             StartCoroutine(PlayerInRangeCheck());
         }
 
-
         private void Update()
         {
             Debug.DrawLine(transform.position, (transform.forward + transform.right) * 5f, Color.white);

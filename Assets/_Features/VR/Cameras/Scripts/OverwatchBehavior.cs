@@ -6,12 +6,33 @@ namespace Gameplay.VR
 {
     public class OverwatchBehavior : EntityVisionData
     {
+        private void Awake()
+        {
+            foreach (GameObject item in FindObjectsOfType<GameObject>())
+            {
+                if (item.CompareTag("Guard") && item != gameObject) guards.Add(item);
+            }
+        }
+
+        private void Start()
+        {
+            StartCoroutine(PingForGuards());
+        }
+
         IEnumerator PingForGuards()
         {
-            foreach (GameObject item in guards)
+            while (true)
             {
-                Debug.DrawLine(transform.position, item.transform.position);
+                foreach (GameObject item in guards)
+                {
+                    if(Vector3.Distance(transform.position, item.transform.position) < rangeOfVision)
+                        Debug.DrawLine(transform.position, item.transform.position, Color.green);
+                    
+                    else Debug.DrawLine(transform.position, item.transform.position, Color.red);
+                }
+                yield return null;
             }
+
             yield return new WaitForSeconds(pingFrequency);
             StartCoroutine(PingForGuards());
         }
