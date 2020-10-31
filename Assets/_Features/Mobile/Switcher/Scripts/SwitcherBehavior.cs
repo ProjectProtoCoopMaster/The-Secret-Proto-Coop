@@ -5,21 +5,36 @@ using UnityEngine.UI;
 
 namespace Gameplay
 {
-    public class SwitcherBehavior : MonoBehaviour
+    public class SwitcherBehavior : MonoBehaviour, ISwitchable
     {
-       
-        public int ID;
-        
+        [Header("---IMPORTANT---")]
+        [Range(0,10)]
+        public float ID;
 
+        [Header("---References---")]
+        [SerializeField] private CallableFunction _switch;
+        [SerializeField] private CallableFunction _sendSwitcherChange;
         [SerializeField] private List<Object> nodes;
-        public void CallSwitchManager(CallableFunction _switch) => _switch.Raise(ID);
 
-        public void Switch()
+        public int State { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+
+        public void CallSwitchManager()
+        { 
+            _switch.Raise(ID);
+            _sendSwitcherChange.Raise(ID);
+        }
+
+        public void SwitchNode()
         {
             foreach (ISwitchable node in nodes)
             {
                 node.SwitchNode();
             }
+        }
+
+        public void CheckState()
+        {
+            throw new System.NotImplementedException();
         }
 
         public void SearchReferences()
@@ -36,7 +51,7 @@ namespace Gameplay
             }
         }
 
-
+     
     }
 
 }

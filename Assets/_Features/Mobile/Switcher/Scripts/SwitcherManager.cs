@@ -9,13 +9,13 @@ namespace Gameplay
         [SerializeField] private SwitcherBehavior[] switchers;
         private void OnEnable() => SearchSwitchersInScene();
 
-        public void RaiseSwitch(int ID)
+        public void RaiseSwitch(float ID)
         {
             for (int i = 0; i < switchers.Length; i++)
             {
                 if (switchers[i].ID == ID)
                 {
-                    switchers[i].Switch();
+                    switchers[i].SwitchNode();
                 }
             }
         }

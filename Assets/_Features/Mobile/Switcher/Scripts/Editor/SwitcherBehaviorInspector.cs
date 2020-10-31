@@ -18,7 +18,7 @@ namespace Gameplay
         {
             base.OnInspectorGUI();
 
-            if (GUILayout.Button("Search ISwitchable References"))
+            if (GUILayout.Button("Search Nodes References"))
             {
                 switcher.SearchReferences();
             }
