@@ -16,13 +16,7 @@ namespace Gameplay.VR
             // have two seperate methods to 
             StartCoroutine(PlayerInRangeCheck());
         }
-
-        private void Update()
-        {
-            Debug.DrawLine(transform.position, (transform.forward + transform.right) * 5f, Color.white);
-            Debug.DrawLine(transform.position, (transform.forward - transform.right) * 5f, Color.white);            
-        }
-
+         
         // check if the player is in range 
         IEnumerator PlayerInRangeCheck()
         {
@@ -30,7 +24,7 @@ namespace Gameplay.VR
             {
                 // if the player is within the vision range
                 if (Vector2.Distance(transform.position, playerHead.position) < rangeOfVision)
-                {
+                {   
                     // if the player is within the angle of vision, call a sight check
                    var playerInCone = Vector3.Angle(transform.forward, playerHead.position) <= coneOfVisionActual ?
                         StartCoroutine(PlayerInSightCheck()) : default;

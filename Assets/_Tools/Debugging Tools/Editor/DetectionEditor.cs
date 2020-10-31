@@ -17,17 +17,17 @@ public class DetectionEditor : Editor
 
     public void OnSceneGUI()
     {
-        leftPoint = new Vector3(Mathf.Sin(-detectionBehavior.coneOfVision / 2 * Mathf.Deg2Rad), 0, Mathf.Cos(-detectionBehavior.coneOfVision / 2 * Mathf.Deg2Rad));
-        rightPoint = new Vector3(Mathf.Sin(detectionBehavior.coneOfVision / 2 * Mathf.Deg2Rad), 0, Mathf.Cos(detectionBehavior.coneOfVision / 2 * Mathf.Deg2Rad));
+        leftPoint = detectionBehavior.transform.forward + new Vector3(Mathf.Sin(-detectionBehavior.coneOfVision / 2 * Mathf.Deg2Rad), 0, Mathf.Cos(-detectionBehavior.coneOfVision / 2 * Mathf.Deg2Rad));
+        rightPoint = detectionBehavior.transform.forward + new Vector3(Mathf.Sin(detectionBehavior.coneOfVision / 2 * Mathf.Deg2Rad), 0, Mathf.Cos(detectionBehavior.coneOfVision / 2 * Mathf.Deg2Rad));
 
         Handles.color = Color.red;
         Handles.DrawWireArc(detectionBehavior.transform.position,
                              Vector3.up,
-                             detectionBehavior.transform.position + leftPoint * detectionBehavior.rangeOfVision,
-                             detectionBehavior.coneOfVision,
+                             detectionBehavior.transform.position + leftPoint,
+                             detectionBehavior.coneOfVision/2,
                              detectionBehavior.rangeOfVision);
 
-        Handles.DrawLine(detectionBehavior.transform.forward, detectionBehavior.transform.position + leftPoint * detectionBehavior.rangeOfVision);
-        Handles.DrawLine(detectionBehavior.transform.forward, detectionBehavior.transform.position + rightPoint * detectionBehavior.rangeOfVision);
+        Handles.DrawLine(detectionBehavior.transform.forward, leftPoint * detectionBehavior.rangeOfVision);
+        Handles.DrawLine(detectionBehavior.transform.forward, rightPoint * detectionBehavior.rangeOfVision);
     }
 }
