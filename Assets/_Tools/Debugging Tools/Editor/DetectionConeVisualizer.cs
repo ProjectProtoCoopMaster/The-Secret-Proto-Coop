@@ -5,7 +5,7 @@ using UnityEditor;
 using Gameplay.VR;
 
 [CustomEditor(typeof(DetectionBehavior))]
-public class DetectionEditor : Editor
+public class DetectionConeVisualizer : Editor
 {
     DetectionBehavior detectionBehavior;
     Vector3 leftPoint, rightPoint;
