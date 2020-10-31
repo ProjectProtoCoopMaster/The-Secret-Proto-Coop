@@ -17,14 +17,17 @@ public class DetectionEditor : Editor
 
     public void OnSceneGUI()
     {
-        leftPoint = detectionBehavior.transform.forward + new Vector3(detectionBehavior.transform.position.x - detectionBehavior.coneOfVision, 0, detectionBehavior.rangeOfVision);
-        rightPoint = detectionBehavior.transform.forward + new Vector3(detectionBehavior.transform.position.x + detectionBehavior.coneOfVision, 0, detectionBehavior.rangeOfVision);
+        leftPoint = new Vector3(Mathf.Sin(-detectionBehavior.coneOfVision / 2 * Mathf.Deg2Rad), 0, Mathf.Cos(-detectionBehavior.coneOfVision / 2 * Mathf.Deg2Rad));
+        rightPoint = new Vector3(Mathf.Sin(detectionBehavior.coneOfVision / 2 * Mathf.Deg2Rad), 0, Mathf.Cos(detectionBehavior.coneOfVision / 2 * Mathf.Deg2Rad));
 
         Handles.color = Color.red;
-        Handles.DrawWireArc(detectionBehavior.transform.forward, 
+        Handles.DrawWireArc(detectionBehavior.transform.position,
                              Vector3.up,
-                             detectionBehavior.transform.forward - detectionBehavior.transform.right, 
-                             detectionBehavior.coneOfVision, 
+                             detectionBehavior.transform.position + leftPoint * detectionBehavior.rangeOfVision,
+                             detectionBehavior.coneOfVision,
                              detectionBehavior.rangeOfVision);
+
+        Handles.DrawLine(detectionBehavior.transform.forward, detectionBehavior.transform.position + leftPoint * detectionBehavior.rangeOfVision);
+        Handles.DrawLine(detectionBehavior.transform.forward, detectionBehavior.transform.position + rightPoint * detectionBehavior.rangeOfVision);
     }
 }
