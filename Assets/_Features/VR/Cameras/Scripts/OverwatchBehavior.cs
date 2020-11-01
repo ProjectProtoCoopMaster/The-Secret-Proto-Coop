@@ -8,6 +8,12 @@ namespace Gameplay.VR
     {
         private void Awake()
         {
+            rangeOfVision = entityData.rangeOfVision;
+            coneOfVision = entityData.coneOfVision;
+            playerHead = entityData.playerHead;
+            layerMask = entityData.layerMask;
+            hitInfo = entityData.hitInfo;
+
             foreach (GameObject item in FindObjectsOfType<GameObject>())
             {
                 if (item.CompareTag("Guard") && item != gameObject) guards.Add(item);
@@ -23,13 +29,7 @@ namespace Gameplay.VR
         {
             while(true)
             {
-                foreach (GameObject item in guards)
-                {
-                    if (Vector3.Distance(transform.position, item.transform.position) < rangeOfVision)
-                        Debug.DrawLine(transform.position, item.transform.position, Color.green);
-
-                    else Debug.DrawLine(transform.position, item.transform.position, Color.red);
-                }
+                foreach (GameObject item in guards) Debug.DrawLine(transform.position, item.transform.position, Color.red);
                 yield return null;
             }
 

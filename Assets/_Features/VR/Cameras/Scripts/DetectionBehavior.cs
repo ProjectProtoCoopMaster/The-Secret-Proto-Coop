@@ -8,6 +8,12 @@ namespace Gameplay.VR
     {
         private void Awake()
         {
+            rangeOfVision = entityData.rangeOfVision;
+            coneOfVision = entityData.coneOfVision;
+            playerHead = entityData.playerHead;
+            layerMask = entityData.layerMask;
+            hitInfo = entityData.hitInfo;
+
             coneOfVisionActual = coneOfVision / 2;
         }
 
@@ -16,11 +22,11 @@ namespace Gameplay.VR
             // have two seperate methods to 
             StartCoroutine(PlayerInRangeCheck());
         }
-         
+
         // check if the player is in range 
         IEnumerator PlayerInRangeCheck()
         {
-            while(true)
+            while (true)
             {
                 Debug.Log("Scanning");
                 // if the player is within the vision range

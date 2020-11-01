@@ -7,16 +7,18 @@ namespace Gameplay.VR
     // TODO : make these values auto assign with a Scriptable Object
     public class EntityVisionData : MonoBehaviour
     {
-        // common variables (detection and overwatch)
-        public float rangeOfVision;
-        public float coneOfVision;
-        public Transform playerHead;
-        public LayerMask layerMask;
-        public RaycastHit hitInfo;
+        public EntityVisionScriptable entityData;
 
-        // overwatch variables
-        public float pingFrequency;
-        protected float coneOfVisionActual;
-        internal List<GameObject> guards = new List<GameObject>();
+        // common variables (detection and overwatch)
+        [HideInInspector] public float rangeOfVision;
+        [HideInInspector] public float coneOfVision;
+        [HideInInspector] public Transform playerHead;
+        [HideInInspector] public LayerMask layerMask;
+        [HideInInspector] public RaycastHit hitInfo;
+
+        // overwatch variables (do not show in Scriptable)
+        [HideInInspector] public float pingFrequency;
+        [HideInInspector] public float coneOfVisionActual;
+        [HideInInspector] public List<GameObject> guards = new List<GameObject>();
     }
 }
