@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEditor;
 using Gameplay.VR;
 
+[CanEditMultipleObjects]
 [CustomEditor(typeof(DetectionBehavior))]
 public class DetectionConeVisualizer : Editor
 {
