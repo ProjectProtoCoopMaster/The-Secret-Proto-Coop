@@ -10,11 +10,11 @@ namespace Gameplay.VR
         public EntityVisionScriptable entityData;
 
         // common variables (detection and overwatch)
-        [HideInInspector] public float rangeOfVision;
-        [HideInInspector] public float coneOfVision;
-        [HideInInspector] public Transform playerHead;
-        [HideInInspector] public LayerMask layerMask;
-        [HideInInspector] public RaycastHit hitInfo;
+        public float rangeOfVision;
+        public float coneOfVision;
+        public Transform playerHead;
+        public LayerMask layerMask;
+        public RaycastHit hitInfo;
 
         // overwatch variables (do not show in Scriptable)
         [HideInInspector] public float pingFrequency;

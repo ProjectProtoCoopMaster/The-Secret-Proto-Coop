@@ -8,13 +8,13 @@ namespace Gameplay.VR
     {
         private void Awake()
         {
-            rangeOfVision = entityData.rangeOfVision;
+            /*rangeOfVision = entityData.rangeOfVision;
             coneOfVision = entityData.coneOfVision;
             playerHead = entityData.playerHead;
             layerMask = entityData.layerMask;
-            hitInfo = entityData.hitInfo;
+            hitInfo = entityData.hitInfo; */
 
-            coneOfVisionActual = coneOfVision / 2;
+             coneOfVisionActual = coneOfVision / 2;
         }
 
         private void Start()
