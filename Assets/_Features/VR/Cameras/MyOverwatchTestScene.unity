@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 151086666}
   - component: {fileID: 151086670}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Guard
   m_TagString: Guard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -488,7 +488,7 @@ GameObject:
   - component: {fileID: 538526427}
   - component: {fileID: 538526426}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Guard
   m_TagString: Guard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1153,7 +1153,7 @@ GameObject:
   - component: {fileID: 1864674788}
   - component: {fileID: 1864674787}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Guard
   m_TagString: Guard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

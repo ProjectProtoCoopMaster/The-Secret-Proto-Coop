@@ -17,8 +17,8 @@ namespace Gameplay.VR
         public RaycastHit hitInfo;
 
         // overwatch variables (do not show in Scriptable)
-        [HideInInspector] public float pingFrequency;
-        [HideInInspector] public float coneOfVisionActual;
-        [HideInInspector] public List<GameObject> guards = new List<GameObject>();
+        protected float pingFrequency = 2f; // frequency at which you check up on nearby entities
+        protected float coneOfVisionActual; // internal variable (cone of vision divided by 2)
+        protected List<GameObject> guards = new List<GameObject>(); // list of guards in the scene
     }
 }
