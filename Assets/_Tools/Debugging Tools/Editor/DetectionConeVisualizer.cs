@@ -22,13 +22,22 @@ public class DetectionConeVisualizer : Editor
         leftPoint = localTransform.position + (localTransform.rotation * new Vector3(Mathf.Sin(-detectionBehavior.coneOfVision / 2 * Mathf.Deg2Rad), 0, Mathf.Cos(-detectionBehavior.coneOfVision / 2 * Mathf.Deg2Rad)) * detectionBehavior.rangeOfVision);
         rightPoint = localTransform.position + (localTransform.rotation * new Vector3(Mathf.Sin(detectionBehavior.coneOfVision / 2 * Mathf.Deg2Rad), 0, Mathf.Cos(detectionBehavior.coneOfVision / 2 * Mathf.Deg2Rad)) * detectionBehavior.rangeOfVision);
 
-        Handles.color = Color.red; Handles.DrawWireArc(detectionBehavior.transform.position,
-                                   Vector3.up,
-                                   leftPoint,
-                                   360,//.coneOfVision / 2,
-                                   detectionBehavior.rangeOfVision);
+        Handles.color = Color.white;
+        Handles.DrawWireDisc(localTransform.position, Vector3.up, detectionBehavior.rangeOfVision);
 
-        Handles.color = Color.blue; Handles.DrawLine(localTransform.position, leftPoint);
-        Handles.color = Color.green; Handles.DrawLine(localTransform.position, rightPoint);
+        Handles.DrawLine(localTransform.position, leftPoint);
+        Handles.DrawLine(localTransform.position, rightPoint);
+
+
+        // floor the values to get the "shadow" image but locked at 0y
+        Vector3 flooredPosition = new Vector3(localTransform.position.x, detectionBehavior.playerHead.transform.position.y, localTransform.position.z);
+        Vector3 flooredleftPoint = new Vector3(leftPoint.x, detectionBehavior.playerHead.transform.position.y, leftPoint.z);
+        Vector3 flooredrightPoint = new Vector3(rightPoint.x, detectionBehavior.playerHead.transform.position.y, rightPoint.z);
+
+        Handles.color = Color.red;
+        Handles.DrawWireDisc(flooredPosition, Vector3.up, detectionBehavior.rangeOfVision);
+
+        Handles.DrawLine(flooredPosition, flooredleftPoint);
+        Handles.DrawLine(flooredPosition, flooredrightPoint);
     }
 }
