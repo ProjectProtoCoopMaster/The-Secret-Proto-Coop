@@ -6,6 +6,8 @@ namespace Gameplay.VR
 {
     public class RotationBehavior : RotationData
     {
+        bool movingRight;
+
         private void Awake()
         {
             // assign the camera's base rotation
@@ -20,16 +22,13 @@ namespace Gameplay.VR
 
         private void Start()
         {
-            StartCoroutine(Rotate(targetRotation));
+            StartCoroutine(Rotate());
         }
 
-        private IEnumerator Rotate(Vector3 target)
+        private IEnumerator Rotate()
         {
             // reset the clock
             timePassed = 0f;
-
-            // make the rotationIncrement positive or negative depending on the direction
-            rotationIncrement *= Mathf.Sign(target.y - transform.eulerAngles.y);
 
             // apply the rotation over time
             while (timePassed <= rotationDuration)
@@ -45,13 +44,11 @@ namespace Gameplay.VR
             // wait for a set amount of time
             yield return new WaitForSeconds(holdTime);
 
-            // flip the values for the next rotation
-            Vector3 temp = baseRotation;
-            baseRotation = -target;
-            targetRotation = temp;
+            // multiply the incrementor by -1 to switch its sign for the next pass
+            rotationIncrement *= -1;
 
             // call the function recursively
-            StartCoroutine(Rotate(targetRotation));
+            StartCoroutine(Rotate());
         }
     }
 }
