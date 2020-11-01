@@ -22,11 +22,13 @@ namespace Gameplay.VR
         {
             while(true)
             {
+                Debug.Log("Scanning");
                 // if the player is within the vision range
                 if (Vector2.Distance(transform.position, playerHead.position) < rangeOfVision)
-                {   
-                    // if the player is within the angle of vision, call a sight check
-                   var playerInCone = Vector3.Angle(transform.forward, playerHead.position) <= coneOfVisionActual ?
+                {
+                    // get the direction of the player's head, if the angle between the looking dir of the cam and the player is less than the cone of vision, then you are inside the cone of vision
+                    Vector3 targetDir = playerHead.position - transform.position;
+                    var playerInCone = Vector3.Angle(targetDir, transform.forward) <= coneOfVisionActual ?
                         StartCoroutine(PlayerInSightCheck()) : default;
                 }
 
@@ -37,6 +39,7 @@ namespace Gameplay.VR
         // if the player is in range and in the cone of vision, check if you have line of sight to his head collider
         IEnumerator PlayerInSightCheck()
         {
+            Debug.Log("I can see the player");
             Debug.DrawLine(transform.position, playerHead.position, Color.green);
 
             // if you hit something between the camera and the player's head position on the player layer

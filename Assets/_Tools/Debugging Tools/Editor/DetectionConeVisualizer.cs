@@ -22,12 +22,11 @@ public class DetectionConeVisualizer : Editor
         leftPoint = localTransform.position + (localTransform.rotation * new Vector3(Mathf.Sin(-detectionBehavior.coneOfVision / 2 * Mathf.Deg2Rad), 0, Mathf.Cos(-detectionBehavior.coneOfVision / 2 * Mathf.Deg2Rad)) * detectionBehavior.rangeOfVision);
         rightPoint = localTransform.position + (localTransform.rotation * new Vector3(Mathf.Sin(detectionBehavior.coneOfVision / 2 * Mathf.Deg2Rad), 0, Mathf.Cos(detectionBehavior.coneOfVision / 2 * Mathf.Deg2Rad)) * detectionBehavior.rangeOfVision);
 
-        /*
         Handles.color = Color.red; Handles.DrawWireArc(detectionBehavior.transform.position,
                                    Vector3.up,
-                                   detectionBehavior.transform.position + leftPoint,
-                                   detectionBehavior.coneOfVision / 2,
-                                   detectionBehavior.rangeOfVision);*/
+                                   leftPoint,
+                                   360,//.coneOfVision / 2,
+                                   detectionBehavior.rangeOfVision);
 
         Handles.color = Color.blue; Handles.DrawLine(localTransform.position, leftPoint);
         Handles.color = Color.green; Handles.DrawLine(localTransform.position, rightPoint);
