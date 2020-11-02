@@ -8,9 +8,8 @@ namespace Tools.Debugging
     [CustomEditor(typeof(EntityVisionDataInterface))]
     public class EntityVisionGeneratorInspector : Editor
     {
-        bool askingUser = true, existingData, localData;
-        SerializedProperty entityVisionScriptableProperty, rangeOfVision, coneOfVision, layerMask;
-        SerializedObject entityVisionScriptableObject;
+        bool existingData, localData;
+        SerializedProperty entityVisionScriptableProperty, rangeOfVision, coneOfVision;
 
         EntityVisionDataInterface entityVisionDataInterface;
         DetectionBehavior detectionBehavior;
@@ -25,20 +24,25 @@ namespace Tools.Debugging
             entityVisionScriptableProperty = serializedObject.FindProperty("entityVisionData");
             rangeOfVision = serializedObject.FindProperty("rangeOfVision");
             coneOfVision = serializedObject.FindProperty("coneOfVision");
-            layerMask = serializedObject.FindProperty("layerMask");
         }
 
         public override void OnInspectorGUI()
         {
             serializedObject.Update();
 
-            if (askingUser) UserChoice();
+            if (entityVisionScriptableProperty.objectReferenceValue != null || existingData)
+            {
+                DrawScriptableObjProperty();
+            }
 
+            else if (rangeOfVision.floatValue != 0 || coneOfVision.floatValue != 0 || localData)
+            {
+                DrawLocalProperties();
+            }
 
             else
             {
-                if (existingData) DisplayPropField();
-                else if (localData) DrawPropFields();
+                UserChoice();
             }
 
             serializedObject.ApplyModifiedProperties();
@@ -56,7 +60,6 @@ namespace Tools.Debugging
             {
                 existingData = true;
                 localData = false;
-                askingUser = false;
 
             }
 
@@ -64,35 +67,40 @@ namespace Tools.Debugging
             {
                 localData = true;
                 existingData = false;
-                askingUser = false;
             }
             EditorGUILayout.EndHorizontal();
             EditorGUILayout.EndVertical();
         }
 
         // display a single property field for assigning exsiting scriptableObject data
-        private void DisplayPropField()
+        private void DrawScriptableObjProperty()
         {
             EditorGUILayout.BeginVertical();
-            EditorGUILayout.BeginHorizontal();
-            EditorGUILayout.PropertyField(entityVisionScriptableProperty);
-            if (entityVisionScriptableProperty != null)
+
+            if (entityVisionScriptableProperty.objectReferenceValue != null)
             {
-                entityVisionScriptableObject = new SerializedObject(entityVisionScriptableProperty.objectReferenceValue);
+                SerializedObject entityVisionScriptableObject = new SerializedObject(entityVisionScriptableProperty.objectReferenceValue);
                 detectionBehavior.rangeOfVision = overwatchBehavior.rangeOfVision = entityVisionScriptableObject.FindProperty("rangeOfVision").floatValue;
                 detectionBehavior.coneOfVision = overwatchBehavior.coneOfVision = entityVisionScriptableObject.FindProperty("coneOfVision").floatValue;
             }
+
+            EditorGUILayout.BeginHorizontal();
+            EditorGUILayout.PropertyField(entityVisionScriptableProperty);
             EditorGUILayout.EndHorizontal();
+
             if (GUILayout.Button(new GUIContent("Change Data", "Go back to select data")))
             {
+                entityVisionScriptableProperty.objectReferenceValue = null;
                 existingData = false;
-                askingUser = true;
             }
+
             EditorGUILayout.EndVertical();
+
+
         }
 
         // draw a property field for creating custom data
-        private void DrawPropFields()
+        private void DrawLocalProperties()
         {
             EditorGUILayout.BeginVertical();
 
@@ -104,8 +112,9 @@ namespace Tools.Debugging
 
             if (GUILayout.Button(new GUIContent("Change Data", "Go back to select data")))
             {
+                rangeOfVision.floatValue = 0;
+                coneOfVision.floatValue = 0;
                 localData = false;
-                askingUser = true;
             }
             EditorGUILayout.EndVertical();
         }

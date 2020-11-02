@@ -8,14 +8,14 @@ namespace Gameplay.VR
     [RequireComponent(typeof(DetectionBehavior))]
     public class EntityVisionDataInterface : MonoBehaviour
     {
-        [SerializeField] [HideInInspector] public EntityVisionScriptable entityVisionData;
+        [SerializeField] public EntityVisionScriptable entityVisionData;
 
-        [SerializeField] [HideInInspector] public float rangeOfVision;
-        [SerializeField] [HideInInspector] public float coneOfVision;
-        [SerializeField] [HideInInspector] public Transform playerHead;
+        [SerializeField] public float rangeOfVision;
+        [SerializeField] public float coneOfVision;
+        [SerializeField] public Transform playerHead;
 
-        [SerializeField] [HideInInspector] protected LayerMask layerMask;
-        [SerializeField] [HideInInspector] protected RaycastHit hitInfo;
+        [SerializeField] protected LayerMask layerMask;
+        [SerializeField] protected RaycastHit hitInfo;
 
         // overwatch variables (do not show in Scriptable)
         protected float pingFrequency = 2f; // frequency at which you check up on nearby entities
