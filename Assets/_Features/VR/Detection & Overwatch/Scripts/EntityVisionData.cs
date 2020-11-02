@@ -19,5 +19,7 @@ namespace Gameplay.VR
         // overwatch variables (do not show in Scriptable)
         protected float pingFrequency = 2f; // frequency at which you check up on nearby entities
         protected List<GameObject> guards = new List<GameObject>(); // list of guards in the scene
+
+
     }
 }

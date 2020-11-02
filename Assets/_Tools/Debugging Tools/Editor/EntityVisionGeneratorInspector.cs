@@ -1,15 +1,15 @@
 ﻿using Gameplay.VR;
 using UnityEngine;
 using UnityEditor;
-using System;
 
 namespace Tools.Debugging
 {
+    [CanEditMultipleObjects]
     [CustomEditor(typeof(EntityVisionDataInterface))]
     public class EntityVisionGeneratorInspector : Editor
     {
         bool existingData, localData;
-        SerializedProperty entityVisionScriptableProperty, rangeOfVision, coneOfVision;
+        SerializedProperty entityVisionScriptableProperty, rangeOfVision, coneOfVision, playerTransform;
 
         EntityVisionDataInterface entityVisionDataInterface;
         DetectionBehavior detectionBehavior;
@@ -21,41 +21,38 @@ namespace Tools.Debugging
             detectionBehavior = entityVisionDataInterface.gameObject.GetComponent<DetectionBehavior>();
             overwatchBehavior = entityVisionDataInterface.gameObject.GetComponent<OverwatchBehavior>();
 
-            entityVisionScriptableProperty = serializedObject.FindProperty("entityVisionData");
-            rangeOfVision = serializedObject.FindProperty("rangeOfVision");
-            coneOfVision = serializedObject.FindProperty("coneOfVision");
+            entityVisionScriptableProperty = serializedObject.FindProperty(nameof(entityVisionDataInterface.entityVisionData));
+            rangeOfVision = serializedObject.FindProperty(nameof(entityVisionDataInterface.rangeOfVision));
+            coneOfVision = serializedObject.FindProperty(nameof(entityVisionDataInterface.coneOfVision));
+            playerTransform = serializedObject.FindProperty(nameof(entityVisionDataInterface.playerHead));
         }
 
         public override void OnInspectorGUI()
         {
             serializedObject.Update();
 
-            if (entityVisionScriptableProperty.objectReferenceValue != null || existingData)
-            {
-                DrawScriptableObjProperty();
-            }
+            if (playerTransform.objectReferenceValue == null)
+                playerTransform.objectReferenceValue = GameObject.Find("Player");
 
-            else if (rangeOfVision.floatValue != 0 || coneOfVision.floatValue != 0 || localData)
-            {
-                DrawLocalProperties();
-            }
+            if(playerTransform.objectReferenceValue != null) 
+                detectionBehavior.playerHead = overwatchBehavior.playerHead = playerTransform.objectReferenceValue as Transform;
 
-            else
-            {
-                UserChoice();
-            }
+            EditorGUILayout.PropertyField(playerTransform);
+
+            if (entityVisionScriptableProperty.objectReferenceValue != null || existingData) DrawScriptableObjProperty();
+            else if (rangeOfVision.floatValue != 0 || coneOfVision.floatValue != 0 || localData) DrawLocalProperties();
+            else UserChoice();
 
             serializedObject.ApplyModifiedProperties();
-
-            Debug.Log(detectionBehavior.rangeOfVision);
-            Debug.Log(detectionBehavior.coneOfVision);
         }
 
+        #region User Input
         // ask the user if he's assigning or creating data
         private void UserChoice()
         {
             EditorGUILayout.BeginVertical();
             EditorGUILayout.BeginHorizontal();
+
             if (GUILayout.Button(new GUIContent("Apply an existing data", "Open an objectfield that allows you to assign pre-existing data. Useful for re-using data that is the same for other entities.")))
             {
                 existingData = true;
@@ -71,7 +68,9 @@ namespace Tools.Debugging
             EditorGUILayout.EndHorizontal();
             EditorGUILayout.EndVertical();
         }
+        #endregion
 
+        #region Draw Fields
         // display a single property field for assigning exsiting scriptableObject data
         private void DrawScriptableObjProperty()
         {
@@ -118,5 +117,6 @@ namespace Tools.Debugging
             }
             EditorGUILayout.EndVertical();
         }
+        #endregion
     }
 }
