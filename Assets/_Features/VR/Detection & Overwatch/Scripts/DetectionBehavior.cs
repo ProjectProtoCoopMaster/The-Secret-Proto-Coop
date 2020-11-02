@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Gameplay.VR
 {
-    public class DetectionBehavior : EntityVisionData
+    public class DetectionBehavior : EntityVisionDataInterface
     {
         private void Start()
         {
@@ -19,11 +19,11 @@ namespace Gameplay.VR
             {
                 Debug.Log("Scanning");
                 // if the player is within the vision range
-                if (Vector2.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(playerHead.position.x, playerHead.position.z)) < entityData.rangeOfVision)
+                if (Vector2.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(playerHead.position.x, playerHead.position.z)) < rangeOfVision)
                 {
                     // get the direction of the player's head, if the angle between the looking dir of the cam and the player is less than the cone of vision, then you are inside the cone of vision
                     Vector3 targetDir = playerHead.position - new Vector3(transform.position.x, playerHead.position.y, transform.position.z);
-                    var playerInCone = Vector3.Angle(targetDir, transform.forward) <= entityData.coneOfVision * .5f ?
+                    var playerInCone = Vector3.Angle(targetDir, transform.forward) <= coneOfVision * .5f ?
                         StartCoroutine(PlayerInSightCheck()) : default;
                 }
 
@@ -38,7 +38,7 @@ namespace Gameplay.VR
             Debug.DrawLine(transform.position, playerHead.position, Color.green);
 
             // if you hit something between the camera and the player's head position on the player layer
-            if (Physics.Linecast(this.transform.position, playerHead.position, out hitInfo, entityData.layerMask))
+            if (Physics.Linecast(this.transform.position, playerHead.position, out hitInfo, layerMask))
             {
                 // call the gameOver event
             }

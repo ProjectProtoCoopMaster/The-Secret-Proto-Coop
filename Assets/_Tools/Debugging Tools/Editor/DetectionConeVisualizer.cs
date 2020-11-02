@@ -1,32 +1,30 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEditor;
 using Gameplay.VR;
 
-[CanEditMultipleObjects]
-[CustomEditor(typeof(DetectionBehavior))]
-public class DetectionConeVisualizer : Editor
+namespace Tools.Debugging
 {
-    DetectionBehavior detectionBehavior;
-    Vector3 leftPoint, rightPoint;
-
-    private void OnEnable()
+    [CanEditMultipleObjects]
+    [CustomEditor(typeof(DetectionBehavior))]
+    public class DetectionConeVisualizer : Editor
     {
-        detectionBehavior = target as DetectionBehavior;
-    }
+        DetectionBehavior detectionBehavior;
+        Vector3 leftPoint, rightPoint;
 
-    public void OnSceneGUI()
-    {
-        if (detectionBehavior.entityData != null && detectionBehavior.playerHead)
+        private void OnEnable()
+        {
+            detectionBehavior = target as DetectionBehavior;
+        }
+
+        public void OnSceneGUI()
         {
             Transform localTransform = detectionBehavior.transform;
 
-            leftPoint = localTransform.position + (localTransform.rotation * new Vector3(Mathf.Sin(-detectionBehavior.entityData.coneOfVision / 2 * Mathf.Deg2Rad), 0, Mathf.Cos(-detectionBehavior.entityData.coneOfVision / 2 * Mathf.Deg2Rad)) * detectionBehavior.entityData.rangeOfVision);
-            rightPoint = localTransform.position + (localTransform.rotation * new Vector3(Mathf.Sin(detectionBehavior.entityData.coneOfVision / 2 * Mathf.Deg2Rad), 0, Mathf.Cos(detectionBehavior.entityData.coneOfVision / 2 * Mathf.Deg2Rad)) * detectionBehavior.entityData.rangeOfVision);
+            leftPoint = localTransform.position + (localTransform.rotation * new Vector3(Mathf.Sin(-detectionBehavior.coneOfVision / 2 * Mathf.Deg2Rad), 0, Mathf.Cos(-detectionBehavior.coneOfVision / 2 * Mathf.Deg2Rad)) * detectionBehavior.rangeOfVision);
+            rightPoint = localTransform.position + (localTransform.rotation * new Vector3(Mathf.Sin(detectionBehavior.coneOfVision / 2 * Mathf.Deg2Rad), 0, Mathf.Cos(detectionBehavior.coneOfVision / 2 * Mathf.Deg2Rad)) * detectionBehavior.rangeOfVision);
 
             Handles.color = Color.white;
-            Handles.DrawWireDisc(localTransform.position, Vector3.up, detectionBehavior.entityData.rangeOfVision);
+            Handles.DrawWireDisc(localTransform.position, Vector3.up, detectionBehavior.rangeOfVision);
 
             Handles.DrawLine(localTransform.position, leftPoint);
             Handles.DrawLine(localTransform.position, rightPoint);
@@ -40,7 +38,7 @@ public class DetectionConeVisualizer : Editor
                 Vector3 flooredrightPoint = new Vector3(rightPoint.x, detectionBehavior.playerHead.position.y, rightPoint.z);
 
                 Handles.color = Color.red;
-                Handles.DrawWireDisc(flooredPosition, Vector3.up, detectionBehavior.entityData.rangeOfVision);
+                Handles.DrawWireDisc(flooredPosition, Vector3.up, detectionBehavior.rangeOfVision);
 
                 Handles.DrawLine(flooredPosition, flooredleftPoint);
                 Handles.DrawLine(flooredPosition, flooredrightPoint);
