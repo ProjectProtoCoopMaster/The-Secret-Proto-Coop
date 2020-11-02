@@ -6,17 +6,6 @@ namespace Gameplay.VR
 {
     public class DetectionBehavior : EntityVisionData
     {
-        private void Awake()
-        {
-            /*rangeOfVision = entityData.rangeOfVision;
-            coneOfVision = entityData.coneOfVision;
-            playerHead = entityData.playerHead;
-            layerMask = entityData.layerMask;
-            hitInfo = entityData.hitInfo; */
-
-             coneOfVisionActual = coneOfVision / 2;
-        }
-
         private void Start()
         {
             // have two seperate methods to 
@@ -30,11 +19,11 @@ namespace Gameplay.VR
             {
                 Debug.Log("Scanning");
                 // if the player is within the vision range
-                if (Vector2.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(playerHead.position.x, playerHead.position.z)) < rangeOfVision)
+                if (Vector2.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(playerHead.position.x, playerHead.position.z)) < entityData.rangeOfVision)
                 {
                     // get the direction of the player's head, if the angle between the looking dir of the cam and the player is less than the cone of vision, then you are inside the cone of vision
                     Vector3 targetDir = playerHead.position - new Vector3(transform.position.x, playerHead.position.y, transform.position.z);
-                    var playerInCone = Vector3.Angle(targetDir, transform.forward) <= coneOfVisionActual ?
+                    var playerInCone = Vector3.Angle(targetDir, transform.forward) <= entityData.coneOfVision * .5f ?
                         StartCoroutine(PlayerInSightCheck()) : default;
                 }
 
@@ -49,7 +38,7 @@ namespace Gameplay.VR
             Debug.DrawLine(transform.position, playerHead.position, Color.green);
 
             // if you hit something between the camera and the player's head position on the player layer
-            if (Physics.Linecast(this.transform.position, playerHead.position, out hitInfo, layerMask))
+            if (Physics.Linecast(this.transform.position, playerHead.position, out hitInfo, entityData.layerMask))
             {
                 // call the gameOver event
             }

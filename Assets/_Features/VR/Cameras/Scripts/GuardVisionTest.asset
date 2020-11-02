@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f352a3d5c6b68140a9a27c9c7685f0a, type: 3}
-  m_Name: TestData
+  m_Name: GuardVisionTest
   m_EditorClassIdentifier: 
-  rangeOfVision: 20
-  coneOfVision: 100
+  rangeOfVision: 15
+  coneOfVision: 160
   playerHead: {fileID: 0}
   layerMask:
     serializedVersion: 2

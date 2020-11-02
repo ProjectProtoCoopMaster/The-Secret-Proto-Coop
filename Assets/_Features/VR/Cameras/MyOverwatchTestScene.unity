@@ -232,6 +232,7 @@ GameObject:
   - component: {fileID: 151086667}
   - component: {fileID: 151086666}
   - component: {fileID: 151086670}
+  - component: {fileID: 151086671}
   m_Layer: 0
   m_Name: Guard
   m_TagString: Guard
@@ -309,13 +310,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 151086665}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0.19591573, z: -0, w: 0.9806208}
   m_LocalPosition: {x: 9.22, y: 0, z: 7.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -22.596, z: 0}
 --- !u!114 &151086670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,16 +329,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53529aae8a8e8e444ab5f37ddbd4fc75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entityData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 0}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  pingFrequency: 0
-  coneOfVisionActual: 0
-  guards: []
+  entityData: {fileID: 11400000, guid: 4e24e6c26d1f8dd49a05e124023762ac, type: 2}
+  playerHead: {fileID: 1551439401}
+--- !u!114 &151086671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151086665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f26db10a9f33444b97710c03677104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityData: {fileID: 11400000, guid: 4e24e6c26d1f8dd49a05e124023762ac, type: 2}
+  playerHead: {fileID: 1551439401}
 --- !u!1 &188421232
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,7 +366,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &188421233
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -430,7 +437,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188421232}
   m_LocalRotation: {x: -0, y: 0.7000719, z: -0, w: 0.71407247}
-  m_LocalPosition: {x: 10, y: 13, z: 0}
+  m_LocalPosition: {x: -11.9, y: 13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1431696794}
@@ -465,15 +472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityData: {fileID: 11400000, guid: 4e24e6c26d1f8dd49a05e124023762ac, type: 2}
-  rangeOfVision: 0
-  coneOfVision: 0
   playerHead: {fileID: 0}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  pingFrequency: 0
-  coneOfVisionActual: 0
-  guards: []
 --- !u!1 &538526425
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,6 +486,7 @@ GameObject:
   - component: {fileID: 538526428}
   - component: {fileID: 538526427}
   - component: {fileID: 538526426}
+  - component: {fileID: 538526431}
   m_Layer: 0
   m_Name: Guard
   m_TagString: Guard
@@ -506,16 +506,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53529aae8a8e8e444ab5f37ddbd4fc75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entityData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 0}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  pingFrequency: 0
-  coneOfVisionActual: 0
-  guards: []
+  entityData: {fileID: 11400000, guid: 4e24e6c26d1f8dd49a05e124023762ac, type: 2}
+  playerHead: {fileID: 1551439401}
 --- !u!136 &538526427
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -586,13 +578,27 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 538526425}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: 0.41140613, z: -0, w: 0.9114522}
   m_LocalPosition: {x: 4.72, y: 0, z: -15.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 48.586, z: 0}
+--- !u!114 &538526431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538526425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f26db10a9f33444b97710c03677104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityData: {fileID: 11400000, guid: 4e24e6c26d1f8dd49a05e124023762ac, type: 2}
+  playerHead: {fileID: 1551439401}
 --- !u!114 &687471291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,15 +612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityData: {fileID: 11400000, guid: 4e24e6c26d1f8dd49a05e124023762ac, type: 2}
-  rangeOfVision: 15
-  coneOfVision: 120
   playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  pingFrequency: 0
-  coneOfVisionActual: 0
-  guards: []
 --- !u!1 &1143358910
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,15 +648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityData: {fileID: 11400000, guid: 4e24e6c26d1f8dd49a05e124023762ac, type: 2}
-  rangeOfVision: 20
-  coneOfVision: 90
   playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  pingFrequency: 0
-  coneOfVisionActual: 0
-  guards: []
 --- !u!114 &1143358912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -744,7 +734,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143358910}
   m_LocalRotation: {x: -0, y: -0.49559504, z: -0, w: 0.86855376}
-  m_LocalPosition: {x: 38.2, y: 13, z: -22.7}
+  m_LocalPosition: {x: 42.1, y: 13, z: -27.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 13406130}
@@ -764,15 +754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityData: {fileID: 11400000, guid: 4e24e6c26d1f8dd49a05e124023762ac, type: 2}
-  rangeOfVision: 20
-  coneOfVision: 90
   playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  pingFrequency: 0
-  coneOfVisionActual: 0
-  guards: []
 --- !u!1 &1303661058
 GameObject:
   m_ObjectHideFlags: 0
@@ -1133,7 +1115,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1551439397}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.4, y: 0, z: -6.5}
+  m_LocalPosition: {x: 17.25, y: 0, z: -15.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1152,6 +1134,7 @@ GameObject:
   - component: {fileID: 1864674789}
   - component: {fileID: 1864674788}
   - component: {fileID: 1864674787}
+  - component: {fileID: 1864674792}
   m_Layer: 0
   m_Name: Guard
   m_TagString: Guard
@@ -1171,16 +1154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53529aae8a8e8e444ab5f37ddbd4fc75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entityData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 0}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  pingFrequency: 0
-  coneOfVisionActual: 0
-  guards: []
+  entityData: {fileID: 11400000, guid: 4e24e6c26d1f8dd49a05e124023762ac, type: 2}
+  playerHead: {fileID: 1551439401}
 --- !u!136 &1864674788
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1251,10 +1226,24 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864674786}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.7, y: 0, z: -7.8}
+  m_LocalRotation: {x: -0, y: -0.5378727, z: -0, w: 0.84302604}
+  m_LocalPosition: {x: 16.72, y: 0, z: -12.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -65.078, z: 0}
+--- !u!114 &1864674792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864674786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f26db10a9f33444b97710c03677104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityData: {fileID: 11400000, guid: 4e24e6c26d1f8dd49a05e124023762ac, type: 2}
+  playerHead: {fileID: 1551439401}

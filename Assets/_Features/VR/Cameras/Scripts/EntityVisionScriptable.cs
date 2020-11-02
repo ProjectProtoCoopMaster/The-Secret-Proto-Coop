@@ -10,5 +10,4 @@ public class EntityVisionScriptable : ScriptableObject
     public float coneOfVision;
     public Transform playerHead;
     public LayerMask layerMask;
-    public RaycastHit hitInfo;
 }
