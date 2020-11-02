@@ -7,15 +7,21 @@ namespace Gameplay
 {
     public class SwitcherBehavior : MonoBehaviour, ISwitchable
     {
-        [Header("---IMPORTANT---")]
-        [Range(0,10)]
-        public float ID;
-
         [Header("---References---")]
-        [SerializeField] private CallableFunction _switch;
-        [SerializeField] private CallableFunction _sendSwitcherChange;
-        [SerializeField] private List<Object> nodes;
+        public CallableFunction _switch = default;
+        public CallableFunction _sendSwitcherChange = default;
+        [SerializeField] private Button button;
+        [SerializeField] private Image image;
+        public List<Object> nodes = default;
 
+        [Header("---IMPORTANT---")]
+        [Range(0, 10)]
+        public float ID = default;
+        public enum SwitchTimer { None, Fixed}
+
+        public SwitchTimer switchTimer = default;
+        [HideInInspector]
+        public float timer = 0;
         public int State { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 
         public void CallSwitchManager()
@@ -26,10 +32,25 @@ namespace Gameplay
 
         public void SwitchNode()
         {
+
             foreach (ISwitchable node in nodes)
             {
                 node.SwitchNode();
             }
+            if (switchTimer == SwitchTimer.Fixed && button.enabled)
+                StartCoroutine(DelaySwitchNode());
+            
+        }
+
+        IEnumerator DelaySwitchNode()
+        {
+            button.enabled = false;
+            image.color = Color.grey;
+            yield return new WaitForSeconds(timer);
+            SwitchNode();
+            button.enabled = true;
+            image.color = Color.white;
+            yield break;
         }
 
         public void CheckState()

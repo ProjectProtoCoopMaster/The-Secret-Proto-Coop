@@ -13,7 +13,7 @@ namespace Gameplay
         {
             listener.OnEventRaised();
         }
-        public void Raise<T>(T ID) => listener.component.SendMessage(listener.methodName, ID);
+        public void Raise<T>(T parameter) => listener.component.SendMessage(listener.methodName, parameter);
 
         public void RegisterListener(CallableFunctionListener otherListener)
         {

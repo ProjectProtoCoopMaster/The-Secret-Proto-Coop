@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using Gameplay;
 
-namespace Gameplay.Networking
+namespace Networking
 {
 
     public class TransmitterManager : MonoBehaviour

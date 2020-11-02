@@ -2,27 +2,51 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using Gameplay.Mobile;
 
-[CustomEditor(typeof(ElectricalDrawingView))]
-public class ElectricalDrawer : Editor
+namespace Tools.LevelDesign
 {
-
-    private void OnSceneGUI()
+    [CustomEditor(typeof(ElectricalDrawingView))]
+    public class ElectricalDrawer : Editor
     {
-        ElectricalDrawingView t = target as ElectricalDrawingView;
-         Event cur = Event.current;
-
-        //t.pos = SceneView.currentDrawingSceneView.camera.ScreenToWorldPoint(cur.mousePosition);
-        t.pos = t.transform.position;
-        t.pos = new Vector3(t.pos.x, t.pos.y, 0);
-        Rect rect = new Rect(t.pos.x, t.pos.y, 1, 1);
-        Handles.DrawSolidRectangleWithOutline(rect, Color.cyan, Color.black);
-
-        if (cur.type == EventType.KeyDown)
+        ElectricalDrawingView t;
+        Rect selectionRect;
+        private void OnEnable()
         {
-            t.isDrawing = true;
+            t = target as ElectricalDrawingView;
+        }
+        private void OnSceneGUI()
+        {
+            Event current = Event.current;
+
+            if (current.type == EventType.MouseDown && current.button == 1)
+            {
+                t.isSelectionning = true;
+                OpenSelectionPanel();
+                
+
+            }
+            else if (current.type == EventType.MouseDown && current.button == 0)
+            {
+                t.isSelectionning = false;
+            }
+
+            if(t.isSelectionning) Handles.DrawSolidRectangleWithOutline(selectionRect, Color.cyan, Color.black);
+
+
+            SceneView.currentDrawingSceneView.Repaint();
+
         }
 
+        private void OpenSelectionPanel()
+        {
+            Event current = Event.current;
+            Ray ray = HandleUtility.GUIPointToWorldRay(current.mousePosition);
+            current.mousePosition = ray.origin;
+            selectionRect = new Rect(current.mousePosition.x, current.mousePosition.y, 2, 1);
 
+
+        }
     }
 }
+
