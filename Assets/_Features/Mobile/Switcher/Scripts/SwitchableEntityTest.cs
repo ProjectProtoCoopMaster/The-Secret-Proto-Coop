@@ -26,12 +26,12 @@ namespace Gameplay
 
         public void CheckState()
         {
-            if (State == 0) TurnOn();
-            else TurnOff();
+            if (State == 0) TurnOff();
+            else TurnOn();
         }
 
-        private void TurnOff() { GetComponent<Image>().color = offColor; }
-        private void TurnOn() { GetComponent<Image>().color = onColor; }
+        public void TurnOff() { GetComponent<Image>().color = offColor; }
+        public void TurnOn() { GetComponent<Image>().color = onColor; }
         
     }
 }

@@ -15,7 +15,7 @@ namespace Gameplay
             {
                 if (switchers[i].ID == ID)
                 {
-                    switchers[i].SwitchNode();
+                    switchers[i].TriggerSwitch();
                 }
             }
         }

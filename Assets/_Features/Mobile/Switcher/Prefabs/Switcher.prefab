@@ -95,6 +95,7 @@ MonoBehaviour:
   button: {fileID: 3409338572498560287}
   image: {fileID: 3409338572498560284}
   nodes: []
+  state: 0
   ID: 0
   switchTimer: 1
   timer: 0

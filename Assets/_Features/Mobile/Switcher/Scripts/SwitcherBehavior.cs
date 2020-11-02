@@ -15,6 +15,7 @@ namespace Gameplay
         public List<Object> nodes = default;
 
         [Header("---IMPORTANT---")]
+        [Range(0, 1), SerializeField] private int state;
         [Range(0, 10)]
         public float ID = default;
         public enum SwitchTimer { None, Fixed}
@@ -22,7 +23,11 @@ namespace Gameplay
         public SwitchTimer switchTimer = default;
         [HideInInspector]
         public float timer = 0;
-        public int State { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+
+        public int State { get { return state; } set { state = value; } }
+
+
+        private void Start() => CheckState();
 
         public void CallSwitchManager()
         { 
@@ -32,30 +37,36 @@ namespace Gameplay
 
         public void SwitchNode()
         {
+            if (State == 0) State = 1;
+            else State = 0;
 
+            CheckState();
+
+        }
+
+        public void TriggerSwitch()
+        {
             foreach (ISwitchable node in nodes)
             {
                 node.SwitchNode();
             }
-            if (switchTimer == SwitchTimer.Fixed && button.enabled)
+            if (switchTimer == SwitchTimer.Fixed && button.interactable)
                 StartCoroutine(DelaySwitchNode());
-            
         }
 
         IEnumerator DelaySwitchNode()
         {
-            button.enabled = false;
-            image.color = Color.grey;
+            TurnOff();
             yield return new WaitForSeconds(timer);
-            SwitchNode();
-            button.enabled = true;
-            image.color = Color.white;
+            TriggerSwitch();
+            TurnOn();
             yield break;
         }
 
         public void CheckState()
         {
-            throw new System.NotImplementedException();
+            if (State == 0) TurnOff();
+            else TurnOn();
         }
 
         public void SearchReferences()
@@ -72,7 +83,20 @@ namespace Gameplay
             }
         }
 
-     
+        public void TurnOn()
+        {
+            ChangeSwitch(true, Color.white);
+        }
+
+        public void TurnOff()
+        {
+            ChangeSwitch(false, Color.black);
+        }
+
+        void ChangeSwitch(bool buttonState, Color buttonColor)
+        {
+            button.interactable = buttonState;
+        }
     }
 
 }

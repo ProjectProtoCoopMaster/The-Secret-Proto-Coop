@@ -10,6 +10,10 @@ namespace Gameplay
         void SwitchNode();
 
         void CheckState();
+
+        void TurnOn();
+
+        void TurnOff();
     }
 }
 
