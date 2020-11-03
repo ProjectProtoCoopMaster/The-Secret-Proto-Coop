@@ -12,6 +12,7 @@ namespace Tools.LevelDesign
         ElectricalDrawingView t;
         Rect selectionRect;
         Vector2 mousePos;
+        Event current;
 
         private void OnEnable()
         {
@@ -19,9 +20,11 @@ namespace Tools.LevelDesign
         }
         private void OnSceneGUI()
         {
-            Event current = Event.current;
-            HandleUtility.AddDefaultControl(0);
-            
+            current = Event.current;
+
+            t.selectedGO = Selection.activeGameObject;
+
+
 
 
             if (current.type == EventType.MouseDown)
@@ -56,7 +59,60 @@ namespace Tools.LevelDesign
             if (t.isSelectionning)
             {
                 DrawSelectionRects();
+                HandleUtility.AddDefaultControl(0);
             }
+
+                
+
+
+            Undo.RecordObject(t, "Undo Electrical");
+
+            if (t.canDraw) DrawLines();
+
+            if(current.type == EventType.KeyDown)
+            {
+                if (current.keyCode == KeyCode.A)
+                {
+                    t.CreateLine();
+
+                    current.Use();
+                }
+                else if (current.keyCode == KeyCode.E)
+                {
+                    t.ChangeTangentToALine();
+                }
+                else if (current.keyCode == KeyCode.R)
+                {
+                    t.ChangeTangentToUpLeft();
+                }
+                else if (current.keyCode == KeyCode.T)
+                {
+                    t.ChangeTangentToDownLeft();
+                }
+                else if (current.keyCode == KeyCode.Space)
+                {
+                    if (t.isDrawingLine)
+                    {
+                        if (t.firstSelectedGO == null)
+                        {
+                            t.firstSelectedGO = t.selectedGO;
+
+                            current.Use();
+                        }
+                        else
+                        {
+                            
+                            t.secondSelectedGO = t.selectedGO;
+
+                            t.AddLine();
+
+                            current.Use();
+                        }
+                    }
+                }
+            }
+
+
 
             SceneView.currentDrawingSceneView.Repaint();
 
@@ -64,18 +120,16 @@ namespace Tools.LevelDesign
 
         private void OpenSelectionPanel()
         {
-            Event current = Event.current;
             Ray ray = HandleUtility.GUIPointToWorldRay(current.mousePosition);
             mousePos = ray.origin;
         }
 
         private void DrawSelectionRects()
         {
-            Event current = Event.current;
 
             if (t.numberOfSelectionRect == 1)
                 selectionRect = new Rect(mousePos.x, mousePos.y, 4, (1.5f * t.numberOfSelectionRect));
-            else selectionRect = new Rect(mousePos.x, mousePos.y, 4, (1.5f * t.numberOfSelectionRect - (t.numberOfSelectionRect * .5f)));
+            else selectionRect = new Rect(mousePos.x, mousePos.y, 4, (1.5f * t.numberOfSelectionRect - (t.numberOfSelectionRect * .4f)));
 
 
             
@@ -93,7 +147,23 @@ namespace Tools.LevelDesign
                     {
                         Handles.DrawSolidRectangleWithOutline(switcherRect, Color.red, Color.black);
                         if (current.type == EventType.MouseDown)
-                            t.CreateSwitcher();
+                        {
+                            switch (i)
+                            {
+                                case 0:
+                                    t.CreateSwitcher();
+                                    current.Use();
+                                    break;
+                                case 1:
+
+                                    t.isDrawingLine = true;
+                                    current.Use();
+                                    break;
+                            }
+
+                        }
+                            
+
                     }
                     else
                     {
@@ -106,14 +176,34 @@ namespace Tools.LevelDesign
                     Handles.DrawSolidRectangleWithOutline(switcherRect, Color.cyan, Color.black);
                 }
 
-
-                
-                
-               
             }
 
 
         }
+
+        private void DrawLines()
+        {
+
+            int ID = t.startPoint.Count - 1;
+
+
+            t.startPoint[ID] = Handles.PositionHandle(t.startPoint[ID], Quaternion.identity);
+            Handles.DrawSolidRectangleWithOutline(new Rect(t.startPoint[ID].x, t.startPoint[ID].y, .1f, .1f), Color.red, Color.black);
+            t.startTangent[ID] = Handles.PositionHandle(t.startTangent[ID], Quaternion.identity);
+            Handles.DrawSolidRectangleWithOutline(new Rect(t.startTangent[ID].x, t.startTangent[ID].y, .1f, .1f), Color.green, Color.black);
+            t.endTangent[ID] = Handles.PositionHandle(t.endTangent[ID], Quaternion.identity);
+            Handles.DrawSolidRectangleWithOutline(new Rect(t.endTangent[ID].x, t.endTangent[ID].y, .1f, .1f), Color.cyan, Color.black);
+            t.endPoint[ID] = Handles.PositionHandle(t.endPoint[ID], Quaternion.identity);
+            Handles.DrawSolidRectangleWithOutline(new Rect(t.endPoint[ID].x, t.endPoint[ID].y, .1f, .1f), Color.magenta, Color.black);
+
+
+            for (int i = 0; i < t.startPoint.Count; i++)
+            {
+                Handles.DrawBezier(t.startPoint[i], t.endPoint[i], t.startTangent[i], t.endTangent[i], Color.red, null, 5f);
+            }
+
+        }
+
     }
 }
 
