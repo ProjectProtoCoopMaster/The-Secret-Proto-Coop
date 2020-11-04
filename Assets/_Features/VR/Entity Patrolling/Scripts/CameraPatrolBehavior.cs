@@ -5,18 +5,28 @@ namespace Gameplay.VR
 {
     public class CameraPatrolBehavior : EntityPatrolData
     {
-        private void Update()
+        private void Start()
         {
-            Debug.Log(patrolPointsList.Count);
-            
-            foreach (PatrolPoint item in patrolPointsList) 
-                Debug.Log(item.worldPosition);
+            StartCoroutine(MoveToAltPosition());
         }
 
         // move the camera to its next patrol point location
         IEnumerator MoveToAltPosition()
         {
-            yield return null;
+            foreach (GameObject points in gameObjects) queue.Enqueue(points);
+
+            while (true)
+            {
+                if (queue.Count > 0)
+                {
+                    transform.position = queue.Dequeue().transform.position;
+                    yield return new WaitForSeconds(.25f);
+                }
+                // move in a looping manner
+                //else foreach (GameObject points in gameObjects) queue.Enqueue(points);
+
+                else for (int i = gameObjects.Count - 1; i >= 0; i--) queue.Enqueue(gameObjects[i]);
+            }
         }
     }
 }

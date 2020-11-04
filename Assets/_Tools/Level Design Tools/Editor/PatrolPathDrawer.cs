@@ -85,8 +85,8 @@ public class PatrolPathDrawer : EditorWindow
                 points.Add(selectedPatrolPoint); 
                 currentPatrolEntity.patrolPointsList.Add(new PatrolPoint());
                 Handles.SphereHandleCap(0, curEvent.mousePosition, Quaternion.identity, 5f, EventType.MouseDrag);
-
             });
+
             generic.ShowAsContext();
         }
 
