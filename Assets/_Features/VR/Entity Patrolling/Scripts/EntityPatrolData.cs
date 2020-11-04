@@ -6,7 +6,7 @@ namespace Gameplay.VR
 {
     public class EntityPatrolData : MonoBehaviour
     {
-        protected List<PatrolPoint> fullPatrolPath = new List<PatrolPoint>();
-        protected Queue<PatrolPoint> patrolQueue = new Queue<PatrolPoint>();
+        [SerializeField] public List<PatrolPoint> patrolPointsList = new List<PatrolPoint>();
+        [SerializeField] public Queue<PatrolPoint> patrolPointsQueue = new Queue<PatrolPoint>();
     }
 }

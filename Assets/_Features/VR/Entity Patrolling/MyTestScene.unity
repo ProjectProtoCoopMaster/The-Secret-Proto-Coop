@@ -152,6 +152,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ec698b6557992b4f846a327bd502dd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  patrolPointsList:
+  - worldPosition: {x: 0, y: 0, z: 0}
+    patrolPointIndex: 0
+  - worldPosition: {x: 0, y: 0, z: 0}
+    patrolPointIndex: 1
 --- !u!4 &920356088
 Transform:
   m_ObjectHideFlags: 0
@@ -195,6 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ec698b6557992b4f846a327bd502dd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  patrolPointsList: []
 --- !u!4 &971349595
 Transform:
   m_ObjectHideFlags: 0
@@ -238,6 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ec698b6557992b4f846a327bd502dd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  patrolPointsList: []
 --- !u!4 &1288813584
 Transform:
   m_ObjectHideFlags: 0
@@ -373,6 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ec698b6557992b4f846a327bd502dd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  patrolPointsList: []
 --- !u!4 &1308553225
 Transform:
   m_ObjectHideFlags: 0
@@ -499,6 +507,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ec698b6557992b4f846a327bd502dd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  patrolPointsList:
+  - worldPosition: {x: 18.08459, y: 0, z: 42.271603}
+    patrolPointIndex: 0
+  - worldPosition: {x: 4.523262, y: 0, z: 70.8174}
+    patrolPointIndex: 1
+  - worldPosition: {x: 12.080236, y: 0, z: 110.4219}
+    patrolPointIndex: 2
 --- !u!4 &1745230311
 Transform:
   m_ObjectHideFlags: 0
@@ -542,6 +557,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ec698b6557992b4f846a327bd502dd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  patrolPointsList:
+  - worldPosition: {x: 18.08459, y: 0, z: 42.271603}
+    patrolPointIndex: 0
+  - worldPosition: {x: 4.523262, y: 0, z: 70.8174}
+    patrolPointIndex: 1
+  - worldPosition: {x: 12.080236, y: 0, z: 110.4219}
+    patrolPointIndex: 2
 --- !u!4 &1888451925
 Transform:
   m_ObjectHideFlags: 0
@@ -585,6 +607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ec698b6557992b4f846a327bd502dd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  patrolPointsList: []
 --- !u!4 &2007084135
 Transform:
   m_ObjectHideFlags: 0

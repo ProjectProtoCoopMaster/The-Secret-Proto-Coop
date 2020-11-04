@@ -8,12 +8,24 @@ using Object = UnityEngine.Object;
 public class PatrolPathDrawer : EditorWindow
 {
     EntityPatrolData[] patrolEntities;
+    EntityPatrolData currentPatrolEntity;
+    int selectedIndex = 0;
+
     string[] patrolEntityNames;
-    int index = 0;
     private bool creatingPath, editingPath;
+
     Event curEvent;
-    List<GameObject> patrolPoints = new List<GameObject>();
+    List<GameObject> points = new List<GameObject>();
+    List<PatrolPoint> patrolPoints = new List<PatrolPoint>();
     GameObject selectedPatrolPoint;
+
+    #region Base Methods
+    [MenuItem("Window/Patrol Path Drawer %#x")]
+    public static void Init()
+    {
+        PatrolPathDrawer window = GetWindow<PatrolPathDrawer>();
+        window.Show();
+    }
 
     private void OnEnable()
     {
@@ -26,19 +38,22 @@ public class PatrolPathDrawer : EditorWindow
             patrolEntityNames[i] = patrolEntityName;
         }
         curEvent = Event.current;
-    }
 
-    [MenuItem("Window/Patrol Path Drawer %#x")]
-    public static void Init()
-    {
-        PatrolPathDrawer window = GetWindow<PatrolPathDrawer>();
-        window.Show();
+        foreach (EntityPatrolData entityPatrolEntity in patrolEntities)
+        {
+            foreach (PatrolPoint patrolPoint in entityPatrolEntity.patrolPointsList)
+            {
+                GameObject newObj = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                newObj.transform.position = patrolPoint.worldPosition;
+            }
+        }
     }
 
     private void OnGUI()
     {
-        GUILayout.BeginVertical();
-        EditorGUILayout.Popup(index, patrolEntityNames);
+        selectedIndex = EditorGUILayout.Popup(selectedIndex, patrolEntityNames);
+        currentPatrolEntity = patrolEntities[selectedIndex];
+
         GUILayout.BeginHorizontal();
         if (GUILayout.Button(new GUIContent("Create Path", "Start creating a patrol path for the currently selected entity.")))
         {
@@ -52,20 +67,37 @@ public class PatrolPathDrawer : EditorWindow
         }
         if (GUILayout.Button(new GUIContent("Delete Path", ""))) DeletePath();
         GUILayout.EndHorizontal();
-        GUILayout.EndVertical();
-    }
 
+        currentPatrolEntity.patrolPointsList = patrolPoints;
+    }
+    #endregion
+
+    #region Path Methods
     private void CreatePath()
     {
         if (curEvent.type == EventType.MouseDown && curEvent.button == 1)
         {
             GenericMenu generic = new GenericMenu();
             generic.AddDisabledItem(new GUIContent("Patrol Points"), false);
-            generic.AddItem(new GUIContent("Create a Patrol Point"), false, ()=> { patrolPoints.Add(selectedPatrolPoint = GameObject.CreatePrimitive(PrimitiveType.Cube)); });
+            generic.AddItem(new GUIContent("Create a Patrol Point"), false, () =>
+            {
+                selectedPatrolPoint = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                points.Add(selectedPatrolPoint); 
+                currentPatrolEntity.patrolPointsList.Add(new PatrolPoint());
+                Handles.SphereHandleCap(0, curEvent.mousePosition, Quaternion.identity, 5f, EventType.MouseDrag);
+
+            });
             generic.ShowAsContext();
         }
-        foreach (GameObject patrolPoint in patrolPoints)
-            patrolPoint.transform.position = Handles.PositionHandle(patrolPoint.transform.position, patrolPoint.transform.rotation);
+
+        foreach (var patrolPoint in points)
+            Handles.DoPositionHandle(patrolPoint.transform.position, patrolPoint.transform.rotation);
+
+        for (int i = 0; i < points.Count - 1; i++)
+            Handles.DrawLine(points[i].transform.position, points[i + 1].transform.position);
+
+        for (int i = 0; i < points.Count; i++)
+            currentPatrolEntity.patrolPointsList[i] = new PatrolPoint(points[i].transform.position, i);
     }
 
     private void EditPath()
@@ -80,7 +112,9 @@ public class PatrolPathDrawer : EditorWindow
     {
         throw new NotImplementedException();
     }
+    #endregion
 
+    #region Scene GUI Methods
     void OnFocus()
     {
         // Remove delegate listener if it has previously
@@ -102,4 +136,5 @@ public class PatrolPathDrawer : EditorWindow
         if (creatingPath) CreatePath();
         else if (editingPath) EditPath();
     }
+    #endregion
 }
