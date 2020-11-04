@@ -9,30 +9,51 @@ namespace Gameplay
     {
 
         [Range(0,1),SerializeField] private int state;
+        [Range(0, 1), SerializeField] private int power;
         [SerializeField] private Color offColor;
         [SerializeField] private Color onColor;
-        
 
-        private void Start() => CheckState();
-
-        public int State { get { return state; } set { state = value; } }
-        public void SwitchNode() 
+        private void OnEnable()
         {
-            if (State == 0) State = 1;
-            else State = 0;
-
-            CheckState();
+            Power = power;
         }
 
-        public void CheckState()
+        public GameObject MyGameObject { get { return this.gameObject; } set { MyGameObject = value; } }
+        public int State { get { return state; } set { state = value; } }
+        public int Power
         {
-            if (State == 0) TurnOff();
-            else TurnOn();
+            get { return power; }
+            set
+            {
+                power = value;
+                if (power == 1)
+                {
+                    if (state == 1)
+                    {
+                        TurnOn();
+                    }
+                    else
+                    {
+                        TurnOff();
+                    }
+                    
+                }
+                else
+                {
+                    TurnOff();
+                }
+
+                
+            }
         }
 
         public void TurnOff() { GetComponent<Image>().color = offColor; }
         public void TurnOn() { GetComponent<Image>().color = onColor; }
-        
+
+        public void SwitchNode(int changeNodes)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
 

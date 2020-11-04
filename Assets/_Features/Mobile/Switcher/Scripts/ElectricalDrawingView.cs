@@ -7,13 +7,15 @@ namespace Gameplay.Mobile
 {
     public class ElectricalDrawingView : MonoBehaviour
     {
-        public bool isSelectionning;
+        public bool isSelecting;
         public bool isMouse0Pressed;
         public int numberOfSelectionRect;
         public GameObject switcher;
         public GameObject line;
         public Canvas canvas;
-        public GUIStyle selectionNameStyle;
+        public GUIStyle importantStyle;
+        public GUIStyle  mediumStyle;
+        public GUIStyle  infoStyle;
         public List<Vector3> startPoint;
         public List<Vector3> endPoint;
         public List<Vector3> startTangent;
@@ -23,8 +25,9 @@ namespace Gameplay.Mobile
         public GameObject selectedGO;
         public GameObject firstSelectedGO;
         public GameObject secondSelectedGO;
-
-
+        public string lastAction;
+        public string currentAction;
+        public string[] inputActions;
         
         
 
@@ -32,6 +35,8 @@ namespace Gameplay.Mobile
         {
             GameObject newSwitcher =  Instantiate(switcher,canvas.transform);
             Selection.activeGameObject = newSwitcher;
+            isDrawingLine = true;
+
         }
 
 
@@ -54,7 +59,12 @@ namespace Gameplay.Mobile
             canDraw = false;
 
         }
-
+        
+        public void LinkPointsToGameObject()
+        {
+            startPoint[0] = firstSelectedGO.transform.position;
+            endPoint[0] = secondSelectedGO.transform.position;
+        }
         public void AddLine()
         {
 
@@ -67,7 +77,7 @@ namespace Gameplay.Mobile
 
             
 
-            isSelectionning = false;
+            isSelecting = false;
             canDraw = true;
 
 
@@ -101,6 +111,18 @@ namespace Gameplay.Mobile
             int ID = startTangent.Count - 1;
             startTangent[ID] = new Vector2(endPoint[ID].x, startPoint[ID].y); 
             endTangent[ID] = new Vector2(endPoint[ID].x, startPoint[ID].y);
+        }
+
+        public void MyReset()
+        {
+            isDrawingLine = false;
+            canDraw = false;
+            isSelecting = false;
+            currentAction = "";
+            firstSelectedGO = null;
+            secondSelectedGO = null;
+            selectedGO = null;
+
         }
 
     }

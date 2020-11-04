@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using Gameplay.Mobile;
+using UnityEngine.InputSystem.Interactions;
 
 namespace Tools.LevelDesign
 {
@@ -31,14 +32,14 @@ namespace Tools.LevelDesign
             {
                 if (current.button == 1)
                 {
-                    t.isSelectionning = true;
+                    t.isSelecting = true;
                     OpenSelectionPanel();
                 }
                 else if (current.button == 0)
                 {
                     if (!selectionRect.Contains(HandleUtility.GUIPointToWorldRay(current.mousePosition).origin))
                     {
-                        t.isSelectionning = false;
+                        t.isSelecting = false;
                     }
 
                     t.isMouse0Pressed = true;
@@ -56,38 +57,69 @@ namespace Tools.LevelDesign
             
             }
 
-            if (t.isSelectionning)
+            if (t.isSelecting)
             {
                 DrawSelectionRects();
                 HandleUtility.AddDefaultControl(0);
             }
 
-                
 
 
-            Undo.RecordObject(t, "Undo Electrical");
 
-            if (t.canDraw) DrawLines();
 
-            if(current.type == EventType.KeyDown)
+            
+            if (t.canDraw) { DrawLines(); t.LinkPointsToGameObject(); t.currentAction = "Creating A Line"; }
+            if (t.isDrawingLine) { if (t.firstSelectedGO == null) t.currentAction = "Selecting First GameObject : " + t.selectedGO;
+                                   else t.currentAction = "Selecting Second GameObject : " + t.selectedGO; }
+
+            if (current.type == EventType.KeyDown)
             {
                 if (current.keyCode == KeyCode.A)
                 {
-                    t.CreateLine();
+                    if (t.canDraw)
+                    {
+                        MyUndo("Create Line");
+                        t.currentAction = "";
+                        t.CreateLine();
 
-                    current.Use();
+                        current.Use();
+                    }
+
                 }
                 else if (current.keyCode == KeyCode.E)
                 {
-                    t.ChangeTangentToALine();
+                    if (t.canDraw)
+                    {
+                        MyUndo("Change Tangent To A Line");
+                        t.ChangeTangentToALine();
+                        current.Use();
+                    }
+
                 }
                 else if (current.keyCode == KeyCode.R)
                 {
-                    t.ChangeTangentToUpLeft();
+                    if (t.canDraw)
+                    {
+                        MyUndo("Change Tangent To A Right Angle");
+                        t.ChangeTangentToUpLeft();
+                        current.Use();
+                    }
                 }
                 else if (current.keyCode == KeyCode.T)
                 {
-                    t.ChangeTangentToDownLeft();
+                    if (t.canDraw)
+                    {
+                        MyUndo("Change Tangent To A Right Angle");
+                        t.ChangeTangentToDownLeft();
+                        current.Use();
+                    }
+
+                }
+                else if (current.keyCode == KeyCode.Escape)
+                {
+                    MyUndo("Reset");
+                    t.MyReset();
+                    current.Use();
                 }
                 else if (current.keyCode == KeyCode.Space)
                 {
@@ -95,17 +127,16 @@ namespace Tools.LevelDesign
                     {
                         if (t.firstSelectedGO == null)
                         {
+                            MyUndo("Select First Object");
                             t.firstSelectedGO = t.selectedGO;
 
                             current.Use();
                         }
-                        else
+                        else if (t.secondSelectedGO == null)
                         {
-                            
+                            MyUndo("Select Second Object");
                             t.secondSelectedGO = t.selectedGO;
-
                             t.AddLine();
-
                             current.Use();
                         }
                     }
@@ -114,10 +145,118 @@ namespace Tools.LevelDesign
 
 
 
+            DrawLabels();
             SceneView.currentDrawingSceneView.Repaint();
+            HandleUtility.Repaint();
 
         }
 
+        private void DrawLabels()
+        {
+            Rect screenRect = SceneView.currentDrawingSceneView.camera.pixelRect;
+            Vector3 labelPos = SceneView.lastActiveSceneView.camera.ScreenToWorldPoint(new Vector2(10,screenRect.height - 10));
+            labelPos = new Vector3(labelPos.x, labelPos.y, 0);
+
+            if(t.currentAction != "")
+            {
+                Handles.Label(labelPos, "Current Action : " + t.currentAction, t.importantStyle);
+                labelPos = SceneView.lastActiveSceneView.camera.ScreenToWorldPoint(new Vector2(10, screenRect.height - 35));
+                labelPos = new Vector3(labelPos.x, labelPos.y, 0);
+            }
+
+            if (t.isDrawingLine)
+            {
+
+                for (int i = 0; i <3; i++)
+                {
+
+                    switch (i)
+                    {
+                        case 0:
+                            Handles.Label(labelPos, "Space : Register GameObject After you've Selected It", t.infoStyle);
+                            break;
+                        case 1:
+                            labelPos = SceneView.lastActiveSceneView.camera.ScreenToWorldPoint(new Vector2(10, screenRect.height - 60));
+                            labelPos = new Vector3(labelPos.x, labelPos.y, 0);
+                            Handles.Label(labelPos, "Left Click On GameObject :  Select It", t.infoStyle);
+                            break;
+                        case 2:
+                            labelPos = SceneView.lastActiveSceneView.camera.ScreenToWorldPoint(new Vector2(10, screenRect.height - 85));
+                            labelPos = new Vector3(labelPos.x, labelPos.y, 0);
+                            Handles.Label(labelPos, "Escape : Reset", t.infoStyle);
+                            break;
+
+                    }
+
+                }
+
+                labelPos = SceneView.lastActiveSceneView.camera.ScreenToWorldPoint(new Vector2(10, screenRect.height - 110));
+                labelPos = new Vector3(labelPos.x, labelPos.y, 0);
+
+            }
+            else if (t.canDraw)
+            {
+                for (int i = 0; i < 5; i++)
+                {
+
+                    switch (i)
+                    {
+                        case 0:
+                            Handles.Label(labelPos, "A : Create A Line", t.infoStyle);
+                            break;
+                        case 1:
+                            labelPos = SceneView.lastActiveSceneView.camera.ScreenToWorldPoint(new Vector2(10, screenRect.height - 60));
+                            labelPos = new Vector3(labelPos.x, labelPos.y, 0);
+                            Handles.Label(labelPos, "E : Make Line Straight", t.infoStyle);
+                            break;
+                        case 2:
+                            labelPos = SceneView.lastActiveSceneView.camera.ScreenToWorldPoint(new Vector2(10, screenRect.height - 85));
+                            labelPos = new Vector3(labelPos.x, labelPos.y, 0);
+                            Handles.Label(labelPos, "R : Create A Right Angle", t.infoStyle);
+                            break;
+                        case 3:
+                            labelPos = SceneView.lastActiveSceneView.camera.ScreenToWorldPoint(new Vector2(10, screenRect.height - 110));
+                            labelPos = new Vector3(labelPos.x, labelPos.y, 0);
+                            Handles.Label(labelPos, "T : Create A Right Angle", t.infoStyle);
+                            break;
+                        case 4:
+                            labelPos = SceneView.lastActiveSceneView.camera.ScreenToWorldPoint(new Vector2(10, screenRect.height - 135));
+                            labelPos = new Vector3(labelPos.x, labelPos.y, 0);
+                            Handles.Label(labelPos, "Escape : Reset", t.infoStyle);
+                            break;
+                    }
+                    labelPos = SceneView.lastActiveSceneView.camera.ScreenToWorldPoint(new Vector2(10, screenRect.height - 160));
+                    labelPos = new Vector3(labelPos.x, labelPos.y, 0);
+
+                }
+            }
+
+            else
+            {
+
+                for (int i = 0; i < 1; i++)
+                {
+
+                    switch (i)
+                    {
+                        case 0:
+                            Handles.Label(labelPos, "Right Click : Open Selecting Panel", t.infoStyle);
+                            break;
+
+                    }
+
+                }
+                labelPos = SceneView.lastActiveSceneView.camera.ScreenToWorldPoint(new Vector2(10, screenRect.height - 35));
+                labelPos = new Vector3(labelPos.x, labelPos.y, 0);
+
+            }
+
+
+            Handles.Label(labelPos, "Last Action : " + t.lastAction,t.mediumStyle);
+
+            
+
+        }
         private void OpenSelectionPanel()
         {
             Ray ray = HandleUtility.GUIPointToWorldRay(current.mousePosition);
@@ -151,11 +290,12 @@ namespace Tools.LevelDesign
                             switch (i)
                             {
                                 case 0:
+                                    MyUndo("Create Switcher");
                                     t.CreateSwitcher();
                                     current.Use();
                                     break;
                                 case 1:
-
+                                    MyUndo("Start Drawing Line");
                                     t.isDrawingLine = true;
                                     current.Use();
                                     break;
@@ -202,6 +342,12 @@ namespace Tools.LevelDesign
                 Handles.DrawBezier(t.startPoint[i], t.endPoint[i], t.startTangent[i], t.endTangent[i], Color.red, null, 5f);
             }
 
+        }
+
+        private void MyUndo(string text)
+        {
+            Undo.RecordObject(t, text);
+            t.lastAction = text;
         }
 
     }

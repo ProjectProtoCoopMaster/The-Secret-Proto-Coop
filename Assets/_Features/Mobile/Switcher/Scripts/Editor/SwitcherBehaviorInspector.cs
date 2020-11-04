@@ -10,6 +10,7 @@ namespace Gameplay
     {
         
         SwitcherBehavior switcher;
+        int numberOfChilds;
         private void OnEnable()
         {
             switcher = target as SwitcherBehavior;
@@ -18,7 +19,6 @@ namespace Gameplay
         public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();
-
            
 
             if(switcher.switchTimer == SwitcherBehavior.SwitchTimer.Fixed)
@@ -26,13 +26,26 @@ namespace Gameplay
                 switcher.timer = EditorGUILayout.FloatField("Timer",switcher.timer);
             }
 
-            if (GUILayout.Button("Search Nodes References"))
+            //if (GUILayout.Button("Search Nodes References"))
+            //{
+            //    switcher.SearchReferences();
+            //}
+
+            switcher.SearchReferences();
+
+            for (int i = 0; i < switcher.transform.childCount; i++)
             {
-                switcher.SearchReferences();
+                if (switcher.transform.GetChild(i).gameObject.GetComponent<SwitcherBehavior>() != null)
+                {
+                    switcher.transform.GetChild(i).gameObject.GetComponent<SwitcherBehavior>().SearchReferences();
+                    EditorUtility.SetDirty(switcher.transform.GetChild(i).gameObject.GetComponent<SwitcherBehavior>());
+                }
+
             }
 
-            EditorUtility.SetDirty(switcher);
 
+            Repaint();
+            EditorUtility.SetDirty(switcher);
         }
     }
 }

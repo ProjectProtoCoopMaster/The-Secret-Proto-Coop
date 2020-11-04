@@ -16,6 +16,7 @@ namespace Gameplay
 
         [Header("---IMPORTANT---")]
         [Range(0, 1), SerializeField] private int state;
+        [Range(0, 1), SerializeField] private int power;
         [Range(0, 10)]
         public float ID = default;
         public enum SwitchTimer { None, Fixed}
@@ -24,10 +25,42 @@ namespace Gameplay
         [HideInInspector]
         public float timer = 0;
 
-        public int State { get { return state; } set { state = value; } }
+        public int State 
+        { 
+            get { return state; } 
+            set { state = value; }
+        
+        }
+
+        public int Power
+        {
+            get { return power; }
+            set 
+            { 
+                power = value;
+                if (power == 1)
+                {
+                    if (state == 1) 
+                    {
+                        TurnOn();
+                        
+                    }
+                    else 
+                    { 
+                        TurnOff(); 
+                    }
+                }
+                else
+                {
+                    TurnOff();
+                }
+            }
+        }
+
+        public GameObject MyGameObject { get { return this.gameObject; } set { MyGameObject = value; } }
 
 
-        private void Start() => CheckState();
+        private void Start() => Power = power;
 
         public void CallSwitchManager()
         { 
@@ -35,39 +68,67 @@ namespace Gameplay
             _sendSwitcherChange.Raise(ID);
         }
 
-        public void SwitchNode()
+        private void SwitchNode()
         {
-            if (State == 0) State = 1;
-            else State = 0;
+            foreach (ISwitchable node in nodes)
+            {
+                if (node.Power == 1) node.Power = 0;
+                else node.Power = 1;
+                if (node.MyGameObject.GetComponent<SwitcherBehavior>() != null)
+                    node.MyGameObject.GetComponent<SwitcherBehavior>().SwitchChildrens();
+            }
 
-            CheckState();
 
         }
 
         public void TriggerSwitch()
         {
+            if(switchTimer == SwitchTimer.Fixed)
+            {
+                StartCoroutine(DelaySwitchNode());
+            }
+            else
+            {
+
+                SwitchNode();
+            }
+
+            
+        }
+
+        public void SwitchChildrens()
+        {
+
             foreach (ISwitchable node in nodes)
             {
-                node.SwitchNode();
+                if (Power == 1)
+                {
+                    if (node.Power == 1) node.TurnOn();
+                    else node.TurnOff();
+
+
+                }
+                else
+                {
+                    node.TurnOff();
+                }
+
+                if (node.MyGameObject.GetComponent<SwitcherBehavior>() != null)
+                    node.MyGameObject.GetComponent<SwitcherBehavior>().SwitchChildrens();
+
             }
-            if (switchTimer == SwitchTimer.Fixed && button.interactable)
-                StartCoroutine(DelaySwitchNode());
         }
 
         IEnumerator DelaySwitchNode()
         {
+            SwitchNode();
             TurnOff();
             yield return new WaitForSeconds(timer);
-            TriggerSwitch();
+            SwitchNode();
             TurnOn();
             yield break;
         }
 
-        public void CheckState()
-        {
-            if (State == 0) TurnOff();
-            else TurnOn();
-        }
 
         public void SearchReferences()
         {
@@ -77,7 +138,6 @@ namespace Gameplay
                 if (transform.GetChild(i).gameObject.GetComponent<ISwitchable>() != null)
                 {
                     nodes.Add(transform.GetChild(i).gameObject.GetComponent<ISwitchable>() as Object);
-
                 }
 
             }
@@ -86,17 +146,22 @@ namespace Gameplay
         public void TurnOn()
         {
             ChangeSwitch(true, Color.white);
+
         }
 
         public void TurnOff()
         {
             ChangeSwitch(false, Color.black);
+            
+            //SwitchNode();
         }
 
         void ChangeSwitch(bool buttonState, Color buttonColor)
         {
             button.interactable = buttonState;
         }
+
+
     }
 
 }

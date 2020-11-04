@@ -6,10 +6,10 @@ namespace Gameplay
 {
     public interface ISwitchable
     {
+        GameObject MyGameObject { get; set; }
         int State { get; set; }
-        void SwitchNode();
 
-        void CheckState();
+        int Power { get; set; }
 
         void TurnOn();
 
