@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Gameplay
 {
@@ -9,9 +10,26 @@ namespace Gameplay
     {
         public Transform playerVR;
         public Vector3Variable playerVRPos;
-        public void JoinRoom() => NetworkManager.JoinRoom();
+        [SerializeField] CallableFunction _JoinRoom;
+        [SerializeField] CallableFunction _CreateRoom;
+        
+        public void JoinRoom() => _JoinRoom.Raise();
 
-        public void CreateRoom() => NetworkManager.CreateRoom();
+        public void CreateRoom() => _CreateRoom.Raise();
+
+        public void OpenScene()
+        {
+            if (Application.platform == RuntimePlatform.WindowsEditor)
+            {
+                SceneManager.LoadScene(1, LoadSceneMode.Additive);
+                SceneManager.UnloadScene(3);
+            }
+            else
+            {
+                SceneManager.LoadScene(2, LoadSceneMode.Additive);
+                SceneManager.UnloadScene(3);
+            }
+        }
 
     }
 }

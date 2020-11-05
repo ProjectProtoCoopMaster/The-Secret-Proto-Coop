@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+#if Unity_Editor
 using UnityEditor;
-using UnityEngine;
+#endif
 
-namespace Gameplay.Mobile
+using UnityEngine;
+using Gameplay.Mobile;
+
+namespace Tools.LevelDesign
 {
     public class ElectricalDrawingView : MonoBehaviour
     {
@@ -34,7 +38,11 @@ namespace Gameplay.Mobile
         public void CreateSwitcher()
         {
             GameObject newSwitcher =  Instantiate(switcher,canvas.transform);
+
+            #if Unity_Editor
             Selection.activeGameObject = newSwitcher;
+            #endif
+
             isDrawingLine = true;
 
         }

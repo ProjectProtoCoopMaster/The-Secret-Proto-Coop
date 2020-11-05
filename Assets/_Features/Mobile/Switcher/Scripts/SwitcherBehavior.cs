@@ -132,7 +132,8 @@ namespace Gameplay
 
         public void SearchReferences()
         {
-            nodes.Clear();
+            if (nodes.Count > 0)
+                nodes.Clear();
             for (int i = 0; i < transform.childCount; i++)
             {
                 if (transform.GetChild(i).gameObject.GetComponent<ISwitchable>() != null)
@@ -158,7 +159,8 @@ namespace Gameplay
 
         void ChangeSwitch(bool buttonState, Color buttonColor)
         {
-            button.interactable = buttonState;
+            if (button != null)
+                button.interactable = buttonState;
         }
 
 
