@@ -8,20 +8,22 @@ namespace Gameplay.VR
     {
         private void Awake()
         {
-            foreach (GameObject item in FindObjectsOfType<GameObject>())
-            {
-                if (item.CompareTag("Guard") && item != gameObject) guards.Add(item);
-            }
+            guards.AddRange(GameObject.FindGameObjectsWithTag("Guard"));
         }
 
         private void Start()
         {
+            //StartCoroutine(PingForGuards());
+        }
+
+        public void GE_SonarForGuards()
+        {
             StartCoroutine(PingForGuards());
-            //StartCoroutine(CheckDeadGuardPositions());
         }
 
         IEnumerator PingForGuards()
         {
+            Debug.Log("Checking for more");
             for (int i = 0; i < guards.Count; i++)
             {
                 // if the player is within the vision range
@@ -37,9 +39,7 @@ namespace Gameplay.VR
             }
 
             yield return null;
-            //yield return new WaitForSeconds(pingFrequency);
-            StartCoroutine(PingForGuards()); 
-            
+            StartCoroutine(PingForGuards());
         }
 
         void CheckGuardState(GameObject guard)

@@ -35,7 +35,7 @@ namespace Tools.Debugging
             if (playerTransform.objectReferenceValue == null)
                 playerTransform.objectReferenceValue = GameObject.Find("Player");
 
-            /*if(playerTransform.objectReferenceValue != null) detectionBehavior.playerHead = overwatchBehavior.playerHead = playerTransform.objectReferenceValue as Transform;*/
+            if(playerTransform.objectReferenceValue != null) detectionBehavior.playerHead = playerTransform.objectReferenceValue as Transform;
 
             EditorGUILayout.PropertyField(playerTransform);            
 

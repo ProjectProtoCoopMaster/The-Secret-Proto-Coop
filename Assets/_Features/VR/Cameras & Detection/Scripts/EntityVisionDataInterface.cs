@@ -13,11 +13,13 @@ namespace Gameplay.VR
         [SerializeField] [HideInInspector] public float rangeOfVision;
         [SerializeField] [HideInInspector] public float coneOfVision;
         [SerializeField] public Transform playerHead;
+        [SerializeField] public Vector3Variable playerPositionAtom;
 
         [SerializeField] [HideInInspector] protected LayerMask layerMask;
         [SerializeField] [HideInInspector] protected RaycastHit hitInfo;
 
         [SerializeField] [HideInInspector] protected GameEvent gameOver;
+        [SerializeField] public GameEvent scanForGuard;
         [SerializeField] [HideInInspector] protected Vector3 targetDir;
 
         // overwatch variables (do not show in Scriptable)
