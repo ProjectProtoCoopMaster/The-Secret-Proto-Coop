@@ -12,24 +12,17 @@ namespace Gameplay.VR
 
         [SerializeField] [HideInInspector] public float rangeOfVision;
         [SerializeField] [HideInInspector] public float coneOfVision;
-        [SerializeField] [HideInInspector] public Transform playerHead;
+        [SerializeField] public Transform playerHead;
 
         [SerializeField] [HideInInspector] protected LayerMask layerMask;
         [SerializeField] [HideInInspector] protected RaycastHit hitInfo;
 
+        [SerializeField] [HideInInspector] protected GameEvent gameOver;
+        [SerializeField] [HideInInspector] protected Vector3 targetDir;
+
         // overwatch variables (do not show in Scriptable)
         protected float pingFrequency = 2f; // frequency at which you check up on nearby entities
         protected List<GameObject> guards = new List<GameObject>(); // list of guards in the scene
-
-        /*
-        // if a scriptable object has been assigned through the inspector, unload its variables into the script
-        private void Awake()
-        {
-            if (entityVisionData != null)
-            {
-                rangeOfVision = entityVisionData.rangeOfVision;
-                rangeOfVision = entityVisionData.coneOfVision;
-            }
-        }*/
+        protected List<Vector3> deadGuards = new List<Vector3>(); // list of guards in the scene
     }
 }

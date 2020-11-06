@@ -12,5 +12,6 @@ namespace Gameplay.VR
         protected Vector3 baseRotation, targetRotation, currentRotation;
         protected float rotationIncrement;
         protected float timePassed;
+        protected WaitForSeconds waitTime;
     }
 }
