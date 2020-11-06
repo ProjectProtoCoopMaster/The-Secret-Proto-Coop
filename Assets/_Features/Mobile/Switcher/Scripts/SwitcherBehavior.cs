@@ -24,7 +24,6 @@ namespace Gameplay
         public SwitchTimer switchTimer = default;
         [HideInInspector]
         public float timer = 0;
-
         public int State 
         { 
             get { return state; } 
