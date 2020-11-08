@@ -9,6 +9,9 @@ namespace Gameplay.VR.Player
         // night vision behavior
         [SerializeField] protected float someVariable;
 
+        public void GE_NightVision()
+        {
 
+        }
     }
 }

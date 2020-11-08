@@ -8,20 +8,19 @@ namespace Gameplay.VR.Player
     public class SuffocationBehavior : AgentStateData
     {
         // suffocation behavior
-        [SerializeField] protected float oxygenLevel;
-        [SerializeField] protected float oxygenDepletionRate;
+        [SerializeField] protected float oxygenInSeconds;
 
-        void GE_DepleteOxygen()
+        public void GE_DepleteOxygen()
         {
             StartCoroutine(DepleteOxygen());
         }
 
         IEnumerator DepleteOxygen()
         {
-            oxygenLevel -= oxygenDepletionRate * Time.deltaTime;
+            oxygenInSeconds -= Time.deltaTime;
             yield return null;
 
-            if (oxygenLevel <= 0) gameOver.Raise();
+            if (oxygenInSeconds <= 0) gameOver.Raise();
         }
     }
 }

@@ -8,5 +8,10 @@ namespace Gameplay.VR.Player
     {
         // visibility jammer behavior
         [SerializeField] protected float anotherVariable;
+
+        public void GE_VisibilityJammed()
+        {
+
+        }
     }
 }
