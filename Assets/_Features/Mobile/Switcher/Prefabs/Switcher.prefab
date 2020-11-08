@@ -98,7 +98,7 @@ MonoBehaviour:
   state: 0
   power: 1
   ID: 0
-  switchTimer: 1
+  switchTimer: 0
   timer: 0
 --- !u!114 &3409338572498560287
 MonoBehaviour:

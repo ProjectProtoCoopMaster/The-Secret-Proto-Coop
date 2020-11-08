@@ -30,7 +30,7 @@ namespace Tools.LevelDesign
             var Bytes = tex2D.EncodeToPNG();
             DestroyImmediate(tex2D);
             File.WriteAllBytes(Application.dataPath + "/_Features/Global/Level Translate Tool/Pictures/"+pictureName + ".png", Bytes);
-
+            AssetDatabase.Refresh();
         }
 
         

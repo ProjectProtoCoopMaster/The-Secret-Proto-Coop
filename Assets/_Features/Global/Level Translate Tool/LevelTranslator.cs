@@ -4,34 +4,35 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 using UnityEditor;
+using UnityEditorInternal;
 
 namespace Tools.LevelDesign
 {
     public class LevelTranslator : MonoBehaviour
     {
-        [SerializeField] GameObject cube;
+        [SerializeField] Canvas canvas;
+        [SerializeField] RectTransform switchablesParent;
         [SerializeField] Camera cam;
-        [SerializeField] Image image;
-        [SerializeField] Object jsonFile;
+        [SerializeField] Image prefab;
         public TextAsset json;
         [SerializeField] LevelSaver.ListOfISwitchableElement elements;
 
         public void TranslateLevelPosition()
         {
-            //string path = AssetDatabase.GetAssetPath(jsonFile);
-            //AssetDatabase.MoveAsset(path, path.Replace(".json", ".txt"));
-
-            //Object newJson = new Object();
-            //AssetDatabase.CreateAsset(new TextAsset(), "Assets/StreamingAssets/Levels/Text/Text.txt");
-            //File.
-            //json = new TextAsset();
-            //json = jsonFile as TextAsset;
             elements = JsonUtility.FromJson<LevelSaver.ListOfISwitchableElement>(json.ToString());
+            RectTransform parent = Instantiate(switchablesParent, canvas.transform) as RectTransform;
+            for (int i = 0; i < elements.list.Count; i++)
+            {
+                Vector3 position = elements.list[i].position;
+                
+                Image newImage = Instantiate(prefab, parent.transform) as Image;
+                newImage.rectTransform.anchoredPosition = position - new Vector3(newImage.rectTransform.sizeDelta.x * .5f, newImage.rectTransform.sizeDelta.y * .5f);
+                
+            }
 
 
-            //Vector3 screenPoint = cam.WorldToViewportPoint(cube.transform.position);
-            //screenPoint = new Vector2(screenPoint.x * cam.pixelWidth, screenPoint.y * cam.pixelHeight);
-            //image.rectTransform.anchoredPosition = screenPoint;
+
+
         }
     }
 }

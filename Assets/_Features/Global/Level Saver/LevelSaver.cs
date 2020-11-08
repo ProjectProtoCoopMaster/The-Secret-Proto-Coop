@@ -10,8 +10,10 @@ namespace Tools.LevelDesign
     
     public class LevelSaver : MonoBehaviour
     {
+        [SerializeField] private Camera cam;
         public GameObject[] parentSwitchers;
         public ListOfISwitchableElement elements;
+        public string levelName;
 
         
         string path, JsonString;
@@ -23,14 +25,17 @@ namespace Tools.LevelDesign
                 AddSwitcherChilds(parentSwitchers[i]);
             }
 
-            path = "Assets/_Features/Global/Level Saver"+"/Level.json";
+            
+            path = "Assets/_Features/Global/Level Saver/Levels/"+ levelName+".json";
+            if (!File.Exists(path)) 
+            {
+                File.Create(path).Dispose();
+            }
+                
             JsonString = File.ReadAllText(path);
-            JsonString = JsonUtility.ToJson(elements);
-
-
-            Debug.Log(JsonString);
+            JsonString = JsonUtility.ToJson(elements,true);
             File.WriteAllText(path, JsonString);
-
+            AssetDatabase.Refresh();
             
         }
 
@@ -52,7 +57,7 @@ namespace Tools.LevelDesign
                         ISwitchableElements newElement = new ISwitchableElements();
                         newElement.prefab = PrefabUtility.GetCorrespondingObjectFromSource(switcher.transform.GetChild(j).gameObject) as GameObject;
                         
-                        newElement.position = switcher.transform.GetChild(j).position;
+                        newElement.position = cam.WorldToScreenPoint(switcher.transform.GetChild(j).position);
                         elements.list.Add(newElement);
                     }
                 }
