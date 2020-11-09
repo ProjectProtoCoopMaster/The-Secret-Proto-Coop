@@ -37,7 +37,8 @@ namespace Tools.Debugging
 
             /*if(playerTransform.objectReferenceValue != null) detectionBehavior.playerHead = overwatchBehavior.playerHead = playerTransform.objectReferenceValue as Transform;*/
 
-            EditorGUILayout.PropertyField(playerTransform);            
+            EditorGUILayout.PropertyField(playerTransform);
+
 
             if (entityVisionScriptableProperty.objectReferenceValue != null || existingData) DrawScriptableObjProperty();
             else if (rangeOfVision.floatValue != 0 || coneOfVision.floatValue != 0 || localData) DrawLocalProperties();
@@ -45,6 +46,15 @@ namespace Tools.Debugging
 
             serializedObject.ApplyModifiedProperties();
         }
+
+        private void OnSceneGUI()
+        {
+            Handles.color = Color.red;
+            foreach (GameObject guard in overwatchBehavior.visibleGuards)
+                Handles.DrawLine(overwatchBehavior.gameObject.transform.position, guard.transform.position);
+            Handles.color = Color.white;
+        }
+
 
         #region User Input
         // ask the user if he's assigning or creating data

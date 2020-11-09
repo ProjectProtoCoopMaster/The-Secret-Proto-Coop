@@ -2,12 +2,14 @@
 using UnityEngine;
 using System.Threading;
 using System;
+using System.Collections.Generic;
 
 namespace Gameplay.VR
 {
     public class OverwatchBehavior : EntityVisionDataInterface
     {
         private bool ready;
+        public List<GameObject> visibleGuards = new List<GameObject>();
 
         private void Awake()
         {
@@ -20,12 +22,6 @@ namespace Gameplay.VR
         private void Start()
         {
             StartCoroutine(DoWork());
-            //StartCoroutine(CheckDeadGuardPositions());
-        }
-
-        private void StartRunning(object state)
-        {
-            StartCoroutine(PingForGuards());
         }
 
         IEnumerator DoWork()
@@ -33,11 +29,18 @@ namespace Gameplay.VR
             ThreadPool.QueueUserWorkItem(StartRunning);
 
             while (!ready) yield return null;
-            StartCoroutine(DoWork());
+            StartCoroutine(PingForGuards());
+        }
+
+        private void StartRunning(object state)
+        {
+            ready = !ready;
+            StartCoroutine(PingForGuards());
         }
 
         IEnumerator PingForGuards()
         {
+            visibleGuards.Clear();
             for (int i = 0; i < guards.Count; i++)
             {
                 // if the player is within the vision range
@@ -52,13 +55,14 @@ namespace Gameplay.VR
                 else continue;
             }
 
-            yield return null; 
+            yield return null;
             ready = !ready;
+            StartCoroutine(DoWork());
         }
 
         void CheckGuardState(GameObject guard)
         {
-            Debug.DrawLine(transform.position, guard.transform.position, Color.red);
+            if (!visibleGuards.Contains(guard)) visibleGuards.Add(guard);
             if (guard.name == "DEAD") Debug.Log("Game over, bub");
         }
     }
