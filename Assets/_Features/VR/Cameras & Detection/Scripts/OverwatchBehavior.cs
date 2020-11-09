@@ -1,11 +1,14 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
+using System.Threading;
+using System;
 
 namespace Gameplay.VR
 {
     public class OverwatchBehavior : EntityVisionDataInterface
     {
+        private bool ready;
+
         private void Awake()
         {
             foreach (GameObject item in FindObjectsOfType<GameObject>())
@@ -16,8 +19,21 @@ namespace Gameplay.VR
 
         private void Start()
         {
-            StartCoroutine(PingForGuards());
+            StartCoroutine(DoWork());
             //StartCoroutine(CheckDeadGuardPositions());
+        }
+
+        private void StartRunning(object state)
+        {
+            StartCoroutine(PingForGuards());
+        }
+
+        IEnumerator DoWork()
+        {
+            ThreadPool.QueueUserWorkItem(StartRunning);
+
+            while (!ready) yield return null;
+            StartCoroutine(DoWork());
         }
 
         IEnumerator PingForGuards()
@@ -36,10 +52,8 @@ namespace Gameplay.VR
                 else continue;
             }
 
-            yield return null;
-            //yield return new WaitForSeconds(pingFrequency);
-            StartCoroutine(PingForGuards()); 
-            
+            yield return null; 
+            ready = !ready;
         }
 
         void CheckGuardState(GameObject guard)
