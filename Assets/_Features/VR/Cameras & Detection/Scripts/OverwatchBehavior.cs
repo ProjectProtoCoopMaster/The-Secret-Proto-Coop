@@ -3,14 +3,17 @@ using UnityEngine;
 using System.Threading;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Gameplay.VR
 {
     public class OverwatchBehavior : EntityVisionDataInterface
     {
         private bool ready;
-        public List<GameObject> visibleGuards = new List<GameObject>();
 
+#if UNITY_EDITOR
+        public List<GameObject> visibleGuards = new List<GameObject>();
+#endif
         private void Awake()
         {
             foreach (GameObject item in FindObjectsOfType<GameObject>())
@@ -62,7 +65,9 @@ namespace Gameplay.VR
 
         void CheckGuardState(GameObject guard)
         {
+#if UNITY_EDITOR
             if (!visibleGuards.Contains(guard)) visibleGuards.Add(guard);
+#endif
             if (guard.name == "DEAD") Debug.Log("Game over, bub");
         }
     }
