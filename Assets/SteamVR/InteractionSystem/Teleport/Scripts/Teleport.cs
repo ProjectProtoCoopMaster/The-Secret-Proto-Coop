@@ -894,7 +894,7 @@ namespace Valve.VR.InteractionSystem
 			if ( teleportingToMarker.ShouldMovePlayer() )
 			{
 				Vector3 playerFeetOffset = player.trackingOriginTransform.position - player.feetPositionGuess;
-				StartCoroutine(TeleportThePlayer(teleportPosition + playerFeetOffset));
+				StartCoroutine(TeleportThePlayer(player.trackingOriginTransform.position, teleportPosition + playerFeetOffset));
 				//player.trackingOriginTransform.position = teleportPosition + playerFeetOffset; ///// THIS IS WHERE YOU TP THE PLAYER ? 
 
                 if (player.leftHand.currentAttachedObjectInfo.HasValue)
@@ -912,28 +912,25 @@ namespace Valve.VR.InteractionSystem
 
 		float time;
 		Vector3 change;
-		Vector3 startValue;
-		Vector3 targetValue;
-		float tweenDuration = 2f;
-
+		float tweenDuration = .25f;
 		Vector3 movingPosition;
 
-		IEnumerator TeleportThePlayer(Vector3 targetPos)
+		IEnumerator TeleportThePlayer(Vector3 startPos, Vector3 targetPos)
         {
-
-			startValue = transform.position;
-			change = targetPos - startValue;
+			time = 0;
+			change = targetPos - startPos;
 
 			while (time <= tweenDuration)
 			{
 				time += Time.deltaTime;
-				movingPosition.x = LinearTween(time, startValue.x, change.x, tweenDuration);
-				movingPosition.x = LinearTween(time, startValue.z, change.z, tweenDuration);
+				movingPosition.x = LinearTween(time, startPos.x, change.x, tweenDuration);
+				movingPosition.z = LinearTween(time, startPos.z, change.z, tweenDuration);
 
-				transform.position = movingPosition;
+				player.trackingOriginTransform.position = movingPosition;
 				yield return null;
 			}
 		}
+
 		public float LinearTween(float time, float beginning, float change, float duration)
 		{
 			return time * change / duration + beginning;
