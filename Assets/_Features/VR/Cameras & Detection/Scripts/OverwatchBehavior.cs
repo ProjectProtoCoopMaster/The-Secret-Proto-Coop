@@ -10,6 +10,10 @@ namespace Gameplay.VR
     public class OverwatchBehavior : EntityVisionDataInterface
     {
         private bool ready;
+        Vector2 myPos, targetPos;
+        Vector3 myFinalPos;
+
+        float distance;
 
 #if UNITY_EDITOR
         public List<GameObject> visibleGuards = new List<GameObject>();
@@ -46,11 +50,23 @@ namespace Gameplay.VR
             visibleGuards.Clear();
             for (int i = 0; i < guards.Count; i++)
             {
-                // if the player is within the vision range
-                if (Vector2.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(guards[i].transform.position.x, guards[i].transform.position.z)) < rangeOfVision)
+                myPos.x = transform.position.x;
+                myPos.y = transform.position.z;
+
+                targetPos.x = guards[i].transform.position.x;
+                targetPos.y = guards[i].transform.position.z;
+
+                myFinalPos.x = transform.position.x;
+                myFinalPos.y = guards[i].transform.position.y;
+                myFinalPos.z = transform.position.z;
+
+                distance = (targetPos - myPos).sqrMagnitude;
+
+                // if the target guard is within the vision range
+                if (distance < rangeOfVision)
                 {
                     // get the direction of the player's head...
-                    targetDir = guards[i].transform.position - new Vector3(transform.position.x, guards[i].transform.position.y, transform.position.z);
+                    targetDir = guards[i].transform.position - myFinalPos;
                     //...if the angle between the looking dir of the cam and the player is less than the cone of vision, then you are inside the cone of vision
                     if (Vector3.Angle(targetDir, transform.forward) <= coneOfVision * .5f) CheckGuardState(guards[i]);
                 }

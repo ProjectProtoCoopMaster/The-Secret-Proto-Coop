@@ -6,6 +6,11 @@ namespace Gameplay.VR
 {
     public class DetectionBehavior : EntityVisionDataInterface
     {
+        Vector2 myPos, targetPos;
+        Vector3 myFinalPos;
+
+        float distToTarget;
+
         private void Start()
         {
             // have two seperate methods to 
@@ -17,11 +22,22 @@ namespace Gameplay.VR
         {
             while (true)
             {
+                myPos.x = transform.position.x;
+                myPos.y = transform.position.z;
+
+                targetPos.x = playerHead.transform.position.x;
+                targetPos.y = playerHead.transform.position.z;
+
+                myFinalPos.x = transform.position.x;
+                myFinalPos.y = playerHead.transform.position.y;
+                myFinalPos.z = transform.position.z;
+
+                distToTarget = (targetPos - myPos).sqrMagnitude;
                 // if the player is within the vision range
-                if (Vector2.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(playerHead.position.x, playerHead.position.z)) < rangeOfVision)
+                if (distToTarget < rangeOfVision)
                 {
                     // get the direction of the player's head...
-                    targetDir = playerHead.position - new Vector3(transform.position.x, playerHead.position.y, transform.position.z);
+                    targetDir = playerHead.position - myFinalPos;
                     //...if the angle between the looking dir of the cam and the player is less than the cone of vision, then you are inside the cone of vision
                     if (Vector3.Angle(targetDir, transform.forward) <= coneOfVision * .5f) PlayerInSightCheck();
                 }

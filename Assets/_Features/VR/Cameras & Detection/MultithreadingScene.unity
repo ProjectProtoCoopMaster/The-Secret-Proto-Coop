@@ -139,7 +139,6 @@ GameObject:
   - component: {fileID: 90870445}
   - component: {fileID: 90870444}
   - component: {fileID: 90870443}
-  - component: {fileID: 90870451}
   m_Layer: 0
   m_Name: Rotating Camera (7)
   m_TagString: Untagged
@@ -303,27 +302,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 127.284, z: 0}
---- !u!114 &90870451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 90870442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1559033067}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &212590541
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,7 +317,6 @@ GameObject:
   - component: {fileID: 212590544}
   - component: {fileID: 212590543}
   - component: {fileID: 212590542}
-  - component: {fileID: 212590549}
   m_Layer: 0
   m_Name: Guard (1)
   m_TagString: Guard
@@ -487,27 +464,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &212590549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 212590541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1559033067}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &257483737
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,7 +562,6 @@ GameObject:
   - component: {fileID: 289588663}
   - component: {fileID: 289588662}
   - component: {fileID: 289588661}
-  - component: {fileID: 289588668}
   m_Layer: 0
   m_Name: Guard (2)
   m_TagString: Guard
@@ -754,27 +709,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
---- !u!114 &289588668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 289588660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1559033067}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &314759211
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,7 +724,6 @@ GameObject:
   - component: {fileID: 314759214}
   - component: {fileID: 314759213}
   - component: {fileID: 314759212}
-  - component: {fileID: 314759219}
   m_Layer: 0
   m_Name: Guard
   m_TagString: Guard
@@ -938,27 +871,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &314759219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 314759211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1559033067}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &392819414
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,7 +886,6 @@ GameObject:
   - component: {fileID: 392819417}
   - component: {fileID: 392819416}
   - component: {fileID: 392819415}
-  - component: {fileID: 392819422}
   m_Layer: 0
   m_Name: Guard (7)
   m_TagString: Guard
@@ -1122,27 +1033,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &392819422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 392819414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1559033067}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &558736163
 GameObject:
   m_ObjectHideFlags: 0
@@ -1158,7 +1048,6 @@ GameObject:
   - component: {fileID: 558736166}
   - component: {fileID: 558736165}
   - component: {fileID: 558736164}
-  - component: {fileID: 558736171}
   m_Layer: 0
   m_Name: Guard (6)
   m_TagString: Guard
@@ -1306,27 +1195,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
---- !u!114 &558736171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 558736163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1559033067}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &694724669
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,7 +1210,6 @@ GameObject:
   - component: {fileID: 694724672}
   - component: {fileID: 694724671}
   - component: {fileID: 694724670}
-  - component: {fileID: 694724677}
   m_Layer: 0
   m_Name: Guard (3)
   m_TagString: Guard
@@ -1490,27 +1357,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &694724677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 694724669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1559033067}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &696927362
 GameObject:
   m_ObjectHideFlags: 0
@@ -1618,7 +1464,6 @@ GameObject:
   - component: {fileID: 1291256596}
   - component: {fileID: 1291256595}
   - component: {fileID: 1291256594}
-  - component: {fileID: 1291256601}
   m_Layer: 0
   m_Name: Guard (4)
   m_TagString: Guard
@@ -1766,27 +1611,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1291256601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1291256593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1559033067}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1378197048
 GameObject:
   m_ObjectHideFlags: 0
@@ -1993,7 +1817,6 @@ GameObject:
   - component: {fileID: 1766794976}
   - component: {fileID: 1766794975}
   - component: {fileID: 1766794974}
-  - component: {fileID: 1766794981}
   m_Layer: 0
   m_Name: Guard (8)
   m_TagString: Guard
@@ -2141,71 +1964,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1766794981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766794973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1559033067}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
---- !u!1 &1876091316
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1876091317}
-  - component: {fileID: 1876091318}
-  m_Layer: 0
-  m_Name: MANAGER
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1876091317
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1876091316}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.8488464, y: -22.568247, z: 0.047344208}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1876091318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1876091316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3b73f735a3d7624cbc3b7963d204a5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  detection: []
 --- !u!1 &2139575243
 GameObject:
   m_ObjectHideFlags: 0
@@ -2221,7 +1979,6 @@ GameObject:
   - component: {fileID: 2139575246}
   - component: {fileID: 2139575245}
   - component: {fileID: 2139575244}
-  - component: {fileID: 2139575251}
   m_Layer: 0
   m_Name: Guard (5)
   m_TagString: Guard
@@ -2369,24 +2126,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
---- !u!114 &2139575251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2139575243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1559033067}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}

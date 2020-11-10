@@ -138,7 +138,6 @@ GameObject:
   - component: {fileID: 46629325}
   - component: {fileID: 46629324}
   - component: {fileID: 46629323}
-  - component: {fileID: 46629330}
   m_Layer: 0
   m_Name: Guard (76)
   m_TagString: Guard
@@ -286,27 +285,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 81
   m_LocalEulerAnglesHint: {x: 0, y: -94.75, z: 0}
---- !u!114 &46629330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 46629322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &117735469
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +300,6 @@ GameObject:
   - component: {fileID: 117735472}
   - component: {fileID: 117735471}
   - component: {fileID: 117735470}
-  - component: {fileID: 117735477}
   m_Layer: 0
   m_Name: Guard (62)
   m_TagString: Guard
@@ -470,27 +447,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 71
   m_LocalEulerAnglesHint: {x: 0, y: 63.702, z: 0}
---- !u!114 &117735477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 117735469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &153889192
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,7 +462,6 @@ GameObject:
   - component: {fileID: 153889195}
   - component: {fileID: 153889194}
   - component: {fileID: 153889193}
-  - component: {fileID: 153889200}
   m_Layer: 0
   m_Name: Guard (19)
   m_TagString: Guard
@@ -654,27 +609,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
---- !u!114 &153889200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153889192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &157959846
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,7 +624,6 @@ GameObject:
   - component: {fileID: 157959849}
   - component: {fileID: 157959848}
   - component: {fileID: 157959847}
-  - component: {fileID: 157959854}
   m_Layer: 0
   m_Name: Guard (16)
   m_TagString: Guard
@@ -838,27 +771,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &157959854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 157959846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &166903428
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,7 +786,6 @@ GameObject:
   - component: {fileID: 166903431}
   - component: {fileID: 166903430}
   - component: {fileID: 166903429}
-  - component: {fileID: 166903436}
   m_Layer: 0
   m_Name: Guard (27)
   m_TagString: Guard
@@ -1022,27 +933,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &166903436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 166903428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &169973666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1058,7 +948,6 @@ GameObject:
   - component: {fileID: 169973669}
   - component: {fileID: 169973668}
   - component: {fileID: 169973667}
-  - component: {fileID: 169973674}
   m_Layer: 0
   m_Name: Guard (61)
   m_TagString: Guard
@@ -1206,27 +1095,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 67
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &169973674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 169973666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &171004874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,7 +1110,6 @@ GameObject:
   - component: {fileID: 171004877}
   - component: {fileID: 171004876}
   - component: {fileID: 171004875}
-  - component: {fileID: 171004882}
   m_Layer: 0
   m_Name: Guard (25)
   m_TagString: Guard
@@ -1390,27 +1257,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
---- !u!114 &171004882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 171004874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &188421232
 GameObject:
   m_ObjectHideFlags: 0
@@ -1427,7 +1273,6 @@ GameObject:
   - component: {fileID: 687471291}
   - component: {fileID: 188421239}
   - component: {fileID: 188421238}
-  - component: {fileID: 188421240}
   m_Layer: 0
   m_Name: Rotating Camera
   m_TagString: Untagged
@@ -1570,27 +1415,6 @@ MonoBehaviour:
   gameOver: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
   visibleGuards: []
---- !u!114 &188421240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 188421232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &209453704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1607,7 +1431,6 @@ GameObject:
   - component: {fileID: 209453707}
   - component: {fileID: 209453706}
   - component: {fileID: 209453705}
-  - component: {fileID: 209453713}
   m_Layer: 0
   m_Name: Rotating Camera (3)
   m_TagString: Untagged
@@ -1771,27 +1594,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 90
   m_LocalEulerAnglesHint: {x: 0, y: 258.49, z: 0}
---- !u!114 &209453713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 209453704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &230199380
 GameObject:
   m_ObjectHideFlags: 0
@@ -1807,7 +1609,6 @@ GameObject:
   - component: {fileID: 230199383}
   - component: {fileID: 230199382}
   - component: {fileID: 230199381}
-  - component: {fileID: 230199388}
   m_Layer: 0
   m_Name: Guard (68)
   m_TagString: Guard
@@ -1955,27 +1756,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 75
   m_LocalEulerAnglesHint: {x: 0, y: 63.702, z: 0}
---- !u!114 &230199388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 230199380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &242653856
 GameObject:
   m_ObjectHideFlags: 0
@@ -1991,7 +1771,6 @@ GameObject:
   - component: {fileID: 242653859}
   - component: {fileID: 242653858}
   - component: {fileID: 242653857}
-  - component: {fileID: 242653864}
   m_Layer: 0
   m_Name: Guard (49)
   m_TagString: Guard
@@ -2139,27 +1918,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 50
   m_LocalEulerAnglesHint: {x: 0, y: -96.047, z: 0}
---- !u!114 &242653864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 242653856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &252420347
 GameObject:
   m_ObjectHideFlags: 0
@@ -2175,7 +1933,6 @@ GameObject:
   - component: {fileID: 252420350}
   - component: {fileID: 252420349}
   - component: {fileID: 252420348}
-  - component: {fileID: 252420355}
   m_Layer: 0
   m_Name: Guard (51)
   m_TagString: Guard
@@ -2323,27 +2080,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 57
   m_LocalEulerAnglesHint: {x: 0, y: -33.884, z: 0}
---- !u!114 &252420355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 252420347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &260254123
 GameObject:
   m_ObjectHideFlags: 0
@@ -2359,7 +2095,6 @@ GameObject:
   - component: {fileID: 260254126}
   - component: {fileID: 260254125}
   - component: {fileID: 260254124}
-  - component: {fileID: 260254131}
   m_Layer: 0
   m_Name: Guard (54)
   m_TagString: Guard
@@ -2507,27 +2242,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 65
   m_LocalEulerAnglesHint: {x: 0, y: -33.884, z: 0}
---- !u!114 &260254131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 260254123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &261303309
 GameObject:
   m_ObjectHideFlags: 0
@@ -2543,7 +2257,6 @@ GameObject:
   - component: {fileID: 261303312}
   - component: {fileID: 261303311}
   - component: {fileID: 261303310}
-  - component: {fileID: 261303317}
   m_Layer: 0
   m_Name: Guard (41)
   m_TagString: Guard
@@ -2691,27 +2404,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: -96.047, z: 0}
---- !u!114 &261303317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 261303309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &271092841
 GameObject:
   m_ObjectHideFlags: 0
@@ -2727,7 +2419,6 @@ GameObject:
   - component: {fileID: 271092844}
   - component: {fileID: 271092843}
   - component: {fileID: 271092842}
-  - component: {fileID: 271092849}
   m_Layer: 0
   m_Name: Guard (69)
   m_TagString: Guard
@@ -2875,27 +2566,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 74
   m_LocalEulerAnglesHint: {x: 0, y: 63.702, z: 0}
---- !u!114 &271092849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 271092841}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &297023519
 GameObject:
   m_ObjectHideFlags: 0
@@ -2911,7 +2581,6 @@ GameObject:
   - component: {fileID: 297023522}
   - component: {fileID: 297023521}
   - component: {fileID: 297023520}
-  - component: {fileID: 297023527}
   m_Layer: 0
   m_Name: Guard (5)
   m_TagString: Guard
@@ -3059,27 +2728,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &297023527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 297023519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &346739630
 GameObject:
   m_ObjectHideFlags: 0
@@ -3095,7 +2743,6 @@ GameObject:
   - component: {fileID: 346739633}
   - component: {fileID: 346739632}
   - component: {fileID: 346739631}
-  - component: {fileID: 346739638}
   m_Layer: 0
   m_Name: Guard (11)
   m_TagString: Guard
@@ -3243,27 +2890,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &346739638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 346739630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &353908801
 GameObject:
   m_ObjectHideFlags: 0
@@ -3279,7 +2905,6 @@ GameObject:
   - component: {fileID: 353908804}
   - component: {fileID: 353908803}
   - component: {fileID: 353908802}
-  - component: {fileID: 353908809}
   m_Layer: 0
   m_Name: Guard (50)
   m_TagString: Guard
@@ -3427,27 +3052,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 58
   m_LocalEulerAnglesHint: {x: 0, y: -171.869, z: 0}
---- !u!114 &353908809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 353908801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &359859165
 GameObject:
   m_ObjectHideFlags: 0
@@ -3463,7 +3067,6 @@ GameObject:
   - component: {fileID: 359859168}
   - component: {fileID: 359859167}
   - component: {fileID: 359859166}
-  - component: {fileID: 359859173}
   m_Layer: 0
   m_Name: Guard (80)
   m_TagString: Guard
@@ -3611,27 +3214,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 87
   m_LocalEulerAnglesHint: {x: 0, y: 140.82, z: 0}
---- !u!114 &359859173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 359859165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &360324187
 GameObject:
   m_ObjectHideFlags: 0
@@ -3647,7 +3229,6 @@ GameObject:
   - component: {fileID: 360324190}
   - component: {fileID: 360324189}
   - component: {fileID: 360324188}
-  - component: {fileID: 360324195}
   m_Layer: 0
   m_Name: Guard (43)
   m_TagString: Guard
@@ -3795,27 +3376,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: -96.047, z: 0}
---- !u!114 &360324195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 360324187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &382903113
 GameObject:
   m_ObjectHideFlags: 0
@@ -3831,7 +3391,6 @@ GameObject:
   - component: {fileID: 382903116}
   - component: {fileID: 382903115}
   - component: {fileID: 382903114}
-  - component: {fileID: 382903121}
   m_Layer: 0
   m_Name: Guard (15)
   m_TagString: Guard
@@ -3979,27 +3538,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &382903121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 382903113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &390104295
 GameObject:
   m_ObjectHideFlags: 0
@@ -4015,7 +3553,6 @@ GameObject:
   - component: {fileID: 390104298}
   - component: {fileID: 390104297}
   - component: {fileID: 390104296}
-  - component: {fileID: 390104303}
   m_Layer: 0
   m_Name: Guard (26)
   m_TagString: Guard
@@ -4163,27 +3700,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &390104303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 390104295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &452489080
 GameObject:
   m_ObjectHideFlags: 0
@@ -4295,7 +3811,6 @@ GameObject:
   - component: {fileID: 514493175}
   - component: {fileID: 514493174}
   - component: {fileID: 514493173}
-  - component: {fileID: 514493180}
   m_Layer: 0
   m_Name: Guard (65)
   m_TagString: Guard
@@ -4443,27 +3958,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 68
   m_LocalEulerAnglesHint: {x: 0, y: 63.702, z: 0}
---- !u!114 &514493180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 514493172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &537735587
 GameObject:
   m_ObjectHideFlags: 0
@@ -4479,7 +3973,6 @@ GameObject:
   - component: {fileID: 537735590}
   - component: {fileID: 537735589}
   - component: {fileID: 537735588}
-  - component: {fileID: 537735595}
   m_Layer: 0
   m_Name: Guard (37)
   m_TagString: Guard
@@ -4627,27 +4120,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: -74.283, z: 0}
---- !u!114 &537735595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 537735587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &557364684
 GameObject:
   m_ObjectHideFlags: 0
@@ -4663,7 +4135,6 @@ GameObject:
   - component: {fileID: 557364687}
   - component: {fileID: 557364686}
   - component: {fileID: 557364685}
-  - component: {fileID: 557364692}
   m_Layer: 0
   m_Name: Guard (12)
   m_TagString: Guard
@@ -4811,27 +4282,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
---- !u!114 &557364692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557364684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &677534382
 GameObject:
   m_ObjectHideFlags: 0
@@ -4847,7 +4297,6 @@ GameObject:
   - component: {fileID: 677534385}
   - component: {fileID: 677534384}
   - component: {fileID: 677534383}
-  - component: {fileID: 677534390}
   m_Layer: 0
   m_Name: Guard (3)
   m_TagString: Guard
@@ -4995,27 +4444,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
---- !u!114 &677534390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 677534382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &687471291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5052,7 +4480,6 @@ GameObject:
   - component: {fileID: 699720475}
   - component: {fileID: 699720474}
   - component: {fileID: 699720473}
-  - component: {fileID: 699720480}
   m_Layer: 0
   m_Name: Guard (58)
   m_TagString: Guard
@@ -5200,27 +4627,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 61
   m_LocalEulerAnglesHint: {x: 0, y: -33.884, z: 0}
---- !u!114 &699720480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 699720472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &705026319
 GameObject:
   m_ObjectHideFlags: 0
@@ -5332,7 +4738,6 @@ GameObject:
   - component: {fileID: 709010613}
   - component: {fileID: 709010612}
   - component: {fileID: 709010611}
-  - component: {fileID: 709010618}
   m_Layer: 0
   m_Name: Guard (77)
   m_TagString: Guard
@@ -5480,27 +4885,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 80
   m_LocalEulerAnglesHint: {x: 0, y: 43.235, z: 0}
---- !u!114 &709010618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 709010610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &724641202
 GameObject:
   m_ObjectHideFlags: 0
@@ -5516,7 +4900,6 @@ GameObject:
   - component: {fileID: 724641205}
   - component: {fileID: 724641204}
   - component: {fileID: 724641203}
-  - component: {fileID: 724641210}
   m_Layer: 0
   m_Name: Guard (66)
   m_TagString: Guard
@@ -5664,27 +5047,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 77
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
---- !u!114 &724641210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 724641202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &752376081
 GameObject:
   m_ObjectHideFlags: 0
@@ -5700,7 +5062,6 @@ GameObject:
   - component: {fileID: 752376084}
   - component: {fileID: 752376083}
   - component: {fileID: 752376082}
-  - component: {fileID: 752376089}
   m_Layer: 0
   m_Name: Guard (52)
   m_TagString: Guard
@@ -5848,27 +5209,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 56
   m_LocalEulerAnglesHint: {x: 0, y: -33.884, z: 0}
---- !u!114 &752376089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 752376081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &756582340
 GameObject:
   m_ObjectHideFlags: 0
@@ -5884,7 +5224,6 @@ GameObject:
   - component: {fileID: 756582343}
   - component: {fileID: 756582342}
   - component: {fileID: 756582341}
-  - component: {fileID: 756582348}
   m_Layer: 0
   m_Name: Guard (56)
   m_TagString: Guard
@@ -6032,27 +5371,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 63
   m_LocalEulerAnglesHint: {x: 0, y: -171.869, z: 0}
---- !u!114 &756582348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 756582340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &761120931
 GameObject:
   m_ObjectHideFlags: 0
@@ -6068,7 +5386,6 @@ GameObject:
   - component: {fileID: 761120934}
   - component: {fileID: 761120933}
   - component: {fileID: 761120932}
-  - component: {fileID: 761120939}
   m_Layer: 0
   m_Name: Guard (73)
   m_TagString: Guard
@@ -6216,27 +5533,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 78
   m_LocalEulerAnglesHint: {x: 0, y: -18.928, z: 0}
---- !u!114 &761120939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 761120931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &801956685
 GameObject:
   m_ObjectHideFlags: 0
@@ -6252,7 +5548,6 @@ GameObject:
   - component: {fileID: 801956688}
   - component: {fileID: 801956687}
   - component: {fileID: 801956686}
-  - component: {fileID: 801956693}
   m_Layer: 0
   m_Name: Guard (63)
   m_TagString: Guard
@@ -6400,27 +5695,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 70
   m_LocalEulerAnglesHint: {x: 0, y: 63.702, z: 0}
---- !u!114 &801956693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 801956685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &817756272
 GameObject:
   m_ObjectHideFlags: 0
@@ -6436,7 +5710,6 @@ GameObject:
   - component: {fileID: 817756275}
   - component: {fileID: 817756274}
   - component: {fileID: 817756273}
-  - component: {fileID: 817756280}
   m_Layer: 0
   m_Name: Guard (60)
   m_TagString: Guard
@@ -6584,27 +5857,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 66
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
---- !u!114 &817756280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 817756272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &834767959
 GameObject:
   m_ObjectHideFlags: 0
@@ -6620,7 +5872,6 @@ GameObject:
   - component: {fileID: 834767962}
   - component: {fileID: 834767961}
   - component: {fileID: 834767960}
-  - component: {fileID: 834767967}
   m_Layer: 0
   m_Name: Guard (48)
   m_TagString: Guard
@@ -6768,27 +6019,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 51
   m_LocalEulerAnglesHint: {x: 0, y: -96.047, z: 0}
---- !u!114 &834767967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 834767959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &875080243
 GameObject:
   m_ObjectHideFlags: 0
@@ -6804,7 +6034,6 @@ GameObject:
   - component: {fileID: 875080250}
   - component: {fileID: 875080249}
   - component: {fileID: 875080248}
-  - component: {fileID: 875080251}
   m_Layer: 0
   m_Name: Guard
   m_TagString: Guard
@@ -6952,27 +6181,6 @@ MonoBehaviour:
     m_Bits: 0
   gameOver: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
---- !u!114 &875080251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875080243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &884010358
 GameObject:
   m_ObjectHideFlags: 0
@@ -6988,7 +6196,6 @@ GameObject:
   - component: {fileID: 884010361}
   - component: {fileID: 884010360}
   - component: {fileID: 884010359}
-  - component: {fileID: 884010366}
   m_Layer: 0
   m_Name: Guard (4)
   m_TagString: Guard
@@ -7136,27 +6343,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &884010366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 884010358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &920106537
 GameObject:
   m_ObjectHideFlags: 0
@@ -7172,7 +6358,6 @@ GameObject:
   - component: {fileID: 920106540}
   - component: {fileID: 920106539}
   - component: {fileID: 920106538}
-  - component: {fileID: 920106545}
   m_Layer: 0
   m_Name: Guard (8)
   m_TagString: Guard
@@ -7320,27 +6505,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &920106545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 920106537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &975330080
 GameObject:
   m_ObjectHideFlags: 0
@@ -7356,7 +6520,6 @@ GameObject:
   - component: {fileID: 975330083}
   - component: {fileID: 975330082}
   - component: {fileID: 975330081}
-  - component: {fileID: 975330088}
   m_Layer: 0
   m_Name: Guard (39)
   m_TagString: Guard
@@ -7504,27 +6667,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 63.702, z: 0}
---- !u!114 &975330088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975330080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &997673104
 GameObject:
   m_ObjectHideFlags: 0
@@ -7636,7 +6778,6 @@ GameObject:
   - component: {fileID: 1012228198}
   - component: {fileID: 1012228197}
   - component: {fileID: 1012228196}
-  - component: {fileID: 1012228203}
   m_Layer: 0
   m_Name: Guard (23)
   m_TagString: Guard
@@ -7784,27 +6925,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1012228203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1012228195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1057414560
 GameObject:
   m_ObjectHideFlags: 0
@@ -7820,7 +6940,6 @@ GameObject:
   - component: {fileID: 1057414563}
   - component: {fileID: 1057414562}
   - component: {fileID: 1057414561}
-  - component: {fileID: 1057414568}
   m_Layer: 0
   m_Name: Guard
   m_TagString: Guard
@@ -7968,27 +7087,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1057414568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1057414560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1060787224
 GameObject:
   m_ObjectHideFlags: 0
@@ -8004,7 +7102,6 @@ GameObject:
   - component: {fileID: 1060787227}
   - component: {fileID: 1060787226}
   - component: {fileID: 1060787225}
-  - component: {fileID: 1060787232}
   m_Layer: 0
   m_Name: Guard (21)
   m_TagString: Guard
@@ -8152,27 +7249,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1060787232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1060787224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1063591545
 GameObject:
   m_ObjectHideFlags: 0
@@ -8188,7 +7264,6 @@ GameObject:
   - component: {fileID: 1063591548}
   - component: {fileID: 1063591547}
   - component: {fileID: 1063591546}
-  - component: {fileID: 1063591553}
   m_Layer: 0
   m_Name: Guard (22)
   m_TagString: Guard
@@ -8336,27 +7411,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1063591553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1063591545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1093674528
 GameObject:
   m_ObjectHideFlags: 0
@@ -8372,7 +7426,6 @@ GameObject:
   - component: {fileID: 1093674531}
   - component: {fileID: 1093674530}
   - component: {fileID: 1093674529}
-  - component: {fileID: 1093674536}
   m_Layer: 0
   m_Name: Guard (74)
   m_TagString: Guard
@@ -8520,27 +7573,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 83
   m_LocalEulerAnglesHint: {x: 0, y: 43.235, z: 0}
---- !u!114 &1093674536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1093674528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1104582301
 GameObject:
   m_ObjectHideFlags: 0
@@ -8556,7 +7588,6 @@ GameObject:
   - component: {fileID: 1104582304}
   - component: {fileID: 1104582303}
   - component: {fileID: 1104582302}
-  - component: {fileID: 1104582309}
   m_Layer: 0
   m_Name: Guard (18)
   m_TagString: Guard
@@ -8704,27 +7735,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
---- !u!114 &1104582309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1104582301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1107083794
 GameObject:
   m_ObjectHideFlags: 0
@@ -8741,7 +7751,6 @@ GameObject:
   - component: {fileID: 1107083797}
   - component: {fileID: 1107083796}
   - component: {fileID: 1107083795}
-  - component: {fileID: 1107083803}
   m_Layer: 0
   m_Name: Rotating Camera (2)
   m_TagString: Untagged
@@ -8905,27 +7914,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 89
   m_LocalEulerAnglesHint: {x: 0, y: 155.257, z: 0}
---- !u!114 &1107083803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1107083794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1136375800
 GameObject:
   m_ObjectHideFlags: 0
@@ -8941,7 +7929,6 @@ GameObject:
   - component: {fileID: 1136375803}
   - component: {fileID: 1136375802}
   - component: {fileID: 1136375801}
-  - component: {fileID: 1136375808}
   m_Layer: 0
   m_Name: Guard (10)
   m_TagString: Guard
@@ -9089,27 +8076,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1136375808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1136375800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1188547099
 GameObject:
   m_ObjectHideFlags: 0
@@ -9125,7 +8091,6 @@ GameObject:
   - component: {fileID: 1188547102}
   - component: {fileID: 1188547101}
   - component: {fileID: 1188547100}
-  - component: {fileID: 1188547107}
   m_Layer: 0
   m_Name: Guard (40)
   m_TagString: Guard
@@ -9273,27 +8238,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: -234.031, z: 0}
---- !u!114 &1188547107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1188547099}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1193689813
 GameObject:
   m_ObjectHideFlags: 0
@@ -9309,7 +8253,6 @@ GameObject:
   - component: {fileID: 1193689816}
   - component: {fileID: 1193689815}
   - component: {fileID: 1193689814}
-  - component: {fileID: 1193689821}
   m_Layer: 0
   m_Name: Guard (70)
   m_TagString: Guard
@@ -9457,27 +8400,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 73
   m_LocalEulerAnglesHint: {x: 0, y: 63.702, z: 0}
---- !u!114 &1193689821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1193689813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1204888456
 GameObject:
   m_ObjectHideFlags: 0
@@ -9493,7 +8415,6 @@ GameObject:
   - component: {fileID: 1204888459}
   - component: {fileID: 1204888458}
   - component: {fileID: 1204888457}
-  - component: {fileID: 1204888464}
   m_Layer: 0
   m_Name: Guard (78)
   m_TagString: Guard
@@ -9641,27 +8562,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 85
   m_LocalEulerAnglesHint: {x: 0, y: 140.82, z: 0}
---- !u!114 &1204888464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1204888456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1210231341
 GameObject:
   m_ObjectHideFlags: 0
@@ -9677,7 +8577,6 @@ GameObject:
   - component: {fileID: 1210231344}
   - component: {fileID: 1210231343}
   - component: {fileID: 1210231342}
-  - component: {fileID: 1210231349}
   m_Layer: 0
   m_Name: Guard (79)
   m_TagString: Guard
@@ -9825,27 +8724,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 84
   m_LocalEulerAnglesHint: {x: 0, y: 140.82, z: 0}
---- !u!114 &1210231349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1210231341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1240824815
 GameObject:
   m_ObjectHideFlags: 0
@@ -9861,7 +8739,6 @@ GameObject:
   - component: {fileID: 1240824818}
   - component: {fileID: 1240824817}
   - component: {fileID: 1240824816}
-  - component: {fileID: 1240824823}
   m_Layer: 0
   m_Name: Guard (59)
   m_TagString: Guard
@@ -10009,27 +8886,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 60
   m_LocalEulerAnglesHint: {x: 0, y: -33.884, z: 0}
---- !u!114 &1240824823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240824815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1244771795
 GameObject:
   m_ObjectHideFlags: 0
@@ -10045,7 +8901,6 @@ GameObject:
   - component: {fileID: 1244771798}
   - component: {fileID: 1244771797}
   - component: {fileID: 1244771796}
-  - component: {fileID: 1244771803}
   m_Layer: 0
   m_Name: Guard (29)
   m_TagString: Guard
@@ -10193,27 +9048,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1244771803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1244771795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1256816916
 GameObject:
   m_ObjectHideFlags: 0
@@ -10229,7 +9063,6 @@ GameObject:
   - component: {fileID: 1256816919}
   - component: {fileID: 1256816918}
   - component: {fileID: 1256816917}
-  - component: {fileID: 1256816924}
   m_Layer: 0
   m_Name: Guard (1)
   m_TagString: Guard
@@ -10377,27 +9210,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1256816924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1256816916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1260596267
 GameObject:
   m_ObjectHideFlags: 0
@@ -10413,7 +9225,6 @@ GameObject:
   - component: {fileID: 1260596270}
   - component: {fileID: 1260596269}
   - component: {fileID: 1260596268}
-  - component: {fileID: 1260596275}
   m_Layer: 0
   m_Name: Guard (47)
   m_TagString: Guard
@@ -10561,27 +9372,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 52
   m_LocalEulerAnglesHint: {x: 0, y: -234.031, z: 0}
---- !u!114 &1260596275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1260596267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1303661058
 GameObject:
   m_ObjectHideFlags: 0
@@ -10689,7 +9479,6 @@ GameObject:
   - component: {fileID: 1321425218}
   - component: {fileID: 1321425217}
   - component: {fileID: 1321425216}
-  - component: {fileID: 1321425223}
   m_Layer: 0
   m_Name: Guard (28)
   m_TagString: Guard
@@ -10837,27 +9626,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: -77.472, z: 0}
---- !u!114 &1321425223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1321425215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1359590205
 GameObject:
   m_ObjectHideFlags: 0
@@ -10873,7 +9641,6 @@ GameObject:
   - component: {fileID: 1359590208}
   - component: {fileID: 1359590207}
   - component: {fileID: 1359590206}
-  - component: {fileID: 1359590213}
   m_Layer: 0
   m_Name: Guard (44)
   m_TagString: Guard
@@ -11021,27 +9788,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 55
   m_LocalEulerAnglesHint: {x: 0, y: -96.047, z: 0}
---- !u!114 &1359590213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1359590205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1366241149
 GameObject:
   m_ObjectHideFlags: 0
@@ -11057,7 +9803,6 @@ GameObject:
   - component: {fileID: 1366241152}
   - component: {fileID: 1366241151}
   - component: {fileID: 1366241150}
-  - component: {fileID: 1366241157}
   m_Layer: 0
   m_Name: Guard (75)
   m_TagString: Guard
@@ -11205,27 +9950,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 82
   m_LocalEulerAnglesHint: {x: 0, y: -94.75, z: 0}
---- !u!114 &1366241157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1366241149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1379507268
 GameObject:
   m_ObjectHideFlags: 0
@@ -11241,7 +9965,6 @@ GameObject:
   - component: {fileID: 1379507271}
   - component: {fileID: 1379507270}
   - component: {fileID: 1379507269}
-  - component: {fileID: 1379507276}
   m_Layer: 0
   m_Name: Guard (14)
   m_TagString: Guard
@@ -11389,27 +10112,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1379507276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1379507268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1393606384
 GameObject:
   m_ObjectHideFlags: 0
@@ -11425,7 +10127,6 @@ GameObject:
   - component: {fileID: 1393606387}
   - component: {fileID: 1393606386}
   - component: {fileID: 1393606385}
-  - component: {fileID: 1393606392}
   m_Layer: 0
   m_Name: Guard (34)
   m_TagString: Guard
@@ -11573,27 +10274,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 63.702, z: 0}
---- !u!114 &1393606392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1393606384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1398235179
 GameObject:
   m_ObjectHideFlags: 0
@@ -11609,7 +10289,6 @@ GameObject:
   - component: {fileID: 1398235182}
   - component: {fileID: 1398235181}
   - component: {fileID: 1398235180}
-  - component: {fileID: 1398235187}
   m_Layer: 0
   m_Name: Guard (46)
   m_TagString: Guard
@@ -11757,27 +10436,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 53
   m_LocalEulerAnglesHint: {x: 0, y: -234.031, z: 0}
---- !u!114 &1398235187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1398235179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1431696793
 GameObject:
   m_ObjectHideFlags: 0
@@ -11889,7 +10547,6 @@ GameObject:
   - component: {fileID: 1444582734}
   - component: {fileID: 1444582733}
   - component: {fileID: 1444582732}
-  - component: {fileID: 1444582739}
   m_Layer: 0
   m_Name: Guard (67)
   m_TagString: Guard
@@ -12037,27 +10694,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 76
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1444582739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1444582731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1459001617
 GameObject:
   m_ObjectHideFlags: 0
@@ -12073,7 +10709,6 @@ GameObject:
   - component: {fileID: 1459001620}
   - component: {fileID: 1459001619}
   - component: {fileID: 1459001618}
-  - component: {fileID: 1459001625}
   m_Layer: 0
   m_Name: Guard (31)
   m_TagString: Guard
@@ -12221,27 +10856,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
---- !u!114 &1459001625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459001617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1459339759
 GameObject:
   m_ObjectHideFlags: 0
@@ -12257,7 +10871,6 @@ GameObject:
   - component: {fileID: 1459339762}
   - component: {fileID: 1459339761}
   - component: {fileID: 1459339760}
-  - component: {fileID: 1459339767}
   m_Layer: 0
   m_Name: Guard (71)
   m_TagString: Guard
@@ -12405,27 +11018,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 72
   m_LocalEulerAnglesHint: {x: 0, y: 63.702, z: 0}
---- !u!114 &1459339767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459339759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1472664509
 GameObject:
   m_ObjectHideFlags: 0
@@ -12441,7 +11033,6 @@ GameObject:
   - component: {fileID: 1472664512}
   - component: {fileID: 1472664511}
   - component: {fileID: 1472664510}
-  - component: {fileID: 1472664517}
   m_Layer: 0
   m_Name: Guard (35)
   m_TagString: Guard
@@ -12589,27 +11180,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 63.702, z: 0}
---- !u!114 &1472664517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1472664509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1478452699
 GameObject:
   m_ObjectHideFlags: 0
@@ -12708,7 +11278,6 @@ GameObject:
   - component: {fileID: 1490411694}
   - component: {fileID: 1490411693}
   - component: {fileID: 1490411692}
-  - component: {fileID: 1490411699}
   m_Layer: 0
   m_Name: Guard (7)
   m_TagString: Guard
@@ -12856,27 +11425,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1490411699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1490411691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1506222187
 GameObject:
   m_ObjectHideFlags: 0
@@ -12892,7 +11440,6 @@ GameObject:
   - component: {fileID: 1506222190}
   - component: {fileID: 1506222189}
   - component: {fileID: 1506222188}
-  - component: {fileID: 1506222195}
   m_Layer: 0
   m_Name: Guard
   m_TagString: Guard
@@ -13040,27 +11587,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
---- !u!114 &1506222195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1506222187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1518878059
 GameObject:
   m_ObjectHideFlags: 0
@@ -13077,7 +11603,6 @@ GameObject:
   - component: {fileID: 1518878062}
   - component: {fileID: 1518878061}
   - component: {fileID: 1518878060}
-  - component: {fileID: 1518878068}
   m_Layer: 0
   m_Name: Rotating Camera (4)
   m_TagString: Untagged
@@ -13241,27 +11766,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 91
   m_LocalEulerAnglesHint: {x: 0, y: 189.702, z: 0}
---- !u!114 &1518878068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1518878059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1526462863
 GameObject:
   m_ObjectHideFlags: 0
@@ -13277,7 +11781,6 @@ GameObject:
   - component: {fileID: 1526462866}
   - component: {fileID: 1526462865}
   - component: {fileID: 1526462864}
-  - component: {fileID: 1526462871}
   m_Layer: 0
   m_Name: Guard (81)
   m_TagString: Guard
@@ -13425,27 +11928,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 86
   m_LocalEulerAnglesHint: {x: 0, y: 140.82, z: 0}
---- !u!114 &1526462871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1526462863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1550091660
 GameObject:
   m_ObjectHideFlags: 0
@@ -13461,7 +11943,6 @@ GameObject:
   - component: {fileID: 1550091663}
   - component: {fileID: 1550091662}
   - component: {fileID: 1550091661}
-  - component: {fileID: 1550091668}
   m_Layer: 0
   m_Name: Guard (53)
   m_TagString: Guard
@@ -13609,27 +12090,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 59
   m_LocalEulerAnglesHint: {x: 0, y: -33.884, z: 0}
---- !u!114 &1550091668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550091660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1551439397
 GameObject:
   m_ObjectHideFlags: 0
@@ -13740,7 +12200,6 @@ GameObject:
   - component: {fileID: 1602654559}
   - component: {fileID: 1602654558}
   - component: {fileID: 1602654557}
-  - component: {fileID: 1602654564}
   m_Layer: 0
   m_Name: Guard (2)
   m_TagString: Guard
@@ -13888,27 +12347,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1602654564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1602654556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1664093835
 GameObject:
   m_ObjectHideFlags: 0
@@ -13924,7 +12362,6 @@ GameObject:
   - component: {fileID: 1664093838}
   - component: {fileID: 1664093837}
   - component: {fileID: 1664093836}
-  - component: {fileID: 1664093843}
   m_Layer: 0
   m_Name: Guard (72)
   m_TagString: Guard
@@ -14072,27 +12509,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 79
   m_LocalEulerAnglesHint: {x: 0, y: -18.928, z: 0}
---- !u!114 &1664093843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1664093835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1676783977
 GameObject:
   m_ObjectHideFlags: 0
@@ -14108,7 +12524,6 @@ GameObject:
   - component: {fileID: 1676783980}
   - component: {fileID: 1676783979}
   - component: {fileID: 1676783978}
-  - component: {fileID: 1676783985}
   m_Layer: 0
   m_Name: Guard (30)
   m_TagString: Guard
@@ -14256,27 +12671,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
---- !u!114 &1676783985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1676783977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1740094626
 GameObject:
   m_ObjectHideFlags: 0
@@ -14293,7 +12687,6 @@ GameObject:
   - component: {fileID: 1740094629}
   - component: {fileID: 1740094628}
   - component: {fileID: 1740094627}
-  - component: {fileID: 1740094635}
   m_Layer: 0
   m_Name: Rotating Camera (1)
   m_TagString: Untagged
@@ -14457,27 +12850,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 88
   m_LocalEulerAnglesHint: {x: 0, y: 32.828, z: 0}
---- !u!114 &1740094635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1740094626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1827017711
 GameObject:
   m_ObjectHideFlags: 0
@@ -14493,7 +12865,6 @@ GameObject:
   - component: {fileID: 1827017714}
   - component: {fileID: 1827017713}
   - component: {fileID: 1827017712}
-  - component: {fileID: 1827017719}
   m_Layer: 0
   m_Name: Guard (36)
   m_TagString: Guard
@@ -14641,27 +13012,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: -74.283, z: 0}
---- !u!114 &1827017719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1827017711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1841814869
 GameObject:
   m_ObjectHideFlags: 0
@@ -14869,7 +13219,6 @@ GameObject:
   - component: {fileID: 1912711027}
   - component: {fileID: 1912711026}
   - component: {fileID: 1912711025}
-  - component: {fileID: 1912711032}
   m_Layer: 0
   m_Name: Guard (13)
   m_TagString: Guard
@@ -15017,27 +13366,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
---- !u!114 &1912711032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1912711024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1913631428
 GameObject:
   m_ObjectHideFlags: 0
@@ -15053,7 +13381,6 @@ GameObject:
   - component: {fileID: 1913631431}
   - component: {fileID: 1913631430}
   - component: {fileID: 1913631429}
-  - component: {fileID: 1913631436}
   m_Layer: 0
   m_Name: Guard (45)
   m_TagString: Guard
@@ -15201,27 +13528,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 54
   m_LocalEulerAnglesHint: {x: 0, y: -96.047, z: 0}
---- !u!114 &1913631436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1913631428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1929777839
 GameObject:
   m_ObjectHideFlags: 0
@@ -15237,7 +13543,6 @@ GameObject:
   - component: {fileID: 1929777842}
   - component: {fileID: 1929777841}
   - component: {fileID: 1929777840}
-  - component: {fileID: 1929777847}
   m_Layer: 0
   m_Name: Guard (20)
   m_TagString: Guard
@@ -15385,27 +13690,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1929777847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1929777839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1953588933
 GameObject:
   m_ObjectHideFlags: 0
@@ -15421,7 +13705,6 @@ GameObject:
   - component: {fileID: 1953588936}
   - component: {fileID: 1953588935}
   - component: {fileID: 1953588934}
-  - component: {fileID: 1953588941}
   m_Layer: 0
   m_Name: Guard (64)
   m_TagString: Guard
@@ -15569,27 +13852,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 69
   m_LocalEulerAnglesHint: {x: 0, y: 63.702, z: 0}
---- !u!114 &1953588941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953588933}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1954067567
 GameObject:
   m_ObjectHideFlags: 0
@@ -15606,7 +13868,6 @@ GameObject:
   - component: {fileID: 1954067570}
   - component: {fileID: 1954067569}
   - component: {fileID: 1954067568}
-  - component: {fileID: 1954067576}
   m_Layer: 0
   m_Name: Rotating Camera (6)
   m_TagString: Untagged
@@ -15770,27 +14031,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 93
   m_LocalEulerAnglesHint: {x: 0, y: 258.05798, z: 0}
---- !u!114 &1954067576
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1954067567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1960257373
 GameObject:
   m_ObjectHideFlags: 0
@@ -15806,7 +14046,6 @@ GameObject:
   - component: {fileID: 1960257376}
   - component: {fileID: 1960257375}
   - component: {fileID: 1960257374}
-  - component: {fileID: 1960257381}
   m_Layer: 0
   m_Name: Guard (17)
   m_TagString: Guard
@@ -15954,27 +14193,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1960257381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960257373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1975413468
 GameObject:
   m_ObjectHideFlags: 0
@@ -15990,7 +14208,6 @@ GameObject:
   - component: {fileID: 1975413471}
   - component: {fileID: 1975413470}
   - component: {fileID: 1975413469}
-  - component: {fileID: 1975413476}
   m_Layer: 0
   m_Name: Guard (33)
   m_TagString: Guard
@@ -16138,27 +14355,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1975413476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975413468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &2002931823
 GameObject:
   m_ObjectHideFlags: 0
@@ -16174,7 +14370,6 @@ GameObject:
   - component: {fileID: 2002931826}
   - component: {fileID: 2002931825}
   - component: {fileID: 2002931824}
-  - component: {fileID: 2002931831}
   m_Layer: 0
   m_Name: Guard (32)
   m_TagString: Guard
@@ -16322,27 +14517,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2002931831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2002931823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &2015247618
 GameObject:
   m_ObjectHideFlags: 0
@@ -16359,7 +14533,6 @@ GameObject:
   - component: {fileID: 2015247621}
   - component: {fileID: 2015247620}
   - component: {fileID: 2015247619}
-  - component: {fileID: 2015247627}
   m_Layer: 0
   m_Name: Rotating Camera (5)
   m_TagString: Untagged
@@ -16523,27 +14696,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 92
   m_LocalEulerAnglesHint: {x: 0, y: 162.912, z: 0}
---- !u!114 &2015247627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015247618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &2022742734
 GameObject:
   m_ObjectHideFlags: 0
@@ -16559,7 +14711,6 @@ GameObject:
   - component: {fileID: 2022742737}
   - component: {fileID: 2022742736}
   - component: {fileID: 2022742735}
-  - component: {fileID: 2022742742}
   m_Layer: 0
   m_Name: Guard (38)
   m_TagString: Guard
@@ -16707,27 +14858,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 63.702, z: 0}
---- !u!114 &2022742742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2022742734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &2038304355
 GameObject:
   m_ObjectHideFlags: 0
@@ -16743,7 +14873,6 @@ GameObject:
   - component: {fileID: 2038304358}
   - component: {fileID: 2038304357}
   - component: {fileID: 2038304356}
-  - component: {fileID: 2038304363}
   m_Layer: 0
   m_Name: Guard (6)
   m_TagString: Guard
@@ -16891,27 +15020,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
---- !u!114 &2038304363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2038304355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &2063257922
 GameObject:
   m_ObjectHideFlags: 0
@@ -16927,7 +15035,6 @@ GameObject:
   - component: {fileID: 2063257925}
   - component: {fileID: 2063257924}
   - component: {fileID: 2063257923}
-  - component: {fileID: 2063257930}
   m_Layer: 0
   m_Name: Guard (57)
   m_TagString: Guard
@@ -17075,27 +15182,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 62
   m_LocalEulerAnglesHint: {x: 0, y: -171.869, z: 0}
---- !u!114 &2063257930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2063257922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &2065933918
 GameObject:
   m_ObjectHideFlags: 0
@@ -17111,7 +15197,6 @@ GameObject:
   - component: {fileID: 2065933921}
   - component: {fileID: 2065933920}
   - component: {fileID: 2065933919}
-  - component: {fileID: 2065933926}
   m_Layer: 0
   m_Name: Guard (9)
   m_TagString: Guard
@@ -17259,27 +15344,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
---- !u!114 &2065933926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2065933918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &2071868191
 GameObject:
   m_ObjectHideFlags: 0
@@ -17391,7 +15455,6 @@ GameObject:
   - component: {fileID: 2072313827}
   - component: {fileID: 2072313826}
   - component: {fileID: 2072313825}
-  - component: {fileID: 2072313832}
   m_Layer: 0
   m_Name: Guard (55)
   m_TagString: Guard
@@ -17539,27 +15602,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 64
   m_LocalEulerAnglesHint: {x: 0, y: -33.884, z: 0}
---- !u!114 &2072313832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2072313824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &2093756276
 GameObject:
   m_ObjectHideFlags: 0
@@ -17575,7 +15617,6 @@ GameObject:
   - component: {fileID: 2093756279}
   - component: {fileID: 2093756278}
   - component: {fileID: 2093756277}
-  - component: {fileID: 2093756284}
   m_Layer: 0
   m_Name: Guard (42)
   m_TagString: Guard
@@ -17723,27 +15764,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: -96.047, z: 0}
---- !u!114 &2093756284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2093756276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &2130863224
 GameObject:
   m_ObjectHideFlags: 0
@@ -17759,7 +15779,6 @@ GameObject:
   - component: {fileID: 2130863227}
   - component: {fileID: 2130863226}
   - component: {fileID: 2130863225}
-  - component: {fileID: 2130863232}
   m_Layer: 0
   m_Name: Guard (24)
   m_TagString: Guard
@@ -17907,24 +15926,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
---- !u!114 &2130863232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130863224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee219fe95a89346a6b2aa65783d2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
-  playerHead: {fileID: 1551439401}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  gameOver: {fileID: 0}
-  targetDir: {x: 0, y: 0, z: 0}
