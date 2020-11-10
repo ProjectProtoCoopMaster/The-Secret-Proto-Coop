@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Net;
 using UnityEngine;
@@ -18,25 +19,52 @@ namespace Gameplay.VR.Player
         SteamVR_Action teleportAction;
         Transform cameraRigRoot;
 
+
+        // a reference to the action
+        public SteamVR_Action_Boolean teleport;
+        // a reference to the hand
+        public SteamVR_Input_Sources handType;
+
+        float time;
+        Vector3 change;
+        Vector3 startValue;
+        Vector3 targetValue;
+        float tweenDuration;
+
+        Vector3 movingPosition;
+
+
         private void Start()
         {
-            
+            teleport.AddOnStateDownListener(TriggerDown, handType);
+            teleport.AddOnStateUpListener(TriggerUp, handType);
         }
 
-        IEnumerator Dashing()
+        private void TriggerDown(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
         {
-            float elapsed = 0f;
-            Vector3 startPoint = cameraRigRoot.position;
 
-            while (elapsed > dashTime)
+        }
+
+        private void TriggerUp(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
+        {
+
+        }
+
+        //example function
+        IEnumerator MoveValue(Vector3 targetPos)
+        {
+            startValue = transform.position;
+            change = targetPos - startValue;
+
+            while (time <= tweenDuration)
             {
-                elapsed += Time.deltaTime;
-                float elapsedPct = elapsed / Time;
+                time += Time.deltaTime;
+                movingPosition.x = TweenManager.LinearTween(time, startValue.x, change.x, tweenDuration);
+                movingPosition.x = TweenManager.LinearTween(time, startValue.z, change.z, tweenDuration);
 
-                cameraRigRoot.position = Vector3.Lerp(startPoint, )
-
+                transform.position = movingPosition;
+                yield return null;
             }
         }
-
     }
 }

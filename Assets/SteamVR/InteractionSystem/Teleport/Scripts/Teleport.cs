@@ -894,7 +894,8 @@ namespace Valve.VR.InteractionSystem
 			if ( teleportingToMarker.ShouldMovePlayer() )
 			{
 				Vector3 playerFeetOffset = player.trackingOriginTransform.position - player.feetPositionGuess;
-				player.trackingOriginTransform.position = teleportPosition + playerFeetOffset;
+				StartCoroutine(TeleportThePlayer(teleportPosition + playerFeetOffset));
+				//player.trackingOriginTransform.position = teleportPosition + playerFeetOffset; ///// THIS IS WHERE YOU TP THE PLAYER ? 
 
                 if (player.leftHand.currentAttachedObjectInfo.HasValue)
                     player.leftHand.ResetAttachedTransform(player.leftHand.currentAttachedObjectInfo.Value);
@@ -909,6 +910,34 @@ namespace Valve.VR.InteractionSystem
 			Teleport.Player.Send( pointedAtTeleportMarker );
 		}
 
+		float time;
+		Vector3 change;
+		Vector3 startValue;
+		Vector3 targetValue;
+		float tweenDuration = 2f;
+
+		Vector3 movingPosition;
+
+		IEnumerator TeleportThePlayer(Vector3 targetPos)
+        {
+
+			startValue = transform.position;
+			change = targetPos - startValue;
+
+			while (time <= tweenDuration)
+			{
+				time += Time.deltaTime;
+				movingPosition.x = LinearTween(time, startValue.x, change.x, tweenDuration);
+				movingPosition.x = LinearTween(time, startValue.z, change.z, tweenDuration);
+
+				transform.position = movingPosition;
+				yield return null;
+			}
+		}
+		public float LinearTween(float time, float beginning, float change, float duration)
+		{
+			return time * change / duration + beginning;
+		}
 
 		//-------------------------------------------------
 		private void HighlightSelected( TeleportMarkerBase hitTeleportMarker )
