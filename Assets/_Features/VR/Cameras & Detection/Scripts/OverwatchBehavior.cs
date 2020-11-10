@@ -45,6 +45,15 @@ namespace Gameplay.VR
             StartCoroutine(PingForGuards());
         }
 
+        public void GE_OverwatchSwitch()
+        {
+            isActive = !isActive;
+            ready = false;
+
+            if (isActive) StartCoroutine(DoWork());
+            else StopAllCoroutines();
+        }
+
         IEnumerator PingForGuards()
         {
             visibleGuards.Clear();

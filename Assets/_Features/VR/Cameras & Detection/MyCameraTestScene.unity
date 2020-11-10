@@ -1273,6 +1273,7 @@ GameObject:
   - component: {fileID: 687471291}
   - component: {fileID: 188421239}
   - component: {fileID: 188421238}
+  - component: {fileID: 188421240}
   m_Layer: 0
   m_Name: Rotating Camera
   m_TagString: Untagged
@@ -1400,7 +1401,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188421232}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53529aae8a8e8e444ab5f37ddbd4fc75, type: 3}
   m_Name: 
@@ -1415,6 +1416,60 @@ MonoBehaviour:
   gameOver: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
   visibleGuards: []
+--- !u!114 &188421240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188421232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0495881fcb2a8c458606d5a16ec5fe7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Function: {fileID: 0}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 188421237}
+        m_TargetAssemblyTypeName: Gameplay.VR.RotationBehavior, Assembly-CSharp
+        m_MethodName: GE_RotationSwitch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 687471291}
+        m_TargetAssemblyTypeName: Gameplay.VR.DetectionBehavior, Assembly-CSharp
+        m_MethodName: GE_DetectionSwitch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 188421239}
+        m_TargetAssemblyTypeName: Gameplay.VR.OverwatchBehavior, Assembly-CSharp
+        m_MethodName: GE_OverwatchSwitch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  methodName: 
+  component: {fileID: 0}
 --- !u!1 &209453704
 GameObject:
   m_ObjectHideFlags: 0
@@ -4451,7 +4506,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188421232}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3f26db10a9f33444b97710c03677104, type: 3}
   m_Name: 

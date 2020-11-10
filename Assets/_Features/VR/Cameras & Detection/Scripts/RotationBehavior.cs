@@ -25,6 +25,14 @@ namespace Gameplay.VR
             StartCoroutine(Rotate());
         }
 
+        public void GE_RotationSwitch()
+        {
+            isRotating = !isRotating;
+
+            if (isRotating) StartCoroutine(Rotate());
+            else StopAllCoroutines();
+        }
+
         private IEnumerator Rotate()
         {
             // reset the clock

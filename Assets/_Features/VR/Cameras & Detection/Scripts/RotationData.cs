@@ -13,5 +13,7 @@ namespace Gameplay.VR
         protected float rotationIncrement;
         protected float timePassed;
         protected WaitForSeconds waitTime;
+
+        protected bool isRotating;
     }
 }

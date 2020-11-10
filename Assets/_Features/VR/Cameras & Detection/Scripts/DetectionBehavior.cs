@@ -17,6 +17,14 @@ namespace Gameplay.VR
             StartCoroutine(PlayerInRangeCheck());
         }
 
+        public void GE_DetectionSwitch()
+        {
+            isActive = !isActive;
+
+            if (isActive) StartCoroutine(PlayerInRangeCheck());
+            else StopAllCoroutines();
+        }
+
         // check if the player is in range 
         IEnumerator PlayerInRangeCheck()
         {
