@@ -167,6 +167,14 @@ namespace Valve.VR.InteractionSystem
 			float invalidReticleStartingScale = invalidReticleTransform.localScale.x;
 			invalidReticleMinScale *= invalidReticleStartingScale;
 			invalidReticleMaxScale *= invalidReticleStartingScale;
+
+
+
+			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// CUSTOM ADDED 
+			main = particleDash.main;
+			main.duration = tweenDuration;
+
+
 		}
 
 
@@ -912,11 +920,16 @@ namespace Valve.VR.InteractionSystem
 
 		float time;
 		Vector3 change;
-		float tweenDuration = .25f;
 		Vector3 movingPosition;
+		[Header("CUSTOM VALUES")]
+		public float tweenDuration = .25f;
+		public ParticleSystem particleDash;
+		ParticleSystem.MainModule main; // assigned in awake
 
 		IEnumerator TeleportThePlayer(Vector3 startPos, Vector3 targetPos)
-        {
+		{			
+			particleDash.Play();
+
 			time = 0;
 			change = targetPos - startPos;
 
@@ -929,6 +942,7 @@ namespace Valve.VR.InteractionSystem
 				player.trackingOriginTransform.position = movingPosition;
 				yield return null;
 			}
+			particleDash.Stop();
 		}
 
 		public float LinearTween(float time, float beginning, float change, float duration)
