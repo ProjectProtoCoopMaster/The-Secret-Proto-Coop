@@ -21,6 +21,7 @@ namespace Gameplay.VR.Player
 
         private void TriggerRelease(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
         {
+            projectile = FindObjectOfType<ProjectileBehavior>();
             projectile.transform.position = gunBarrel.position;
             projectile.transform.rotation = gunBarrel.rotation;
             projectile.Shoot();

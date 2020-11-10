@@ -6,6 +6,13 @@ namespace Gameplay.VR.Player
 {
     public class ProjectileBehavior : BallistixData
     {
+        Rigidbody rigidbody;
+
+        private void Awake()
+        {
+            rigidbody = GetComponent<Rigidbody>();
+        }
+
         public void Shoot()
         {
             StartCoroutine(Move());
@@ -13,15 +20,19 @@ namespace Gameplay.VR.Player
 
         IEnumerator Move()
         {
-            while(decay < lifetime)
+            decay = 0;
+            rigidbody.velocity = Vector3.zero;
+
+            while (decay < lifetime)
             {
                 decay += Time.deltaTime;
-                transform.forward += new Vector3(0, 0, 1) * bulletSpeed * Time.deltaTime;
+
+                rigidbody.AddForce(transform.forward * bulletSpeed, ForceMode.Impulse);
+
                 yield return null;
             }
 
-            decay = 0;
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
             yield return null;
         }
     }
