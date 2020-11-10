@@ -7,7 +7,7 @@ namespace Tools.Debugging
     [ExecuteAlways]
     [CanEditMultipleObjects]
     [CustomEditor(typeof(EntityVisionDataInterface))]
-    public class EntityVisionGeneratorInspector : Editor
+    public class EntityVisionDataInspector : Editor
     {
         bool existingData, localData;
         SerializedProperty entityVisionScriptableProperty, rangeOfVision, coneOfVision, playerTransform;
@@ -35,10 +35,10 @@ namespace Tools.Debugging
             if (playerTransform.objectReferenceValue == null)
                 playerTransform.objectReferenceValue = GameObject.Find("Player");
 
-            /*if(playerTransform.objectReferenceValue != null) detectionBehavior.playerHead = overwatchBehavior.playerHead = playerTransform.objectReferenceValue as Transform;*/
+            if (playerTransform.objectReferenceValue != null)
+                detectionBehavior.playerHead = overwatchBehavior.playerHead  = playerTransform.objectReferenceValue as Transform;
 
             EditorGUILayout.PropertyField(playerTransform);
-
 
             if (entityVisionScriptableProperty.objectReferenceValue != null || existingData) DrawScriptableObjProperty();
             else if (rangeOfVision.floatValue != 0 || coneOfVision.floatValue != 0 || localData) DrawLocalProperties();

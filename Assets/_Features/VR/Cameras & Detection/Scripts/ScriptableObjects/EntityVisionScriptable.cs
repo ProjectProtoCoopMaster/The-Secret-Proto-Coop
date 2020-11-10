@@ -8,4 +8,5 @@ public class EntityVisionScriptable : ScriptableObject
 {
     public float rangeOfVision;
     public float coneOfVision;
+    //public Transform playerHead;
 }

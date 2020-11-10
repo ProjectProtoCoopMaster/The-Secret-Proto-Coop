@@ -9,12 +9,6 @@ namespace Gameplay.VR
 {
     public class OverwatchBehavior : EntityVisionDataInterface
     {
-        private bool ready;
-        Vector2 myPos, targetPos;
-        Vector3 myFinalPos;
-
-        float distance;
-
 #if UNITY_EDITOR
         public List<GameObject> visibleGuards = new List<GameObject>();
 #endif
@@ -28,29 +22,14 @@ namespace Gameplay.VR
 
         private void Start()
         {
-            StartCoroutine(DoWork());
-        }
-
-        IEnumerator DoWork()
-        {
-            ThreadPool.QueueUserWorkItem(StartRunning);
-
-            while (!ready) yield return null;
-            StartCoroutine(PingForGuards());
-        }
-
-        private void StartRunning(object state)
-        {
-            ready = !ready;
             StartCoroutine(PingForGuards());
         }
 
         public void GE_OverwatchSwitch()
         {
             isActive = !isActive;
-            ready = false;
 
-            if (isActive) StartCoroutine(DoWork());
+            if (isActive) StartCoroutine(PingForGuards());
             else StopAllCoroutines();
         }
 
@@ -69,10 +48,10 @@ namespace Gameplay.VR
                 myFinalPos.y = guards[i].transform.position.y;
                 myFinalPos.z = transform.position.z;
 
-                distance = (targetPos - myPos).sqrMagnitude;
+                distToTarget = (targetPos - myPos).sqrMagnitude;
 
                 // if the target guard is within the vision range
-                if (distance < rangeOfVision)
+                if (distToTarget < rangeOfVision)
                 {
                     // get the direction of the player's head...
                     targetDir = guards[i].transform.position - myFinalPos;
@@ -84,8 +63,7 @@ namespace Gameplay.VR
             }
 
             yield return null;
-            ready = !ready;
-            StartCoroutine(DoWork());
+            StartCoroutine(PingForGuards());
         }
 
         void CheckGuardState(GameObject guard)

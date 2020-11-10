@@ -6,11 +6,6 @@ namespace Gameplay.VR
 {
     public class DetectionBehavior : EntityVisionDataInterface
     {
-        Vector2 myPos, targetPos;
-        Vector3 myFinalPos;
-
-        float distToTarget;
-
         private void Start()
         {
             // have two seperate methods to 
@@ -64,7 +59,6 @@ namespace Gameplay.VR
             {
                 // call the gameOver event for a quick death
                 gameOver.Raise();
-
                 // TODO : Implement a progressive spotting mechanic, based on distance
             }
         }

@@ -25,6 +25,22 @@ namespace Gameplay.VR
         protected List<GameObject> guards = new List<GameObject>(); // list of guards in the scene
         protected List<Vector3> deadGuards = new List<Vector3>(); // list of guards in the scene
 
+        protected Vector2 myPos, targetPos;
+        protected Vector3 myFinalPos;
+        protected float distToTarget;
         protected bool isActive;
+
+        private void Awake()
+        {
+            /*
+            if (playerHead == null)
+            {
+                Debug.Log("Set Player Reference");
+                Transform playerTransform = GameObject.Find("Player").transform;
+                gameObject.GetComponent<DetectionBehavior>().playerHead = playerTransform;
+                gameObject.GetComponent<OverwatchBehavior>().playerHead = playerTransform;
+            }*/
+
+        }
     }
 }
