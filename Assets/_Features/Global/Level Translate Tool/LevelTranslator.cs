@@ -26,7 +26,7 @@ namespace Tools.LevelDesign
                 Vector3 position = elements.list[i].position;
                 
                 Image newImage = Instantiate(prefab, parent.transform) as Image;
-                newImage.rectTransform.anchoredPosition = position - new Vector3(newImage.rectTransform.sizeDelta.x * .5f, newImage.rectTransform.sizeDelta.y * .5f);
+                newImage.rectTransform.anchoredPosition = position /*- new Vector3(newImage.rectTransform.sizeDelta.x * .5f, newImage.rectTransform.sizeDelta.y * .5f)*/;
                 
             }
 
