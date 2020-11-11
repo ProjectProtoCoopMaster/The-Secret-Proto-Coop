@@ -6,6 +6,8 @@ using UnityEditor;
 
 using UnityEngine;
 using Gameplay.Mobile;
+using UnityEngine.PlayerLoop;
+using UnityEditor;
 
 namespace Tools.LevelDesign
 {
@@ -32,7 +34,6 @@ namespace Tools.LevelDesign
         public string lastAction;
         public string currentAction;
         public string[] inputActions;
-        
         
 
         public void CreateSwitcher()

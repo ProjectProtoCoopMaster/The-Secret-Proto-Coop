@@ -22,6 +22,8 @@ namespace Gameplay.Mobile
             }
         }
 
+        private void Start() => Power = power;
+
         public void TurnOff() { GetComponent<Image>().color = Color.black; }
         public void TurnOn() { GetComponent<Image>().color = Color.white; }
     }

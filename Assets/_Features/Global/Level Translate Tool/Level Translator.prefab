@@ -44,8 +44,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
+  switchablesParent: {fileID: 6392877473346512957, guid: 470970daa2bd3ce42a57adc299e9f8d5, type: 3}
   cam: {fileID: 0}
-  prefab: {fileID: 889995443554590654, guid: dd1e11bb8cc3dd24ca7099ca11eaac4b, type: 3}
-  json: {fileID: 4900000, guid: d6e0c0531f016964b8ded7430b8e3774, type: 3}
+  prefabsVR:
+  - {fileID: 591396147552927884, guid: df1251393bd29cd4c9fc32bb93fab1fa, type: 3}
+  - {fileID: 6447603160729144450, guid: 617f42d2ab7ead94d8f6c713d33555db, type: 3}
+  prefabsMobile:
+  - {fileID: 3529710568262980421, guid: a556368ec54ce75438bfa888159612e3, type: 3}
+  - {fileID: 6224717817596567922, guid: 96bba10d87f035147be05b26c59cf045, type: 3}
+  json: {fileID: 4900000, guid: 42c748044cbd516498a7d3d7c6b0ac95, type: 3}
   elements:
-    list: []
+    list:
+    - prefab: {fileID: 591396147552927884, guid: df1251393bd29cd4c9fc32bb93fab1fa, type: 3}
+      position: {x: 829.0983, y: 227.4591, z: 17.059998}
+    - prefab: {fileID: 6447603160729144450, guid: 617f42d2ab7ead94d8f6c713d33555db, type: 3}
+      position: {x: 189.75401, y: 227.4591, z: 17.059998}
+    - prefab: {fileID: 591396147552927884, guid: df1251393bd29cd4c9fc32bb93fab1fa, type: 3}
+      position: {x: 189.75401, y: 817.6231, z: 17.059996}
+    - prefab: {fileID: 591396147552927884, guid: df1251393bd29cd4c9fc32bb93fab1fa, type: 3}
+      position: {x: 1173.3606, y: 661.8854, z: 17.059998}

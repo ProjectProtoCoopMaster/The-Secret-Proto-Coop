@@ -10,12 +10,15 @@ namespace Tools.LevelDesign
 {
     public class LevelTranslator : MonoBehaviour
     {
-        [SerializeField] Canvas canvas;
-        [SerializeField] RectTransform switchablesParent;
-        [SerializeField] Camera cam;
-        [SerializeField] Image prefab;
+        [SerializeField] private Canvas canvas;
+        [SerializeField] private RectTransform switchablesParent;
+        [SerializeField] private Camera cam;
+        [SerializeField] private List<GameObject> prefabsVR;
+        [SerializeField] private List<Image> prefabsMobile;
         public TextAsset json;
-        [SerializeField] LevelSaver.ListOfISwitchableElement elements;
+        [HideInInspector]
+        [SerializeField] private LevelSaver.ListOfISwitchableElement elements;
+        private Image newImage;
 
         public void TranslateLevelPosition()
         {
@@ -24,9 +27,17 @@ namespace Tools.LevelDesign
             for (int i = 0; i < elements.list.Count; i++)
             {
                 Vector3 position = elements.list[i].position;
+
+                for (int j = 0; j < prefabsVR.Count; j++)
+                {
+                    if (elements.list[i].prefab.GetInstanceID() == prefabsVR[j].GetInstanceID()) 
+                    {
+                        newImage = Instantiate(prefabsMobile[j], parent.transform) as Image;
+                        
+                    }
+                }
                 
-                Image newImage = Instantiate(prefab, parent.transform) as Image;
-                newImage.rectTransform.anchoredPosition = position /*- new Vector3(newImage.rectTransform.sizeDelta.x * .5f, newImage.rectTransform.sizeDelta.y * .5f)*/;
+                newImage.rectTransform.anchoredPosition = position;
                 
             }
 
