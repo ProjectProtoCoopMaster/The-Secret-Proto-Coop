@@ -11,6 +11,7 @@ namespace Tools.LevelDesign
         
         private Camera cam;
         public string pictureName;
+        public string folderName;
 
         public void TakePicture()
         {
@@ -29,7 +30,14 @@ namespace Tools.LevelDesign
 
             var Bytes = tex2D.EncodeToPNG();
             DestroyImmediate(tex2D);
-            File.WriteAllBytes(Application.dataPath + "/_Features/Global/Level Translate Tool/Pictures/"+pictureName + ".png", Bytes);
+            string path = "Assets/_Features/Global/Level Saver/Levels/" + folderName + "/";
+
+
+            if (!File.Exists("Assets/_Features/Global/Level Saver/Levels/" + folderName + "/"))
+            {
+                Directory.CreateDirectory("Assets/_Features/Global/Level Saver/Levels/" + folderName + "/");
+            }
+            File.WriteAllBytes(path+pictureName+".png", Bytes);
             AssetDatabase.Refresh();
         }
 

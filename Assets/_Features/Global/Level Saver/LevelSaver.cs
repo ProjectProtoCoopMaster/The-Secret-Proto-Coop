@@ -26,10 +26,12 @@ namespace Tools.LevelDesign
             }
 
             
-            path = "Assets/_Features/Global/Level Saver/Levels/"+ levelName+".json";
+            path = "Assets/_Features/Global/Level Saver/Levels/"+ levelName+"/"+levelName+".json";
             if (!File.Exists(path)) 
             {
+                Directory.CreateDirectory("Assets/_Features/Global/Level Saver/Levels/" + levelName + "/");
                 File.Create(path).Dispose();
+
             }
                 
             JsonString = File.ReadAllText(path);
