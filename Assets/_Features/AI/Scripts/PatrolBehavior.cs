@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PatrolBehavior : MonoBehaviour
+public class PatrolBehavior : MoveBehavior
 {
     public PatrolPath path;
 
@@ -13,23 +13,15 @@ public class PatrolBehavior : MonoBehaviour
     private Action currentAction;
     private int _act;
 
-    public PathfindingBehavior pathfindingBehavior;
+    public WatchBehavior watching;
 
     private float currentWaitTime;
 
-    private bool isMoving;
-    private bool isWaiting;
-    private bool isWatching;
+    public bool isMoving { get; set; }
+    public bool isWaiting { get; set; }
+    public bool isWatching { get; set; }
 
-    public static bool SafeCheck<T>(T element, string message)
-    {
-        if (element == null)
-        {
-            Debug.Log(message);
-            return false;
-        }
-        else return true;
-    }
+    private LastAction lastAction;
 
     void Start()
     {
@@ -51,12 +43,8 @@ public class PatrolBehavior : MonoBehaviour
     {
         currentWaypoint = path.waypoints[index];
 
-        SetDestination();
-    }
+        SetMove(currentWaypoint.position, true);
 
-    public void SetDestination()
-    {
-        pathfindingBehavior.destination = currentWaypoint.position;
         isMoving = true;
     }
 
@@ -66,7 +54,6 @@ public class PatrolBehavior : MonoBehaviour
         {
             NextWaypoint();
         }
-
         else
         {
             currentAction = currentWaypoint.actions[index];
@@ -80,7 +67,15 @@ public class PatrolBehavior : MonoBehaviour
             {
                 isWatching = true;
 
-                // Code to setup Rotation / Watching
+                if (currentAction.watchDirections == null) return;
+                else
+                {
+                    WatchBehavior w = watching;
+                    w.directions = currentAction.watchDirections;
+                    w._pos = 0;
+                    w.SetDirection(w._pos);
+                    w.watch = true;
+                }
             }
         }
     }
@@ -91,24 +86,19 @@ public class PatrolBehavior : MonoBehaviour
 
         else if (isWaiting) Wait();
 
-        else if (isWatching) Watch();
+        else if (isWatching) CheckWatch();
     }
 
     private void CheckPosition()
     {
-        if (ComparePositions(transform.position, currentWaypoint.position))
+        if (IsInArea(transform.position, currentWaypoint.position, path.pointArea))
         {
+            SetMove(transform.position, false);
+
             isMoving = false;
             _act = 0;
             SetAction(_act);
         }
-    }
-
-    public bool ComparePositions(Vector3 objectPos, Vector3 destPos)
-    {
-        if (objectPos.x == destPos.x && objectPos.z == destPos.z) return true;
-
-        else return false;
     }
 
     private void Wait()
@@ -118,45 +108,64 @@ public class PatrolBehavior : MonoBehaviour
             isWaiting = false;
             NextAction();
         }
-        else
-        {
-            currentWaitTime -= Time.deltaTime;
-        }
+        else currentWaitTime -= Time.deltaTime;
     }
 
-    private void Watch()
+    private void CheckWatch()
     {
-        // Code to execute rotation / Watching
-
-        isWatching = false;
-        NextAction();
+        if (!watching.watch)
+        {
+            isWatching = false;
+            NextAction();
+        }
     }
 
     private void NextAction()
     {
         _act++;
 
-        if (currentWaypoint.actions.Count == _act)
-        {
-            NextWaypoint();
-        }
-        else
-        {
-            SetAction(_act);
-        }
+        if (currentWaypoint.actions.Count == _act) NextWaypoint();
+
+        else SetAction(_act);
     }
 
     private void NextWaypoint()
     {
         _way++;
 
-        if (path.waypoints.Count == _way)
+        if (path.waypoints.Count == _way && loopPath) StartPatrol();
+
+        else SetWaypoint(_way);
+    }
+
+    public void StopPatrol()
+    {
+        lastAction = isMoving ? LastAction.Move : isWatching ? LastAction.Watch : isWaiting ? LastAction.Wait : LastAction.None;
+
+        isWaiting = false;
+
+        SetMove(currentWaypoint.position, false);
+        isMoving = false;
+
+        isWatching = false;
+        watching.watch = false;
+    }
+
+    public void ResumePatrol()
+    {
+        switch (lastAction)
         {
-            if (loopPath) StartPatrol();
-        }
-        else
-        {
-            SetWaypoint(_way);
+            case LastAction.Move:
+                SetMove(currentWaypoint.position, true);
+                isMoving = true;
+                break;
+            case LastAction.Wait:
+                isWaiting = true;
+                break;
+            case LastAction.Watch:
+                watching.watch = true;
+                isWatching = true;
+                break;
         }
     }
 }

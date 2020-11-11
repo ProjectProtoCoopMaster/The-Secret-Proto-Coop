@@ -14,7 +14,7 @@ public class Action
     public float timeToWait;
 
     [ShowIf("type", ActionType.Watching)]
-    public Vector3 lookToPosition;
+    public List<Vector3> watchDirections;
 }
 
 public class Waypoint : MonoBehaviour

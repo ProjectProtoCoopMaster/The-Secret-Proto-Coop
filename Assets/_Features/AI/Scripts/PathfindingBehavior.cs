@@ -10,18 +10,29 @@ public class PathfindingBehavior : MonoBehaviour
     
     public Vector3 destination { get; set; }
 
+    public bool move { get; set; }
+
+    public float angular;
+
     private void Start()
     {
-        destination = this.transform.position;
+        destination = transform.position;
     }
 
     void Update()
     {
-        SetNavDestination(destination);
+        if (move) SetNavDestination(destination);
     }
 
     public void SetNavDestination(Vector3 dest)
     {
         navMeshAgent.SetDestination(dest);
+    }
+
+    public void SetNavAgent(bool locked)
+    {
+        if (locked) navMeshAgent.angularSpeed = 0.0f;
+
+        else navMeshAgent.angularSpeed = angular;
     }
 }
