@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 5960268178023418780}
   m_Layer: 0
   m_Name: Static Camera
-  m_TagString: Untagged
+  m_TagString: Camera/Static Camera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -214,6 +214,8 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &7403117790416530890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,6 +235,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &5960268178023418780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,3 +257,5 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}

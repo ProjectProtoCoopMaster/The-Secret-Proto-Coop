@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 90
   coneOfVision: 90
   playerHead: {fileID: 1559033067}
   layerMask:
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 90
   coneOfVision: 90
   playerHead: {fileID: 1559033067}
   layerMask:
@@ -196,13 +196,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 90870442}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3f26db10a9f33444b97710c03677104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 90
   coneOfVision: 90
   playerHead: {fileID: 1559033067}
   layerMask:
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 11400000, guid: f52ae61ece9ba174ba70d6e39eac350d, type: 2}
-  rangeOfVision: 10
+  rangeOfVision: 90
   coneOfVision: 90
   playerHead: {fileID: 1559033067}
   layerMask:
@@ -352,15 +352,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212590541}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53529aae8a8e8e444ab5f37ddbd4fc75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
-  playerHead: {fileID: 0}
+  playerHead: {fileID: 1559033067}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
@@ -374,15 +374,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212590541}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3f26db10a9f33444b97710c03677104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
-  playerHead: {fileID: 0}
+  playerHead: {fileID: 1559033067}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
@@ -582,7 +582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 11400000, guid: f52ae61ece9ba174ba70d6e39eac350d, type: 2}
-  rangeOfVision: 10
+  rangeOfVision: 90
   coneOfVision: 90
   playerHead: {fileID: 1559033067}
   layerMask:
@@ -597,7 +597,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 289588660}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53529aae8a8e8e444ab5f37ddbd4fc75, type: 3}
   m_Name: 
@@ -619,7 +619,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 289588660}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3f26db10a9f33444b97710c03677104, type: 3}
   m_Name: 
@@ -744,7 +744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 90
   coneOfVision: 90
   playerHead: {fileID: 1559033067}
   layerMask:
@@ -759,7 +759,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314759211}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53529aae8a8e8e444ab5f37ddbd4fc75, type: 3}
   m_Name: 
@@ -781,7 +781,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314759211}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3f26db10a9f33444b97710c03677104, type: 3}
   m_Name: 
@@ -906,7 +906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 11400000, guid: f52ae61ece9ba174ba70d6e39eac350d, type: 2}
-  rangeOfVision: 10
+  rangeOfVision: 90
   coneOfVision: 90
   playerHead: {fileID: 1559033067}
   layerMask:
@@ -921,15 +921,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392819414}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53529aae8a8e8e444ab5f37ddbd4fc75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
-  playerHead: {fileID: 0}
+  playerHead: {fileID: 1559033067}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
@@ -943,15 +943,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392819414}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3f26db10a9f33444b97710c03677104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
-  playerHead: {fileID: 0}
+  playerHead: {fileID: 1559033067}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
@@ -1068,7 +1068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 11400000, guid: f52ae61ece9ba174ba70d6e39eac350d, type: 2}
-  rangeOfVision: 10
+  rangeOfVision: 90
   coneOfVision: 90
   playerHead: {fileID: 1559033067}
   layerMask:
@@ -1083,15 +1083,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558736163}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53529aae8a8e8e444ab5f37ddbd4fc75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
-  playerHead: {fileID: 0}
+  playerHead: {fileID: 1559033067}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
@@ -1105,15 +1105,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558736163}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3f26db10a9f33444b97710c03677104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
-  playerHead: {fileID: 0}
+  playerHead: {fileID: 1559033067}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
@@ -1230,7 +1230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 90
   coneOfVision: 90
   playerHead: {fileID: 1559033067}
   layerMask:
@@ -1245,7 +1245,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 694724669}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53529aae8a8e8e444ab5f37ddbd4fc75, type: 3}
   m_Name: 
@@ -1267,7 +1267,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 694724669}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3f26db10a9f33444b97710c03677104, type: 3}
   m_Name: 
@@ -1484,7 +1484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 11400000, guid: f52ae61ece9ba174ba70d6e39eac350d, type: 2}
-  rangeOfVision: 10
+  rangeOfVision: 90
   coneOfVision: 90
   playerHead: {fileID: 1559033067}
   layerMask:
@@ -1499,7 +1499,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1291256593}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53529aae8a8e8e444ab5f37ddbd4fc75, type: 3}
   m_Name: 
@@ -1521,7 +1521,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1291256593}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3f26db10a9f33444b97710c03677104, type: 3}
   m_Name: 
@@ -1837,7 +1837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 90
   coneOfVision: 90
   playerHead: {fileID: 1559033067}
   layerMask:
@@ -1852,7 +1852,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1766794973}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53529aae8a8e8e444ab5f37ddbd4fc75, type: 3}
   m_Name: 
@@ -1874,7 +1874,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1766794973}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3f26db10a9f33444b97710c03677104, type: 3}
   m_Name: 
@@ -1999,7 +1999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 11400000, guid: f52ae61ece9ba174ba70d6e39eac350d, type: 2}
-  rangeOfVision: 10
+  rangeOfVision: 90
   coneOfVision: 90
   playerHead: {fileID: 1559033067}
   layerMask:
@@ -2014,7 +2014,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139575243}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53529aae8a8e8e444ab5f37ddbd4fc75, type: 3}
   m_Name: 
@@ -2036,7 +2036,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139575243}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3f26db10a9f33444b97710c03677104, type: 3}
   m_Name: 

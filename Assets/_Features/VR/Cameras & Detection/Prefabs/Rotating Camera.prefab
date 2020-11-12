@@ -208,8 +208,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96efc348615a2a747a2b633ae3c2af37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationAngle: 90
-  rotationDuration: 0
+  rotationAngle: 30
+  rotationDuration: 2
   holdTime: 0.5
 --- !u!114 &-5080753237786526469
 MonoBehaviour:
@@ -224,12 +224,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
+  rangeOfVision: 90
+  coneOfVision: 90
   playerHead: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &7403117790416530890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,12 +245,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
+  rangeOfVision: 90
+  coneOfVision: 90
   playerHead: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &5960268178023418780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,9 +267,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
+  rangeOfVision: 90
+  coneOfVision: 90
   playerHead: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}

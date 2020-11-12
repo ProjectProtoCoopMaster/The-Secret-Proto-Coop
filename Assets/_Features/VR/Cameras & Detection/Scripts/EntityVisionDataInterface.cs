@@ -32,15 +32,11 @@ namespace Gameplay.VR
 
         private void Awake()
         {
-            /*
             if (playerHead == null)
             {
                 Debug.Log("Set Player Reference");
-                Transform playerTransform = GameObject.Find("Player").transform;
-                gameObject.GetComponent<DetectionBehavior>().playerHead = playerTransform;
-                gameObject.GetComponent<OverwatchBehavior>().playerHead = playerTransform;
-            }*/
-
+                playerHead = GameObject.Find("Player").transform;
+            }
         }
     }
 }

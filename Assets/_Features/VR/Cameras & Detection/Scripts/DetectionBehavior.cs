@@ -35,7 +35,9 @@ namespace Gameplay.VR
                 myFinalPos.y = playerHead.transform.position.y;
                 myFinalPos.z = transform.position.z;
 
-                distToTarget = (targetPos - myPos).sqrMagnitude;
+                distToTarget = targetPos.sqrMagnitude - myPos.sqrMagnitude;
+//                Debug.DrawLine(transform.position, playerHead.position, Color.white);
+
                 // if the player is within the vision range
                 if (distToTarget < rangeOfVision)
                 {
@@ -52,13 +54,15 @@ namespace Gameplay.VR
         // if the player is in range and in the cone of vision, check if you have line of sight to his head collider
         void PlayerInSightCheck()
         {
+            Debug.Log("Yeah, she's gone");
+
             Debug.DrawLine(transform.position, playerHead.position, Color.green);
 
             // if you hit something between the camera and the player's head position on the player layer
             if (Physics.Linecast(this.transform.position, playerHead.position, out hitInfo, layerMask))
             {
                 // call the gameOver event for a quick death
-                gameOver.Raise();
+                //gameOver.Raise();
                 // TODO : Implement a progressive spotting mechanic, based on distance
             }
         }
