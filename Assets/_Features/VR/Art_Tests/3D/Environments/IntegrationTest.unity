@@ -387,7 +387,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &822123101
 Transform:
   m_ObjectHideFlags: 0
@@ -417,6 +417,10 @@ PrefabInstance:
     - target: {fileID: 5594484670664326339, guid: 1c07cf6dd9a272e4e9a5b235befe5940, type: 3}
       propertyPath: m_Name
       value: Rotating Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594484670664326342, guid: 1c07cf6dd9a272e4e9a5b235befe5940, type: 3}
+      propertyPath: rotationAngle
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 5594484670664326343, guid: 1c07cf6dd9a272e4e9a5b235befe5940, type: 3}
       propertyPath: m_LocalPosition.x
@@ -466,6 +470,10 @@ PrefabInstance:
       propertyPath: playerHead
       value: 
       objectReference: {fileID: 1955904552}
+    - target: {fileID: 5960268178023418780, guid: 1c07cf6dd9a272e4e9a5b235befe5940, type: 3}
+      propertyPath: coneOfVision
+      value: 180
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c07cf6dd9a272e4e9a5b235befe5940, type: 3}
 --- !u!1001 &1914223581
@@ -570,7 +578,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1955904551}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 63, y: 5, z: 29.6}
+  m_LocalPosition: {x: 52.7, y: 5, z: 23.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 795744201}
