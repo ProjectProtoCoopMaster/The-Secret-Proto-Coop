@@ -54,16 +54,22 @@ namespace Gameplay.VR
         // if the player is in range and in the cone of vision, check if you have line of sight to his head collider
         void PlayerInSightCheck()
         {
-            Debug.DrawLine(transform.position, playerHead.position, Color.green);
-
-            // if you hit something between the camera and the player's head position on the player layer
-            if (Physics.Linecast(this.transform.position, playerHead.position, out hitInfo))
+            // if you hit something between the camera and the player's head position
+            if (Physics.Linecast(this.transform.position, playerHead.position, out hitInfo, playerLayer))
             {
-                if (hitInfo.collider.gameObject.name == "Player") Debug.Log("I hit the player"); 
-                // call the gameOver event for a quick death
-                else Debug.Log("I hit something");
-                // gameOver.Raise();
-                // TODO : Implement a progressive spotting mechanic, based on distance
+                if (hitInfo.collider.gameObject.name == "Player")
+                {
+                    Debug.DrawLine(transform.position, playerHead.position, Color.green);
+                    Debug.Log("I hit the player");
+                    // call the gameOver event for a quick death
+                    // gameOver.Raise();
+                    // TODO : Implement a progressive spotting mechanic, based on distance
+                }
+                else
+                {
+                    Debug.DrawLine(transform.position, playerHead.position, Color.red);
+                    Debug.Log("I hit something");
+                }
             }
         }
     }

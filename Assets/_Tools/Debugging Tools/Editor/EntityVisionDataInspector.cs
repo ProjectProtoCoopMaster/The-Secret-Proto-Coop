@@ -1,6 +1,8 @@
 ﻿using Gameplay.VR;
 using UnityEngine;
 using UnityEditor;
+using System.Collections.Generic;
+using System;
 
 namespace Tools.Debugging
 {
@@ -9,8 +11,12 @@ namespace Tools.Debugging
     [CustomEditor(typeof(EntityVisionDataInterface))]
     public class EntityVisionDataInspector : Editor
     {
+        static int playerMask = 0;
+        static List<string> layers;
+        static string[] layerOptions;
+
         bool existingData, localData;
-        SerializedProperty entityVisionScriptableProperty, rangeOfVision, coneOfVision, playerTransform;
+        SerializedProperty entityVisionScriptableProp, rangeOfVisionProp, coneOfVisionProp, playerTransformProp, playerDetectionLayerProp;
 
         EntityVisionDataInterface entityVisionDataInterface;
         DetectionBehavior detectionBehavior;
@@ -22,11 +28,13 @@ namespace Tools.Debugging
             detectionBehavior = entityVisionDataInterface.gameObject.GetComponent<DetectionBehavior>();
             overwatchBehavior = entityVisionDataInterface.gameObject.GetComponent<OverwatchBehavior>();
 
-            entityVisionScriptableProperty = serializedObject.FindProperty(nameof(entityVisionDataInterface.entityVisionData));
-            rangeOfVision = serializedObject.FindProperty(nameof(entityVisionDataInterface.rangeOfVision));
-            coneOfVision = serializedObject.FindProperty(nameof(entityVisionDataInterface.coneOfVision));
-            playerTransform = serializedObject.FindProperty(nameof(entityVisionDataInterface.playerHead));
+            entityVisionScriptableProp = serializedObject.FindProperty(nameof(entityVisionDataInterface.entityVisionData));
+            rangeOfVisionProp = serializedObject.FindProperty(nameof(entityVisionDataInterface.rangeOfVision));
+            coneOfVisionProp = serializedObject.FindProperty(nameof(entityVisionDataInterface.coneOfVision));
+            playerTransformProp = serializedObject.FindProperty(nameof(entityVisionDataInterface.playerHead));
+            playerDetectionLayerProp = serializedObject.FindProperty(nameof(entityVisionDataInterface.playerLayer));
         }
+
 
         public override void OnInspectorGUI()
         {
@@ -38,13 +46,44 @@ namespace Tools.Debugging
             if (playerTransform.objectReferenceValue != null)
                 detectionBehavior.playerHead = overwatchBehavior.playerHead = playerTransform.objectReferenceValue as Transform;*/
 
-            EditorGUILayout.PropertyField(playerTransform);
+            EditorGUILayout.PropertyField(playerTransformProp);
+            DrawLayerMask();
 
-            if (entityVisionScriptableProperty.objectReferenceValue != null || existingData) DrawScriptableObjProperty();
-            else if (rangeOfVision.floatValue != 0 || coneOfVision.floatValue != 0 || localData) DrawLocalProperties();
+            EditorGUILayout.Space();
+
+            if (entityVisionScriptableProp.objectReferenceValue != null || existingData) DrawScriptableObjProperty();
+            else if (rangeOfVisionProp.floatValue != 0 || coneOfVisionProp.floatValue != 0 || localData) DrawLocalProperties();
             else UserChoice();
 
             serializedObject.ApplyModifiedProperties();
+        }
+
+        private void DrawLayerMask()
+        {
+            if (layers == null)
+            {
+                layers = new List<string>();
+                layerOptions = new string[4];
+            }
+            else layers.Clear();
+
+            for (int i = 0; i < 32; i++)
+            {
+                string layerName = LayerMask.LayerToName(i);
+                if (layerName != "")
+                {
+                    layers.Add(layerName);
+                }
+                else continue;
+            }
+
+            if (layerOptions.Length != layers.Count)
+            {
+                layerOptions = new string[layers.Count];
+            }
+            for (int i = 0; i < layerOptions.Length; i++) layerOptions[i] = layers[i];
+
+            detectionBehavior.playerLayer = overwatchBehavior.playerLayer = playerMask = EditorGUILayout.MaskField("Player Flags", playerMask, layerOptions);
         }
 
         private void OnSceneGUI()
@@ -86,20 +125,20 @@ namespace Tools.Debugging
         {
             EditorGUILayout.BeginVertical();
 
-            if (entityVisionScriptableProperty.objectReferenceValue != null)
+            if (entityVisionScriptableProp.objectReferenceValue != null)
             {
-                SerializedObject entityVisionScriptableObject = new SerializedObject(entityVisionScriptableProperty.objectReferenceValue);
+                SerializedObject entityVisionScriptableObject = new SerializedObject(entityVisionScriptableProp.objectReferenceValue);
                 detectionBehavior.rangeOfVision = overwatchBehavior.rangeOfVision = entityVisionScriptableObject.FindProperty("rangeOfVision").floatValue;
                 detectionBehavior.coneOfVision = overwatchBehavior.coneOfVision = entityVisionScriptableObject.FindProperty("coneOfVision").floatValue;
             }
 
             EditorGUILayout.BeginHorizontal();
-            EditorGUILayout.PropertyField(entityVisionScriptableProperty);
+            EditorGUILayout.PropertyField(entityVisionScriptableProp);
             EditorGUILayout.EndHorizontal();
 
             if (GUILayout.Button(new GUIContent("Change Data", "Go back to select data")))
             {
-                entityVisionScriptableProperty.objectReferenceValue = null;
+                entityVisionScriptableProp.objectReferenceValue = null;
                 existingData = false;
             }
 
@@ -116,13 +155,13 @@ namespace Tools.Debugging
             EditorGUILayout.BeginHorizontal();
             EditorGUILayout.EndHorizontal();
 
-            detectionBehavior.rangeOfVision = overwatchBehavior.rangeOfVision = rangeOfVision.floatValue = EditorGUILayout.FloatField(new GUIContent("Range of Vision", "Set the entity's range of vision (expressed in Unity's base units)."), rangeOfVision.floatValue);
-            detectionBehavior.coneOfVision = overwatchBehavior.coneOfVision = coneOfVision.floatValue = EditorGUILayout.FloatField(new GUIContent("Cone of Vision", "Set the entity's cone of vision (expressed in degrees)."), coneOfVision.floatValue);
+            detectionBehavior.rangeOfVision = overwatchBehavior.rangeOfVision = rangeOfVisionProp.floatValue = EditorGUILayout.FloatField(new GUIContent("Range of Vision", "Set the entity's range of vision (expressed in Unity's base units)."), rangeOfVisionProp.floatValue);
+            detectionBehavior.coneOfVision = overwatchBehavior.coneOfVision = coneOfVisionProp.floatValue = EditorGUILayout.FloatField(new GUIContent("Cone of Vision", "Set the entity's cone of vision (expressed in degrees)."), coneOfVisionProp.floatValue);
 
             if (GUILayout.Button(new GUIContent("Change Data", "Go back to select data")))
             {
-                rangeOfVision.floatValue = 0;
-                coneOfVision.floatValue = 0;
+                rangeOfVisionProp.floatValue = 0;
+                coneOfVisionProp.floatValue = 0;
                 localData = false;
             }
             EditorGUILayout.EndVertical();
