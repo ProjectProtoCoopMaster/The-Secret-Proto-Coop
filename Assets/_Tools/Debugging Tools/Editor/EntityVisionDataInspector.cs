@@ -32,11 +32,11 @@ namespace Tools.Debugging
         {
             serializedObject.Update();
 
-            if (playerTransform.objectReferenceValue == null)
+            /*if (playerTransform.objectReferenceValue == null)
                 playerTransform.objectReferenceValue = GameObject.Find("Player");
 
             if (playerTransform.objectReferenceValue != null)
-                detectionBehavior.playerHead = overwatchBehavior.playerHead  = playerTransform.objectReferenceValue as Transform;
+                detectionBehavior.playerHead = overwatchBehavior.playerHead = playerTransform.objectReferenceValue as Transform;*/
 
             EditorGUILayout.PropertyField(playerTransform);
 
@@ -128,5 +128,5 @@ namespace Tools.Debugging
             EditorGUILayout.EndVertical();
         }
         #endregion
-    }
+   }
 }

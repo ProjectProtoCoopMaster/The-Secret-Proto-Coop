@@ -29,12 +29,12 @@ namespace Tools.Debugging
             Handles.DrawLine(localTransform.position, leftPoint);
             Handles.DrawLine(localTransform.position, rightPoint);
 
-            if (detectionBehavior.playerHead  != null)
+            if (detectionBehavior.playerHead != null)
             {
                 // floor the values to get the "shadow" image but locked at 0y
-                Vector3 flooredPosition = new Vector3(localTransform.position.x, detectionBehavior.playerHead .position.y, localTransform.position.z);
-                Vector3 flooredleftPoint = new Vector3(leftPoint.x, detectionBehavior.playerHead .position.y, leftPoint.z);
-                Vector3 flooredrightPoint = new Vector3(rightPoint.x, detectionBehavior.playerHead .position.y, rightPoint.z);
+                Vector3 flooredPosition = new Vector3(localTransform.position.x, detectionBehavior.playerHead.position.y, localTransform.position.z);
+                Vector3 flooredleftPoint = new Vector3(leftPoint.x, detectionBehavior.playerHead.position.y, leftPoint.z);
+                Vector3 flooredrightPoint = new Vector3(rightPoint.x, detectionBehavior.playerHead.position.y, rightPoint.z);
 
                 Handles.color = Color.red;
                 Handles.DrawWireDisc(flooredPosition, Vector3.up, detectionBehavior.rangeOfVision);

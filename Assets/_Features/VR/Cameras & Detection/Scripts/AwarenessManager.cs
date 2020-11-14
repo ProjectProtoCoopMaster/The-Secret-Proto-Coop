@@ -17,7 +17,7 @@ namespace Gameplay.VR
         {
             for (int i = 0; i < detectionBehaviors.Count; i++)
             {
-                detectionBehaviors[i].scanForGuard.Raise();
+               // detectionBehaviors[i].scanForGuard.Raise();
             }
         }
     }
