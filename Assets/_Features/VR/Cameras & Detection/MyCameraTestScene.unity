@@ -166,7 +166,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &46629324
 MonoBehaviour:
@@ -181,7 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -189,8 +188,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &46629325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -212,7 +211,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &46629326
 BoxCollider:
@@ -528,7 +526,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &117735471
 MonoBehaviour:
@@ -551,8 +548,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &117735472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -574,7 +571,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &117735473
 BoxCollider:
@@ -695,7 +691,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &153889194
 MonoBehaviour:
@@ -710,7 +705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -718,8 +713,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &153889195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -733,7 +728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -741,7 +736,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &153889196
 BoxCollider:
@@ -862,7 +856,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &157959848
 MonoBehaviour:
@@ -885,8 +878,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &157959849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -908,7 +901,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &157959850
 BoxCollider:
@@ -1029,7 +1021,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &166903430
 MonoBehaviour:
@@ -1052,8 +1043,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &166903431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1075,7 +1066,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &166903432
 BoxCollider:
@@ -1196,7 +1186,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &169973668
 MonoBehaviour:
@@ -1211,7 +1200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -1219,8 +1208,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &169973669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1234,7 +1223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -1242,7 +1231,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &169973670
 BoxCollider:
@@ -1363,7 +1351,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &171004876
 MonoBehaviour:
@@ -1378,7 +1365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -1386,8 +1373,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &171004877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1401,7 +1388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -1409,7 +1396,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &171004878
 BoxCollider:
@@ -1624,7 +1610,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &188421239
 MonoBehaviour:
@@ -1647,36 +1632,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
---- !u!114 &188421240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 188421232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b050f1f874b0d5498a0b48727c3f05e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 188421239}
-        m_TargetAssemblyTypeName: Gameplay.VR.OverwatchBehavior, Assembly-CSharp
-        m_MethodName: GE_SonarForGuards
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  visibleGuards: []
 --- !u!1 &209453704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1721,7 +1678,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &209453706
 MonoBehaviour:
@@ -1744,8 +1700,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &209453707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1767,7 +1723,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &209453708
 MonoBehaviour:
@@ -1904,7 +1859,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &230199382
 MonoBehaviour:
@@ -1927,8 +1881,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &230199383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1950,7 +1904,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &230199384
 BoxCollider:
@@ -2071,7 +2024,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &242653858
 MonoBehaviour:
@@ -2094,8 +2046,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &242653859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2117,7 +2069,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &242653860
 BoxCollider:
@@ -2238,7 +2189,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &252420349
 MonoBehaviour:
@@ -2253,7 +2203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -2261,8 +2211,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &252420350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2276,7 +2226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -2284,7 +2234,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &252420351
 BoxCollider:
@@ -2405,7 +2354,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &260254125
 MonoBehaviour:
@@ -2428,8 +2376,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &260254126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2451,7 +2399,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &260254127
 BoxCollider:
@@ -2572,7 +2519,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &261303311
 MonoBehaviour:
@@ -2587,7 +2533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -2595,8 +2541,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &261303312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2610,7 +2556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -2618,7 +2564,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &261303313
 BoxCollider:
@@ -2739,7 +2684,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &271092843
 MonoBehaviour:
@@ -2754,7 +2698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -2762,8 +2706,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &271092844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2777,7 +2721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -2785,7 +2729,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &271092845
 BoxCollider:
@@ -2906,7 +2849,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &297023521
 MonoBehaviour:
@@ -2921,7 +2863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -2929,8 +2871,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &297023522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2944,7 +2886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -2952,7 +2894,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &297023523
 BoxCollider:
@@ -3073,7 +3014,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &346739632
 MonoBehaviour:
@@ -3088,7 +3028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -3096,8 +3036,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &346739633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3111,7 +3051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -3119,7 +3059,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &346739634
 BoxCollider:
@@ -3240,7 +3179,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &353908803
 MonoBehaviour:
@@ -3255,7 +3193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -3263,8 +3201,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &353908804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3278,7 +3216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -3286,7 +3224,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &353908805
 BoxCollider:
@@ -3407,7 +3344,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &359859167
 MonoBehaviour:
@@ -3422,7 +3358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -3430,8 +3366,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &359859168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3445,7 +3381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -3453,7 +3389,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &359859169
 BoxCollider:
@@ -3574,7 +3509,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &360324189
 MonoBehaviour:
@@ -3597,8 +3531,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &360324190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3620,7 +3554,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &360324191
 BoxCollider:
@@ -3741,7 +3674,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &382903115
 MonoBehaviour:
@@ -3764,8 +3696,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &382903116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3787,7 +3719,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &382903117
 BoxCollider:
@@ -3908,7 +3839,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &390104297
 MonoBehaviour:
@@ -3923,7 +3853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 90
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -3931,8 +3861,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &390104298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3946,7 +3876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 90
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -3954,7 +3884,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &390104299
 BoxCollider:
@@ -4171,7 +4100,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &514493174
 MonoBehaviour:
@@ -4194,8 +4122,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &514493175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4217,7 +4145,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &514493176
 BoxCollider:
@@ -4338,7 +4265,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &537735589
 MonoBehaviour:
@@ -4353,7 +4279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -4361,8 +4287,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &537735590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4376,7 +4302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -4384,7 +4310,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &537735591
 BoxCollider:
@@ -4505,7 +4430,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &557364686
 MonoBehaviour:
@@ -4520,7 +4444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -4528,8 +4452,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &557364687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4543,7 +4467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -4551,7 +4475,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &557364688
 BoxCollider:
@@ -4672,7 +4595,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &677534384
 MonoBehaviour:
@@ -4687,7 +4609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -4695,8 +4617,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &677534385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4710,7 +4632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -4718,7 +4640,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &677534386
 BoxCollider:
@@ -4817,7 +4738,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &699720472
 GameObject:
@@ -4862,7 +4782,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &699720474
 MonoBehaviour:
@@ -4877,7 +4796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -4885,8 +4804,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &699720475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4900,7 +4819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -4908,7 +4827,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &699720476
 BoxCollider:
@@ -5125,7 +5043,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &709010612
 MonoBehaviour:
@@ -5148,8 +5065,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &709010613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5171,7 +5088,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &709010614
 BoxCollider:
@@ -5292,7 +5208,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &724641204
 MonoBehaviour:
@@ -5307,7 +5222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -5315,8 +5230,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &724641205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5330,7 +5245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -5338,7 +5253,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &724641206
 BoxCollider:
@@ -5459,7 +5373,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &752376083
 MonoBehaviour:
@@ -5482,8 +5395,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &752376084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5505,7 +5418,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &752376085
 BoxCollider:
@@ -5626,7 +5538,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &756582342
 MonoBehaviour:
@@ -5641,7 +5552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -5649,8 +5560,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &756582343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5664,7 +5575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -5672,7 +5583,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &756582344
 BoxCollider:
@@ -5793,7 +5703,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &761120933
 MonoBehaviour:
@@ -5816,8 +5725,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &761120934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5839,7 +5748,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &761120935
 BoxCollider:
@@ -5960,7 +5868,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &801956687
 MonoBehaviour:
@@ -5975,7 +5882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -5983,8 +5890,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &801956688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5998,7 +5905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -6006,7 +5913,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &801956689
 BoxCollider:
@@ -6127,7 +6033,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &817756274
 MonoBehaviour:
@@ -6142,7 +6047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -6150,8 +6055,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &817756275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6165,7 +6070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -6173,7 +6078,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &817756276
 BoxCollider:
@@ -6294,7 +6198,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &834767961
 MonoBehaviour:
@@ -6309,7 +6212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -6317,8 +6220,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &834767962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6332,7 +6235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -6340,7 +6243,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &834767963
 BoxCollider:
@@ -6538,7 +6440,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &875080249
 MonoBehaviour:
@@ -6561,8 +6462,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &875080250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6584,36 +6485,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
---- !u!114 &875080251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875080243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b050f1f874b0d5498a0b48727c3f05e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 875080249}
-        m_TargetAssemblyTypeName: Gameplay.VR.OverwatchBehavior, Assembly-CSharp
-        m_MethodName: GE_SonarForGuards
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &884010358
 GameObject:
   m_ObjectHideFlags: 0
@@ -6657,7 +6529,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &884010360
 MonoBehaviour:
@@ -6680,8 +6551,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &884010361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6703,7 +6574,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &884010362
 BoxCollider:
@@ -6824,7 +6694,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &920106539
 MonoBehaviour:
@@ -6839,7 +6708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -6847,8 +6716,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &920106540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6862,7 +6731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -6870,7 +6739,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &920106541
 BoxCollider:
@@ -6991,7 +6859,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &975330082
 MonoBehaviour:
@@ -7014,8 +6881,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &975330083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7037,7 +6904,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &975330084
 BoxCollider:
@@ -7254,7 +7120,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1012228197
 MonoBehaviour:
@@ -7269,7 +7134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -7277,8 +7142,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1012228198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7292,7 +7157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -7300,7 +7165,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1012228199
 BoxCollider:
@@ -7422,7 +7286,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1057414562
 MonoBehaviour:
@@ -7445,8 +7308,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1057414563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7468,7 +7331,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1057414564
 BoxCollider:
@@ -7617,7 +7479,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1060787226
 MonoBehaviour:
@@ -7640,8 +7501,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1060787227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7663,7 +7524,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1060787228
 BoxCollider:
@@ -7784,7 +7644,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1063591547
 MonoBehaviour:
@@ -7807,8 +7666,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1063591548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7830,7 +7689,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1063591549
 BoxCollider:
@@ -7951,7 +7809,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1093674530
 MonoBehaviour:
@@ -7974,8 +7831,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1093674531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7997,7 +7854,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1093674532
 BoxCollider:
@@ -8118,7 +7974,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1104582303
 MonoBehaviour:
@@ -8133,7 +7988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -8141,8 +7996,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1104582304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8156,7 +8011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -8164,7 +8019,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1104582305
 BoxCollider:
@@ -8286,7 +8140,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1107083796
 MonoBehaviour:
@@ -8309,8 +8162,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1107083797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8332,7 +8185,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1107083798
 MonoBehaviour:
@@ -8469,7 +8321,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1136375802
 MonoBehaviour:
@@ -8492,8 +8343,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1136375803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8515,7 +8366,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1136375804
 BoxCollider:
@@ -8636,7 +8486,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1188547101
 MonoBehaviour:
@@ -8651,7 +8500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -8659,8 +8508,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1188547102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8674,7 +8523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -8682,7 +8531,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1188547103
 BoxCollider:
@@ -8803,7 +8651,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1193689815
 MonoBehaviour:
@@ -8818,7 +8665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -8826,8 +8673,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1193689816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8841,7 +8688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -8849,7 +8696,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1193689817
 BoxCollider:
@@ -8970,7 +8816,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1204888458
 MonoBehaviour:
@@ -8985,7 +8830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -8993,8 +8838,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1204888459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9008,7 +8853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -9016,7 +8861,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1204888460
 BoxCollider:
@@ -9137,7 +8981,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1210231343
 MonoBehaviour:
@@ -9152,7 +8995,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -9160,8 +9003,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1210231344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9175,7 +9018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -9183,7 +9026,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1210231345
 BoxCollider:
@@ -9304,7 +9146,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1240824817
 MonoBehaviour:
@@ -9327,8 +9168,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1240824818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9350,7 +9191,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1240824819
 BoxCollider:
@@ -9471,7 +9311,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1244771797
 MonoBehaviour:
@@ -9486,7 +9325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -9494,8 +9333,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1244771798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9509,7 +9348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -9517,7 +9356,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1244771799
 BoxCollider:
@@ -9639,7 +9477,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1256816918
 MonoBehaviour:
@@ -9662,8 +9499,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1256816919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9685,7 +9522,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1256816920
 BoxCollider:
@@ -9834,7 +9670,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1260596269
 MonoBehaviour:
@@ -9849,7 +9684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -9857,8 +9692,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1260596270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9872,7 +9707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -9880,7 +9715,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1260596271
 BoxCollider:
@@ -10093,7 +9927,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1321425217
 MonoBehaviour:
@@ -10116,8 +9949,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1321425218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10139,7 +9972,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1321425219
 BoxCollider:
@@ -10210,13 +10042,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321425215}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.70602, y: 0.33506393, z: -35.09606}
+  m_LocalRotation: {x: -0, y: -0.625735, z: -0, w: 0.7800358}
+  m_LocalPosition: {x: 63.38, y: 0, z: -48.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 105737513}
-  m_RootOrder: 36
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 0}
+  m_RootOrder: 39
+  m_LocalEulerAnglesHint: {x: 0, y: -77.472, z: 0}
 --- !u!1 &1359590205
 GameObject:
   m_ObjectHideFlags: 0
@@ -10260,7 +10092,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1359590207
 MonoBehaviour:
@@ -10283,8 +10114,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1359590208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10306,7 +10137,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1359590209
 BoxCollider:
@@ -10427,7 +10257,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1366241151
 MonoBehaviour:
@@ -10442,7 +10271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -10450,8 +10279,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1366241152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10465,7 +10294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -10473,7 +10302,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1366241153
 BoxCollider:
@@ -10594,7 +10422,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1379507270
 MonoBehaviour:
@@ -10609,7 +10436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -10617,8 +10444,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1379507271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10632,7 +10459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -10640,7 +10467,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1379507272
 BoxCollider:
@@ -10761,7 +10587,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1393606386
 MonoBehaviour:
@@ -10784,8 +10609,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1393606387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10807,7 +10632,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1393606388
 BoxCollider:
@@ -10928,7 +10752,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1398235181
 MonoBehaviour:
@@ -10943,7 +10766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -10951,8 +10774,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1398235182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10966,7 +10789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -10974,7 +10797,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1398235183
 BoxCollider:
@@ -11191,7 +11013,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1444582733
 MonoBehaviour:
@@ -11206,7 +11027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -11214,8 +11035,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1444582734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11229,7 +11050,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -11237,7 +11058,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1444582735
 BoxCollider:
@@ -11358,7 +11178,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1459001619
 MonoBehaviour:
@@ -11373,7 +11192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -11381,8 +11200,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1459001620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11396,7 +11215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -11404,7 +11223,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1459001621
 BoxCollider:
@@ -11525,7 +11343,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1459339761
 MonoBehaviour:
@@ -11548,8 +11365,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1459339762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11571,7 +11388,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1459339763
 BoxCollider:
@@ -11692,7 +11508,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1472664511
 MonoBehaviour:
@@ -11707,7 +11522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -11715,8 +11530,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1472664512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11730,7 +11545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -11738,7 +11553,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1472664513
 BoxCollider:
@@ -11942,7 +11756,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1490411693
 MonoBehaviour:
@@ -11965,8 +11778,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1490411694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11988,7 +11801,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1490411695
 BoxCollider:
@@ -12110,7 +11922,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1506222189
 MonoBehaviour:
@@ -12125,7 +11936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -12133,8 +11944,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1506222190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12148,7 +11959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -12156,7 +11967,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1506222191
 BoxCollider:
@@ -12306,7 +12116,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1518878061
 MonoBehaviour:
@@ -12329,8 +12138,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1518878062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12352,7 +12161,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1518878063
 MonoBehaviour:
@@ -12489,7 +12297,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1526462865
 MonoBehaviour:
@@ -12504,7 +12311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -12512,8 +12319,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1526462866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12527,7 +12334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -12535,7 +12342,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1526462867
 BoxCollider:
@@ -12656,7 +12462,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1550091662
 MonoBehaviour:
@@ -12679,8 +12484,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1550091663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12702,7 +12507,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1550091664
 BoxCollider:
@@ -12919,7 +12723,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1602654558
 MonoBehaviour:
@@ -12934,7 +12737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -12942,8 +12745,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1602654559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12957,7 +12760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -12965,7 +12768,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1602654560
 BoxCollider:
@@ -13114,7 +12916,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1664093837
 MonoBehaviour:
@@ -13137,8 +12938,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1664093838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13160,7 +12961,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1664093839
 BoxCollider:
@@ -13281,7 +13081,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1676783979
 MonoBehaviour:
@@ -13296,7 +13095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -13304,8 +13103,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1676783980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13319,7 +13118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -13327,7 +13126,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1676783981
 BoxCollider:
@@ -13449,7 +13247,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1740094628
 MonoBehaviour:
@@ -13472,8 +13269,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1740094629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13495,7 +13292,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1740094630
 MonoBehaviour:
@@ -13632,7 +13428,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1827017713
 MonoBehaviour:
@@ -13647,7 +13442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -13655,8 +13450,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1827017714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13670,7 +13465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -13678,7 +13473,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1827017715
 BoxCollider:
@@ -13991,7 +13785,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1912711026
 MonoBehaviour:
@@ -14006,7 +13799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 90
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -14014,8 +13807,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1912711027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14029,7 +13822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 90
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -14037,7 +13830,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1912711028
 BoxCollider:
@@ -14158,7 +13950,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1913631430
 MonoBehaviour:
@@ -14173,7 +13964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -14181,8 +13972,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1913631431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14196,7 +13987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -14204,7 +13995,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1913631432
 BoxCollider:
@@ -14325,7 +14115,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1929777841
 MonoBehaviour:
@@ -14340,7 +14129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -14348,8 +14137,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1929777842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14363,7 +14152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -14371,7 +14160,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1929777843
 BoxCollider:
@@ -14492,7 +14280,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1953588935
 MonoBehaviour:
@@ -14507,7 +14294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -14515,8 +14302,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1953588936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14530,7 +14317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -14538,7 +14325,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1953588937
 BoxCollider:
@@ -14660,7 +14446,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1954067569
 MonoBehaviour:
@@ -14683,8 +14468,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1954067570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14706,7 +14491,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1954067571
 MonoBehaviour:
@@ -14843,7 +14627,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1960257375
 MonoBehaviour:
@@ -14858,7 +14641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -14866,8 +14649,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1960257376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14881,7 +14664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -14889,7 +14672,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1960257377
 BoxCollider:
@@ -15010,7 +14792,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1975413470
 MonoBehaviour:
@@ -15033,8 +14814,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &1975413471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15056,7 +14837,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1975413472
 BoxCollider:
@@ -15127,8 +14907,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1975413468}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.70602, y: 0.33506393, z: -35.09606}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 66.07, y: 0, z: -43.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 105737513}
@@ -15177,7 +14957,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2002931825
 MonoBehaviour:
@@ -15192,7 +14971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -15200,8 +14979,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &2002931826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15215,7 +14994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -15223,7 +15002,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &2002931827
 BoxCollider:
@@ -15345,7 +15123,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2015247620
 MonoBehaviour:
@@ -15368,8 +15145,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &2015247621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15391,7 +15168,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2015247622
 MonoBehaviour:
@@ -15528,7 +15304,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2022742736
 MonoBehaviour:
@@ -15543,7 +15318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -15551,8 +15326,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &2022742737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15566,7 +15341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -15574,7 +15349,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &2022742738
 BoxCollider:
@@ -15695,7 +15469,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2038304357
 MonoBehaviour:
@@ -15710,7 +15483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -15718,8 +15491,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &2038304358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15733,7 +15506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -15741,7 +15514,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &2038304359
 BoxCollider:
@@ -15862,7 +15634,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2063257924
 MonoBehaviour:
@@ -15877,7 +15648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -15885,8 +15656,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &2063257925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15900,7 +15671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -15908,7 +15679,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &2063257926
 BoxCollider:
@@ -16029,7 +15799,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2065933920
 MonoBehaviour:
@@ -16044,7 +15813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 90
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -16052,8 +15821,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &2065933921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16067,7 +15836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 90
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -16075,7 +15844,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &2065933922
 BoxCollider:
@@ -16292,7 +16060,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2072313826
 MonoBehaviour:
@@ -16307,7 +16074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -16315,8 +16082,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &2072313827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16330,7 +16097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -16338,7 +16105,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &2072313828
 BoxCollider:
@@ -16459,7 +16225,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2093756278
 MonoBehaviour:
@@ -16482,8 +16247,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &2093756279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16505,7 +16270,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &2093756280
 BoxCollider:
@@ -16626,7 +16390,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2130863226
 MonoBehaviour:
@@ -16641,7 +16404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -16649,8 +16412,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &2130863227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16664,7 +16427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 10
+  rangeOfVision: 30
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
   playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
@@ -16672,7 +16435,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
-  scanForGuard: {fileID: 0}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &2130863228
 BoxCollider:

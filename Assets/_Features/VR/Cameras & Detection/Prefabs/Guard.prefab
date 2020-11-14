@@ -118,6 +118,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &7403117790416530890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +139,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
+  visibleGuards: []
 --- !u!114 &5960268178023418780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,3 +161,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   gameOver: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}

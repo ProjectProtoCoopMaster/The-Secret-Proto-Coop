@@ -8,6 +8,9 @@ TagManager:
   - FxTemporaire
   - Bullet
   - Guard
+  - Camera/Rotating Camera
+  - Camera/Static Camera
+  - Camera/Mobile Camera
   layers:
   - Default
   - TransparentFX
