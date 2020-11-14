@@ -135,6 +135,8 @@ namespace Tools.LevelDesign
                         {
                             MyUndo("Select Second Object");
                             t.secondSelectedGO = t.selectedGO;
+                            
+                            
                             t.AddLine();
                             current.Use();
                         }
@@ -323,22 +325,30 @@ namespace Tools.LevelDesign
         private void DrawLines()
         {
 
+
+            EditorGUI.BeginChangeCheck();
             int ID = t.startPoint.Count - 1;
 
-
+            
             t.startPoint[ID] = Handles.PositionHandle(t.startPoint[ID], Quaternion.identity);
             Handles.DrawSolidRectangleWithOutline(new Rect(t.startPoint[ID].x, t.startPoint[ID].y, .1f, .1f), Color.red, Color.black);
+            
+            t.endPoint[ID] = Handles.PositionHandle(t.endPoint[ID], Quaternion.identity);
+            Handles.DrawSolidRectangleWithOutline(new Rect(t.endPoint[ID].x, t.endPoint[ID].y, .1f, .1f), Color.magenta, Color.black);
             t.startTangent[ID] = Handles.PositionHandle(t.startTangent[ID], Quaternion.identity);
             Handles.DrawSolidRectangleWithOutline(new Rect(t.startTangent[ID].x, t.startTangent[ID].y, .1f, .1f), Color.green, Color.black);
             t.endTangent[ID] = Handles.PositionHandle(t.endTangent[ID], Quaternion.identity);
             Handles.DrawSolidRectangleWithOutline(new Rect(t.endTangent[ID].x, t.endTangent[ID].y, .1f, .1f), Color.cyan, Color.black);
-            t.endPoint[ID] = Handles.PositionHandle(t.endPoint[ID], Quaternion.identity);
-            Handles.DrawSolidRectangleWithOutline(new Rect(t.endPoint[ID].x, t.endPoint[ID].y, .1f, .1f), Color.magenta, Color.black);
 
 
             for (int i = 0; i < t.startPoint.Count; i++)
             {
                 Handles.DrawBezier(t.startPoint[i], t.endPoint[i], t.startTangent[i], t.endTangent[i], Color.red, null, 5f);
+            }
+
+            if (EditorGUI.EndChangeCheck())
+            {
+                MyUndo("Handle Changes");
             }
 
         }

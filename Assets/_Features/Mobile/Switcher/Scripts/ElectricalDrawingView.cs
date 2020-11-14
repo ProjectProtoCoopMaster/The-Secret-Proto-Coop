@@ -117,6 +117,7 @@ namespace Tools.LevelDesign
         }
         public void ChangeTangentToDownLeft()
         {
+
             int ID = startTangent.Count - 1;
             startTangent[ID] = new Vector2(endPoint[ID].x, startPoint[ID].y); 
             endTangent[ID] = new Vector2(endPoint[ID].x, startPoint[ID].y);
