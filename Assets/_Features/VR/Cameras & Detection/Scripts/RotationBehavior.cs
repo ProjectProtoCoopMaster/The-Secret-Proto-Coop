@@ -6,8 +6,6 @@ namespace Gameplay.VR
 {
     public class RotationBehavior : RotationData
     {
-        bool movingRight;
-
         private void Awake()
         {
             // assign the camera's base rotation
@@ -18,6 +16,8 @@ namespace Gameplay.VR
 
             // calculate the increments based on the angle to travel and the time to take
             rotationIncrement = rotationAngle / rotationDuration;
+
+            waitTime = new WaitForSeconds(holdTime);
         }
 
         private void Start()
@@ -33,16 +33,15 @@ namespace Gameplay.VR
             // apply the rotation over time
             while (timePassed <= rotationDuration)
             {
-                currentRotation = transform.rotation.eulerAngles;
-                transform.rotation = Quaternion.Euler(new Vector3(currentRotation.x,
-                                                                  currentRotation.y + rotationIncrement * Time.deltaTime,
-                                                                  currentRotation.z));
+                transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.eulerAngles.x,
+                                                                  transform.rotation.eulerAngles.y + rotationIncrement * Time.deltaTime,
+                                                                  transform.rotation.eulerAngles.z));
                 timePassed += Time.deltaTime;
                 yield return null;
             }
 
             // wait for a set amount of time
-            yield return new WaitForSeconds(holdTime);
+            yield return waitTime;
 
             // multiply the incrementor by -1 to switch its sign for the next pass
             rotationIncrement *= -1;

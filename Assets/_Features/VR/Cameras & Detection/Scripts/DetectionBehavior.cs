@@ -17,14 +17,13 @@ namespace Gameplay.VR
         {
             while (true)
             {
-                Debug.Log("Scanning");
                 // if the player is within the vision range
-                if (Vector2.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(playerHead.position.x, playerHead.position.z)) < rangeOfVision)
+                if (Vector2.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(playerPositionAtom.Value.x, playerPositionAtom.Value.z)) < rangeOfVision)
                 {
-                    // get the direction of the player's head, if the angle between the looking dir of the cam and the player is less than the cone of vision, then you are inside the cone of vision
-                    Vector3 targetDir = playerHead.position - new Vector3(transform.position.x, playerHead.position.y, transform.position.z);
-                    var playerInCone = Vector3.Angle(targetDir, transform.forward) <= coneOfVision * .5f ?
-                        StartCoroutine(PlayerInSightCheck()) : default;
+                    // get the direction of the player's head...
+                    targetDir = playerPositionAtom.Value - new Vector3(transform.position.x, playerPositionAtom.Value.y, transform.position.z);
+                    //...if the angle between the looking dir of the cam and the player is less than the cone of vision, then you are inside the cone of vision
+                    if (Vector3.Angle(targetDir, transform.forward) <= coneOfVision * .5f) PlayerInSightCheck();
                 }
 
                 yield return null;
@@ -32,18 +31,18 @@ namespace Gameplay.VR
         }
 
         // if the player is in range and in the cone of vision, check if you have line of sight to his head collider
-        IEnumerator PlayerInSightCheck()
+        void PlayerInSightCheck()
         {
-            Debug.Log("I can see the player");
-            Debug.DrawLine(transform.position, playerHead.position, Color.green);
+            Debug.DrawLine(transform.position, playerPositionAtom.Value, Color.green);
 
             // if you hit something between the camera and the player's head position on the player layer
-            if (Physics.Linecast(this.transform.position, playerHead.position, out hitInfo, layerMask))
+            if (Physics.Linecast(this.transform.position, playerPositionAtom.Value, out hitInfo, layerMask))
             {
-                // call the gameOver event
-            }
+                // call the gameOver event for a quick death
+                gameOver.Raise();
 
-            yield return null;
+                // TODO : Implement a progressive spotting mechanic, based on distance
+            }
         }
     }
 }

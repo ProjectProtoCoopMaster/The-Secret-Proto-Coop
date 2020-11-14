@@ -161,9 +161,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &46629324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,9 +184,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &46629325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,9 +207,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &46629326
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -272,12 +284,207 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46629322}
   m_LocalRotation: {x: -0, y: -0.73580146, z: -0, w: 0.6771974}
-  m_LocalPosition: {x: 30.019997, y: 0, z: -3.6400032}
+  m_LocalPosition: {x: -4.59, y: 0.33506393, z: 10.34}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 78
+  m_LocalEulerAnglesHint: {x: 0, y: -94.75, z: 0}
+--- !u!1 &105737512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 105737513}
+  m_Layer: 0
+  m_Name: Enemy Entities
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &105737513
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105737512}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 38.033978, y: -0.33506393, z: -15.553934}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 188421236}
+  - {fileID: 875080247}
+  - {fileID: 1057414567}
+  - {fileID: 1506222194}
+  - {fileID: 1256816923}
+  - {fileID: 1602654563}
+  - {fileID: 677534389}
+  - {fileID: 2038304362}
+  - {fileID: 297023526}
+  - {fileID: 884010365}
+  - {fileID: 1490411698}
+  - {fileID: 920106544}
+  - {fileID: 2065933925}
+  - {fileID: 557364691}
+  - {fileID: 346739637}
+  - {fileID: 1136375807}
+  - {fileID: 382903120}
+  - {fileID: 1379507275}
+  - {fileID: 1912711031}
+  - {fileID: 1060787231}
+  - {fileID: 1929777846}
+  - {fileID: 153889199}
+  - {fileID: 1104582308}
+  - {fileID: 1960257380}
+  - {fileID: 157959853}
+  - {fileID: 166903435}
+  - {fileID: 390104302}
+  - {fileID: 171004881}
+  - {fileID: 2130863231}
+  - {fileID: 1012228202}
+  - {fileID: 1063591552}
+  - {fileID: 1975413475}
+  - {fileID: 2002931830}
+  - {fileID: 1459001624}
+  - {fileID: 1676783984}
+  - {fileID: 1244771802}
+  - {fileID: 1321425222}
+  - {fileID: 975330087}
+  - {fileID: 2022742741}
+  - {fileID: 537735594}
+  - {fileID: 1827017718}
+  - {fileID: 1472664516}
+  - {fileID: 1393606391}
+  - {fileID: 2093756283}
+  - {fileID: 261303316}
+  - {fileID: 1188547106}
+  - {fileID: 360324194}
+  - {fileID: 242653863}
+  - {fileID: 834767966}
+  - {fileID: 1260596274}
+  - {fileID: 1398235186}
+  - {fileID: 1913631435}
+  - {fileID: 1359590212}
+  - {fileID: 752376088}
+  - {fileID: 252420354}
+  - {fileID: 353908808}
+  - {fileID: 1550091667}
+  - {fileID: 1240824822}
+  - {fileID: 699720479}
+  - {fileID: 2063257929}
+  - {fileID: 756582347}
+  - {fileID: 2072313831}
+  - {fileID: 260254130}
+  - {fileID: 817756279}
+  - {fileID: 169973673}
+  - {fileID: 514493179}
+  - {fileID: 1953588940}
+  - {fileID: 801956692}
+  - {fileID: 117735476}
+  - {fileID: 1459339766}
+  - {fileID: 1193689820}
+  - {fileID: 271092848}
+  - {fileID: 230199387}
+  - {fileID: 1444582738}
+  - {fileID: 724641209}
+  - {fileID: 761120938}
+  - {fileID: 1664093842}
+  - {fileID: 709010617}
+  - {fileID: 46629329}
+  - {fileID: 1366241156}
+  - {fileID: 1093674535}
+  - {fileID: 1210231348}
+  - {fileID: 1204888463}
+  - {fileID: 1526462870}
+  - {fileID: 359859172}
+  - {fileID: 1740094634}
+  - {fileID: 1107083802}
+  - {fileID: 209453712}
+  - {fileID: 1518878067}
+  - {fileID: 2015247626}
+  - {fileID: 1954067575}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &112648928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 112648929}
+  - component: {fileID: 112648930}
+  - component: {fileID: 112648931}
+  m_Layer: 0
+  m_Name: Awareness Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &112648929
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112648928}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 38.033978, y: -0.33506393, z: -15.553934}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 81
-  m_LocalEulerAnglesHint: {x: 0, y: -94.75, z: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &112648930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112648928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3915db054a9b4ca4d9f7b828737d01e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionBehaviors:
+  - {fileID: 687471291}
+--- !u!114 &112648931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112648928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b050f1f874b0d5498a0b48727c3f05e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 2f527b1aac6b97e4685e866f0a512cc2, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 112648930}
+        m_TargetAssemblyTypeName: Gameplay.VR.AwarenessManager, Assembly-CSharp
+        m_MethodName: GE_GuardDied
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &117735469
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,9 +523,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &117735471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,9 +546,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &117735472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,9 +569,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &117735473
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -427,11 +646,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 117735469}
   m_LocalRotation: {x: -0, y: 0.52770925, z: -0, w: 0.8494251}
-  m_LocalPosition: {x: 65.82, y: 0, z: -29.080004}
+  m_LocalPosition: {x: 27.786022, y: 0.33506393, z: -13.52607}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 71
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 68
   m_LocalEulerAnglesHint: {x: 0, y: 63.702, z: 0}
 --- !u!1 &153889192
 GameObject:
@@ -471,9 +690,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &153889194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,9 +713,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &153889195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,9 +736,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &153889196
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -582,11 +813,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153889192}
   m_LocalRotation: {x: -0, y: -0.9335323, z: -0, w: 0.35849333}
-  m_LocalPosition: {x: 41.42, y: 0, z: 13.630002}
+  m_LocalPosition: {x: 3.3860207, y: 0.33506393, z: 29.183937}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
 --- !u!1 &157959846
 GameObject:
@@ -626,9 +857,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &157959848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -645,9 +880,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &157959849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -664,9 +903,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &157959850
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -736,12 +979,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157959846}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 45.6, y: 0, z: 0.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.566021, y: 0.33506393, z: 16.053934}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &166903428
 GameObject:
@@ -781,9 +1024,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &166903430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -800,9 +1047,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &166903431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -819,9 +1070,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &166903432
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -891,12 +1146,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 166903428}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 56.94, y: 0, z: -51.25}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 18.906021, y: 0.33506393, z: -35.696068}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &169973666
 GameObject:
@@ -936,9 +1191,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &169973668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -955,9 +1214,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &169973669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -974,9 +1237,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &169973670
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1046,12 +1313,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 169973666}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 74.51001, y: 0, z: -23.650003}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 36.476032, y: 0.33506393, z: -8.096069}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 67
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 64
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &171004874
 GameObject:
@@ -1091,9 +1358,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &171004876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1110,9 +1381,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &171004877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1129,9 +1404,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &171004878
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1202,11 +1481,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171004874}
   m_LocalRotation: {x: -0, y: -0.9335323, z: -0, w: 0.35849333}
-  m_LocalPosition: {x: 52.76, y: 0, z: -38.120003}
+  m_LocalPosition: {x: 14.726021, y: 0.33506393, z: -22.566069}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
 --- !u!1 &188421232
 GameObject:
@@ -1224,6 +1503,7 @@ GameObject:
   - component: {fileID: 687471291}
   - component: {fileID: 188421239}
   - component: {fileID: 188421238}
+  - component: {fileID: 188421240}
   m_Layer: 0
   m_Name: Rotating Camera
   m_TagString: Untagged
@@ -1300,13 +1580,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188421232}
-  m_LocalRotation: {x: -0, y: 0.8960359, z: -0, w: 0.4439815}
-  m_LocalPosition: {x: 21.3, y: 9.51, z: -4.5}
+  m_LocalRotation: {x: -0, y: 0.89603597, z: -0, w: 0.44398153}
+  m_LocalPosition: {x: -16.733978, y: 9.845064, z: 11.053934}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1431696794}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 127.284, z: 0}
 --- !u!114 &188421237
 MonoBehaviour:
@@ -1339,9 +1619,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &188421239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1358,9 +1642,41 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
+  targetDir: {x: 0, y: 0, z: 0}
+--- !u!114 &188421240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188421232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b050f1f874b0d5498a0b48727c3f05e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 188421239}
+        m_TargetAssemblyTypeName: Gameplay.VR.OverwatchBehavior, Assembly-CSharp
+        m_MethodName: GE_SonarForGuards
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &209453704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1400,9 +1716,13 @@ MonoBehaviour:
   rangeOfVision: 20
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &209453706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1419,9 +1739,13 @@ MonoBehaviour:
   rangeOfVision: 20
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &209453707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1438,9 +1762,13 @@ MonoBehaviour:
   rangeOfVision: 20
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &209453708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1526,12 +1854,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 209453704}
   m_LocalRotation: {x: -0, y: 0.77444804, z: -0, w: -0.6326376}
-  m_LocalPosition: {x: 58.4, y: 9.51, z: -41.5}
+  m_LocalPosition: {x: 20.366024, y: 9.845064, z: -25.946066}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 452489081}
-  m_Father: {fileID: 0}
-  m_RootOrder: 90
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 87
   m_LocalEulerAnglesHint: {x: 0, y: 258.49, z: 0}
 --- !u!1 &230199380
 GameObject:
@@ -1571,9 +1899,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &230199382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1590,9 +1922,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &230199383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1609,9 +1945,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &230199384
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1682,11 +2022,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 230199380}
   m_LocalRotation: {x: -0, y: 0.52770925, z: -0, w: 0.8494251}
-  m_LocalPosition: {x: 65.82, y: 0, z: -29.080004}
+  m_LocalPosition: {x: 27.786022, y: 0.33506393, z: -13.52607}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 75
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 72
   m_LocalEulerAnglesHint: {x: 0, y: 63.702, z: 0}
 --- !u!1 &242653856
 GameObject:
@@ -1726,9 +2066,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &242653858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1745,9 +2089,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &242653859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1764,9 +2112,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &242653860
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1837,11 +2189,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 242653856}
   m_LocalRotation: {x: -0, y: -0.74341714, z: -0, w: 0.6688281}
-  m_LocalPosition: {x: 58.569996, y: 0, z: -16.580002}
+  m_LocalPosition: {x: 20.536018, y: 0.33506393, z: -1.0260677}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 50
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: -96.047, z: 0}
 --- !u!1 &252420347
 GameObject:
@@ -1881,9 +2233,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &252420349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1900,9 +2256,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &252420350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1919,9 +2279,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &252420351
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1992,11 +2356,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252420347}
   m_LocalRotation: {x: -0, y: -0.29140532, z: -0, w: 0.9565997}
-  m_LocalPosition: {x: 35.8, y: 0, z: -24.3}
+  m_LocalPosition: {x: -2.2339783, y: 0.33506393, z: -8.746065}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 57
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 54
   m_LocalEulerAnglesHint: {x: 0, y: -33.884, z: 0}
 --- !u!1 &260254123
 GameObject:
@@ -2036,9 +2400,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &260254125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2055,9 +2423,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &260254126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2074,9 +2446,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &260254127
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2147,11 +2523,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 260254123}
   m_LocalRotation: {x: -0, y: -0.29140532, z: -0, w: 0.9565997}
-  m_LocalPosition: {x: 58.579998, y: 0, z: -29.600002}
+  m_LocalPosition: {x: 20.54602, y: 0.33506393, z: -14.046068}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 65
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 62
   m_LocalEulerAnglesHint: {x: 0, y: -33.884, z: 0}
 --- !u!1 &261303309
 GameObject:
@@ -2191,9 +2567,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &261303311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2210,9 +2590,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &261303312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2229,9 +2613,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &261303313
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2302,11 +2690,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261303309}
   m_LocalRotation: {x: -0, y: -0.74341714, z: -0, w: 0.6688281}
-  m_LocalPosition: {x: 35.789997, y: 0, z: -11.279999}
+  m_LocalPosition: {x: -2.2439804, y: 0.33506393, z: 4.2739353}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 47
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: -96.047, z: 0}
 --- !u!1 &271092841
 GameObject:
@@ -2346,9 +2734,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &271092843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2365,9 +2757,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &271092844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2384,9 +2780,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &271092845
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2457,11 +2857,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 271092841}
   m_LocalRotation: {x: -0, y: 0.52770925, z: -0, w: 0.8494251}
-  m_LocalPosition: {x: 56.68, y: 0, z: -22.930002}
+  m_LocalPosition: {x: 18.646023, y: 0.33506393, z: -7.376068}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 74
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 71
   m_LocalEulerAnglesHint: {x: 0, y: 63.702, z: 0}
 --- !u!1 &297023519
 GameObject:
@@ -2501,9 +2901,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &297023521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2520,9 +2924,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &297023522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2539,9 +2947,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &297023523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2611,12 +3023,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297023519}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.16, y: 0, z: -45.949997}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.8739777, y: 0.33506393, z: -30.396063}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &346739630
 GameObject:
@@ -2656,9 +3068,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &346739632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2675,9 +3091,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &346739633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2694,9 +3114,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &346739634
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2766,12 +3190,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 346739630}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 68.94, y: 0, z: -8.38}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 30.906025, y: 0.33506393, z: 7.173934}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &353908801
 GameObject:
@@ -2811,9 +3235,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &353908803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2830,9 +3258,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &353908804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2849,9 +3281,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &353908805
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2922,11 +3358,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353908801}
   m_LocalRotation: {x: -0, y: -0.99748355, z: -0, w: 0.07089841}
-  m_LocalPosition: {x: 40.76, y: 0, z: -17.32}
+  m_LocalPosition: {x: 2.7260208, y: 0.33506393, z: -1.7660656}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 58
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 55
   m_LocalEulerAnglesHint: {x: 0, y: -171.869, z: 0}
 --- !u!1 &359859165
 GameObject:
@@ -2966,9 +3402,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &359859167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2985,9 +3425,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &359859168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3004,9 +3448,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &359859169
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3077,11 +3525,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 359859165}
   m_LocalRotation: {x: -0, y: 0.9421175, z: -0, w: 0.3352831}
-  m_LocalPosition: {x: 32.3, y: 0, z: -10.100004}
+  m_LocalPosition: {x: -5.7339783, y: 0.33506393, z: 5.45393}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 87
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 84
   m_LocalEulerAnglesHint: {x: 0, y: 140.82, z: 0}
 --- !u!1 &360324187
 GameObject:
@@ -3121,9 +3569,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &360324189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3140,9 +3592,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &360324190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3159,9 +3615,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &360324191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3232,11 +3692,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 360324187}
   m_LocalRotation: {x: -0, y: -0.74341714, z: -0, w: 0.6688281}
-  m_LocalPosition: {x: 58.7, y: 0, z: 9.6}
+  m_LocalPosition: {x: 20.666023, y: 0.33506393, z: 25.153934}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 49
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: -96.047, z: 0}
 --- !u!1 &382903113
 GameObject:
@@ -3276,9 +3736,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &382903115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3295,9 +3759,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &382903116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3314,9 +3782,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &382903117
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3386,12 +3858,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382903113}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 48.170006, y: 0, z: -37.870003}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.136028, y: 0.33506393, z: -22.316069}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &390104295
 GameObject:
@@ -3431,9 +3903,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &390104297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3450,9 +3926,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &390104298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3469,9 +3949,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &390104299
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3541,12 +4025,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 390104295}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 47.8, y: 0, z: -45.100002}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.766022, y: 0.33506393, z: -29.546068}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &452489080
 GameObject:
@@ -3682,9 +4166,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &514493174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3701,9 +4189,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &514493175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3720,9 +4212,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &514493176
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3793,11 +4289,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514493172}
   m_LocalRotation: {x: -0, y: 0.52770925, z: -0, w: 0.8494251}
-  m_LocalPosition: {x: 65.82, y: 0, z: -29.080004}
+  m_LocalPosition: {x: 27.786022, y: 0.33506393, z: -13.52607}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 68
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 65
   m_LocalEulerAnglesHint: {x: 0, y: 63.702, z: 0}
 --- !u!1 &537735587
 GameObject:
@@ -3837,9 +4333,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &537735589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3856,9 +4356,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &537735590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3875,9 +4379,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &537735591
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3948,11 +4456,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 537735587}
   m_LocalRotation: {x: -0, y: -0.60378593, z: -0, w: 0.79714656}
-  m_LocalPosition: {x: 26.16, y: 0, z: -24.020004}
+  m_LocalPosition: {x: -11.873978, y: 0.33506393, z: -8.46607}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 42
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: -74.283, z: 0}
 --- !u!1 &557364684
 GameObject:
@@ -3992,9 +4500,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &557364686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4011,9 +4523,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &557364687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4030,9 +4546,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &557364688
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4103,11 +4623,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557364684}
   m_LocalRotation: {x: -0, y: -0.9335323, z: -0, w: 0.35849333}
-  m_LocalPosition: {x: 73.9, y: 0, z: -1.3999996}
+  m_LocalPosition: {x: 35.866024, y: 0.33506393, z: 14.1539345}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
 --- !u!1 &677534382
 GameObject:
@@ -4147,9 +4667,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &677534384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4166,9 +4690,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &677534385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4185,9 +4713,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &677534386
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4258,11 +4790,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 677534382}
   m_LocalRotation: {x: -0, y: -0.9335323, z: -0, w: 0.35849333}
-  m_LocalPosition: {x: 23.63, y: 0, z: -5.73}
+  m_LocalPosition: {x: -6.19, y: 0.33506393, z: 8.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
 --- !u!114 &687471291
 MonoBehaviour:
@@ -4280,9 +4812,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &699720472
 GameObject:
   m_ObjectHideFlags: 0
@@ -4321,9 +4857,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &699720474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4340,9 +4880,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &699720475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4359,9 +4903,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &699720476
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4432,11 +4980,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 699720472}
   m_LocalRotation: {x: -0, y: -0.29140532, z: -0, w: 0.9565997}
-  m_LocalPosition: {x: 49.44, y: 0, z: -23.45}
+  m_LocalPosition: {x: 11.406021, y: 0.33506393, z: -7.8960667}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 61
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 58
   m_LocalEulerAnglesHint: {x: 0, y: -33.884, z: 0}
 --- !u!1 &705026319
 GameObject:
@@ -4572,9 +5120,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &709010612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4591,9 +5143,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &709010613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4610,9 +5166,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &709010614
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4682,12 +5242,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709010610}
-  m_LocalRotation: {x: -0, y: 0.36840567, z: -0, w: 0.9296651}
-  m_LocalPosition: {x: 34.199997, y: 0, z: -16.77}
+  m_LocalRotation: {x: -0, y: 0.3684057, z: -0, w: 0.92966515}
+  m_LocalPosition: {x: -3.8339806, y: 0.33506393, z: -1.2160664}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 80
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 77
   m_LocalEulerAnglesHint: {x: 0, y: 43.235, z: 0}
 --- !u!1 &724641202
 GameObject:
@@ -4727,9 +5287,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &724641204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4746,9 +5310,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &724641205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4765,9 +5333,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &724641206
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4838,11 +5410,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 724641202}
   m_LocalRotation: {x: -0, y: -0.9335323, z: -0, w: 0.35849333}
-  m_LocalPosition: {x: 74.6, y: 0, z: -30.9}
+  m_LocalPosition: {x: 36.56602, y: 0.33506393, z: -15.3460655}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 77
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 74
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
 --- !u!1 &752376081
 GameObject:
@@ -4882,9 +5454,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &752376083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4901,9 +5477,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &752376084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4920,9 +5500,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &752376085
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4993,11 +5577,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752376081}
   m_LocalRotation: {x: -0, y: -0.29140532, z: -0, w: 0.9565997}
-  m_LocalPosition: {x: 44.94, y: 0, z: -30.45}
+  m_LocalPosition: {x: 6.906021, y: 0.33506393, z: -14.896067}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 56
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 53
   m_LocalEulerAnglesHint: {x: 0, y: -33.884, z: 0}
 --- !u!1 &756582340
 GameObject:
@@ -5037,9 +5621,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &756582342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5056,9 +5644,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &756582343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5075,9 +5667,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &756582344
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5148,11 +5744,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 756582340}
   m_LocalRotation: {x: -0, y: -0.99748355, z: -0, w: 0.07089841}
-  m_LocalPosition: {x: 54.399998, y: 0, z: -16.470005}
+  m_LocalPosition: {x: 16.36602, y: 0.33506393, z: -0.91607094}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 63
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 60
   m_LocalEulerAnglesHint: {x: 0, y: -171.869, z: 0}
 --- !u!1 &761120931
 GameObject:
@@ -5192,9 +5788,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &761120933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5211,9 +5811,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &761120934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5230,9 +5834,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &761120935
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5303,11 +5911,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 761120931}
   m_LocalRotation: {x: -0, y: -0.16442628, z: -0, w: 0.9863894}
-  m_LocalPosition: {x: 34.189995, y: 0, z: -3.75}
+  m_LocalPosition: {x: -3.8439827, y: 0.33506393, z: 11.803934}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 78
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 75
   m_LocalEulerAnglesHint: {x: 0, y: -18.928, z: 0}
 --- !u!1 &801956685
 GameObject:
@@ -5347,9 +5955,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &801956687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5366,9 +5978,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &801956688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5385,9 +6001,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &801956689
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5458,11 +6078,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 801956685}
   m_LocalRotation: {x: -0, y: 0.52770925, z: -0, w: 0.8494251}
-  m_LocalPosition: {x: 56.68, y: 0, z: -22.930006}
+  m_LocalPosition: {x: 18.646023, y: 0.33506393, z: -7.376072}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 70
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 67
   m_LocalEulerAnglesHint: {x: 0, y: 63.702, z: 0}
 --- !u!1 &817756272
 GameObject:
@@ -5502,9 +6122,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &817756274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5521,9 +6145,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &817756275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5540,9 +6168,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &817756276
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5613,11 +6245,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 817756272}
   m_LocalRotation: {x: -0, y: -0.9335323, z: -0, w: 0.35849333}
-  m_LocalPosition: {x: 74.6, y: 0, z: -30.9}
+  m_LocalPosition: {x: 36.56602, y: 0.33506393, z: -15.3460655}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 66
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 63
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
 --- !u!1 &834767959
 GameObject:
@@ -5657,9 +6289,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &834767961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5676,9 +6312,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &834767962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5695,9 +6335,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &834767963
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5768,11 +6412,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 834767959}
   m_LocalRotation: {x: -0, y: -0.74341714, z: -0, w: 0.6688281}
-  m_LocalPosition: {x: 49.429996, y: 0, z: -10.43}
+  m_LocalPosition: {x: 11.396019, y: 0.33506393, z: 5.123934}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 51
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: -96.047, z: 0}
 --- !u!1 &875080243
 GameObject:
@@ -5789,6 +6433,7 @@ GameObject:
   - component: {fileID: 875080250}
   - component: {fileID: 875080249}
   - component: {fileID: 875080248}
+  - component: {fileID: 875080251}
   m_Layer: 0
   m_Name: Guard
   m_TagString: Guard
@@ -5865,12 +6510,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 875080243}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.81, y: 0, z: -18.86}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.223978, y: 0.33506393, z: -3.3060665}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &875080248
 MonoBehaviour:
@@ -5885,12 +6530,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
+  rangeOfVision: 10
+  coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &875080249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5907,9 +6556,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &875080250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5926,9 +6579,41 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
+  targetDir: {x: 0, y: 0, z: 0}
+--- !u!114 &875080251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875080243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b050f1f874b0d5498a0b48727c3f05e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 875080249}
+        m_TargetAssemblyTypeName: Gameplay.VR.OverwatchBehavior, Assembly-CSharp
+        m_MethodName: GE_SonarForGuards
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &884010358
 GameObject:
   m_ObjectHideFlags: 0
@@ -5967,9 +6652,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &884010360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5986,9 +6675,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &884010361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6005,9 +6698,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &884010362
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6077,12 +6774,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884010358}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 43.3, y: 0, z: -52.1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.2660217, y: 0.33506393, z: -36.546066}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &920106537
 GameObject:
@@ -6122,9 +6819,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &920106539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6141,9 +6842,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &920106540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6160,9 +6865,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &920106541
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6232,12 +6941,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 920106537}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 68.94, y: 0, z: -8.38}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 30.906025, y: 0.33506393, z: 7.173934}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &975330080
 GameObject:
@@ -6277,9 +6986,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &975330082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6296,9 +7009,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &975330083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6315,9 +7032,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &975330084
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6388,11 +7109,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 975330080}
   m_LocalRotation: {x: -0, y: 0.52770925, z: -0, w: 0.8494251}
-  m_LocalPosition: {x: 30.34, y: 0, z: -37.15}
+  m_LocalPosition: {x: -7.6939774, y: 0.33506393, z: -21.596067}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 63.702, z: 0}
 --- !u!1 &997673104
 GameObject:
@@ -6528,9 +7249,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1012228197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6547,9 +7272,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1012228198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6566,9 +7295,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1012228199
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6638,12 +7371,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1012228195}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 47.8, y: 0, z: -45.1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.766022, y: 0.33506393, z: -29.546064}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1057414560
 GameObject:
@@ -6660,6 +7393,7 @@ GameObject:
   - component: {fileID: 1057414563}
   - component: {fileID: 1057414562}
   - component: {fileID: 1057414561}
+  - component: {fileID: 1057414568}
   m_Layer: 0
   m_Name: Guard
   m_TagString: Guard
@@ -6680,12 +7414,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 11400000, guid: f52ae61ece9ba174ba70d6e39eac350d, type: 2}
-  rangeOfVision: 0
-  coneOfVision: 0
+  rangeOfVision: 10
+  coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1057414562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6702,9 +7440,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1057414563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6721,9 +7463,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1057414564
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6793,13 +7539,41 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1057414560}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.67, y: 0, z: -12.71}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -19.363977, y: 0.33506393, z: 2.843934}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1057414568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057414560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b050f1f874b0d5498a0b48727c3f05e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1057414562}
+        m_TargetAssemblyTypeName: Gameplay.VR.OverwatchBehavior, Assembly-CSharp
+        m_MethodName: GE_SonarForGuards
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1060787224
 GameObject:
   m_ObjectHideFlags: 0
@@ -6838,9 +7612,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1060787226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6857,9 +7635,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1060787227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6876,9 +7658,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1060787228
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6948,12 +7734,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060787224}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 45.6, y: 0, z: 0.50000095}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.566021, y: 0.33506393, z: 16.053936}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1063591545
 GameObject:
@@ -6993,9 +7779,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1063591547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7012,9 +7802,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1063591548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7031,9 +7825,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1063591549
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7103,12 +7901,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1063591545}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 56.94, y: 0, z: -51.25}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 18.906021, y: 0.33506393, z: -35.696068}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1093674528
 GameObject:
@@ -7148,9 +7946,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1093674530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7167,9 +7969,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1093674531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7186,9 +7992,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1093674532
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7258,12 +8068,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1093674528}
-  m_LocalRotation: {x: -0, y: 0.36840567, z: -0, w: 0.9296651}
-  m_LocalPosition: {x: 34.199997, y: 0, z: -16.77}
+  m_LocalRotation: {x: -0, y: 0.3684057, z: -0, w: 0.92966515}
+  m_LocalPosition: {x: -3.8339806, y: 0.33506393, z: -1.2160664}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 83
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 80
   m_LocalEulerAnglesHint: {x: 0, y: 43.235, z: 0}
 --- !u!1 &1104582301
 GameObject:
@@ -7303,9 +8113,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1104582303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7322,9 +8136,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1104582304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7341,9 +8159,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1104582305
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7414,11 +8236,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1104582301}
   m_LocalRotation: {x: -0, y: -0.9335323, z: -0, w: 0.35849333}
-  m_LocalPosition: {x: 41.42, y: 0, z: 13.630002}
+  m_LocalPosition: {x: 3.3860207, y: 0.33506393, z: 29.183937}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
 --- !u!1 &1107083794
 GameObject:
@@ -7459,9 +8281,13 @@ MonoBehaviour:
   rangeOfVision: 20
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1107083796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7478,9 +8304,13 @@ MonoBehaviour:
   rangeOfVision: 20
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1107083797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7497,9 +8327,13 @@ MonoBehaviour:
   rangeOfVision: 20
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1107083798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7585,12 +8419,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1107083794}
   m_LocalRotation: {x: -0, y: 0.9767797, z: -0, w: 0.2142463}
-  m_LocalPosition: {x: 48, y: 9.51, z: -7.8}
+  m_LocalPosition: {x: 9.9660225, y: 9.845064, z: 7.753934}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 705026320}
-  m_Father: {fileID: 0}
-  m_RootOrder: 89
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 86
   m_LocalEulerAnglesHint: {x: 0, y: 155.257, z: 0}
 --- !u!1 &1136375800
 GameObject:
@@ -7630,9 +8464,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1136375802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7649,9 +8487,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1136375803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7668,9 +8510,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1136375804
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7740,12 +8586,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1136375800}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 78.08, y: 0, z: -14.530001}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 40.046024, y: 0.33506393, z: 1.0239334}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1188547099
 GameObject:
@@ -7785,9 +8631,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1188547101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7804,9 +8654,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1188547102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7823,9 +8677,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1188547103
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7895,12 +8753,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1188547099}
-  m_LocalRotation: {x: -0, y: -0.89088243, z: -0, w: -0.45423386}
-  m_LocalPosition: {x: 40.749996, y: 0, z: -4.299999}
+  m_LocalRotation: {x: -0, y: -0.8908825, z: -0, w: -0.45423388}
+  m_LocalPosition: {x: 2.7160187, y: 0.33506393, z: 11.253935}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 48
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: -234.031, z: 0}
 --- !u!1 &1193689813
 GameObject:
@@ -7940,9 +8798,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1193689815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7959,9 +8821,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1193689816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7978,9 +8844,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1193689817
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8051,11 +8921,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193689813}
   m_LocalRotation: {x: -0, y: 0.52770925, z: -0, w: 0.8494251}
-  m_LocalPosition: {x: 56.68, y: 0, z: -22.930006}
+  m_LocalPosition: {x: 18.646023, y: 0.33506393, z: -7.376072}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 73
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 70
   m_LocalEulerAnglesHint: {x: 0, y: 63.702, z: 0}
 --- !u!1 &1204888456
 GameObject:
@@ -8095,9 +8965,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1204888458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8114,9 +8988,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1204888459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8133,9 +9011,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1204888460
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8206,11 +9088,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1204888456}
   m_LocalRotation: {x: -0, y: 0.9421175, z: -0, w: 0.3352831}
-  m_LocalPosition: {x: 32.3, y: 0, z: -10.1}
+  m_LocalPosition: {x: -5.7339783, y: 0.33506393, z: 5.4539337}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 85
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 82
   m_LocalEulerAnglesHint: {x: 0, y: 140.82, z: 0}
 --- !u!1 &1210231341
 GameObject:
@@ -8250,9 +9132,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1210231343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8269,9 +9155,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1210231344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8288,9 +9178,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1210231345
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8361,11 +9255,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210231341}
   m_LocalRotation: {x: -0, y: 0.9421175, z: -0, w: 0.3352831}
-  m_LocalPosition: {x: 32.3, y: 0, z: -10.100004}
+  m_LocalPosition: {x: -5.7339783, y: 0.33506393, z: 5.45393}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 84
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 81
   m_LocalEulerAnglesHint: {x: 0, y: 140.82, z: 0}
 --- !u!1 &1240824815
 GameObject:
@@ -8405,9 +9299,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1240824817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8424,9 +9322,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1240824818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8443,9 +9345,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1240824819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8516,11 +9422,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240824815}
   m_LocalRotation: {x: -0, y: -0.29140532, z: -0, w: 0.9565997}
-  m_LocalPosition: {x: 58.579998, y: 0, z: -29.600002}
+  m_LocalPosition: {x: 20.54602, y: 0.33506393, z: -14.046068}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 60
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 57
   m_LocalEulerAnglesHint: {x: 0, y: -33.884, z: 0}
 --- !u!1 &1244771795
 GameObject:
@@ -8560,9 +9466,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1244771797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8579,9 +9489,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1244771798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8598,9 +9512,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1244771799
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8670,12 +9588,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244771795}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59.6, y: 0, z: -44.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 21.566021, y: 0.33506393, z: -28.946066}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1256816916
 GameObject:
@@ -8692,6 +9610,7 @@ GameObject:
   - component: {fileID: 1256816919}
   - component: {fileID: 1256816918}
   - component: {fileID: 1256816917}
+  - component: {fileID: 1256816924}
   m_Layer: 0
   m_Name: Guard (1)
   m_TagString: Guard
@@ -8712,12 +9631,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 0
-  coneOfVision: 0
+  rangeOfVision: 10
+  coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1256816918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8734,9 +9657,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1256816919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8753,9 +9680,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1256816920
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8825,13 +9756,41 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1256816916}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.81, y: 0, z: -18.86}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.223978, y: 0.33506393, z: -3.3060665}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1256816924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256816916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b050f1f874b0d5498a0b48727c3f05e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1256816918}
+        m_TargetAssemblyTypeName: Gameplay.VR.OverwatchBehavior, Assembly-CSharp
+        m_MethodName: GE_SonarForGuards
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1260596267
 GameObject:
   m_ObjectHideFlags: 0
@@ -8870,9 +9829,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1260596269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8889,9 +9852,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1260596270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8908,9 +9875,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1260596271
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8980,12 +9951,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260596267}
-  m_LocalRotation: {x: -0, y: -0.89088243, z: -0, w: -0.45423386}
-  m_LocalPosition: {x: 54.389996, y: 0, z: -3.4500046}
+  m_LocalRotation: {x: -0, y: -0.8908825, z: -0, w: -0.45423388}
+  m_LocalPosition: {x: 16.356018, y: 0.33506393, z: 12.1039295}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 52
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: -234.031, z: 0}
 --- !u!1 &1303661058
 GameObject:
@@ -9117,9 +10088,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1321425217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9136,9 +10111,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1321425218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9155,9 +10134,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1321425219
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9227,12 +10210,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321425215}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 68.74, y: 0, z: -50.649998}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 30.70602, y: 0.33506393, z: -35.09606}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 39
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1359590205
 GameObject:
@@ -9272,9 +10255,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1359590207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9291,9 +10278,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1359590208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9310,9 +10301,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1359590209
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9383,11 +10378,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1359590205}
   m_LocalRotation: {x: -0, y: -0.74341714, z: -0, w: 0.6688281}
-  m_LocalPosition: {x: 58.569996, y: 0, z: -16.580002}
+  m_LocalPosition: {x: 20.536018, y: 0.33506393, z: -1.0260677}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 55
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 52
   m_LocalEulerAnglesHint: {x: 0, y: -96.047, z: 0}
 --- !u!1 &1366241149
 GameObject:
@@ -9427,9 +10422,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1366241151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9446,9 +10445,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1366241152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9465,9 +10468,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1366241153
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9538,11 +10545,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366241149}
   m_LocalRotation: {x: -0, y: -0.73580146, z: -0, w: 0.6771974}
-  m_LocalPosition: {x: 30.019997, y: 0, z: -3.6400032}
+  m_LocalPosition: {x: -8.46, y: 0.33506393, z: 12.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 82
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 79
   m_LocalEulerAnglesHint: {x: 0, y: -94.75, z: 0}
 --- !u!1 &1379507268
 GameObject:
@@ -9582,9 +10589,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1379507270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9601,9 +10612,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1379507271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9620,9 +10635,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1379507272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9692,12 +10711,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1379507268}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.030006, y: 0, z: -31.720001}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.9960289, y: 0.33506393, z: -16.166067}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1393606384
 GameObject:
@@ -9737,9 +10756,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1393606386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9756,9 +10779,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1393606387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9775,9 +10802,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1393606388
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9848,11 +10879,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393606384}
   m_LocalRotation: {x: -0, y: 0.52770925, z: -0, w: 0.8494251}
-  m_LocalPosition: {x: 30.34, y: 0, z: -37.15}
+  m_LocalPosition: {x: -7.6939774, y: 0.33506393, z: -21.596067}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 45
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 63.702, z: 0}
 --- !u!1 &1398235179
 GameObject:
@@ -9892,9 +10923,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1398235181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9911,9 +10946,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1398235182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9930,9 +10969,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1398235183
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10002,12 +11045,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398235179}
-  m_LocalRotation: {x: -0, y: -0.89088243, z: -0, w: -0.45423386}
-  m_LocalPosition: {x: 54.389996, y: 0, z: -3.4500046}
+  m_LocalRotation: {x: -0, y: -0.8908825, z: -0, w: -0.45423388}
+  m_LocalPosition: {x: 16.356018, y: 0.33506393, z: 12.1039295}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 53
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 50
   m_LocalEulerAnglesHint: {x: 0, y: -234.031, z: 0}
 --- !u!1 &1431696793
 GameObject:
@@ -10143,9 +11186,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1444582733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10162,9 +11209,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1444582734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10181,9 +11232,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1444582735
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10253,12 +11308,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1444582731}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 74.51001, y: 0, z: -23.650003}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 36.476032, y: 0.33506393, z: -8.096069}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 76
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 73
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1459001617
 GameObject:
@@ -10298,9 +11353,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1459001619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10317,9 +11376,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1459001620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10336,9 +11399,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1459001621
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10409,11 +11476,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459001617}
   m_LocalRotation: {x: -0, y: -0.9335323, z: -0, w: 0.35849333}
-  m_LocalPosition: {x: 64.56, y: 0, z: -37.52}
+  m_LocalPosition: {x: 26.52602, y: 0.33506393, z: -21.966066}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
 --- !u!1 &1459339759
 GameObject:
@@ -10453,9 +11520,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1459339761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10472,9 +11543,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1459339762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10491,9 +11566,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1459339763
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10564,11 +11643,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459339759}
   m_LocalRotation: {x: -0, y: 0.52770925, z: -0, w: 0.8494251}
-  m_LocalPosition: {x: 65.82, y: 0, z: -29.080004}
+  m_LocalPosition: {x: 27.786022, y: 0.33506393, z: -13.52607}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 72
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 69
   m_LocalEulerAnglesHint: {x: 0, y: 63.702, z: 0}
 --- !u!1 &1472664509
 GameObject:
@@ -10608,9 +11687,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1472664511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10627,9 +11710,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1472664512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10646,9 +11733,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1472664513
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10719,11 +11810,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472664509}
   m_LocalRotation: {x: -0, y: 0.52770925, z: -0, w: 0.8494251}
-  m_LocalPosition: {x: 21.2, y: 0, z: -31}
+  m_LocalPosition: {x: -16.833977, y: 0.33506393, z: -15.446066}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 44
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 63.702, z: 0}
 --- !u!1 &1478452699
 GameObject:
@@ -10846,9 +11937,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1490411693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10865,9 +11960,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1490411694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10884,9 +11983,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1490411695
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10956,12 +12059,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490411691}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 78.08, y: 0, z: -14.530001}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 40.046024, y: 0.33506393, z: 1.0239334}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1506222187
 GameObject:
@@ -10978,8 +12081,9 @@ GameObject:
   - component: {fileID: 1506222190}
   - component: {fileID: 1506222189}
   - component: {fileID: 1506222188}
+  - component: {fileID: 1506222195}
   m_Layer: 0
-  m_Name: Guard
+  m_Name: DEAD
   m_TagString: Guard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10998,12 +12102,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 11400000, guid: f52ae61ece9ba174ba70d6e39eac350d, type: 2}
-  rangeOfVision: 0
-  coneOfVision: 0
+  rangeOfVision: 10
+  coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1506222189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11020,9 +12128,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1506222190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11039,9 +12151,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1506222191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11112,12 +12228,40 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1506222187}
   m_LocalRotation: {x: -0, y: -0.9335323, z: -0, w: 0.35849333}
-  m_LocalPosition: {x: 23.63, y: 0, z: -5.73}
+  m_LocalPosition: {x: -12.27, y: 0.33506393, z: 6.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
+--- !u!114 &1506222195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506222187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b050f1f874b0d5498a0b48727c3f05e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1506222189}
+        m_TargetAssemblyTypeName: Gameplay.VR.OverwatchBehavior, Assembly-CSharp
+        m_MethodName: GE_SonarForGuards
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1518878059
 GameObject:
   m_ObjectHideFlags: 0
@@ -11157,9 +12301,13 @@ MonoBehaviour:
   rangeOfVision: 20
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1518878061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11176,9 +12324,13 @@ MonoBehaviour:
   rangeOfVision: 20
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1518878062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11195,9 +12347,13 @@ MonoBehaviour:
   rangeOfVision: 20
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1518878063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11283,12 +12439,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1518878059}
   m_LocalRotation: {x: -0, y: 0.996418, z: -0, w: -0.08456539}
-  m_LocalPosition: {x: 47.3, y: 9.51, z: 2.7}
+  m_LocalPosition: {x: 9.266022, y: 9.845064, z: 18.253935}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2071868192}
-  m_Father: {fileID: 0}
-  m_RootOrder: 91
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 88
   m_LocalEulerAnglesHint: {x: 0, y: 189.702, z: 0}
 --- !u!1 &1526462863
 GameObject:
@@ -11328,9 +12484,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1526462865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11347,9 +12507,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1526462866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11366,9 +12530,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1526462867
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11439,11 +12607,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526462863}
   m_LocalRotation: {x: -0, y: 0.9421175, z: -0, w: 0.3352831}
-  m_LocalPosition: {x: 32.3, y: 0, z: -10.1}
+  m_LocalPosition: {x: -5.7339783, y: 0.33506393, z: 5.4539337}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 86
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 83
   m_LocalEulerAnglesHint: {x: 0, y: 140.82, z: 0}
 --- !u!1 &1550091660
 GameObject:
@@ -11483,9 +12651,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1550091662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11502,9 +12674,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1550091663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11521,9 +12697,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1550091664
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11594,11 +12774,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550091660}
   m_LocalRotation: {x: -0, y: -0.29140532, z: -0, w: 0.9565997}
-  m_LocalPosition: {x: 58.710003, y: 0, z: -3.420002}
+  m_LocalPosition: {x: 20.676025, y: 0.33506393, z: 12.133932}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 59
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 56
   m_LocalEulerAnglesHint: {x: 0, y: -33.884, z: 0}
 --- !u!1 &1551439397
 GameObject:
@@ -11693,7 +12873,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1602654556
 GameObject:
@@ -11710,6 +12890,7 @@ GameObject:
   - component: {fileID: 1602654559}
   - component: {fileID: 1602654558}
   - component: {fileID: 1602654557}
+  - component: {fileID: 1602654564}
   m_Layer: 0
   m_Name: Guard (2)
   m_TagString: Guard
@@ -11730,12 +12911,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 11400000, guid: f52ae61ece9ba174ba70d6e39eac350d, type: 2}
-  rangeOfVision: 0
-  coneOfVision: 0
+  rangeOfVision: 10
+  coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1602654558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11752,9 +12937,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1602654559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11771,9 +12960,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1602654560
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11843,13 +13036,41 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1602654556}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.67, y: 0, z: -12.71}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -19.363977, y: 0.33506393, z: 2.843934}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1602654564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602654556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b050f1f874b0d5498a0b48727c3f05e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 709c3d46ac40b6643880ac85fe314ff2, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1602654558}
+        m_TargetAssemblyTypeName: Gameplay.VR.OverwatchBehavior, Assembly-CSharp
+        m_MethodName: GE_SonarForGuards
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1664093835
 GameObject:
   m_ObjectHideFlags: 0
@@ -11888,9 +13109,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1664093837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11907,9 +13132,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1664093838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11926,9 +13155,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1664093839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11999,11 +13232,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1664093835}
   m_LocalRotation: {x: -0, y: -0.16442628, z: -0, w: 0.9863894}
-  m_LocalPosition: {x: 34.189995, y: 0, z: -3.75}
+  m_LocalPosition: {x: -3.8439827, y: 0.33506393, z: 11.803934}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 79
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 76
   m_LocalEulerAnglesHint: {x: 0, y: -18.928, z: 0}
 --- !u!1 &1676783977
 GameObject:
@@ -12043,9 +13276,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1676783979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12062,9 +13299,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1676783980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12081,9 +13322,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1676783981
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12154,11 +13399,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1676783977}
   m_LocalRotation: {x: -0, y: -0.9335323, z: -0, w: 0.35849333}
-  m_LocalPosition: {x: 64.56, y: 0, z: -37.52}
+  m_LocalPosition: {x: 26.52602, y: 0.33506393, z: -21.966066}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
 --- !u!1 &1740094626
 GameObject:
@@ -12199,9 +13444,13 @@ MonoBehaviour:
   rangeOfVision: 20
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1740094628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12218,9 +13467,13 @@ MonoBehaviour:
   rangeOfVision: 20
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1740094629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12237,9 +13490,13 @@ MonoBehaviour:
   rangeOfVision: 20
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1740094630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12325,12 +13582,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1740094626}
   m_LocalRotation: {x: -0, y: 0.28257746, z: -0, w: 0.95924455}
-  m_LocalPosition: {x: 28.8, y: 9.51, z: -41}
+  m_LocalPosition: {x: -9.233978, y: 9.845064, z: -25.446066}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1878007902}
-  m_Father: {fileID: 0}
-  m_RootOrder: 88
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 85
   m_LocalEulerAnglesHint: {x: 0, y: 32.828, z: 0}
 --- !u!1 &1827017711
 GameObject:
@@ -12370,9 +13627,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1827017713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12389,9 +13650,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1827017714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12408,9 +13673,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1827017715
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12481,11 +13750,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1827017711}
   m_LocalRotation: {x: -0, y: -0.60378593, z: -0, w: 0.79714656}
-  m_LocalPosition: {x: 26.16, y: 0, z: -24.020004}
+  m_LocalPosition: {x: -11.873978, y: 0.33506393, z: -8.46607}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: -74.283, z: 0}
 --- !u!1 &1841814869
 GameObject:
@@ -12717,9 +13986,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1912711026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12736,9 +14009,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1912711027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12755,9 +14032,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1912711028
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12828,11 +14109,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1912711024}
   m_LocalRotation: {x: -0, y: -0.9335323, z: -0, w: 0.35849333}
-  m_LocalPosition: {x: 43.990005, y: 0, z: -24.740002}
+  m_LocalPosition: {x: 5.956028, y: 0.33506393, z: -9.186068}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
 --- !u!1 &1913631428
 GameObject:
@@ -12872,9 +14153,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1913631430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12891,9 +14176,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1913631431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12910,9 +14199,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1913631432
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12983,11 +14276,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1913631428}
   m_LocalRotation: {x: -0, y: -0.74341714, z: -0, w: 0.6688281}
-  m_LocalPosition: {x: 49.429996, y: 0, z: -10.430004}
+  m_LocalPosition: {x: 11.396019, y: 0.33506393, z: 5.12393}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 54
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 51
   m_LocalEulerAnglesHint: {x: 0, y: -96.047, z: 0}
 --- !u!1 &1929777839
 GameObject:
@@ -13027,9 +14320,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1929777841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13046,9 +14343,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1929777842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13065,9 +14366,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1929777843
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13137,12 +14442,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929777839}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.46, y: 0, z: 6.6500015}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.5739784, y: 0.33506393, z: 22.203936}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1953588933
 GameObject:
@@ -13182,9 +14487,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1953588935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13201,9 +14510,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1953588936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13220,9 +14533,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1953588937
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13293,11 +14610,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1953588933}
   m_LocalRotation: {x: -0, y: 0.52770925, z: -0, w: 0.8494251}
-  m_LocalPosition: {x: 56.68, y: 0, z: -22.930002}
+  m_LocalPosition: {x: 18.646023, y: 0.33506393, z: -7.376068}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 69
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 66
   m_LocalEulerAnglesHint: {x: 0, y: 63.702, z: 0}
 --- !u!1 &1954067567
 GameObject:
@@ -13338,9 +14655,13 @@ MonoBehaviour:
   rangeOfVision: 20
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1954067569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13357,9 +14678,13 @@ MonoBehaviour:
   rangeOfVision: 20
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1954067570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13376,9 +14701,13 @@ MonoBehaviour:
   rangeOfVision: 20
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1954067571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13464,12 +14793,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954067567}
   m_LocalRotation: {x: -0, y: 0.77682894, z: -0, w: -0.62971175}
-  m_LocalPosition: {x: 72.2, y: 9.51, z: -16.2}
+  m_LocalPosition: {x: 34.16602, y: 9.845064, z: -0.64606667}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1841814870}
-  m_Father: {fileID: 0}
-  m_RootOrder: 93
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 90
   m_LocalEulerAnglesHint: {x: 0, y: 258.05798, z: 0}
 --- !u!1 &1960257373
 GameObject:
@@ -13509,9 +14838,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1960257375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13528,9 +14861,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1960257376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13547,9 +14884,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1960257377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13619,12 +14960,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960257373}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.46, y: 0, z: 6.6500015}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.5739784, y: 0.33506393, z: 22.203936}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1975413468
 GameObject:
@@ -13664,9 +15005,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1975413470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13683,9 +15028,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1975413471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13702,9 +15051,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &1975413472
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13774,12 +15127,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1975413468}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 68.74, y: 0, z: -50.649998}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 30.70602, y: 0.33506393, z: -35.09606}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2002931823
 GameObject:
@@ -13819,9 +15172,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2002931825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13838,9 +15195,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2002931826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13857,9 +15218,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &2002931827
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13929,12 +15294,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2002931823}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59.6, y: 0, z: -44.499996}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 21.566021, y: 0.33506393, z: -28.946062}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2015247618
 GameObject:
@@ -13975,9 +15340,13 @@ MonoBehaviour:
   rangeOfVision: 20
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2015247620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13994,9 +15363,13 @@ MonoBehaviour:
   rangeOfVision: 20
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2015247621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14013,9 +15386,13 @@ MonoBehaviour:
   rangeOfVision: 20
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2015247622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14101,12 +15478,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2015247618}
   m_LocalRotation: {x: -0, y: 0.98890245, z: -0, w: 0.14856666}
-  m_LocalPosition: {x: 36, y: 9.51, z: 15.6}
+  m_LocalPosition: {x: -2.0339775, y: 9.845064, z: 31.153934}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 997673105}
-  m_Father: {fileID: 0}
-  m_RootOrder: 92
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 89
   m_LocalEulerAnglesHint: {x: 0, y: 162.912, z: 0}
 --- !u!1 &2022742734
 GameObject:
@@ -14146,9 +15523,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2022742736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14165,9 +15546,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2022742737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14184,9 +15569,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &2022742738
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14257,11 +15646,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2022742734}
   m_LocalRotation: {x: -0, y: 0.52770925, z: -0, w: 0.8494251}
-  m_LocalPosition: {x: 21.2, y: 0, z: -31.000004}
+  m_LocalPosition: {x: -16.833977, y: 0.33506393, z: -15.44607}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 63.702, z: 0}
 --- !u!1 &2038304355
 GameObject:
@@ -14301,9 +15690,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2038304357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14320,9 +15713,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2038304358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14339,9 +15736,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &2038304359
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14412,11 +15813,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2038304355}
   m_LocalRotation: {x: -0, y: -0.9335323, z: -0, w: 0.35849333}
-  m_LocalPosition: {x: 39.12, y: 0, z: -38.969997}
+  m_LocalPosition: {x: 1.0860214, y: 0.33506393, z: -23.416063}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
 --- !u!1 &2063257922
 GameObject:
@@ -14456,9 +15857,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2063257924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14475,9 +15880,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2063257925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14494,9 +15903,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &2063257926
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14567,11 +15980,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2063257922}
   m_LocalRotation: {x: -0, y: -0.99748355, z: -0, w: 0.07089841}
-  m_LocalPosition: {x: 54.399998, y: 0, z: -16.470005}
+  m_LocalPosition: {x: 16.36602, y: 0.33506393, z: -0.91607094}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 62
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 59
   m_LocalEulerAnglesHint: {x: 0, y: -171.869, z: 0}
 --- !u!1 &2065933918
 GameObject:
@@ -14611,9 +16024,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2065933920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14630,9 +16047,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2065933921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14649,9 +16070,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &2065933922
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14722,11 +16147,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2065933918}
   m_LocalRotation: {x: -0, y: -0.9335323, z: -0, w: 0.35849333}
-  m_LocalPosition: {x: 73.9, y: 0, z: -1.4}
+  m_LocalPosition: {x: 35.866024, y: 0.33506393, z: 14.1539345}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
 --- !u!1 &2071868191
 GameObject:
@@ -14862,9 +16287,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2072313826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14881,9 +16310,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2072313827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14900,9 +16333,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &2072313828
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14973,11 +16410,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2072313824}
   m_LocalRotation: {x: -0, y: -0.29140532, z: -0, w: 0.9565997}
-  m_LocalPosition: {x: 49.44, y: 0, z: -23.450005}
+  m_LocalPosition: {x: 11.406021, y: 0.33506393, z: -7.8960705}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 64
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 61
   m_LocalEulerAnglesHint: {x: 0, y: -33.884, z: 0}
 --- !u!1 &2093756276
 GameObject:
@@ -15017,9 +16454,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2093756278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15036,9 +16477,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2093756279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15055,9 +16500,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &2093756280
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15128,11 +16577,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2093756276}
   m_LocalRotation: {x: -0, y: -0.74341714, z: -0, w: 0.6688281}
-  m_LocalPosition: {x: 44.929996, y: 0, z: -17.43}
+  m_LocalPosition: {x: 6.896019, y: 0.33506393, z: -1.8760662}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 46
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: -96.047, z: 0}
 --- !u!1 &2130863224
 GameObject:
@@ -15172,9 +16621,13 @@ MonoBehaviour:
   rangeOfVision: 0
   coneOfVision: 0
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2130863226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15191,9 +16644,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &2130863227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15210,9 +16667,13 @@ MonoBehaviour:
   rangeOfVision: 10
   coneOfVision: 90
   playerHead: {fileID: 1551439401}
+  playerPositionAtom: {fileID: 11400000, guid: 022819879da18ee499aef7e7df899f57, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  gameOver: {fileID: 0}
+  scanForGuard: {fileID: 0}
+  targetDir: {x: 0, y: 0, z: 0}
 --- !u!65 &2130863228
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15283,9 +16744,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2130863224}
   m_LocalRotation: {x: -0, y: -0.9335323, z: -0, w: 0.35849333}
-  m_LocalPosition: {x: 52.76, y: 0, z: -38.120003}
+  m_LocalPosition: {x: 14.726021, y: 0.33506393, z: -22.566069}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_Father: {fileID: 105737513}
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: -137.985, z: 0}
