@@ -44,7 +44,7 @@ public class DistractionBehavior : MoveBehavior
 
     void CheckForDestination(Vector3 destination)
     {
-        if (IsInArea(transform.position, destination, patrol.path.pointArea))
+        if (IsInArea(transform.position, destination, 0.5f))
         {
             SetMove(transform.position, false);
 
