@@ -11,6 +11,7 @@ TagManager:
   - Camera/Rotating Camera
   - Camera/Static Camera
   - Camera/Mobile Camera
+  - Enemy
   layers:
   - Default
   - TransparentFX
