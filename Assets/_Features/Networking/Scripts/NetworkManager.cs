@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
-using UnityEngine.SceneManagement;
+using Gameplay;
 
-namespace Gameplay.Networking
+namespace Networking
 {
     public class NetworkManager : MonoBehaviourPunCallbacks
     {
@@ -15,16 +15,17 @@ namespace Gameplay.Networking
 
         private void Start()
         {
+
             PhotonNetwork.ConnectUsingSettings();
 
         }
-        public static void JoinRoom()
+        public void JoinRoom()
         {
             PhotonNetwork.JoinRoom("1");
 
         }
 
-        public static void CreateRoom()
+        public void CreateRoom()
         {
             RoomOptions roomOptions = new RoomOptions() { IsVisible = true, IsOpen = true, MaxPlayers = 2 };
             PhotonNetwork.CreateRoom("1", roomOptions);
@@ -32,6 +33,14 @@ namespace Gameplay.Networking
         }
 
         public override void OnJoinedRoom()
+        {
+            if (PhotonNetwork.CurrentRoom.PlayerCount == PhotonNetwork.CurrentRoom.MaxPlayers)
+            {
+                _OnRoomFulled.Raise();
+            }
+        }
+
+        public override void OnPlayerEnteredRoom(Player newPlayer)
         {
             if (PhotonNetwork.CurrentRoom.PlayerCount == PhotonNetwork.CurrentRoom.MaxPlayers)
             {
