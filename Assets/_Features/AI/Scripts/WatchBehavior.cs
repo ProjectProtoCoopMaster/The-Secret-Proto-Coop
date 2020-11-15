@@ -10,6 +10,8 @@ public class WatchBehavior : MonoBehaviour
     private Vector3 currentDirection;
 
     private Quaternion currentRotation;
+    private float[] angles = new float[2];
+    private float angleOffset = 1f;
 
     public int _pos { get; set; }
 
@@ -26,7 +28,8 @@ public class WatchBehavior : MonoBehaviour
         position.y = 0.0f;
 
         currentRotation = Quaternion.LookRotation(position, Vector3.up);
-        Debug.Log(currentRotation.eulerAngles);
+        angles[0] = currentRotation.eulerAngles.y - angleOffset;
+        angles[1] = currentRotation.eulerAngles.y + angleOffset;
 
         time = 0.0f;
     }
@@ -37,7 +40,7 @@ public class WatchBehavior : MonoBehaviour
         {
             WatchDirection();
 
-            if (transform.rotation == currentRotation)
+            if (transform.rotation.eulerAngles.y >= angles[0] && transform.rotation.eulerAngles.y <= angles[1])
             {
                 NextDirection();
             }
@@ -49,6 +52,9 @@ public class WatchBehavior : MonoBehaviour
         time += (Time.deltaTime * rotateSpeed);
 
         transform.rotation = Quaternion.Lerp(transform.rotation, currentRotation, time);
+
+        Debug.Log(currentRotation.eulerAngles + " for " + gameObject.name);
+        Debug.Log(transform.rotation.eulerAngles + " for " + gameObject.name);
     }
 
     private void NextDirection()

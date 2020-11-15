@@ -17,11 +17,8 @@ public class PatrolBehavior : MoveBehavior
 
     private float currentWaitTime;
 
-    public bool isMoving { get; set; }
-    public bool isWaiting { get; set; }
-    public bool isWatching { get; set; }
-
-    private LastAction lastAction;
+    public State state { get; set; }
+    public State save { get; set; }
 
     void Start()
     {
@@ -45,7 +42,7 @@ public class PatrolBehavior : MoveBehavior
 
         SetMove(currentWaypoint.position, true);
 
-        isMoving = true;
+        state = State.Move;
     }
 
     public void SetAction(int index)
@@ -60,12 +57,12 @@ public class PatrolBehavior : MoveBehavior
 
             if (currentAction.type == ActionType.Wait)
             {
-                isWaiting = true;
+                state = State.Wait;
                 currentWaitTime = currentAction.timeToWait;
             }
             else if (currentAction.type == ActionType.Watching)
             {
-                isWatching = true;
+                state = State.Watch;
 
                 if (currentAction.watchDirections == null) return;
                 else
@@ -82,11 +79,11 @@ public class PatrolBehavior : MoveBehavior
 
     void Update()
     {
-        if (isMoving) CheckPosition();
+        if (state == State.Move) CheckPosition();
 
-        else if (isWaiting) Wait();
+        else if (state == State.Wait) Wait();
 
-        else if (isWatching) CheckWatch();
+        else if (state == State.Watch) CheckWatch();
     }
 
     private void CheckPosition()
@@ -95,7 +92,6 @@ public class PatrolBehavior : MoveBehavior
         {
             SetMove(transform.position, false);
 
-            isMoving = false;
             _act = 0;
             SetAction(_act);
         }
@@ -103,21 +99,14 @@ public class PatrolBehavior : MoveBehavior
 
     private void Wait()
     {
-        if (currentWaitTime <= 0.0f)
-        {
-            isWaiting = false;
-            NextAction();
-        }
+        if (currentWaitTime <= 0.0f) NextAction();
+
         else currentWaitTime -= Time.deltaTime;
     }
 
     private void CheckWatch()
     {
-        if (!watching.watch)
-        {
-            isWatching = false;
-            NextAction();
-        }
+        if (!watching.watch) NextAction();
     }
 
     private void NextAction()
@@ -140,32 +129,20 @@ public class PatrolBehavior : MoveBehavior
 
     public void StopPatrol()
     {
-        lastAction = isMoving ? LastAction.Move : isWatching ? LastAction.Watch : isWaiting ? LastAction.Wait : LastAction.None;
+        save = state;
+        state = State.None;
 
-        isWaiting = false;
-
-        SetMove(currentWaypoint.position, false);
-        isMoving = false;
-
-        isWatching = false;
         watching.watch = false;
+
+        SetMove(transform.position, false);
     }
 
     public void ResumePatrol()
     {
-        switch (lastAction)
-        {
-            case LastAction.Move:
-                SetMove(currentWaypoint.position, true);
-                isMoving = true;
-                break;
-            case LastAction.Wait:
-                isWaiting = true;
-                break;
-            case LastAction.Watch:
-                watching.watch = true;
-                isWatching = true;
-                break;
-        }
+        state = save;
+
+        if (state == State.Watch) watching.watch = true;
+
+        if (state == State.Move) SetMove(currentWaypoint.position, true);
     }
 }

@@ -11,12 +11,13 @@ public class DistractionBehavior : MoveBehavior
     public PatrolBehavior patrol;
 
     private Vector3 distractionPosition;
-
     private Vector3 returnPosition;
 
-    private bool diverted;
-    private bool searching;
-    private bool returning;
+    private Vector3 currentDestination;
+
+    private State st;
+
+    private bool hasSearched;
 
     public float waitTime;
     private float currentTime;
@@ -28,54 +29,56 @@ public class DistractionBehavior : MoveBehavior
         distractionPosition = direction;
         returnPosition = transform.position;
 
-        SetMove(distractionPosition, true);
+        currentDestination = distractionPosition;
+        SetMove(currentDestination, true);
 
-        diverted = true;
+        st = State.Move;
     }
 
     private void Update()
     {
-        if (diverted) CheckForDestination();
+        if (st == State.Move) CheckForDestination(currentDestination);
 
-        else if (searching) Waiting(); // Search or Wait Animation and talking
-
-        else if (returning) CheckForReturn();
+        else if (st == State.Search) Waiting(); // Search or Wait Animation and talking
     }
 
-    void CheckForDestination()
+    void CheckForDestination(Vector3 destination)
     {
-        if (IsInArea(transform.position, distractionPosition, patrol.path.pointArea))
+        if (IsInArea(transform.position, destination, patrol.path.pointArea))
         {
             SetMove(transform.position, false);
 
-            diverted = false;
-            searching = true;
+            if (!hasSearched) SetSearch();
 
-            currentTime = waitTime;
+            else EndDiversion();
         }
+    }
+
+    void SetSearch()
+    {
+        st = State.Search;
+
+        currentTime = waitTime;
+    }
+
+    void EndDiversion()
+    {
+        if (hasPatrol) patrol.ResumePatrol();
+
+        st = State.None;
     }
 
     void Waiting()
     {
         if (currentTime <= 0.0f)
         {
-            SetMove(returnPosition, true);
+            currentDestination = returnPosition;
+            SetMove(currentDestination, true);
 
-            searching = false;
-            returning = true;
+            hasSearched = true;
+
+            st = State.Move;
         }
         else currentTime -= Time.deltaTime;
-    }
-
-    void CheckForReturn()
-    {
-        if (IsInArea(transform.position, returnPosition, patrol.path.pointArea))
-        {
-            SetMove(transform.position, false);
-
-            if (hasPatrol) patrol.ResumePatrol();
-
-            returning = false;
-        }
     }
 }

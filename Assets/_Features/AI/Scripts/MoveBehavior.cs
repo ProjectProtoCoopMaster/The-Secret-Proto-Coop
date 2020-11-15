@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum LastAction { Move, Wait, Watch, None }
+public enum State { Move, Wait, Watch, None, Search }
 
 public class MoveBehavior : MonoBehaviour
 {
