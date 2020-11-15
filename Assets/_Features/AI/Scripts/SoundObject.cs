@@ -6,7 +6,7 @@ public class SoundObject : MonoBehaviour
 {
     public float radius;
 
-    private void Start()
+    public void GE_MakeSound()
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
 
