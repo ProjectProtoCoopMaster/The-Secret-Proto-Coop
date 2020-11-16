@@ -32,7 +32,7 @@ namespace Tools.Debugging
             rangeOfVisionProp = serializedObject.FindProperty(nameof(entityVisionDataInterface.rangeOfVision));
             coneOfVisionProp = serializedObject.FindProperty(nameof(entityVisionDataInterface.coneOfVision));
             playerTransformProp = serializedObject.FindProperty(nameof(entityVisionDataInterface.playerHead));
-            playerDetectionLayerProp = serializedObject.FindProperty(nameof(entityVisionDataInterface.playerLayer));
+            playerDetectionLayerProp = serializedObject.FindProperty(nameof(entityVisionDataInterface.detectionMask));
         }
 
 

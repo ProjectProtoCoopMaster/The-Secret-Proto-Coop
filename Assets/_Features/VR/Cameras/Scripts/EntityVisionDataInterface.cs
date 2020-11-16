@@ -14,7 +14,7 @@ namespace Gameplay.VR
         [SerializeField] [HideInInspector] public float coneOfVision;
         [SerializeField] [HideInInspector] public Transform playerHead;
 
-        [SerializeField] public LayerMask playerLayer;
+        [SerializeField] public LayerMask detectionMask;
         [SerializeField] [HideInInspector] protected RaycastHit hitInfo;
 
         [SerializeField] [HideInInspector] protected GameEvent gameOver;

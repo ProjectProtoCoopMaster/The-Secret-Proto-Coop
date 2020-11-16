@@ -59,7 +59,7 @@ namespace Gameplay.VR
             Debug.Log("I'm checking");
 
             // if you hit something between the camera and the player's head position
-            if (Physics.Linecast(this.transform.forward, playerHead.position, out hitInfo, playerLayer))
+            if (Physics.Linecast(transform.position, playerHead.position, out hitInfo, detectionMask))
             {
                 if (hitInfo.collider.gameObject.name == playerHead.name)
                 {
@@ -69,13 +69,13 @@ namespace Gameplay.VR
                     // gameOver.Raise();
                     // TODO : Implement a progressive spotting mechanic, based on distance
                 }
-                else
+                else if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Environment"))
                 {
                     Debug.DrawLine(transform.position, playerHead.position, Color.red);
                     Debug.Log("I hit " + hitInfo.collider.gameObject.name);
                 }
             }
-             else if (!Physics.Linecast(this.transform.forward, playerHead.position, out hitInfo, playerLayer)) 
+            else if (!Physics.Linecast(transform.position, playerHead.position, out hitInfo, detectionMask))
                 Debug.Log("No Collisions");
         }
     }
