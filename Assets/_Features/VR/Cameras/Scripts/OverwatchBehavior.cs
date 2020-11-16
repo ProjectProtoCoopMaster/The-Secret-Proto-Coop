@@ -19,7 +19,7 @@ namespace Gameplay.VR
 
         private void Start()
         {
-            //StartCoroutine(PingForGuards());
+            StartCoroutine(PingForGuards());
         }
 
         public void GE_SonarForGuards()
@@ -73,7 +73,8 @@ namespace Gameplay.VR
 #if UNITY_EDITOR
             if (!visibleGuards.Contains(guard)) visibleGuards.Add(guard);
 #endif
-            if (guard.name == "DEAD") Debug.Log("Game over, bub");
+            if (guard.name == "DEAD") 
+                Debug.Log("Game over, bub");
         }
     }
 }

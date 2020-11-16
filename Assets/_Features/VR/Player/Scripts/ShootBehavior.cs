@@ -24,22 +24,22 @@ namespace Gameplay.VR.Player
 
         private void Update()
         {
-            Debug.DrawRay(gunBarrel.position, transform.forward * 50f, Color.magenta);
+            Debug.DrawRay(gunBarrel.position, gunBarrel.transform.forward * 50f, Color.magenta);
 
             if (Physics.Raycast(gunBarrel.position, gunBarrel.transform.forward, out hit, shootingLayer))
             {
-                if (hit.collider.gameObject.CompareTag("Enemy"))
+                if (hit.collider.gameObject.CompareTag("Guard"))
                     hit.collider.GetComponent<GuardMortalityBehavior>().Shot();
             }
         }
 
         private void TriggerRelease(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
         {
-            Debug.DrawRay(gunBarrel.position, transform.forward * 50f, Color.magenta);
+            Debug.DrawRay(gunBarrel.position, gunBarrel.transform.forward * 50f, Color.magenta);
 
-            if (Physics.Raycast(gunBarrel.position, transform.forward, out hit, shootingLayer))
+            if (Physics.Raycast(gunBarrel.position, gunBarrel.transform.forward, out hit, shootingLayer))
             {
-                if(hit.collider.gameObject.CompareTag("Enemy")) 
+                if(hit.collider.gameObject.CompareTag("Guard")) 
                     GetComponent<GuardMortalityBehavior>().Shot();
             }
         }
