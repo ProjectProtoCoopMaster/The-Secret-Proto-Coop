@@ -10,8 +10,8 @@ namespace Gameplay.VR
     {
         [SerializeField] [HideInInspector] public EntityVisionScriptable entityVisionData;
 
-        [SerializeField] [HideInInspector] public float rangeOfVision;
-        [SerializeField] [HideInInspector] public float coneOfVision;
+        [SerializeField] public float rangeOfVision;
+        [SerializeField] public float coneOfVision;
         [SerializeField] [HideInInspector] public Transform playerHead;
 
         [SerializeField] public LayerMask detectionMask;

@@ -42,11 +42,12 @@ namespace Gameplay.VR
                 if (distToTarget < rangeOfVision * rangeOfVision)
                 {
                     // get the direction of the player's head...
-                   // targetDir = playerHead.position - myFinalPos;
-                    Vector3 targetDir = playerHead.position - transform.position;
+                   targetDir = playerHead.position - myFinalPos;
+                   // Vector3 targetDir = playerHead.position - transform.position;
                     
                     //...if the angle between the looking dir of the cam and the player is less than the cone of vision, then you are inside the cone of vision
-                    if (Vector3.Angle(targetDir, transform.forward) <= coneOfVision * 0.5f) PlayerInSightCheck();
+                    if (Vector3.Angle(targetDir, transform.forward) <= coneOfVision * 0.5f) 
+                        PlayerInSightCheck();
                 }
 
                 yield return null;
