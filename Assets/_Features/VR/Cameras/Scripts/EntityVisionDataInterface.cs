@@ -25,8 +25,7 @@ namespace Gameplay.VR
         protected List<GameObject> guards = new List<GameObject>(); // list of guards in the scene
         protected List<Vector3> deadGuards = new List<Vector3>(); // list of guards in the scene
 
-        protected Vector2 myPos, targetPos;
-        protected Vector3 myFinalPos;
+        protected Vector3 myPos, targetPos, myFinalPos;
         protected float distToTarget;
         protected bool isActive;
 
@@ -35,7 +34,7 @@ namespace Gameplay.VR
             if (playerHead == null)
             {
                 Debug.Log("Set Player Reference");
-                playerHead = GameObject.Find("Player").transform;
+                playerHead = GameObject.Find("HeadCollider").transform;
             }
         }
     }

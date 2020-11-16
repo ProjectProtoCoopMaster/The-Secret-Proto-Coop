@@ -26,10 +26,10 @@ namespace Gameplay.VR
             while (true)
             {
                 myPos.x = transform.position.x;
-                myPos.y = transform.position.z;
+                myPos.z = transform.position.z;
 
                 targetPos.x = playerHead.transform.position.x;
-                targetPos.y = playerHead.transform.position.z;
+                targetPos.z = playerHead.transform.position.z;
 
                 myFinalPos.x = transform.position.x;
                 myFinalPos.y = playerHead.transform.position.y;
@@ -42,9 +42,11 @@ namespace Gameplay.VR
                 if (distToTarget < rangeOfVision * rangeOfVision)
                 {
                     // get the direction of the player's head...
-                    targetDir = playerHead.position - myFinalPos;
+                   // targetDir = playerHead.position - myFinalPos;
+                    Vector3 targetDir = playerHead.position - transform.position;
+                    
                     //...if the angle between the looking dir of the cam and the player is less than the cone of vision, then you are inside the cone of vision
-                    if (Vector3.Angle(targetDir, transform.forward) <= coneOfVision * .5f) PlayerInSightCheck();
+                    if (Vector3.Angle(targetDir, transform.forward) <= coneOfVision * 0.5f) PlayerInSightCheck();
                 }
 
                 yield return null;
@@ -54,8 +56,10 @@ namespace Gameplay.VR
         // if the player is in range and in the cone of vision, check if you have line of sight to his head collider
         void PlayerInSightCheck()
         {
+            Debug.Log("I'm checking");
+
             // if you hit something between the camera and the player's head position
-            if (Physics.Linecast(this.transform.position, playerHead.position, out hitInfo, playerLayer))
+            if (Physics.Linecast(this.transform.forward, playerHead.position, out hitInfo, playerLayer))
             {
                 if (hitInfo.collider.gameObject.name == "Player")
                 {
