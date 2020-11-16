@@ -61,7 +61,7 @@ namespace Gameplay.VR
             // if you hit something between the camera and the player's head position
             if (Physics.Linecast(this.transform.forward, playerHead.position, out hitInfo, playerLayer))
             {
-                if (hitInfo.collider.gameObject.name == "Player")
+                if (hitInfo.collider.gameObject.name == playerHead.name)
                 {
                     Debug.DrawLine(transform.position, playerHead.position, Color.green);
                     Debug.Log("I hit the player");
@@ -72,9 +72,11 @@ namespace Gameplay.VR
                 else
                 {
                     Debug.DrawLine(transform.position, playerHead.position, Color.red);
-                    Debug.Log("I hit something");
+                    Debug.Log("I hit " + hitInfo.collider.gameObject.name);
                 }
             }
+             else if (!Physics.Linecast(this.transform.forward, playerHead.position, out hitInfo, playerLayer)) 
+                Debug.Log("No Collisions");
         }
     }
 }
