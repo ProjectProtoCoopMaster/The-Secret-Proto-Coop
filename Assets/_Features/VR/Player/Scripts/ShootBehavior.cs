@@ -6,7 +6,6 @@ namespace Gameplay.VR.Player
     public class ShootBehavior : BallistixData
     {
         public Transform gunBarrel;
-        //public ProjectileBehavior projectile;
         public LayerMask shootingLayer;
 
         RaycastHit hit;
@@ -17,12 +16,13 @@ namespace Gameplay.VR.Player
         // a reference to the hand
         public SteamVR_Input_Sources handType;
 
+
         private void Start()
         {
             shootAction.AddOnStateUpListener(TriggerRelease, handType);
         }
-
-        private void Update()
+        
+        /*private void Update()
         {
             Debug.DrawRay(gunBarrel.position, gunBarrel.transform.forward * 50f, Color.magenta);
 
@@ -31,7 +31,7 @@ namespace Gameplay.VR.Player
                 if (hit.collider.gameObject.CompareTag("Guard"))
                     hit.collider.GetComponent<GuardMortalityBehavior>().Shot();
             }
-        }
+        }*/
 
         private void TriggerRelease(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
         {
@@ -39,8 +39,8 @@ namespace Gameplay.VR.Player
 
             if (Physics.Raycast(gunBarrel.position, gunBarrel.transform.forward, out hit, shootingLayer))
             {
-                if(hit.collider.gameObject.CompareTag("Guard")) 
-                    GetComponent<GuardMortalityBehavior>().Shot();
+                if (hit.collider.gameObject.CompareTag("Guard"))
+                    hit.collider.GetComponent<GuardMortalityBehavior>().Shot();
             }
         }
     }

@@ -10,6 +10,7 @@ namespace Gameplay.VR
 
         public void Shot()
         {
+            gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
             gameObject.name = "DEAD";
             killed.Raise();
         }
