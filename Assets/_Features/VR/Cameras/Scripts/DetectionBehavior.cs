@@ -9,15 +9,20 @@ namespace Gameplay.VR
         private void Start()
         {
             // have two seperate methods to 
+            isActive = true;
             StartCoroutine(PlayerInRangeCheck());
         }
 
-        public void CE_DetectionSwitch()
+        // called from VR_CameraBehavior
+        public void DetectionOn()
         {
-            isActive = !isActive;
-
-            if (isActive) StartCoroutine(PlayerInRangeCheck());
-            else StopAllCoroutines();
+            isActive = true;
+            StartCoroutine(PlayerInRangeCheck());
+        }
+        public void DetectionOff()
+        {
+            isActive = false;
+            StopAllCoroutines();
         }
 
         // check if the player is in range 
@@ -25,11 +30,13 @@ namespace Gameplay.VR
         {
             while (true)
             {
+                if (!isActive) break;
+
                 myPos.x = transform.position.x;
-                myPos.y = transform.position.z;
+                myPos.z = transform.position.z;
 
                 targetPos.x = playerHead.transform.position.x;
-                targetPos.y = playerHead.transform.position.z;
+                targetPos.z = playerHead.transform.position.z;
 
                 myFinalPos.x = transform.position.x;
                 myFinalPos.y = playerHead.transform.position.y;
@@ -42,9 +49,12 @@ namespace Gameplay.VR
                 if (distToTarget < rangeOfVision * rangeOfVision)
                 {
                     // get the direction of the player's head...
-                    targetDir = playerHead.position - myFinalPos;
+                   targetDir = playerHead.position - myFinalPos;
+                   // Vector3 targetDir = playerHead.position - transform.position;
+                    
                     //...if the angle between the looking dir of the cam and the player is less than the cone of vision, then you are inside the cone of vision
-                    if (Vector3.Angle(targetDir, transform.forward) <= coneOfVision * .5f) PlayerInSightCheck();
+                    if (Vector3.Angle(targetDir, transform.forward) <= coneOfVision * 0.5f) 
+                        PlayerInSightCheck();
                 }
 
                 yield return null;
@@ -54,23 +64,25 @@ namespace Gameplay.VR
         // if the player is in range and in the cone of vision, check if you have line of sight to his head collider
         void PlayerInSightCheck()
         {
+            Debug.Log("I'm checking");
+
             // if you hit something between the camera and the player's head position
-            if (Physics.Linecast(this.transform.position, playerHead.position, out hitInfo, playerLayer))
+            if (Physics.Linecast(transform.position, playerHead.position, out hitInfo, detectionMask))
             {
-                if (hitInfo.collider.gameObject.name == "Player")
+                if (hitInfo.collider.gameObject.name == playerHead.name)
                 {
                     Debug.DrawLine(transform.position, playerHead.position, Color.green);
                     Debug.Log("I hit the player");
-                    // call the gameOver event for a quick death
-                    // gameOver.Raise();
-                    // TODO : Implement a progressive spotting mechanic, based on distance
+                    raiseAlarm.Raise();
                 }
-                else
+                else if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Environment"))
                 {
                     Debug.DrawLine(transform.position, playerHead.position, Color.red);
-                    Debug.Log("I hit something");
+                    Debug.Log("I hit " + hitInfo.collider.gameObject.name);
                 }
             }
+            else if (!Physics.Linecast(transform.position, playerHead.position, out hitInfo, detectionMask))
+                Debug.Log("No Collisions");
         }
     }
 }

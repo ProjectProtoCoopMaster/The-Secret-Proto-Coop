@@ -12,6 +12,10 @@ namespace Gameplay.VR
 #if UNITY_EDITOR
         public List<GameObject> visibleGuards = new List<GameObject>();
 #endif
+
+        bool raisingAlarm;
+
+
         private void Awake()
         {
             guards.AddRange(GameObject.FindGameObjectsWithTag("Guard"));
@@ -19,20 +23,28 @@ namespace Gameplay.VR
 
         private void Start()
         {
-            //StartCoroutine(PingForGuards());
+            isActive = true;
+            StartCoroutine(PingForGuards());
         }
-
-        public void GE_SonarForGuards()
+        
+        // called if
+        public void GE_Overwatching()
         {
+            raisingAlarm = false;
             StartCoroutine(PingForGuards());
         }
 
-        public void GE_OverwatchSwitch()
+        // for cameras
+        // called from VR_CameraBehavior
+        public void OverwatchOn()
         {
-            isActive = !isActive;
-
-            if (isActive) StartCoroutine(PingForGuards());
-            else StopAllCoroutines();
+            isActive = true;
+            StartCoroutine(PingForGuards());
+        }
+        public void OverwatchOff()
+        {
+            isActive = false;
+            StopAllCoroutines();
         }
 
         IEnumerator PingForGuards()
@@ -65,7 +77,7 @@ namespace Gameplay.VR
             }
 
             yield return null;
-            StartCoroutine(PingForGuards());
+            if(!raisingAlarm && isActive) StartCoroutine(PingForGuards());
         }
 
         void CheckGuardState(GameObject guard)
@@ -73,7 +85,13 @@ namespace Gameplay.VR
 #if UNITY_EDITOR
             if (!visibleGuards.Contains(guard)) visibleGuards.Add(guard);
 #endif
-            if (guard.name == "DEAD") Debug.Log("Game over, bub");
+
+            // if you see a dead guard
+            if (guard.name == "DEAD")
+            {
+                raisingAlarm = true;
+                raiseAlarm.Raise();
+            }
         }
     }
 }

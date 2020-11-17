@@ -4,6 +4,10 @@ namespace Gameplay.VR
 {
     public class VR_CameraBehavior : MonoBehaviour, ISwitchable
     {
+        OverwatchBehavior overwatchBehavior;
+        DetectionBehavior detectionBehavior;
+        RotationBehavior rotationBehavior;
+
         [Range(0, 1), SerializeField] private int state;
         [Range(0, 1), SerializeField] private int power;
 
@@ -41,14 +45,29 @@ namespace Gameplay.VR
 
         public GameObject MyGameObject { get { return this.gameObject; } set { MyGameObject = value; } }
 
+        private void Awake()
+        {
+            overwatchBehavior = GetComponent<OverwatchBehavior>();
+            detectionBehavior = GetComponent<DetectionBehavior>();
+            try
+            {
+                rotationBehavior = GetComponent<RotationBehavior>();
+            }
+            finally { };
+        }
+
         public void TurnOff()
         {
-
+            overwatchBehavior.OverwatchOff();
+            detectionBehavior.DetectionOff();
+            if(rotationBehavior != null) rotationBehavior.RotationOff();
         }
 
         public void TurnOn()
         {
-
+            overwatchBehavior.OverwatchOn();
+            detectionBehavior.DetectionOn();
+            if (rotationBehavior != null) rotationBehavior.RotationOn();
         }
     }
 }

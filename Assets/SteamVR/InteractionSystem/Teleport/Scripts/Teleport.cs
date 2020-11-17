@@ -171,8 +171,9 @@ namespace Valve.VR.InteractionSystem
 
 
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// CUSTOM ADDED 
-			main = particleDash.main;
-			main.duration = tweenDuration;
+			/*main = particleDash.main;
+			main.duration = tweenDuration;*/
+			// causes errors
 
 
 		}

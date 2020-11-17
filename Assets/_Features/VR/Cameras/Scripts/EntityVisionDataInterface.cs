@@ -10,14 +10,14 @@ namespace Gameplay.VR
     {
         [SerializeField] [HideInInspector] public EntityVisionScriptable entityVisionData;
 
-        [SerializeField] [HideInInspector] public float rangeOfVision;
-        [SerializeField] [HideInInspector] public float coneOfVision;
+        [SerializeField] public float rangeOfVision;
+        [SerializeField] public float coneOfVision;
         [SerializeField] [HideInInspector] public Transform playerHead;
 
-        [SerializeField] [HideInInspector] public LayerMask playerLayer;
+        [SerializeField] public LayerMask detectionMask;
         [SerializeField] [HideInInspector] protected RaycastHit hitInfo;
 
-        [SerializeField] [HideInInspector] protected GameEvent gameOver;
+        [SerializeField] protected GameEvent raiseAlarm;
         [SerializeField] [HideInInspector] protected Vector3 targetDir;
 
         // overwatch variables (do not show in Scriptable)
@@ -25,8 +25,7 @@ namespace Gameplay.VR
         protected List<GameObject> guards = new List<GameObject>(); // list of guards in the scene
         protected List<Vector3> deadGuards = new List<Vector3>(); // list of guards in the scene
 
-        protected Vector2 myPos, targetPos;
-        protected Vector3 myFinalPos;
+        protected Vector3 myPos, targetPos, myFinalPos;
         protected float distToTarget;
         protected bool isActive;
 
@@ -35,7 +34,7 @@ namespace Gameplay.VR
             if (playerHead == null)
             {
                 Debug.Log("Set Player Reference");
-                playerHead = GameObject.Find("Player").transform;
+                playerHead = GameObject.Find("HeadCollider").transform;
             }
         }
     }

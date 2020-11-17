@@ -22,15 +22,19 @@ namespace Gameplay.VR
 
         private void Start()
         {
+            isRotating = true;
             StartCoroutine(Rotate());
         }
 
-        public void GE_RotationSwitch()
+        public void RotationOn()
         {
-            isRotating = !isRotating;
-
-            if (isRotating) StartCoroutine(Rotate());
-            else StopAllCoroutines();
+            isRotating = true;
+            StartCoroutine(Rotate());
+        }
+        public void RotationOff()
+        {
+            isRotating = false;
+            StopAllCoroutines();
         }
 
         private IEnumerator Rotate()
@@ -55,7 +59,7 @@ namespace Gameplay.VR
             rotationIncrement *= -1;
 
             // call the function recursively
-            StartCoroutine(Rotate());
+            if(isRotating) StartCoroutine(Rotate());
         }
     }
 }
