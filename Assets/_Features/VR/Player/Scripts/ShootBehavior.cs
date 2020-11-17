@@ -19,7 +19,7 @@ namespace Gameplay.VR.Player
 
         private void Start()
         {
-            shootAction.AddOnStateUpListener(TriggerRelease, handType);
+            shootAction.AddOnStateDownListener(TriggerRelease, handType);
         }
         
         /*private void Update()
@@ -36,7 +36,6 @@ namespace Gameplay.VR.Player
         private void TriggerRelease(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
         {
             Debug.DrawRay(gunBarrel.position, gunBarrel.transform.forward * 50f, Color.magenta);
-
             if (Physics.Raycast(gunBarrel.position, gunBarrel.transform.forward, out hit, shootingLayer))
             {
                 if (hit.collider.gameObject.CompareTag("Guard"))
