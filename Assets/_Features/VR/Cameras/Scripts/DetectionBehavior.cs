@@ -9,15 +9,20 @@ namespace Gameplay.VR
         private void Start()
         {
             // have two seperate methods to 
+            isActive = true;
             StartCoroutine(PlayerInRangeCheck());
         }
 
-        public void CE_DetectionSwitch()
+        // called from VR_CameraBehavior
+        public void DetectionOn()
         {
-            isActive = !isActive;
-
-            if (isActive) StartCoroutine(PlayerInRangeCheck());
-            else StopAllCoroutines();
+            isActive = true;
+            StartCoroutine(PlayerInRangeCheck());
+        }
+        public void DetectionOff()
+        {
+            isActive = false;
+            StopAllCoroutines();
         }
 
         // check if the player is in range 
@@ -25,6 +30,8 @@ namespace Gameplay.VR
         {
             while (true)
             {
+                if (!isActive) break;
+
                 myPos.x = transform.position.x;
                 myPos.z = transform.position.z;
 
@@ -66,9 +73,7 @@ namespace Gameplay.VR
                 {
                     Debug.DrawLine(transform.position, playerHead.position, Color.green);
                     Debug.Log("I hit the player");
-                    // call the gameOver event for a quick death
-                    // gameOver.Raise();
-                    // TODO : Implement a progressive spotting mechanic, based on distance
+                    raiseAlarm.Raise();
                 }
                 else if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Environment"))
                 {

@@ -225,7 +225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 155126158}
   m_Layer: 0
-  m_Name: =======CURRENT=======
+  m_Name: =======ELECTRICAL=======
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -245,7 +245,7 @@ Transform:
   - {fileID: 2113548506}
   - {fileID: 854409917}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &225881564
 GameObject:
@@ -379,6 +379,8 @@ GameObject:
   - component: {fileID: 278079906}
   - component: {fileID: 278079905}
   - component: {fileID: 278079916}
+  - component: {fileID: 278079917}
+  - component: {fileID: 278079918}
   m_Layer: 9
   m_Name: Agent 5
   m_TagString: Guard
@@ -419,7 +421,7 @@ MonoBehaviour:
   detectionMask:
     serializedVersion: 2
     m_Bits: 1280
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: a4e593c46a2b7be44a74f90b35e2c128, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &278079906
 MonoBehaviour:
@@ -434,13 +436,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 2
+  rangeOfVision: 5
   coneOfVision: 45
   playerHead: {fileID: 0}
   detectionMask:
     serializedVersion: 2
     m_Bits: 512
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: a4e593c46a2b7be44a74f90b35e2c128, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
   visibleGuards: []
 --- !u!114 &278079907
@@ -456,13 +458,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 2
+  rangeOfVision: 5
   coneOfVision: 45
   playerHead: {fileID: 0}
   detectionMask:
     serializedVersion: 2
     m_Bits: 1280
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: a4e593c46a2b7be44a74f90b35e2c128, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &278079908
 MonoBehaviour:
@@ -619,6 +621,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd0caf7176a78094c8ce6e8a176e1d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  killed: {fileID: 11400000, guid: 2f527b1aac6b97e4685e866f0a512cc2, type: 2}
+--- !u!114 &278079917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278079903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b050f1f874b0d5498a0b48727c3f05e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 2f527b1aac6b97e4685e866f0a512cc2, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 665732318}
+        m_TargetAssemblyTypeName: Gameplay.VR.AwarenessManager, Assembly-CSharp
+        m_MethodName: GE_KillAlarmRaiser
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &278079918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278079903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd0caf7176a78094c8ce6e8a176e1d1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killed: {fileID: 11400000, guid: 2f527b1aac6b97e4685e866f0a512cc2, type: 2}
 --- !u!1 &289822659
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,6 +755,105 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &301220509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 301220510}
+  - component: {fileID: 301220513}
+  - component: {fileID: 301220512}
+  - component: {fileID: 301220511}
+  m_Layer: 0
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &301220510
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301220509}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1007596005}
+  m_Father: {fileID: 2096472273}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &301220511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301220509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 3895
+--- !u!114 &301220512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301220509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &301220513
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301220509}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &315183783
 GameObject:
   m_ObjectHideFlags: 0
@@ -1699,6 +1842,8 @@ GameObject:
   - component: {fileID: 455145360}
   - component: {fileID: 455145359}
   - component: {fileID: 455145358}
+  - component: {fileID: 455145369}
+  - component: {fileID: 455145370}
   m_Layer: 9
   m_Name: Agent 8
   m_TagString: Guard
@@ -1739,7 +1884,7 @@ MonoBehaviour:
   detectionMask:
     serializedVersion: 2
     m_Bits: 1280
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: a4e593c46a2b7be44a74f90b35e2c128, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &455145359
 MonoBehaviour:
@@ -1760,7 +1905,7 @@ MonoBehaviour:
   detectionMask:
     serializedVersion: 2
     m_Bits: 512
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: a4e593c46a2b7be44a74f90b35e2c128, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
   visibleGuards: []
 --- !u!114 &455145360
@@ -1782,7 +1927,7 @@ MonoBehaviour:
   detectionMask:
     serializedVersion: 2
     m_Bits: 1280
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: a4e593c46a2b7be44a74f90b35e2c128, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &455145361
 MonoBehaviour:
@@ -1927,6 +2072,47 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 455145356}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &455145369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455145356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b050f1f874b0d5498a0b48727c3f05e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 2f527b1aac6b97e4685e866f0a512cc2, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 665732318}
+        m_TargetAssemblyTypeName: Gameplay.VR.AwarenessManager, Assembly-CSharp
+        m_MethodName: GE_KillAlarmRaiser
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &455145370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455145356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd0caf7176a78094c8ce6e8a176e1d1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killed: {fileID: 11400000, guid: 2f527b1aac6b97e4685e866f0a512cc2, type: 2}
 --- !u!1 &496774855
 GameObject:
   m_ObjectHideFlags: 0
@@ -2493,6 +2679,8 @@ GameObject:
   - component: {fileID: 664739022}
   - component: {fileID: 664739021}
   - component: {fileID: 664739032}
+  - component: {fileID: 664739033}
+  - component: {fileID: 664739034}
   m_Layer: 9
   m_Name: Agent 3
   m_TagString: Guard
@@ -2533,7 +2721,7 @@ MonoBehaviour:
   detectionMask:
     serializedVersion: 2
     m_Bits: 1280
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: a4e593c46a2b7be44a74f90b35e2c128, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &664739022
 MonoBehaviour:
@@ -2548,13 +2736,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 2
+  rangeOfVision: 5
   coneOfVision: 45
   playerHead: {fileID: 0}
   detectionMask:
     serializedVersion: 2
     m_Bits: 512
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: a4e593c46a2b7be44a74f90b35e2c128, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
   visibleGuards: []
 --- !u!114 &664739023
@@ -2570,13 +2758,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 2
+  rangeOfVision: 5
   coneOfVision: 45
   playerHead: {fileID: 0}
   detectionMask:
     serializedVersion: 2
     m_Bits: 1280
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: a4e593c46a2b7be44a74f90b35e2c128, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &664739024
 MonoBehaviour:
@@ -2733,6 +2921,151 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd0caf7176a78094c8ce6e8a176e1d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  killed: {fileID: 11400000, guid: 2f527b1aac6b97e4685e866f0a512cc2, type: 2}
+--- !u!114 &664739033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664739019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b050f1f874b0d5498a0b48727c3f05e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 2f527b1aac6b97e4685e866f0a512cc2, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 665732318}
+        m_TargetAssemblyTypeName: Gameplay.VR.AwarenessManager, Assembly-CSharp
+        m_MethodName: GE_KillAlarmRaiser
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &664739034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664739019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd0caf7176a78094c8ce6e8a176e1d1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killed: {fileID: 11400000, guid: 2f527b1aac6b97e4685e866f0a512cc2, type: 2}
+--- !u!1 &665732316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 665732317}
+  - component: {fileID: 665732318}
+  - component: {fileID: 665732319}
+  - component: {fileID: 665732320}
+  m_Layer: 0
+  m_Name: Awareness Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &665732317
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665732316}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1751821123}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &665732318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665732316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3915db054a9b4ca4d9f7b828737d01e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToAlarm: 2
+  gameOver: {fileID: 11400000, guid: 410184a300c54954da159856bcad80c4, type: 2}
+--- !u!114 &665732319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665732316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b050f1f874b0d5498a0b48727c3f05e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: bd5c66dcedebf114aa9ffcaa2b71844d, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 665732318}
+        m_TargetAssemblyTypeName: Gameplay.VR.AwarenessManager, Assembly-CSharp
+        m_MethodName: GE_CameraRaisedAlarm
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &665732320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665732316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b050f1f874b0d5498a0b48727c3f05e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: a4e593c46a2b7be44a74f90b35e2c128, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 665732318}
+        m_TargetAssemblyTypeName: Gameplay.VR.AwarenessManager, Assembly-CSharp
+        m_MethodName: GE_GuardRaisingAlarm
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &697891010
 GameObject:
   m_ObjectHideFlags: 0
@@ -3251,6 +3584,8 @@ GameObject:
   - component: {fileID: 770761644}
   - component: {fileID: 770761643}
   - component: {fileID: 770761654}
+  - component: {fileID: 770761655}
+  - component: {fileID: 770761656}
   m_Layer: 9
   m_Name: Agent 4
   m_TagString: Guard
@@ -3291,7 +3626,7 @@ MonoBehaviour:
   detectionMask:
     serializedVersion: 2
     m_Bits: 1280
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: a4e593c46a2b7be44a74f90b35e2c128, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &770761644
 MonoBehaviour:
@@ -3312,7 +3647,7 @@ MonoBehaviour:
   detectionMask:
     serializedVersion: 2
     m_Bits: 512
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: a4e593c46a2b7be44a74f90b35e2c128, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
   visibleGuards: []
 --- !u!114 &770761645
@@ -3334,7 +3669,7 @@ MonoBehaviour:
   detectionMask:
     serializedVersion: 2
     m_Bits: 1280
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: a4e593c46a2b7be44a74f90b35e2c128, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &770761646
 MonoBehaviour:
@@ -3491,6 +3826,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd0caf7176a78094c8ce6e8a176e1d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  killed: {fileID: 11400000, guid: 2f527b1aac6b97e4685e866f0a512cc2, type: 2}
+--- !u!114 &770761655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770761641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b050f1f874b0d5498a0b48727c3f05e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 2f527b1aac6b97e4685e866f0a512cc2, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 665732318}
+        m_TargetAssemblyTypeName: Gameplay.VR.AwarenessManager, Assembly-CSharp
+        m_MethodName: GE_KillAlarmRaiser
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &770761656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770761641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd0caf7176a78094c8ce6e8a176e1d1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killed: {fileID: 11400000, guid: 2f527b1aac6b97e4685e866f0a512cc2, type: 2}
 --- !u!1 &854409916
 GameObject:
   m_ObjectHideFlags: 0
@@ -3536,7 +3913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e169551e80ecdc42af9e6f74b8d41b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _switch: {fileID: 11400000, guid: 132bc9b2e7c5b274880b347cde153bc8, type: 2}
+  _switch: {fileID: 0}
   _sendSwitcherChange: {fileID: 0}
   button: {fileID: 0}
   image: {fileID: 0}
@@ -3952,6 +4329,85 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947656480}
   m_Mesh: {fileID: 336686368}
+--- !u!1 &1007596004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1007596005}
+  - component: {fileID: 1007596007}
+  - component: {fileID: 1007596006}
+  m_Layer: 0
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1007596005
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007596004}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 301220510}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 500, y: 500}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1007596006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007596004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 80
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 8
+    m_MaxSize: 80
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &1007596007
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007596004}
+  m_CullTransparentMesh: 0
 --- !u!1 &1008666000
 GameObject:
   m_ObjectHideFlags: 0
@@ -4321,6 +4777,10 @@ PrefabInstance:
       propertyPath: urpControllerMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 70a2eb634d7ed434b86d36f190fcf3a1, type: 2}
+    - target: {fileID: 13693334, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114000013786455312, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
@@ -4539,6 +4999,7 @@ GameObject:
   - component: {fileID: 1120566672}
   - component: {fileID: 1120566671}
   - component: {fileID: 1120566670}
+  - component: {fileID: 1120566674}
   m_Layer: 0
   m_Name: GUN
   m_TagString: Untagged
@@ -4553,13 +5014,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120566668}
-  m_LocalRotation: {x: 0, y: -0.30070576, z: 0, w: 0.953717}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.0955472, y: -0.38391054, z: -0.039978046, w: 0.917543}
+  m_LocalPosition: {x: -0.0018, y: 0.0508, z: 0.0018}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 1967753960}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -35, z: 0}
+  m_LocalEulerAnglesHint: {x: -11.89, y: -45.41, z: 0}
 --- !u!136 &1120566670
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4623,6 +5084,104 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120566668}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!120 &1120566674
+LineRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120566668}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 0
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Positions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 1}
+  m_Parameters:
+    serializedVersion: 3
+    widthMultiplier: 1
+    widthCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 0.811974, g: 0.6367924, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    numCornerVertices: 0
+    numCapVertices: 0
+    alignment: 0
+    textureMode: 0
+    shadowBias: 0.5
+    generateLightingData: 0
+  m_UseWorldSpace: 1
+  m_Loop: 0
 --- !u!1 &1195412924
 GameObject:
   m_ObjectHideFlags: 0
@@ -5146,6 +5705,8 @@ GameObject:
   - component: {fileID: 1292888574}
   - component: {fileID: 1292888573}
   - component: {fileID: 1292888584}
+  - component: {fileID: 1292888585}
+  - component: {fileID: 1292888586}
   m_Layer: 9
   m_Name: Agent 6
   m_TagString: Guard
@@ -5186,7 +5747,7 @@ MonoBehaviour:
   detectionMask:
     serializedVersion: 2
     m_Bits: 1280
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: a4e593c46a2b7be44a74f90b35e2c128, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1292888574
 MonoBehaviour:
@@ -5201,13 +5762,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 5.5
+  rangeOfVision: 5
   coneOfVision: 45
   playerHead: {fileID: 0}
   detectionMask:
     serializedVersion: 2
     m_Bits: 512
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: a4e593c46a2b7be44a74f90b35e2c128, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
   visibleGuards: []
 --- !u!114 &1292888575
@@ -5223,13 +5784,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 5.5
+  rangeOfVision: 5
   coneOfVision: 45
   playerHead: {fileID: 0}
   detectionMask:
     serializedVersion: 2
     m_Bits: 1280
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: a4e593c46a2b7be44a74f90b35e2c128, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1292888576
 MonoBehaviour:
@@ -5386,6 +5947,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd0caf7176a78094c8ce6e8a176e1d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  killed: {fileID: 11400000, guid: 2f527b1aac6b97e4685e866f0a512cc2, type: 2}
+--- !u!114 &1292888585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292888571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b050f1f874b0d5498a0b48727c3f05e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 2f527b1aac6b97e4685e866f0a512cc2, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 665732318}
+        m_TargetAssemblyTypeName: Gameplay.VR.AwarenessManager, Assembly-CSharp
+        m_MethodName: GE_KillAlarmRaiser
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1292888586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292888571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd0caf7176a78094c8ce6e8a176e1d1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killed: {fileID: 11400000, guid: 2f527b1aac6b97e4685e866f0a512cc2, type: 2}
 --- !u!1 &1333652745
 GameObject:
   m_ObjectHideFlags: 0
@@ -5407,6 +6010,8 @@ GameObject:
   - component: {fileID: 1333652748}
   - component: {fileID: 1333652747}
   - component: {fileID: 1333652758}
+  - component: {fileID: 1333652759}
+  - component: {fileID: 1333652760}
   m_Layer: 9
   m_Name: Agent 7
   m_TagString: Guard
@@ -5447,7 +6052,7 @@ MonoBehaviour:
   detectionMask:
     serializedVersion: 2
     m_Bits: 1280
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: a4e593c46a2b7be44a74f90b35e2c128, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1333652748
 MonoBehaviour:
@@ -5462,13 +6067,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 5.5
+  rangeOfVision: 5
   coneOfVision: 45
   playerHead: {fileID: 0}
   detectionMask:
     serializedVersion: 2
     m_Bits: 512
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: a4e593c46a2b7be44a74f90b35e2c128, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
   visibleGuards: []
 --- !u!114 &1333652749
@@ -5484,13 +6089,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
-  rangeOfVision: 5.5
+  rangeOfVision: 5
   coneOfVision: 45
   playerHead: {fileID: 0}
   detectionMask:
     serializedVersion: 2
     m_Bits: 1280
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: a4e593c46a2b7be44a74f90b35e2c128, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1333652750
 MonoBehaviour:
@@ -5647,6 +6252,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd0caf7176a78094c8ce6e8a176e1d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  killed: {fileID: 11400000, guid: 2f527b1aac6b97e4685e866f0a512cc2, type: 2}
+--- !u!114 &1333652759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333652745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b050f1f874b0d5498a0b48727c3f05e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 2f527b1aac6b97e4685e866f0a512cc2, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 665732318}
+        m_TargetAssemblyTypeName: Gameplay.VR.AwarenessManager, Assembly-CSharp
+        m_MethodName: GE_KillAlarmRaiser
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1333652760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333652745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd0caf7176a78094c8ce6e8a176e1d1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killed: {fileID: 11400000, guid: 2f527b1aac6b97e4685e866f0a512cc2, type: 2}
 --- !u!1 &1385782270
 GameObject:
   m_ObjectHideFlags: 0
@@ -5761,7 +6408,7 @@ MonoBehaviour:
   detectionMask:
     serializedVersion: 2
     m_Bits: 1280
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: a4e593c46a2b7be44a74f90b35e2c128, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1386375461
 MonoBehaviour:
@@ -5777,12 +6424,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
   rangeOfVision: 5
-  coneOfVision: 70
+  coneOfVision: 45
   playerHead: {fileID: 0}
   detectionMask:
     serializedVersion: 2
     m_Bits: 512
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: a4e593c46a2b7be44a74f90b35e2c128, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
   visibleGuards: []
 --- !u!114 &1386375462
@@ -5799,12 +6446,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityVisionData: {fileID: 0}
   rangeOfVision: 5
-  coneOfVision: 70
+  coneOfVision: 45
   playerHead: {fileID: 0}
   detectionMask:
     serializedVersion: 2
     m_Bits: 1280
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: a4e593c46a2b7be44a74f90b35e2c128, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!1 &1410066438
 GameObject:
@@ -6687,6 +7334,79 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1703521633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1703521634}
+  - component: {fileID: 1703521635}
+  - component: {fileID: 1703521636}
+  m_Layer: 0
+  m_Name: GameManagertemp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1703521634
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703521633}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1751821123}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1703521635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703521633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4229fb1300c7b8442895654393bf7956, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverText: {fileID: 1007596006}
+--- !u!114 &1703521636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703521633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b050f1f874b0d5498a0b48727c3f05e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 410184a300c54954da159856bcad80c4, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1703521635}
+        m_TargetAssemblyTypeName: GameVerTest, Assembly-CSharp
+        m_MethodName: GE_GameOver
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1744863989
 GameObject:
   m_ObjectHideFlags: 0
@@ -6779,6 +7499,38 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1751821122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1751821123}
+  m_Layer: 0
+  m_Name: =======MANAGERS=======
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1751821123
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751821122}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 665732317}
+  - {fileID: 1703521634}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1774053741
 GameObject:
   m_ObjectHideFlags: 0
@@ -6989,6 +7741,7 @@ GameObject:
   - component: {fileID: 1905353072}
   - component: {fileID: 1905353071}
   - component: {fileID: 1905353082}
+  - component: {fileID: 1905353083}
   m_Layer: 9
   m_Name: Agent 1
   m_TagString: Guard
@@ -7029,7 +7782,7 @@ MonoBehaviour:
   detectionMask:
     serializedVersion: 2
     m_Bits: 1280
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: a4e593c46a2b7be44a74f90b35e2c128, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1905353072
 MonoBehaviour:
@@ -7050,7 +7803,7 @@ MonoBehaviour:
   detectionMask:
     serializedVersion: 2
     m_Bits: 512
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: a4e593c46a2b7be44a74f90b35e2c128, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
   visibleGuards: []
 --- !u!114 &1905353073
@@ -7072,7 +7825,7 @@ MonoBehaviour:
   detectionMask:
     serializedVersion: 2
     m_Bits: 1280
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: a4e593c46a2b7be44a74f90b35e2c128, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &1905353074
 MonoBehaviour:
@@ -7229,6 +7982,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd0caf7176a78094c8ce6e8a176e1d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  killed: {fileID: 11400000, guid: 2f527b1aac6b97e4685e866f0a512cc2, type: 2}
+--- !u!114 &1905353083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905353069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b050f1f874b0d5498a0b48727c3f05e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 2f527b1aac6b97e4685e866f0a512cc2, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 665732318}
+        m_TargetAssemblyTypeName: Gameplay.VR.AwarenessManager, Assembly-CSharp
+        m_MethodName: GE_KillAlarmRaiser
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1931342310
 GameObject:
   m_ObjectHideFlags: 0
@@ -7393,13 +8175,44 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2091534662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.8906623, y: -2.3830724, z: -0.5660387}
+  m_LocalPosition: {x: 5, y: -2.3830724, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1513263643}
   - {fileID: 321235120}
   m_Father: {fileID: 0}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2096472272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2096472273}
+  m_Layer: 0
+  m_Name: =======USER INTERFACE=======
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2096472273
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096472272}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 301220510}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2098352698
 GameObject:
@@ -7542,7 +8355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e169551e80ecdc42af9e6f74b8d41b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _switch: {fileID: 11400000, guid: 132bc9b2e7c5b274880b347cde153bc8, type: 2}
+  _switch: {fileID: 0}
   _sendSwitcherChange: {fileID: 0}
   button: {fileID: 0}
   image: {fileID: 0}
@@ -7572,7 +8385,7 @@ MonoBehaviour:
   detectionMask:
     serializedVersion: 2
     m_Bits: 1280
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: bd5c66dcedebf114aa9ffcaa2b71844d, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &4142618799123556126
 MonoBehaviour:
@@ -7593,7 +8406,7 @@ MonoBehaviour:
   detectionMask:
     serializedVersion: 2
     m_Bits: 1280
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: bd5c66dcedebf114aa9ffcaa2b71844d, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!23 &5594484669886383818
 MeshRenderer:
@@ -7720,7 +8533,6 @@ GameObject:
   - component: {fileID: 7403117791020503200}
   - component: {fileID: 5960268178493191926}
   - component: {fileID: 5594484670194549166}
-  - component: {fileID: 5594484670194549164}
   m_Layer: 9
   m_Name: Static Camera 1
   m_TagString: Camera/Static Camera
@@ -7777,36 +8589,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5594484670194549164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5594484670194549161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0495881fcb2a8c458606d5a16ec5fe7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Function: {fileID: 11400000, guid: 132bc9b2e7c5b274880b347cde153bc8, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4142618797390512529}
-        m_TargetAssemblyTypeName: Gameplay.VR.DetectionBehavior, Assembly-CSharp
-        m_MethodName: CE_DetectionSwitch
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  methodName: 
-  component: {fileID: 0}
 --- !u!4 &5594484670194549165
 Transform:
   m_ObjectHideFlags: 0
@@ -7963,7 +8745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0495881fcb2a8c458606d5a16ec5fe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Function: {fileID: 11400000, guid: 132bc9b2e7c5b274880b347cde153bc8, type: 2}
+  Function: {fileID: 0}
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -8096,7 +8878,7 @@ MonoBehaviour:
   detectionMask:
     serializedVersion: 2
     m_Bits: 1280
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: bd5c66dcedebf114aa9ffcaa2b71844d, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!114 &5960268178493191926
 MonoBehaviour:
@@ -8117,7 +8899,7 @@ MonoBehaviour:
   detectionMask:
     serializedVersion: 2
     m_Bits: 1280
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: bd5c66dcedebf114aa9ffcaa2b71844d, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
 --- !u!54 &7036071765004547617
 Rigidbody:
@@ -8262,6 +9044,8 @@ GameObject:
   - component: {fileID: 1386375461}
   - component: {fileID: 1386375460}
   - component: {fileID: 7036071765004547625}
+  - component: {fileID: 7036071765004547628}
+  - component: {fileID: 7036071765004547629}
   m_Layer: 9
   m_Name: Agent 2
   m_TagString: Guard
@@ -8281,6 +9065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd0caf7176a78094c8ce6e8a176e1d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  killed: {fileID: 11400000, guid: 2f527b1aac6b97e4685e866f0a512cc2, type: 2}
 --- !u!65 &7036071765004547626
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8316,6 +9101,47 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &7036071765004547628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7036071765004547624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b050f1f874b0d5498a0b48727c3f05e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 2f527b1aac6b97e4685e866f0a512cc2, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 665732318}
+        m_TargetAssemblyTypeName: Gameplay.VR.AwarenessManager, Assembly-CSharp
+        m_MethodName: GE_KillAlarmRaiser
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7036071765004547629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7036071765004547624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd0caf7176a78094c8ce6e8a176e1d1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killed: {fileID: 11400000, guid: 2f527b1aac6b97e4685e866f0a512cc2, type: 2}
 --- !u!114 &7403117790681036335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8335,7 +9161,7 @@ MonoBehaviour:
   detectionMask:
     serializedVersion: 2
     m_Bits: 1280
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: bd5c66dcedebf114aa9ffcaa2b71844d, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
   visibleGuards: []
 --- !u!114 &7403117791020503200
@@ -8357,6 +9183,6 @@ MonoBehaviour:
   detectionMask:
     serializedVersion: 2
     m_Bits: 1280
-  gameOver: {fileID: 0}
+  raiseAlarm: {fileID: 11400000, guid: bd5c66dcedebf114aa9ffcaa2b71844d, type: 2}
   targetDir: {x: 0, y: 0, z: 0}
   visibleGuards: []

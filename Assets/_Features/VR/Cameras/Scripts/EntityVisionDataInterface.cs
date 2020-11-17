@@ -17,7 +17,7 @@ namespace Gameplay.VR
         [SerializeField] public LayerMask detectionMask;
         [SerializeField] [HideInInspector] protected RaycastHit hitInfo;
 
-        [SerializeField] [HideInInspector] protected GameEvent gameOver;
+        [SerializeField] protected GameEvent raiseAlarm;
         [SerializeField] [HideInInspector] protected Vector3 targetDir;
 
         // overwatch variables (do not show in Scriptable)
