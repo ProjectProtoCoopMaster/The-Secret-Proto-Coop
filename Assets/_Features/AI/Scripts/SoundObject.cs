@@ -6,6 +6,14 @@ public class SoundObject : MonoBehaviour
 {
     public float radius;
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Floor")
+        {
+            GE_MakeSound();
+        }
+    }
+
     public void GE_MakeSound()
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);

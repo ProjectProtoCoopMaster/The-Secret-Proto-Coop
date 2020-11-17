@@ -12,6 +12,7 @@ TagManager:
   - Camera/Static Camera
   - Camera/Mobile Camera
   - Enemy
+  - Floor
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - Player
   - Enemy
   - Environment
-  - 
+  - Entity
   - 
   - 
   - 

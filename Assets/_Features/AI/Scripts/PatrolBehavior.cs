@@ -91,7 +91,7 @@ public class PatrolBehavior : MoveBehavior
 
     private void CheckPosition()
     {
-        if (IsInArea(transform.position, currentWaypoint.position, path.pointArea))
+        if (IsInArea(transform.position, currentWaypoint.position, 0.5f))
         {
             SetMove(transform.position, false);
 

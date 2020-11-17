@@ -33,7 +33,9 @@ public class DistractionBehavior : MoveBehavior
         currentDestination = distractionPosition;
         SetMove(currentDestination, true);
 
-        st = State.Move;
+        //SetSearch(0.5f);
+
+        hasSearched = false;
     }
     #endregion
 
@@ -52,17 +54,17 @@ public class DistractionBehavior : MoveBehavior
         {
             SetMove(transform.position, false);
 
-            if (!hasSearched) SetSearch();
+            if (!hasSearched) SetSearch(waitTime);
 
             else EndDiversion();
         }
     }
 
-    void SetSearch()
+    void SetSearch(float time)
     {
         st = State.Search;
 
-        currentTime = waitTime;
+        currentTime = time;
     }
 
     void EndDiversion()
@@ -78,14 +80,19 @@ public class DistractionBehavior : MoveBehavior
     {
         if (currentTime <= 0.0f)
         {
-            currentDestination = returnPosition;
-            SetMove(currentDestination, true);
-
-            hasSearched = true;
-
-            st = State.Move;
+            EndWait(returnPosition);
         }
         else currentTime -= Time.deltaTime;
+    }
+
+    private void EndWait(Vector3 destination)
+    {
+        currentDestination = destination;
+        SetMove(currentDestination, true);
+
+        hasSearched = true;
+
+        st = State.Move;
     }
     #endregion
     #endregion
