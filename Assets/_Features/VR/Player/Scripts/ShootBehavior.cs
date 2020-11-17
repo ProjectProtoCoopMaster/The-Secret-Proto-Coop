@@ -19,7 +19,7 @@ namespace Gameplay.VR.Player
 
         private void Start()
         {
-            shootAction.AddOnStateDownListener(TriggerRelease, handType);
+            shootAction.AddOnStateUpListener(TriggerRelease, handType);
         }
         
         /*private void Update()
@@ -35,11 +35,20 @@ namespace Gameplay.VR.Player
 
         private void TriggerRelease(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
         {
+            GameObject yes = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            yes.GetComponent<Collider>().enabled = false;
+            yes.transform.position = gunBarrel.position;
+            yes.transform.localScale = new Vector3(.2f, .2f, .2f);
+            Rigidbody ohyeah = yes.AddComponent<Rigidbody>();
+            ohyeah.AddForce(gunBarrel.transform.forward * 20f, ForceMode.Impulse);
+                       
             Debug.DrawRay(gunBarrel.position, gunBarrel.transform.forward * 50f, Color.magenta);
-            if (Physics.Raycast(gunBarrel.position, gunBarrel.transform.forward, out hit, shootingLayer))
+            if (Physics.Raycast(gunBarrel.position, gunBarrel.transform.forward, out hit, 500f, shootingLayer))
             {
                 if (hit.collider.gameObject.CompareTag("Guard"))
                     hit.collider.GetComponent<GuardMortalityBehavior>().Shot();
+
+                else Debug.Log("Bullet hit " + hit.collider.name);
             }
         }
     }
