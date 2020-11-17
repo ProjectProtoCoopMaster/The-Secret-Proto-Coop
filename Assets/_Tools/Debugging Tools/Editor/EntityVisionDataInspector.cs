@@ -32,12 +32,14 @@ namespace Tools.Debugging
             rangeOfVisionProp = serializedObject.FindProperty(nameof(entityVisionDataInterface.rangeOfVision));
             coneOfVisionProp = serializedObject.FindProperty(nameof(entityVisionDataInterface.coneOfVision));
             playerTransformProp = serializedObject.FindProperty(nameof(entityVisionDataInterface.playerHead));
-            playerDetectionLayerProp = serializedObject.FindProperty(nameof(entityVisionDataInterface.playerLayer));
+            playerDetectionLayerProp = serializedObject.FindProperty(nameof(entityVisionDataInterface.detectionMask));
         }
 
 
         public override void OnInspectorGUI()
         {
+            base.OnInspectorGUI();
+
             serializedObject.Update();
 
             /*if (playerTransform.objectReferenceValue == null)
@@ -59,7 +61,7 @@ namespace Tools.Debugging
         }
 
         private void DrawLayerMask()
-        {
+        {/*
             if (layers == null)
             {
                 layers = new List<string>();
@@ -83,7 +85,8 @@ namespace Tools.Debugging
             }
             for (int i = 0; i < layerOptions.Length; i++) layerOptions[i] = layers[i];
 
-            detectionBehavior.playerLayer = overwatchBehavior.playerLayer = playerMask = EditorGUILayout.MaskField("Player Flags", playerMask, layerOptions);
+            playerMask = EditorGUILayout.MaskField("Player Flags", playerMask, layerOptions);
+            detectionBehavior.playerLayer = overwatchBehavior.playerLayer = playerMask;*/
         }
 
         private void OnSceneGUI()
