@@ -22,6 +22,7 @@ public class DistractionBehavior : MoveBehavior
     public float waitTime;
     private float currentTime;
 
+    #region Set
     public void DistractTo(Vector3 direction)
     {
         if (hasPatrol) patrol.StopPatrol();
@@ -34,7 +35,9 @@ public class DistractionBehavior : MoveBehavior
 
         st = State.Move;
     }
+    #endregion
 
+    #region Loop
     private void Update()
     {
         if (st == State.Move) CheckForDestination(currentDestination);
@@ -42,6 +45,7 @@ public class DistractionBehavior : MoveBehavior
         else if (st == State.Search) Waiting(); // Search or Wait Animation and talking
     }
 
+    #region Check
     void CheckForDestination(Vector3 destination)
     {
         if (IsInArea(transform.position, destination, 0.5f))
@@ -67,7 +71,9 @@ public class DistractionBehavior : MoveBehavior
 
         st = State.None;
     }
+    #endregion
 
+    #region Search
     void Waiting()
     {
         if (currentTime <= 0.0f)
@@ -81,4 +87,6 @@ public class DistractionBehavior : MoveBehavior
         }
         else currentTime -= Time.deltaTime;
     }
+    #endregion
+    #endregion
 }

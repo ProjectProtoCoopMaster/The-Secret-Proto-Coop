@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,6 +20,7 @@ public class WatchBehavior : MonoBehaviour
 
     private float time;
 
+    #region Set
     public void SetDirection(int index)
     {
         currentDirection = directions[index];
@@ -33,7 +35,9 @@ public class WatchBehavior : MonoBehaviour
 
         time = 0.0f;
     }
+    #endregion
 
+    #region Loop
     void Update()
     {
         if (watch)
@@ -53,10 +57,12 @@ public class WatchBehavior : MonoBehaviour
 
         transform.rotation = Quaternion.Lerp(transform.rotation, currentRotation, time);
 
-        Debug.Log(currentRotation.eulerAngles + " for " + gameObject.name);
-        Debug.Log(transform.rotation.eulerAngles + " for " + gameObject.name);
+        //Debug.Log(currentRotation.eulerAngles + " for " + gameObject.name);
+        //Debug.Log(transform.rotation.eulerAngles + " for " + gameObject.name);
     }
+    #endregion
 
+    #region Next
     private void NextDirection()
     {
         _pos++;
@@ -65,4 +71,5 @@ public class WatchBehavior : MonoBehaviour
 
         else SetDirection(_pos);
     }
+    #endregion
 }

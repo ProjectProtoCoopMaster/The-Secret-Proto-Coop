@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8284067344446594877}
   - component: {fileID: 8284067344446594876}
-  - component: {fileID: 8284067344446594875}
   - component: {fileID: 8284067344446594878}
   - component: {fileID: 566295303}
   m_Layer: 0
@@ -46,22 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 247aab258dd18cd48a06e35ad2e6e77b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: {fileID: 8284067344446594875}
+  usePath: 0
+  path: {fileID: 0}
+  color: {r: 0, g: 0.21960784, b: 1, a: 1}
   radius: 12
---- !u!114 &8284067344446594875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8284067344446594874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cfacc6aa078d1b41b2897e424d22c3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pathColor: {r: 0, g: 0.21808481, b: 1, a: 1}
-  waypoints: []
 --- !u!114 &8284067344446594878
 MonoBehaviour:
   m_ObjectHideFlags: 0

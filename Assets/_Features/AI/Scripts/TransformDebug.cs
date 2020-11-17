@@ -9,16 +9,22 @@ public class TransformDebug : MonoBehaviour
     [ShowIf("usePath")]
     public PatrolPath path;
 
+    [HideIf("usePath")]
     [SerializeField] private Color color;
-    //public Color Color { get { if (usePath) { path.pathColor; } else { color; } } set { } };
+    public Color Color { get { if (usePath) { return path.pathColor; } else { return color; } } }
 
-    public float radius;
+    public bool otherRadius;
+    [ShowIf("otherRadius")]
+    public SoundObject script;
+
+    [HideIf("otherRadius")]
+    [SerializeField] private float radius;
+    public float Radius { get { if (otherRadius) { return script.radius; } else { return radius; } } }
 
     void OnDrawGizmos()
     {
-        if (path != null) Gizmos.color = path.pathColor;
-        else Gizmos.color = Color.red;
+        Gizmos.color = Color;
 
-        Gizmos.DrawWireSphere(transform.position, radius);
+        Gizmos.DrawWireSphere(transform.position, Radius);
     }
 }

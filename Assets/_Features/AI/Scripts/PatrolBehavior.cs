@@ -30,12 +30,13 @@ public class PatrolBehavior : MoveBehavior
         }
     }
 
+    #region Set
     public void StartPatrol()
     {
         _way = 0;
         SetWaypoint(_way);
     }
-    
+
     public void SetWaypoint(int index)
     {
         currentWaypoint = path.waypoints[index];
@@ -75,8 +76,10 @@ public class PatrolBehavior : MoveBehavior
                 }
             }
         }
-    }
+    } 
+    #endregion
 
+    #region Loop
     void Update()
     {
         if (state == State.Move) CheckPosition();
@@ -107,8 +110,10 @@ public class PatrolBehavior : MoveBehavior
     private void CheckWatch()
     {
         if (!watching.watch) NextAction();
-    }
+    } 
+    #endregion
 
+    #region Next
     private void NextAction()
     {
         _act++;
@@ -126,7 +131,9 @@ public class PatrolBehavior : MoveBehavior
 
         else SetWaypoint(_way);
     }
+    #endregion
 
+    #region Pause
     public void StopPatrol()
     {
         save = state;
@@ -145,4 +152,5 @@ public class PatrolBehavior : MoveBehavior
 
         if (state == State.Move) SetMove(currentWaypoint.position, true);
     }
+    #endregion
 }
