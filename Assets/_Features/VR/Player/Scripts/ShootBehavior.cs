@@ -43,7 +43,7 @@ namespace Gameplay.VR.Player
             ohyeah.AddForce(gunBarrel.transform.forward * 20f, ForceMode.Impulse);
                        
             Debug.DrawRay(gunBarrel.position, gunBarrel.transform.forward * 50f, Color.magenta);
-            if (Physics.Raycast(gunBarrel.position, gunBarrel.transform.forward, out hit, 500f, shootingLayer))
+            if (Physics.SphereCast(gunBarrel.position, 0.25f, gunBarrel.transform.forward, out hit, 100f, shootingLayer))
             {
                 if (hit.collider.gameObject.CompareTag("Guard"))
                     hit.collider.GetComponent<GuardMortalityBehavior>().Shot();
