@@ -14,7 +14,6 @@ namespace Gameplay.VR.Player
         Vector3 movingPosition;
         [SerializeField] [FoldoutGroup("Teleportation Transition")] float tweenDuration = .25f;
         [SerializeField] [FoldoutGroup("Teleportation Transition")] ParticleSystem particleDash;
-        ParticleSystem.MainModule main; // assigned in awake
 
         // a reference to the teleportation input
         [SerializeField] [FoldoutGroup("SteamVR Components")] SteamVR_Action_Boolean teleportAction;
@@ -28,11 +27,13 @@ namespace Gameplay.VR.Player
         [SerializeField] [FoldoutGroup("Teleportation")] float maxDistance = 10f;
         [SerializeField] [FoldoutGroup("Teleportation")] float castingHeight = 2f;
         [SerializeField] [FoldoutGroup("Teleportation")] float minControllerAngle = 30f, maxControllerAngle = 150f;
-        [SerializeField] [FoldoutGroup("Teleportation")] GameObject pointer;
+        [SerializeField] [FoldoutGroup("Teleportation")] LineRenderer bezierVisualization;
 
         Ray horizontalRay, tallRay;
         RaycastHit hitTallRay, hitHorizontal;
         Quaternion controllerRotation;
+
+        GameObject pointer;
 
         private void Awake()
         {
@@ -44,15 +45,13 @@ namespace Gameplay.VR.Player
 
         void TryTeleport(SteamVR_Action_Boolean action, SteamVR_Input_Sources source)
         {
-            TallRayPointer();
+            //TallRayPointer();
         }
 
         private void Update()
         {
-            TallRayPointer();
-            leftHandPose.GetLocalRotation(handType);
-            //teleportAction.
-            //teleportAction.GetDeviceIndex(handType);
+            if(Input.GetKey(KeyCode.Space)) TallRayPointer();
+            if (Input.GetKeyUp(KeyCode.Space)) StartCoroutine(TeleportThePlayer(playerPosition, pointer.transform.position));
         }
 
         #region Tall Ray Variables
@@ -75,8 +74,9 @@ namespace Gameplay.VR.Player
         {
             get
             {
-                controllerRotation = leftHandPose.GetLocalRotation(handType);
-                return controllerRotation * Vector3.forward;
+                //controllerRotation = leftHandPose.GetLocalRotation(handType);
+                //return controllerRotation * Vector3.forward;
+                return Vector3.forward;
             }
         }
 
@@ -126,7 +126,7 @@ namespace Gameplay.VR.Player
             {
                 return playerPosition + Vector3.up * castingHeight;
             }
-        } 
+        }
         #endregion
 
         // 1. fire a ray pointing in the direction of the controller
@@ -138,23 +138,40 @@ namespace Gameplay.VR.Player
         {
             //skeleton.GetBonePosition();
 
-            // assign the Ray values
-            horizontalRay.origin = playerPosition;
-            horizontalRay.direction = horizontalDirection;
-
-            tallRay.origin = castingPosition;
-            tallRay.direction = (pointAlongRay - castingPosition).normalized;
-
-            // if you hit something with the Tall Ray, define it as the endpoint
-            if (Physics.Raycast(tallRay, out hitTallRay))
+            if(skeleton != null)
             {
-                pointer.transform.position = hitTallRay.point;
+                // assign the Ray values
+                horizontalRay.origin = playerPosition;
+                horizontalRay.direction = horizontalDirection;
+
+                tallRay.origin = castingPosition;
+
+                tallRay.direction = (pointAlongRay - castingPosition).normalized;
+
+                // if you hit something with the Tall Ray, define it as the endpoint
+                if (Physics.Raycast(tallRay, out hitTallRay))
+                {
+                    pointer.transform.position = hitTallRay.point;
+                }
+                // otherwise, the endpoint must be on the horizontal axis
+                else if (Physics.Raycast(horizontalRay, out hitHorizontal))
+                {
+                    pointer.transform.position = hitHorizontal.point;
+                }
             }
-            // otherwise, the endpoint must be on the horizontal axis
-            else if (Physics.Raycast(horizontalRay, out hitHorizontal))
+
+            else
             {
-                pointer.transform.position = hitHorizontal.point;
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+                if (Physics.Raycast(ray, out RaycastHit hit))
+                {
+                    pointer.transform.position = hit.point;
+                }
             }
+
+            bezierVisualization.SetPosition(0, playerPosition);
+            bezierVisualization.SetPosition(1, pointer.transform.position);
 
             Debug.DrawRay(horizontalRay.origin, horizontalRay.direction * 20f, Color.blue); // draw the initial horizontal Ray
             Debug.DrawLine(horizontalRay.origin, pointAlongRay, Color.white); // draw the teleportation distance limit
@@ -168,12 +185,14 @@ namespace Gameplay.VR.Player
             time = 0;
             change = targetPos - startPos;
 
+            // don't change yPos
+            movingPosition.y = startPos.y;
+
             while (time <= tweenDuration)
             {
                 time += Time.deltaTime;
                 movingPosition.x = TweenManager.LinearTween(time, startPos.x, change.x, tweenDuration);
                 movingPosition.z = TweenManager.LinearTween(time, startPos.z, change.z, tweenDuration);
-
                 transform.position = movingPosition;
                 yield return null;
             }
