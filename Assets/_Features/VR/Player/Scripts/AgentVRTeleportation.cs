@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
+using Valve.VR.InteractionSystem;
 
 namespace Gameplay.VR.Player
 {
@@ -21,7 +22,7 @@ namespace Gameplay.VR.Player
         [SerializeField] [FoldoutGroup("SteamVR Components")] SteamVR_Input_Sources handType;
 
         [SerializeField] [FoldoutGroup("SteamVR Components")] SteamVR_Action_Pose leftHandPose = null;
-        [SerializeField] [FoldoutGroup("SteamVR Components")] SteamVR_Action_Skeleton skeleton;
+        [SerializeField] [FoldoutGroup("SteamVR Components")] Transform cameraRig;
 
         // [SerializeField] [FoldoutGroup("Teleportation")] Transform startPoint, endPoint;
         [SerializeField] [FoldoutGroup("Teleportation")] float maxDistance = 10f;
@@ -37,46 +38,54 @@ namespace Gameplay.VR.Player
 
         private void Awake()
         {
-            //skeleton = GetComponent<SteamVR_Behaviour_Pose>();
-            //teleportAction.AddOnStateUpListener(TryTeleport, handType);
+            teleportAction.AddOnStateUpListener(TryTeleport, handType);
             pointer = GameObject.CreatePrimitive(PrimitiveType.Sphere);
             pointer.GetComponent<Collider>().enabled = false;
         }
 
         void TryTeleport(SteamVR_Action_Boolean action, SteamVR_Input_Sources source)
-        {
-            //TallRayPointer();
+        {            
+            TallRayPointer();
         }
 
         private void Update()
         {
-            if(Input.GetKey(KeyCode.Space)) TallRayPointer();
+            //TallRayPointer();
+            if (Input.GetKey(KeyCode.Space)) TallRayPointer();
             if (Input.GetKeyUp(KeyCode.Space)) StartCoroutine(TeleportThePlayer(playerPosition, pointer.transform.position));
         }
 
         #region Tall Ray Variables
-        Vector3 mousePosition
-        {
-            get
-            {
-                RaycastHit hit;
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-                if (Physics.Raycast(ray, out hit))
-                {
-                    return hit.transform.position;
-                }
-                else return Vector3.zero;
+        public Vector3 getControllerPosition()
+        {
+            SteamVR_Action_Pose[] poseActions = SteamVR_Input.actionsPose;
+            if (poseActions.Length > 0)
+            {
+                return poseActions[0].GetLocalPosition(handType);
             }
+            return new Vector3(0, 0, 0);
+        }
+
+        public Quaternion getControllerRotation()
+        {
+            SteamVR_Action_Pose[] poseActions = SteamVR_Input.actionsPose;
+            if (poseActions.Length > 0)
+            {
+                return poseActions[0].GetLocalRotation(handType);
+            }
+            return Quaternion.identity;
         }
 
         public Vector3 controllerForward
         {
             get
             {
-                //controllerRotation = leftHandPose.GetLocalRotation(handType);
-                //return controllerRotation * Vector3.forward;
-                return Vector3.forward;
+                /*
+                controllerRotation = leftHandPose.GetLocalRotation(handType);
+                Debug.Log("Local Controller Rotation is " + controllerRotation * Vector3.forward);*/
+                return getControllerRotation() * Vector3.forward;
+                //return Vector3.forward;
             }
         }
 
@@ -106,7 +115,7 @@ namespace Gameplay.VR.Player
         {
             get
             {
-                return transform.position;
+                return cameraRig.position;
             }
         }
 
@@ -138,7 +147,7 @@ namespace Gameplay.VR.Player
         {
             //skeleton.GetBonePosition();
 
-            if(skeleton != null)
+            if(leftHandPose != null)
             {
                 // assign the Ray values
                 horizontalRay.origin = playerPosition;
