@@ -9,16 +9,15 @@ namespace Gameplay.AI
     {
         public float rotateSpeed;
 
-        public List<Vector3> directions { get; set; }
+        private bool watch = false;
+
+        private List<Vector3> directions;
         private Vector3 currentDirection;
+        private int index;
 
         private Quaternion currentRotation;
         private float[] angles = new float[2];
         private float angleOffset = 1f;
-
-        public int _pos { get; set; }
-
-        public bool watch { get; set; } = false;
 
         private float time;
 
@@ -27,8 +26,8 @@ namespace Gameplay.AI
             if (action.watchDirections == null) return;
 
             directions = action.watchDirections;
-            _pos = 0;
-            SetDirection(_pos);
+            index = 0;
+            SetDirection(index);
             watch = true;
         }
 
@@ -87,11 +86,11 @@ namespace Gameplay.AI
         #region Next
         private void NextDirection()
         {
-            _pos++;
+            index++;
 
-            if (directions.Count == _pos) watch = false;
+            if (directions.Count == index) watch = false;
 
-            else SetDirection(_pos);
+            else SetDirection(index);
         }
         #endregion
     } 

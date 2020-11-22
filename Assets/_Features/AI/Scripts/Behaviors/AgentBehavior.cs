@@ -48,7 +48,6 @@ namespace Gameplay.AI
         public List<Vector3> watchDirections { get; set; }
     }
 
-    /// Parent class for all Action Behaviors the entities can perform => Will likely be moved to an interface such as IActionable
     public class ActionBehavior : MonoBehaviour
     {
         public ActionType actionType;
@@ -67,6 +66,8 @@ namespace Gameplay.AI
 
         public bool loop;
 
+        private bool active;
+
         protected Dictionary<ActionType, ActionBehavior> actionBehaviors;
 
         protected List<_Action> actions;
@@ -82,10 +83,10 @@ namespace Gameplay.AI
         #region Get
         void Awake()
         {
-            Initialize();
+            InitializeBehavior();
         }
 
-        protected virtual void Initialize()
+        protected virtual void InitializeBehavior()
         {
             actionBehaviors = new Dictionary<ActionType, ActionBehavior>();
 
@@ -99,6 +100,7 @@ namespace Gameplay.AI
             string msg = "There are no actions registered for this behavior ! Consider using Patrol Behavior instead to customize a list of actions.";
             if (Utility.SafeCheck(actions, msg))
             {
+                active = true;
                 actionIndex = 0;
                 SetAction(actionIndex);
             }
@@ -124,9 +126,12 @@ namespace Gameplay.AI
         #region Loop
         void Update()
         {
-            if (actionBehaviors[currentActionType].Check(currentAction))
+            if (active)
             {
-                NextAction();
+                if (actionBehaviors[currentActionType].Check(currentAction))
+                {
+                    NextAction();
+                }
             }
         }
         #endregion
@@ -139,7 +144,7 @@ namespace Gameplay.AI
             if (actions.Count == actionIndex)
             {
                 if (loop) Begin();
-                else if (previousBehavior != null) { previousBehavior.Resume(); previousBehavior = null; actionIndex = 0; Stop(); }
+                else if (previousBehavior != null) { previousBehavior.Resume(); previousBehavior = null; actionIndex = 0; active = false; }
             }
 
             else SetAction(actionIndex);
@@ -149,8 +154,8 @@ namespace Gameplay.AI
         #region Pause
         public void Stop()
         {
+            active = false;
             savedActionType = currentActionType;
-            currentActionType = ActionType.None;
 
             foreach (ActionBehavior actionBehavior in actionBehaviors.Values)
             {
@@ -160,6 +165,7 @@ namespace Gameplay.AI
 
         public void Resume()
         {
+            active = true;
             currentActionType = savedActionType;
 
             SetActionBehavior(currentActionType);

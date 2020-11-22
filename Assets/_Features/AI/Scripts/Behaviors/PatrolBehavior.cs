@@ -12,7 +12,7 @@ namespace Gameplay.AI
         public WaitAction waitBehavior;
         public WatchAction watchBehavior;
 
-        protected override void Initialize()
+        protected override void InitializeBehavior()
         {
             actionBehaviors = new Dictionary<ActionType, ActionBehavior>
             {

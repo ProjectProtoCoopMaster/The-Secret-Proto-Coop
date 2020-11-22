@@ -18,10 +18,10 @@ namespace Gameplay.AI
 
         void Awake()
         {
-            Initialize();
+            InitializeAgent();
         }
 
-        private void Initialize()
+        private void InitializeAgent()
         {
             agentBehaviors = new Dictionary<StateType, AgentBehavior>()
             {

@@ -17,7 +17,7 @@ namespace Gameplay.AI
         public float awarenessTime;
         public float searchTime;
 
-        protected override void Initialize()
+        protected override void InitializeBehavior()
         {
             actionBehaviors = new Dictionary<ActionType, ActionBehavior>
             {

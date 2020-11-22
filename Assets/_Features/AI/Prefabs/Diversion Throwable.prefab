@@ -131,7 +131,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8284067344446594874, guid: 421b614b8645d4c4690ab4eacfe0aa91, type: 3}
       propertyPath: m_Name
-      value: Diversion Throw Object
+      value: Diversion Throwable
       objectReference: {fileID: 0}
     - target: {fileID: 8284067344446594874, guid: 421b614b8645d4c4690ab4eacfe0aa91, type: 3}
       propertyPath: m_Layer
@@ -213,7 +213,8 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 566295303, guid: 421b614b8645d4c4690ab4eacfe0aa91, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 421b614b8645d4c4690ab4eacfe0aa91, type: 3}
 --- !u!1 &6141657805777543834 stripped
 GameObject:
