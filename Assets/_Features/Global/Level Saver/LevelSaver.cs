@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using Gameplay;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 namespace Tools.LevelDesign
 {
@@ -37,8 +39,10 @@ namespace Tools.LevelDesign
             JsonString = File.ReadAllText(path);
             JsonString = JsonUtility.ToJson(elements,true);
             File.WriteAllText(path, JsonString);
+#if UNITY_EDITOR
             AssetDatabase.Refresh();
-            
+#endif
+
         }
 
         private void AddSwitcherChilds(GameObject switcher)
@@ -57,8 +61,10 @@ namespace Tools.LevelDesign
                     {
 
                         ISwitchableElements newElement = new ISwitchableElements();
+#if UNITY_EDITOR
                         newElement.prefab = PrefabUtility.GetCorrespondingObjectFromSource(switcher.transform.GetChild(j).gameObject) as GameObject;
-                        
+#endif
+
                         newElement.position = cam.WorldToScreenPoint(switcher.transform.GetChild(j).position);
                         elements.list.Add(newElement);
                     }

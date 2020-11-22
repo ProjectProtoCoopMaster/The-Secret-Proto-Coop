@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+#if UNITY_EDITOR
 using UnityEditor;
-
+#endif
 namespace Tools.LevelDesign
 {
     public class CameraPicture : MonoBehaviour
@@ -38,10 +39,12 @@ namespace Tools.LevelDesign
                 Directory.CreateDirectory("Assets/_Features/Global/Level Saver/Levels/" + folderName + "/");
             }
             File.WriteAllBytes(path+pictureName+".png", Bytes);
+#if UNITY_EDITOR
             AssetDatabase.Refresh();
+#endif
         }
 
-        
+
 
     }
 }

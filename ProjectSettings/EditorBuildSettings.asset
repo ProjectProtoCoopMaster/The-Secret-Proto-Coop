@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/_Scenes/Managers.unity
     guid: 3bd309a601d0328499c9bfa24ba243a6
   - enabled: 1
-    path: Assets/_Features/Mobile/Switcher/SwitcherScene.unity
-    guid: 58b9a3a30e865dd43bda39625403973c
+    path: Assets/_Features/Global/Level Saver/Levels/LevelProto/ProtoSceneVR.unity
+    guid: 6ca998051f53a7d45ac0f77340949d4e
   - enabled: 1
-    path: Assets/_Features/Mobile/Switcher/SwitcherVRScene.unity
-    guid: efb574905d75a29478c3a3efc9e69a65
+    path: Assets/_Features/Global/Level Saver/Levels/LevelProto/ProtoSceneMobile.unity
+    guid: bc1f38295633dfe4e847afef41e426dc
   - enabled: 1
     path: Assets/_Scenes/MainMenu.unity
     guid: b13ae919ef42f114688211c667de0b4a

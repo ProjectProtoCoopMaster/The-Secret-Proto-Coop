@@ -12,7 +12,7 @@ namespace Gameplay
 
         public void RaiseSwitch(float ID)
         {
-            if (switchers.Length == 0 ) SearchSwitchersInScene();
+            /*if (switchers.Length == 0 )*/ SearchSwitchersInScene();
             for (int i = 0; i < switchers.Length; i++)
             {
                 if (switchers[i].ID == ID)

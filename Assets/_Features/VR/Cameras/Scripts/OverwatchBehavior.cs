@@ -9,9 +9,9 @@ namespace Gameplay.VR
 {
     public class OverwatchBehavior : EntityVisionDataInterface
     {
-#if UNITY_EDITOR
+
         public List<GameObject> visibleGuards = new List<GameObject>();
-#endif
+
 
         bool raisingAlarm;
 

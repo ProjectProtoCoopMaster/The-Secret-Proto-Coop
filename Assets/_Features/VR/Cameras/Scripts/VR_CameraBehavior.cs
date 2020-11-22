@@ -58,6 +58,7 @@ namespace Gameplay.VR
 
         public void TurnOff()
         {
+            Debug.Log("Off");
             overwatchBehavior.OverwatchOff();
             detectionBehavior.DetectionOff();
             if(rotationBehavior != null) rotationBehavior.RotationOff();
@@ -65,6 +66,7 @@ namespace Gameplay.VR
 
         public void TurnOn()
         {
+            Debug.Log("On");
             overwatchBehavior.OverwatchOn();
             detectionBehavior.DetectionOn();
             if (rotationBehavior != null) rotationBehavior.RotationOn();
