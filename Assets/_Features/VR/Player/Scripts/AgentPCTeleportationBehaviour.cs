@@ -7,7 +7,7 @@ namespace Gameplay.VR.Player
     public class AgentPCTeleportationBehaviour : MonoBehaviour
     {
         Transform playerHead;
-        public Transform mouseAndKeyboardController;
+        public Transform mouseOrigin;
         AgentTeleportationManager manager;
         [SerializeField] float mouseSensitivity;
         float xRotation = 0f;
@@ -27,6 +27,18 @@ namespace Gameplay.VR.Player
         // Update is called once per frame
         void Update()
         {
+            if (Input.GetKey(KeyCode.Space))
+            {
+                manager.pointerOrigin = mouseOrigin;
+                manager.TallRayPointer(null);
+            }
+
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                manager.TryTeleporting();
+                Debug.DrawRay(playerHead.position, playerHead.forward * 500);
+            }
+
             float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
             float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
@@ -35,12 +47,6 @@ namespace Gameplay.VR.Player
 
             playerHead.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
             playerHead.transform.parent.Rotate(Vector3.up, mouseX);
-
-            manager.pointerOrigin = mouseAndKeyboardController;
-
-            if (Input.GetKey(KeyCode.Space)) manager.TallRayPointer(null);
-            if (Input.GetKeyUp(KeyCode.Space)) manager.TryTeleporting();
-            Debug.DrawRay(playerHead.position, playerHead.forward * 500);
         }
     }
 }

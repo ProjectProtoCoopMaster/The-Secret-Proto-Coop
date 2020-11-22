@@ -11,8 +11,6 @@ namespace Gameplay.VR.Player
 {
     public class AgentTeleportationManager : MonoBehaviour
     {
-        public bool isDebugging;
-        
         [SerializeField] [FoldoutGroup("Teleportation Transition")] float tweenDuration = .25f;
         [SerializeField] [FoldoutGroup("Teleportation Transition")] ParticleSystem particleDash;
         [SerializeField] [FoldoutGroup("Teleportation Transition")] TweenFunctions tweenFunction;
@@ -20,16 +18,22 @@ namespace Gameplay.VR.Player
         Vector3 movingPosition, change;
         float time;
 
-        [SerializeField] [FoldoutGroup("SteamVR Components")] Transform cameraRig;
         [SerializeField] [FoldoutGroup("SteamVR Components")] internal Transform playerHead;
         SteamVR_Behaviour_Pose controllerPose;
         private bool showRayPointer = false;
+        Transform playerRig;
 
         // [SerializeField] [FoldoutGroup("Teleportation")] Transform startPoint, endPoint;
         [SerializeField] [FoldoutGroup("Teleportation")] float maxDistance = 10f;
         [SerializeField] [FoldoutGroup("Teleportation")] float castingHeight = 2f;
         [SerializeField] [FoldoutGroup("Teleportation")] float minControllerAngle = 30f, maxControllerAngle = 150f;
-        [SerializeField] [FoldoutGroup("Teleportation")] LineRenderer bezierVisualization;
+
+        [SerializeField] [FoldoutGroup("Teleportation Pointer")] LineRenderer bezierVisualization;
+        [SerializeField] [FoldoutGroup("Teleportation Pointer")] float lineWidth;
+        [SerializeField] [FoldoutGroup("Teleportation Pointer")] int smoothness;
+        Vector3 posContainer;
+        Vector3 p0, p1, p2;
+        float t;
 
         Ray horizontalRay, tallRay;
         RaycastHit hitTallRay, hitHorizontal;
@@ -43,6 +47,13 @@ namespace Gameplay.VR.Player
             pointer.GetComponent<Collider>().enabled = false;
 
             delegateTween = TweenManagerLibrary.GetTweenFunction((int)tweenFunction);
+
+            bezierVisualization.startWidth = lineWidth;
+            bezierVisualization.endWidth = lineWidth;
+            bezierVisualization.useWorldSpace = true;
+            bezierVisualization.positionCount = smoothness;
+
+            playerRig = transform;
         }
 
         private void Update()
@@ -90,7 +101,7 @@ namespace Gameplay.VR.Player
         {
             get
             {
-                return cameraRig.position - playerHead.position;
+                return playerRig.position - playerHead.position;
             }
         }
 
@@ -145,7 +156,6 @@ namespace Gameplay.VR.Player
 
         void ShowRayPointer()
         {
-            bezierVisualization.enabled = true;
 
             // assign the Ray values
 #if isDebugging
@@ -170,8 +180,29 @@ namespace Gameplay.VR.Player
             Debug.DrawLine(horizontalRay.origin, pointAlongRay, Color.white); // draw the teleportation distance limit
             Debug.DrawRay(tallRay.origin, tallRay.direction * 50f, Color.red); // draw the Tall Ray shooting down
 
-            bezierVisualization.SetPosition(0, controllerPose.transform.position);
-            bezierVisualization.SetPosition(1, pointer.transform.position);
+            #region Bézier Curve
+            bezierVisualization.enabled = true;
+
+            p1 = p2 = pointer.transform.position;
+
+#if isDebugging
+            p0 = pointerOrigin.transform.position;
+            p1.y = pointerOrigin.position.y;
+#else
+            p0 = controllerPose.transform.position; 
+            p1.y = controllerPose.transform.position.y;
+#endif
+            for (int i = 0; i < smoothness; i++)
+            {
+                t = i / (smoothness - 1.0f);
+                posContainer = (1.0f - t) * (1.0f - t) * p0
+                + 2.0f * (1.0f - t) * t * p1 + t * t * p2;
+                bezierVisualization.SetPosition(i, posContainer);
+            }
+            #endregion
+
+
+
         }
 
         public void TryTeleporting()
@@ -199,8 +230,8 @@ namespace Gameplay.VR.Player
                 time += Time.deltaTime;
                 movingPosition.x = delegateTween(time, startPos.x, change.x, tweenDuration);
                 movingPosition.z = delegateTween(time, startPos.z, change.z, tweenDuration);
-                movingPosition.y = cameraRig.position.y;
-                cameraRig.position = movingPosition;
+                movingPosition.y = playerRig.position.y;
+                playerRig.position = movingPosition;
                 yield return null;
             }
             particleDash.Stop();
