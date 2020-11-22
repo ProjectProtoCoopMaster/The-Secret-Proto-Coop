@@ -1,4 +1,5 @@
-﻿using Sirenix.OdinInspector;
+﻿#define isDebugging
+using Sirenix.OdinInspector;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace Gameplay.VR.Player
     public class AgentTeleportationManager : MonoBehaviour
     {
         public bool isDebugging;
-
+        
         [SerializeField] [FoldoutGroup("Teleportation Transition")] float tweenDuration = .25f;
         [SerializeField] [FoldoutGroup("Teleportation Transition")] ParticleSystem particleDash;
         [SerializeField] [FoldoutGroup("Teleportation Transition")] TweenFunctions tweenFunction;
@@ -33,7 +34,7 @@ namespace Gameplay.VR.Player
         Ray horizontalRay, tallRay;
         RaycastHit hitTallRay, hitHorizontal;
         GameObject pointer;
-        internal GameObject pointerOrigin;
+        internal Transform pointerOrigin;
 
         private void Awake()
         {
@@ -46,10 +47,8 @@ namespace Gameplay.VR.Player
 
         private void Update()
         {
-#if isDebugging
-            delegateTween = TweenManagerLibrary.GetTweenFunction((int)tweenFunction);
-# endif 
-            if(showRayPointer) ShowRayPointer();
+            if (showRayPointer)
+                ShowRayPointer();
         }
 
         #region Tall Ray Variables
@@ -150,10 +149,10 @@ namespace Gameplay.VR.Player
 
             // assign the Ray values
 #if isDebugging
-            horizontalRay.origin = pointerOrigin.transform.position;
-            else  
-#endif
+            horizontalRay.origin = pointerOrigin.position;
+#else 
             horizontalRay.origin = controllerPose.transform.position;
+#endif
             horizontalRay.direction = horizontalDirection;
 
             tallRay.origin = castingPosition;

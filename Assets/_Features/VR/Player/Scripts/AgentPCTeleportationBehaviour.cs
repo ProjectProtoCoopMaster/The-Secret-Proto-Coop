@@ -7,6 +7,7 @@ namespace Gameplay.VR.Player
     public class AgentPCTeleportationBehaviour : MonoBehaviour
     {
         Transform playerHead;
+        public Transform mouseAndKeyboardController;
         AgentTeleportationManager manager;
         [SerializeField] float mouseSensitivity;
         float xRotation = 0f;
@@ -30,26 +31,16 @@ namespace Gameplay.VR.Player
             float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
             xRotation -= mouseY;
+            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-            transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-            playerHead.Rotate(Vector3.up, mouseX);
-        }
+            playerHead.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+            playerHead.transform.parent.Rotate(Vector3.up, mouseX);
 
-        void shit()
-        {
-            //skeleton.GetBonePosition();
+            manager.pointerOrigin = mouseAndKeyboardController;
 
-            /*if (isMouseAndKey)
-            {
-                if (Physics.Raycast(Camera.main.transform.position, Vector3.forward, out RaycastHit hit))
-                {
-                    pointer.transform.position = hit.point;
-                }
-
-                bezierVisualization.SetPosition(0, playerPosition);
-                bezierVisualization.SetPosition(1, pointer.transform.position);
-            }*/
+            if (Input.GetKey(KeyCode.Space)) manager.TallRayPointer(null);
+            if (Input.GetKeyUp(KeyCode.Space)) manager.TryTeleporting();
+            Debug.DrawRay(playerHead.position, playerHead.forward * 500);
         }
     }
-
 }
