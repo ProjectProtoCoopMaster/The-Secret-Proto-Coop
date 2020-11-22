@@ -48,8 +48,7 @@ namespace Gameplay.VR.Player
                 if (hit.collider.gameObject.CompareTag("Guard"))
                 {
                     hit.collider.GetComponent<GuardMortalityBehavior>().Shot();
-                    //hit.collider.GetComponent<RagdollBehavior>().ActivateRagdollWithForce(
-                    //    yes.transform.forward * 100 + yes.transform.up, ForceMode.Impulse);
+                    //hit.collider.GetComponent<IKillabe>().Die();
                 }
                     
 

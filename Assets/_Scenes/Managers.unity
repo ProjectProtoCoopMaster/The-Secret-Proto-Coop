@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &230033386 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6129269782710857282, guid: cca71f5a9eea02044b0e0853e3f8fa32, type: 3}
+  m_PrefabInstance: {fileID: 2906806235926443014}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a86d09b348497bf43b7f418bee32d6c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &814800402
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -180,6 +191,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b3642f1f15068546b1f8d4e24d1003b, type: 3}
+--- !u!1 &1645317098 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1525769403144350532, guid: 7696dbd4dc514c64c8899dd0607249a7, type: 3}
+  m_PrefabInstance: {fileID: 1525769403186798941}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1645317100 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1525769403144350535, guid: 7696dbd4dc514c64c8899dd0607249a7, type: 3}
+  m_PrefabInstance: {fileID: 1525769403186798941}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645317098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6f5f78e3a374fb4ab97bd2ec7c69c9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1645317102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645317098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b050f1f874b0d5498a0b48727c3f05e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 7b4f0b1952a4ff0488f75f2b1cf595ca, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1645317100}
+        m_TargetAssemblyTypeName: Gameplay.GameManager, Assembly-CSharp
+        m_MethodName: GameOver
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &321705840698329360
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -244,6 +299,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1645317099, guid: 7696dbd4dc514c64c8899dd0607249a7, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 230033386}
+    - target: {fileID: 1645317099, guid: 7696dbd4dc514c64c8899dd0607249a7, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RaiseOnLose
+      objectReference: {fileID: 0}
     - target: {fileID: 1525769403144350532, guid: 7696dbd4dc514c64c8899dd0607249a7, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -293,9 +356,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1525769403144350535, guid: 7696dbd4dc514c64c8899dd0607249a7, type: 3}
-      propertyPath: startGame
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: _onLose
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b4f0b1952a4ff0488f75f2b1cf595ca, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7696dbd4dc514c64c8899dd0607249a7, type: 3}
 --- !u!1001 &2906806235926443014
