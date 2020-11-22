@@ -59,8 +59,8 @@ namespace Gameplay.VR.Player
             while (time <= tweenDuration)
             {
                 time += Time.deltaTime;
-                movingPosition.x = TweenManager.LinearTween(time, startValue.x, change.x, tweenDuration);
-                movingPosition.x = TweenManager.LinearTween(time, startValue.z, change.z, tweenDuration);
+                movingPosition.x = TweenManagerLibrary.LinearTween(time, startValue.x, change.x, tweenDuration);
+                movingPosition.x = TweenManagerLibrary.LinearTween(time, startValue.z, change.z, tweenDuration);
 
                 transform.position = movingPosition;
                 yield return null;
