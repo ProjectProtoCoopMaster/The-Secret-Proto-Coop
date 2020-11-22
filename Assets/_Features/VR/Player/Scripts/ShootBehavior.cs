@@ -46,7 +46,12 @@ namespace Gameplay.VR.Player
             if (Physics.SphereCast(gunBarrel.position, 0.25f, gunBarrel.transform.forward, out hit, 100f, shootingLayer))
             {
                 if (hit.collider.gameObject.CompareTag("Guard"))
+                {
                     hit.collider.GetComponent<GuardMortalityBehavior>().Shot();
+                    //hit.collider.GetComponent<RagdollBehavior>().ActivateRagdollWithForce(
+                    //    yes.transform.forward * 100 + yes.transform.up, ForceMode.Impulse);
+                }
+                    
 
                 else Debug.Log("Bullet hit " + hit.collider.name);
             }
