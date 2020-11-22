@@ -887,6 +887,10 @@ PrefabInstance:
       propertyPath: path
       value: 
       objectReference: {fileID: 1278592767}
+    - target: {fileID: 7036071765249521777, guid: 353f3a4096229ae478d9ae5decc89489, type: 3}
+      propertyPath: loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7036071765249521782, guid: 353f3a4096229ae478d9ae5decc89489, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2
@@ -2332,9 +2336,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1298543070}
     m_Modifications:
+    - target: {fileID: 2868061133586548391, guid: b425c849f40da154991333de9348fcaf, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: _Distraction
+      objectReference: {fileID: 0}
     - target: {fileID: 6141657805777543834, guid: b425c849f40da154991333de9348fcaf, type: 3}
       propertyPath: m_Name
       value: Diversion Throw Object
+      objectReference: {fileID: 0}
+    - target: {fileID: 6141657805777543834, guid: b425c849f40da154991333de9348fcaf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6141657805777543837, guid: b425c849f40da154991333de9348fcaf, type: 3}
       propertyPath: m_LocalPosition.x

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.PackageManager.UI;
 using UnityEngine;
+using Gameplay.AI;
 
 public class PatrolPathEditorWindow : ExtendedEditorWindow
 {
