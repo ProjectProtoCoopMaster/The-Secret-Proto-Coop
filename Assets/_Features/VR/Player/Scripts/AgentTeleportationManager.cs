@@ -8,19 +8,20 @@ using Valve.VR.InteractionSystem;
 
 namespace Gameplay.VR.Player
 {
-    public class AgentVRTeleportationManager : MonoBehaviour
+    public class AgentTeleportationManager : MonoBehaviour
     {
-        public bool debuggingMode;
+        public bool isDebugging;
 
-        float time;
-        Vector3 change;
-        Vector3 movingPosition;
         [SerializeField] [FoldoutGroup("Teleportation Transition")] float tweenDuration = .25f;
         [SerializeField] [FoldoutGroup("Teleportation Transition")] ParticleSystem particleDash;
+        [SerializeField] [FoldoutGroup("Teleportation Transition")] TweenFunctions tweenFunction;
+        TweenManagerLibrary.TweenFunction delegateTween;
+        Vector3 movingPosition, change;
+        float time;
 
         [SerializeField] [FoldoutGroup("SteamVR Components")] Transform cameraRig;
-        [SerializeField] [FoldoutGroup("SteamVR Components")] Transform playerHead;
-        SteamVR_Behaviour_Pose _controllerPose;
+        [SerializeField] [FoldoutGroup("SteamVR Components")] internal Transform playerHead;
+        SteamVR_Behaviour_Pose controllerPose;
         private bool showRayPointer = false;
 
         // [SerializeField] [FoldoutGroup("Teleportation")] Transform startPoint, endPoint;
@@ -31,31 +32,24 @@ namespace Gameplay.VR.Player
 
         Ray horizontalRay, tallRay;
         RaycastHit hitTallRay, hitHorizontal;
-
         GameObject pointer;
+        internal GameObject pointerOrigin;
 
         private void Awake()
         {
             pointer = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+
             pointer.GetComponent<Collider>().enabled = false;
+
+            delegateTween = TweenManagerLibrary.GetTweenFunction((int)tweenFunction);
         }
 
         private void Update()
         {
-            if(debuggingMode)
-            {
-                if (Input.GetKey(KeyCode.Space)) 
-                    ShowRayPointer();
-
-                if (Input.GetKeyUp(KeyCode.Space)) 
-                    TryTeleporting();
-            }
-
-            else
-            {
-                if (showRayPointer) 
-                    ShowRayPointer();
-            }
+#if isDebugging
+            delegateTween = TweenManagerLibrary.GetTweenFunction((int)tweenFunction);
+# endif 
+            if(showRayPointer) ShowRayPointer();
         }
 
         #region Tall Ray Variables
@@ -63,7 +57,11 @@ namespace Gameplay.VR.Player
         {
             get
             {
-                return _controllerPose.transform.forward;
+#if isDebugging
+                return playerHead.transform.forward;
+#else 
+                return controllerPose.transform.forward;
+#endif
             }
         }
 
@@ -138,11 +136,11 @@ namespace Gameplay.VR.Player
         // 3. fire a raycast from above the player. Substract the point on the horiz ray from the new ray's position and normalize the result to get the direction
         // 4. if anything is hit by the second ray, it is the endpoint, otherwise, the end point will be somewhere on the horizontal axis.
         // 5. render a bézier curve between the controller and the end point
-        
+
         // show the pointer, using the referenced controller's transform.forward
-        internal void TallRayPointer(SteamVR_Behaviour_Pose controllerPose)
+        internal void TallRayPointer(SteamVR_Behaviour_Pose _controllerPose)
         {
-            _controllerPose = controllerPose;
+            controllerPose = _controllerPose;
             showRayPointer = true;
         }
 
@@ -150,50 +148,31 @@ namespace Gameplay.VR.Player
         {
             bezierVisualization.enabled = true;
 
-            //skeleton.GetBonePosition();
+            // assign the Ray values
+#if isDebugging
+            horizontalRay.origin = pointerOrigin.transform.position;
+            else  
+#endif
+            horizontalRay.origin = controllerPose.transform.position;
+            horizontalRay.direction = horizontalDirection;
 
-            if (debuggingMode)
-            {
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            tallRay.origin = castingPosition;
+            tallRay.direction = (pointAlongRay - castingPosition).normalized;
 
-                if (Physics.Raycast(ray, out RaycastHit hit))
-                {
-                    pointer.transform.position = hit.point;
-                }
+            // if you hit something with the Tall Ray, define it as the endpoint
+            if (Physics.Raycast(tallRay, out hitTallRay))
+                pointer.transform.position = hitTallRay.point;
 
-                bezierVisualization.SetPosition(0, playerPosition);
-                bezierVisualization.SetPosition(1, pointer.transform.position);
-            }
+            // otherwise, the endpoint must be on the horizontal axis
+            else if (Physics.Raycast(horizontalRay, out hitHorizontal))
+                pointer.transform.position = hitHorizontal.point;
 
-            else
-            {
-                // assign the Ray values
-                horizontalRay.origin = _controllerPose.transform.position;
-                horizontalRay.direction = horizontalDirection;
+            Debug.DrawRay(horizontalRay.origin, horizontalRay.direction * 20f, Color.blue); // draw the initial horizontal Ray
+            Debug.DrawLine(horizontalRay.origin, pointAlongRay, Color.white); // draw the teleportation distance limit
+            Debug.DrawRay(tallRay.origin, tallRay.direction * 50f, Color.red); // draw the Tall Ray shooting down
 
-                tallRay.origin = castingPosition;
-
-                tallRay.direction = (pointAlongRay - castingPosition).normalized;
-
-                // if you hit something with the Tall Ray, define it as the endpoint
-                if (Physics.Raycast(tallRay, out hitTallRay))
-                {
-                    pointer.transform.position = hitTallRay.point;
-                }
-                // otherwise, the endpoint must be on the horizontal axis
-                else if (Physics.Raycast(horizontalRay, out hitHorizontal))
-                {
-                    pointer.transform.position = hitHorizontal.point;
-                }
-
-                Debug.DrawRay(horizontalRay.origin, horizontalRay.direction * 20f, Color.blue); // draw the initial horizontal Ray
-                Debug.DrawLine(horizontalRay.origin, pointAlongRay, Color.white); // draw the teleportation distance limit
-                Debug.DrawRay(tallRay.origin, tallRay.direction * 50f, Color.red); // draw the Tall Ray shooting down
-
-                bezierVisualization.SetPosition(0, _controllerPose.transform.position);
-                bezierVisualization.SetPosition(1, pointer.transform.position);
-            }
-
+            bezierVisualization.SetPosition(0, controllerPose.transform.position);
+            bezierVisualization.SetPosition(1, pointer.transform.position);
         }
 
         public void TryTeleporting()
@@ -219,8 +198,8 @@ namespace Gameplay.VR.Player
             while (time <= tweenDuration)
             {
                 time += Time.deltaTime;
-                movingPosition.x = TweenManager.LinearTween(time, startPos.x, change.x, tweenDuration);
-                movingPosition.z = TweenManager.LinearTween(time, startPos.z, change.z, tweenDuration);
+                movingPosition.x = delegateTween(time, startPos.x, change.x, tweenDuration);
+                movingPosition.z = delegateTween(time, startPos.z, change.z, tweenDuration);
                 movingPosition.y = cameraRig.position.y;
                 cameraRig.position = movingPosition;
                 yield return null;

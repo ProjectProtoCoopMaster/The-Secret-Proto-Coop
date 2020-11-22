@@ -2,8 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TweenManager : MonoBehaviour
+public class TweenManagerLibrary : MonoBehaviour
 {
+    public delegate float TweenFunction(float time, float beginning, float change, float duration);
+    static TweenFunction[] tweenFunctions = { LinearTween, EaseInQuad, EaseOutQuad, EaseInOutQuad, EaseInOutQuint, EaseInOutSine };
+
+    public static TweenFunction GetTweenFunction(int index)
+    {
+        return tweenFunctions[index];
+    }
+
     public static float LinearTween(float time, float beginning, float change, float duration)
     {
         return time * change / duration + beginning;
