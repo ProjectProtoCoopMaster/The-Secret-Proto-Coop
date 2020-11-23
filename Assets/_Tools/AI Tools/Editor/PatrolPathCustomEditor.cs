@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using Gameplay.AI;
 
 //[CustomEditor(typeof(PatrolPath))]
 public class PatrolPathCustomEditor : Editor
