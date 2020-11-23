@@ -3,7 +3,7 @@ using Valve.VR;
 
 namespace Gameplay.VR.Player
 {
-    public class ShootBehavior : BallistixData
+    public class ShootBehavior : MonoBehaviour
     {
         public Transform gunBarrel;
         public LayerMask shootingLayer;
