@@ -37,7 +37,7 @@ namespace Gameplay.VR.Player
         GameObject pointer;
         internal Transform pointerOrigin;
 
-        private void Awake()
+        private void Start()
         {
             pointer = GameObject.CreatePrimitive(PrimitiveType.Sphere);
             pointer.GetComponent<Collider>().enabled = false;
@@ -46,10 +46,8 @@ namespace Gameplay.VR.Player
             bezierVisualization.endWidth = lineWidth;
             bezierVisualization.useWorldSpace = true;
             bezierVisualization.positionCount = smoothness;
-        }
 
-        private void Start()
-        {
+
             delegateTween = TweenManagerLibrary.GetTweenFunction((int)tweenFunction);
         }
 

@@ -6,7 +6,8 @@ namespace Gameplay.VR.Player
 {
     public class ShootBehavior : MonoBehaviour
     {
-        [SerializeField] [FoldoutGroup("Shooting Info")] LayerMask shootingLayer;
+        [SerializeField] [FoldoutGroup("Shooting")] LayerMask shootingLayer;
+        [SerializeField] [FoldoutGroup("Shooting")] LineRenderer shotTrail;
 
         RaycastHit hit;
 
@@ -27,12 +28,13 @@ namespace Gameplay.VR.Player
             if (controllerPose == null)
                 controllerPose = FindObjectOfType<SteamVR_Behaviour_Pose>();
 
-            Debug.DrawRay(controllerPose.transform.position, controllerPose.transform.forward * 50f, Color.magenta);
+            Debug.DrawRay(controllerPose.transform.position, (controllerPose.transform.up - controllerPose.transform.forward) * 50f, Color.magenta);
+            
             if (Physics.SphereCast(controllerPose.transform.position, 0.25f, controllerPose.transform.forward, out hit, 100f, shootingLayer))
             {
                 if (hit.collider.gameObject.CompareTag("Guard"))
                 {
-                    hit.collider.GetComponent<GuardMortalityBehavior>().Shot();
+                    hit.collider.GetComponent<GuardBehaviour>().Shot();
                 }                    
 
                 else Debug.Log("Bullet hit " + hit.collider.name);
