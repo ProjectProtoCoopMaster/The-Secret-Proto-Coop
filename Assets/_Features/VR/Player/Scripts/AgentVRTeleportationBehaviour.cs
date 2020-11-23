@@ -18,6 +18,11 @@ namespace Gameplay.VR.Player
             teleportAction.AddOnStateUpListener(Teleport, handType);
         }
 
+        private void Start()
+        {
+            if (manager == null) manager = FindObjectOfType<AgentTeleportationManager>();
+        }
+
         void ShowLaserPointer(SteamVR_Action_Boolean action, SteamVR_Input_Sources source)
         {
             manager.TallRayPointer(controllerPose);

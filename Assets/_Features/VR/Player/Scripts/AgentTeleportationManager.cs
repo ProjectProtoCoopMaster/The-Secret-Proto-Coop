@@ -1,11 +1,8 @@
-﻿#define isDebugging
+﻿//#define isDebugging
 using Sirenix.OdinInspector;
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
-using Valve.VR.InteractionSystem;
 
 namespace Gameplay.VR.Player
 {
@@ -19,9 +16,9 @@ namespace Gameplay.VR.Player
         float time;
 
         [SerializeField] [FoldoutGroup("SteamVR Components")] internal Transform playerHead;
+        [SerializeField] [FoldoutGroup("SteamVR Components")] Transform cameraRig;
         SteamVR_Behaviour_Pose controllerPose;
         private bool showRayPointer = false;
-        Transform playerRig;
 
         // [SerializeField] [FoldoutGroup("Teleportation")] Transform startPoint, endPoint;
         [SerializeField] [FoldoutGroup("Teleportation")] float maxDistance = 10f;
@@ -43,17 +40,18 @@ namespace Gameplay.VR.Player
         private void Awake()
         {
             pointer = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-
             pointer.GetComponent<Collider>().enabled = false;
-
             delegateTween = TweenManagerLibrary.GetTweenFunction((int)tweenFunction);
+
+            if (bezierVisualization == null)
+                bezierVisualization = GetComponentInChildren<LineRenderer>();
 
             bezierVisualization.startWidth = lineWidth;
             bezierVisualization.endWidth = lineWidth;
             bezierVisualization.useWorldSpace = true;
             bezierVisualization.positionCount = smoothness;
 
-            playerRig = transform;
+            DontDestroyOnLoad(this);
         }
 
         private void Update()
@@ -101,7 +99,7 @@ namespace Gameplay.VR.Player
         {
             get
             {
-                return playerRig.position - playerHead.position;
+                return cameraRig.position - playerHead.position;
             }
         }
 
@@ -136,7 +134,7 @@ namespace Gameplay.VR.Player
         {
             get
             {
-                return playerPosition + Vector3.up * castingHeight;
+                return playerHead.position + Vector3.up * castingHeight;
             }
         }
         #endregion
@@ -189,7 +187,7 @@ namespace Gameplay.VR.Player
             p0 = pointerOrigin.transform.position;
             p1.y = pointerOrigin.position.y;
 #else
-            p0 = controllerPose.transform.position; 
+            p0 = controllerPose.transform.position;
             p1.y = controllerPose.transform.position.y;
 #endif
             for (int i = 0; i < smoothness; i++)
@@ -199,16 +197,13 @@ namespace Gameplay.VR.Player
                 + 2.0f * (1.0f - t) * t * p1 + t * t * p2;
                 bezierVisualization.SetPosition(i, posContainer);
             }
-            #endregion
-
-
-
+            #endregion                       
         }
 
         public void TryTeleporting()
         {
-            bezierVisualization.enabled = false;
             StartCoroutine(TeleportThePlayer());
+            bezierVisualization.enabled = false;
         }
 
         IEnumerator TeleportThePlayer()
@@ -230,8 +225,8 @@ namespace Gameplay.VR.Player
                 time += Time.deltaTime;
                 movingPosition.x = delegateTween(time, startPos.x, change.x, tweenDuration);
                 movingPosition.z = delegateTween(time, startPos.z, change.z, tweenDuration);
-                movingPosition.y = playerRig.position.y;
-                playerRig.position = movingPosition;
+                movingPosition.y = cameraRig.position.y;
+                cameraRig.position = movingPosition;
                 yield return null;
             }
             particleDash.Stop();
