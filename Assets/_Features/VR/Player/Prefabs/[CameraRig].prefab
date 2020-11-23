@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2071781268097897309}
   - component: {fileID: 2071781268107946051}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,8 @@ GameObject:
   - component: {fileID: 3549385826799004231}
   - component: {fileID: 3518703279046919066}
   - component: {fileID: 3518703279046919067}
-  m_Layer: 8
+  - component: {fileID: 6621295908609286380}
+  m_Layer: 0
   m_Name: Controller (left)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +156,27 @@ MonoBehaviour:
   teleportAction:
     actionPath: /actions/default/in/Teleport
     needsReinit: 0
-  manager: {fileID: 0}
+  teleportationManager: {fileID: 0}
+--- !u!114 &6621295908609286380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3518703279046919069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a048a001353ad7543876b75a612d2652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootingLayer:
+    serializedVersion: 2
+    m_Bits: 1536
+  controllerPose: {fileID: 0}
+  shootAction:
+    actionPath: /actions/default/in/Shoot
+    needsReinit: 0
+  handType: 1
 --- !u!1 &3518703279047150011
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +189,8 @@ GameObject:
   - component: {fileID: 3549385828165629391}
   - component: {fileID: 3518703279047150008}
   - component: {fileID: 3518703279047150009}
-  m_Layer: 8
+  - component: {fileID: 8372023229305022291}
+  m_Layer: 0
   m_Name: Controller (right)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +284,27 @@ MonoBehaviour:
   teleportAction:
     actionPath: /actions/default/in/Teleport
     needsReinit: 0
-  manager: {fileID: 0}
+  teleportationManager: {fileID: 0}
+--- !u!114 &8372023229305022291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3518703279047150011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a048a001353ad7543876b75a612d2652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootingLayer:
+    serializedVersion: 2
+    m_Bits: 1536
+  controllerPose: {fileID: 0}
+  shootAction:
+    actionPath: /actions/default/in/Shoot
+    needsReinit: 0
+  handType: 2
 --- !u!1 &3518703279047170551
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,7 +315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3518703279047359437}
   - component: {fileID: 3518703279040614853}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +366,7 @@ GameObject:
   - component: {fileID: 3518703279049158765}
   - component: {fileID: 3518703279048126953}
   - component: {fileID: 3518703279040538761}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: '[CameraRig]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -437,7 +479,7 @@ GameObject:
   - component: {fileID: 3588019699651100445}
   - component: {fileID: 3549385806311468807}
   - component: {fileID: 3519418509051990836}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -549,7 +591,7 @@ GameObject:
   - component: {fileID: 4630715393368065991}
   - component: {fileID: 4630715393368065988}
   - component: {fileID: 4630715393368065989}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: TP_Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}

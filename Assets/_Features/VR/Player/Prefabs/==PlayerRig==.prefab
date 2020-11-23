@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4229520391900297452}
   - component: {fileID: 8384332402410097317}
   - component: {fileID: 8384332402410097314}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ==PlayerRig==
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +81,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8384332401359644297}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: KeyboardControllerOrigin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8384332402485342317}
   - component: {fileID: 8384332402485342314}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: "Teleportation B\xE9zier Curve"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,6 +12,7 @@ TagManager:
   - Camera/Static Camera
   - Camera/Mobile Camera
   - Enemy
+  - Grabbable
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - Enemy
   - Environment
   - Traps
-  - 
+  - Grabbable
   - 
   - 
   - 
