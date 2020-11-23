@@ -1,8 +1,8 @@
 ﻿//#define isDebugging
-using Sirenix.OdinInspector;
 using System.Collections;
 using UnityEngine;
 using Valve.VR;
+using Sirenix.OdinInspector;
 
 namespace Gameplay.VR.Player
 {
@@ -41,17 +41,16 @@ namespace Gameplay.VR.Player
         {
             pointer = GameObject.CreatePrimitive(PrimitiveType.Sphere);
             pointer.GetComponent<Collider>().enabled = false;
-            delegateTween = TweenManagerLibrary.GetTweenFunction((int)tweenFunction);
-
-            if (bezierVisualization == null)
-                bezierVisualization = GetComponentInChildren<LineRenderer>();
 
             bezierVisualization.startWidth = lineWidth;
             bezierVisualization.endWidth = lineWidth;
             bezierVisualization.useWorldSpace = true;
             bezierVisualization.positionCount = smoothness;
+        }
 
-            DontDestroyOnLoad(this);
+        private void Start()
+        {
+            delegateTween = TweenManagerLibrary.GetTweenFunction((int)tweenFunction);
         }
 
         private void Update()

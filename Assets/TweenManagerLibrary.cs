@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class TweenManagerLibrary : MonoBehaviour
+public static class TweenManagerLibrary
 {
     public delegate float TweenFunction(float time, float beginning, float change, float duration);
     static TweenFunction[] tweenFunctions = { LinearTween, EaseInQuad, EaseOutQuad, EaseInOutQuad, EaseInOutQuint, EaseInOutSine };

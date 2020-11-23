@@ -1,7 +1,6 @@
-﻿using Sirenix.OdinInspector;
-using System;
-using UnityEngine;
+﻿using UnityEngine;
 using Valve.VR;
+using Sirenix.OdinInspector;
 
 namespace Gameplay.VR.Player
 {
@@ -10,27 +9,28 @@ namespace Gameplay.VR.Player
         [SerializeField] [FoldoutGroup("SteamVR Components")] SteamVR_Input_Sources handType;
         [SerializeField] [FoldoutGroup("SteamVR Components")] SteamVR_Behaviour_Pose controllerPose;
         [SerializeField] [FoldoutGroup("SteamVR Components")] SteamVR_Action_Boolean teleportAction;
-        [SerializeField] [FoldoutGroup("Manager")] AgentTeleportationManager manager;
+        [SerializeField] [FoldoutGroup("Manager")] AgentTeleportationManager teleportationManager;
 
-        private void Awake()
+        private void Start()
         {
             teleportAction.AddOnStateDownListener(ShowLaserPointer, handType);
             teleportAction.AddOnStateUpListener(Teleport, handType);
         }
 
-        private void Start()
-        {
-            if (manager == null) manager = FindObjectOfType<AgentTeleportationManager>();
-        }
-
         void ShowLaserPointer(SteamVR_Action_Boolean action, SteamVR_Input_Sources source)
         {
-            manager.TallRayPointer(controllerPose);
+           if(teleportationManager == null) 
+                teleportationManager = FindObjectOfType<AgentTeleportationManager>();
+
+            teleportationManager.TallRayPointer(controllerPose);
         }
 
         void Teleport(SteamVR_Action_Boolean action, SteamVR_Input_Sources source)
         {
-            manager.TryTeleporting();
+            if (teleportationManager == null) 
+                teleportationManager = FindObjectOfType<AgentTeleportationManager>();
+
+            teleportationManager.TryTeleporting();
         }
     }
 }
