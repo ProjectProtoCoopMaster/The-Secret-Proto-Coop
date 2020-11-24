@@ -1,8 +1,8 @@
-﻿using Networking;
-using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
+using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 namespace Gameplay
 {
@@ -12,7 +12,25 @@ namespace Gameplay
         public Vector3Variable playerVRPos;
         [SerializeField] CallableFunction _JoinRoom;
         [SerializeField] CallableFunction _CreateRoom;
-        
+        public VisualTreeAsset visualTree;
+        public VisualElement rootElement;
+        private Button join;
+
+        private void OnEnable()
+        {
+
+            rootElement = visualTree.CloneTree();
+
+            join = rootElement.Q<Button>("JoinButton");
+
+            //join.clickable.clicked += () => Debug.Log("Clicked");
+
+            rootElement.Add(join);
+
+
+        }
+
+        private void Test(ChangeEvent<Button> value) => Debug.Log("Helo");
         public void JoinRoom() => _JoinRoom.Raise();
 
         public void CreateRoom() => _CreateRoom.Raise();
@@ -30,6 +48,8 @@ namespace Gameplay
                 SceneManager.UnloadScene(3);
             }
         }
+
+        
 
     }
 }
