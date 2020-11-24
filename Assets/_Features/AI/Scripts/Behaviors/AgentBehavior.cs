@@ -48,19 +48,19 @@ namespace Gameplay.AI
         public List<Vector3> watchDirections { get; set; }
     }
 
-    public class ActionBehavior : MonoBehaviour
+    public abstract class ActionBehavior : MonoBehaviour
     {
         public ActionType actionType;
 
-        public virtual void StartActionBehavior(_Action action) { }
+        public abstract void StartActionBehavior(_Action action);
         public virtual void ResumeActionBehavior(_Action action) { StartActionBehavior(action); }
 
-        public virtual void StopActionBehavior() { }
+        public abstract void StopActionBehavior();
 
-        public virtual bool Check(_Action action) { return true; }
+        public abstract bool Check(_Action action);
     }
 
-    public class AgentBehavior : MonoBehaviour
+    public abstract class AgentBehavior : MonoBehaviour
     {
         public StateType stateType;
 
@@ -68,9 +68,9 @@ namespace Gameplay.AI
 
         private bool active;
 
-        protected Dictionary<ActionType, ActionBehavior> actionBehaviors;
+        protected Dictionary<ActionType, ActionBehavior> actionBehaviors = new Dictionary<ActionType, ActionBehavior>();
 
-        protected List<_Action> actions;
+        protected List<_Action> actions = new List<_Action>();
 
         protected _Action currentAction;
         public ActionType currentActionType { get; set; }
@@ -86,12 +86,7 @@ namespace Gameplay.AI
             InitializeBehavior();
         }
 
-        protected virtual void InitializeBehavior()
-        {
-            actionBehaviors = new Dictionary<ActionType, ActionBehavior>();
-
-            actions = new List<_Action>();
-        }
+        protected abstract void InitializeBehavior();
         #endregion
 
         #region Set
