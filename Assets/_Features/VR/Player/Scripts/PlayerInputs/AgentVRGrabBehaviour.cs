@@ -1,63 +1,48 @@
 ﻿using UnityEngine;
 using Valve.VR;
 using Sirenix.OdinInspector;
-using System;
 
 namespace Gameplay.VR.Player
 {
     public class AgentVRGrabBehaviour : MonoBehaviour
     {
-        [SerializeField] [FoldoutGroup("Testing Data")] float disToPickup = .3f;
-        [SerializeField] [FoldoutGroup("Testing Data")] LayerMask pickupLayer;
-        [SerializeField] [FoldoutGroup("Testing Data")] Rigidbody holdingTarget, thisRb;
-
         [SerializeField] [FoldoutGroup("SteamVR Components")] SteamVR_Input_Sources handSource;
-        [SerializeField] [FoldoutGroup("SteamVR Components")] SteamVR_Behaviour_Pose controllerPose;
+        [SerializeField] [FoldoutGroup("SteamVR Components")] SteamVR_Action_Pose controllerPose = SteamVR_Input.GetAction<SteamVR_Action_Pose>("Pose");
         [SerializeField] [FoldoutGroup("SteamVR Components")] SteamVR_Action_Boolean grabAction;
 
-        [SerializeField]
-        [FoldoutGroup("Testing Data")]
-        bool handClosed
-        {
-            get
-            {
-                return grabAction.GetStateDown(handSource);
-            }
-        }
+        [SerializeField] [FoldoutGroup("Manager")] AgentVRGrabManager grabManager;
+        public Transform currentPos;
 
-        private void Start()
+        private void Awake()
         {
             grabAction.AddOnStateDownListener(Pickup, handSource);
             grabAction.AddOnStateUpListener(Release, handSource);
-            thisRb = GetComponent<Rigidbody>();
         }
 
-        private void Pickup(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
+        void Pickup(SteamVR_Action_Boolean action, SteamVR_Input_Sources fromSource)
         {
-            if (controllerPose == null)
-                controllerPose = GetComponent<SteamVR_Behaviour_Pose>();
+            if (grabManager == null)
+                grabManager = FindObjectOfType<AgentVRGrabManager>();
+            /*if (controllerPose == null) 
+                controllerPose = GetComponent<SteamVR_Behaviour_Pose>();*/
 
-            Collider[] colliders = Physics.OverlapSphere(controllerPose.transform.position, disToPickup, pickupLayer);
-            if (colliders.Length > 0)
-                holdingTarget = colliders[0].transform.root.GetComponent<Rigidbody>();
-
-            if (holdingTarget != null)
-            {
-                holdingTarget.transform.parent = controllerPose.transform;
-                holdingTarget.isKinematic = true;
-            }
+            grabManager.TryPickup(currentPos);
         }
 
-        private void Release(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
+        void Release(SteamVR_Action_Boolean action, SteamVR_Input_Sources fromSource)
         {
-            if (controllerPose == null) controllerPose = GetComponent<SteamVR_Behaviour_Pose>();
-            Debug.Log("FLY");
-            holdingTarget.isKinematic = false;
-            holdingTarget.transform.SetParent(null);
-            holdingTarget.velocity = controllerPose.GetVelocity();
-            holdingTarget.angularVelocity = controllerPose.GetAngularVelocity();
+            if (grabManager == null)
+                grabManager = FindObjectOfType<AgentVRGrabManager>();
+            /*if (controllerPose == null) 
+                controllerPose = GetComponent<SteamVR_Behaviour_Pose>();*/
 
-            holdingTarget = null;
+            grabManager.TryRelease(controllerPose[handSource].velocity, controllerPose[handSource].angularVelocity);
+
+        }
+
+        private void Update()
+        {
+            //currentPos = this.transform.parent;
         }
     }
 }

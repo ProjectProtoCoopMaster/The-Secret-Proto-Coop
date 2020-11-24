@@ -9,7 +9,8 @@ namespace Gameplay.VR.Player
         [SerializeField] [FoldoutGroup("SteamVR Components")] SteamVR_Input_Sources handType;
         [SerializeField] [FoldoutGroup("SteamVR Components")] SteamVR_Behaviour_Pose controllerPose;
         [SerializeField] [FoldoutGroup("SteamVR Components")] SteamVR_Action_Boolean teleportAction;
-        [SerializeField] [FoldoutGroup("Manager")] AgentTeleportationManager teleportationManager;
+
+        [SerializeField] [FoldoutGroup("Manager")] AgentVRTeleportationManager teleportationManager;
 
         private void Start()
         {
@@ -20,7 +21,7 @@ namespace Gameplay.VR.Player
         void ShowLaserPointer(SteamVR_Action_Boolean action, SteamVR_Input_Sources source)
         {
            if(teleportationManager == null) 
-                teleportationManager = FindObjectOfType<AgentTeleportationManager>();
+                teleportationManager = FindObjectOfType<AgentVRTeleportationManager>();
 
             teleportationManager.TallRayPointer(controllerPose);
         }
@@ -28,7 +29,7 @@ namespace Gameplay.VR.Player
         void Teleport(SteamVR_Action_Boolean action, SteamVR_Input_Sources source)
         {
             if (teleportationManager == null) 
-                teleportationManager = FindObjectOfType<AgentTeleportationManager>();
+                teleportationManager = FindObjectOfType<AgentVRTeleportationManager>();
 
             teleportationManager.TryTeleporting();
         }

@@ -22,6 +22,7 @@ public class SoundObject : MonoBehaviour
 
         foreach(Collider col in colliders)
         {
+            Debug.Log(col.name);
             if (col.transform.parent.tag == "Enemy")
             {
                 AgentManager agent = col.transform.parent.GetComponent<AgentManager>();

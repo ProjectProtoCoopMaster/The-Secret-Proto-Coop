@@ -6,13 +6,13 @@ namespace Gameplay.VR.Player
     {
         Transform playerHead;
         public Transform mouseOrigin;
-        AgentTeleportationManager manager;
+        AgentVRTeleportationManager manager;
         [SerializeField] float mouseSensitivity;
         float xRotation = 0f;
 
         private void Awake()
         {
-            manager = GetComponent<AgentTeleportationManager>();
+            manager = GetComponent<AgentVRTeleportationManager>();
             playerHead = manager.playerHead;
         }
 
