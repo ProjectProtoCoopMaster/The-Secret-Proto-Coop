@@ -92,7 +92,7 @@ namespace Gameplay.AI
         #region Set
         public void Begin()
         {
-            string msg = "There are no actions registered for this behavior ! Consider using Patrol Behavior instead to customize a list of actions.";
+            string msg = "There are no actions registered for " + this + ", likely, the behavior did not initialize correctly";
             if (Utility.SafeCheck(actions, msg))
             {
                 active = true;
