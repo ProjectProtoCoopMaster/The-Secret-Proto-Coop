@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-namespace Gameplay.VR
+using UnityEngine.UI;
+using DG.Tweening;
+namespace Gameplay.Mobile
 {
-    public class VR_TrapBehavior : MonoBehaviour, ISwitchable
+    public class TrapBehavior : MonoBehaviour, ISwitchable
     {
+        private Color color;
         [Range(0, 1), SerializeField] private int state;
         [Range(0, 1), SerializeField] private int power;
         public GameObject MyGameObject { get { return this.gameObject; } set { MyGameObject = value; } }
@@ -21,17 +23,15 @@ namespace Gameplay.VR
             }
         }
 
-        private void Start() => Power = power;
-
-        public void TurnOff() { GetComponent<BoxCollider>().enabled = false; }
-        public void TurnOn() { GetComponent<BoxCollider>().enabled = true; }
-
-        private void OnTriggerEnter(Collider other)
+        private void OnEnable()
         {
-            if (other.GetComponent<IKillable>() != null)
-                other.GetComponent<IKillable>().GE_Die();
+            color = GetComponent<Image>().color;
         }
 
-    }
-}
+        private void Start() => Power = power;
 
+        public void TurnOff() { GetComponent<Image>().DOColor(Color.black, .5f); }
+        public void TurnOn() { GetComponent<Image>().DOColor(color, .5f); }
+    }
+
+}

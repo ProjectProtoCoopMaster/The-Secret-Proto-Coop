@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using DG.Tweening;
 
 namespace Gameplay.Mobile
 {
     public class ElectricalLineBehavior : MonoBehaviour, ISwitchable
     {
+        private Color2 color;
         [Range(0, 1), SerializeField] private int state;
         [Range(0, 1), SerializeField] private int power;
         [SerializeField] private LineRenderer line;
@@ -18,44 +20,30 @@ namespace Gameplay.Mobile
             set
             {
                 power = value;
-                if (power == 1)
-                {
-                    if (state == 1)
-                    {
-                        TurnOn();
-                    }
-                    else
-                    {
-                        TurnOff();
-                    }
-                }
-                else
-                {
-                    TurnOff();
-                }
+                if (power == 1) if (state == 1) TurnOn(); else TurnOff();
+                else TurnOff();
             }
         }
         private void OnEnable()
         {
             Power = power;
+            color = new Color2(Color.white, Color.white);
         }
 
         public void TurnOff()
         {
-            line.startColor = Color.black;
-            line.endColor = Color.black;
+            line.DOColor(color, new Color2( Color.black,Color.black), .5f);
         }
 
         public void TurnOn()
         {
-            line.startColor = Color.white;
-            line.endColor = Color.white;
+            line.DOColor(new Color2(Color.black, Color.black),color, .5f);
         }
-
         public void SwitchNode(int changeNodes)
         {
             throw new System.NotImplementedException();
         }
+
     }
 }
 
