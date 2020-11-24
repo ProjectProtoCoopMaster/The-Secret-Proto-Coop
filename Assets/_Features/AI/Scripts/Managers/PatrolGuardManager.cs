@@ -17,5 +17,12 @@ namespace Gameplay.AI
                 { StateType.Distraction, distractionBehavior }
             };
         }
+
+        void Start()
+        {
+            currentState = StateType.Patrol;
+
+            agentBehaviors[currentState].Begin();
+        }
     } 
 }
