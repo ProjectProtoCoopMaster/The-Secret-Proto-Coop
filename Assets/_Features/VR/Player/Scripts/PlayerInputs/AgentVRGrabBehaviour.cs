@@ -25,7 +25,14 @@ namespace Gameplay.VR.Player
         internal void TryPickup(SteamVR_Action_Boolean action, SteamVR_Input_Sources fromSource)
         {
             Collider[] colliders = Physics.OverlapSphere(controllerPosition.position, disToPickup, pickupLayer);
-            if (colliders.Length > 0) holdingTarget = colliders[0].transform.GetComponent<Rigidbody>();
+            if (colliders.Length > 0)
+            {
+                for (int i = 0; i < colliders.Length; i++)
+                {
+                    if (colliders[i].CompareTag("Grabbable"))
+                        holdingTarget = colliders[i].transform.GetComponent<Rigidbody>();
+                }
+            }                
 
             if (holdingTarget != null)
             {
