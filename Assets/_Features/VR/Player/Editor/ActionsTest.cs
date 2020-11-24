@@ -1,4 +1,5 @@
-﻿using Valve.VR;
+﻿
+using Valve.VR;
 using UnityEngine;
 
 public class ActionsTest : MonoBehaviour
@@ -19,7 +20,7 @@ public class ActionsTest : MonoBehaviour
         get
         {
             return shootAction.GetStateDown(handType);
-        }        
+        }
     }
 
     bool GetGrabDown
@@ -37,3 +38,4 @@ public class ActionsTest : MonoBehaviour
         if (GetGrabDown) Debug.Log("Grabbed with " + handType);
     }
 }
+
