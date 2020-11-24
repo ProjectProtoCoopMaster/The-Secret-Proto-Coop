@@ -1,82 +1,55 @@
 ﻿using UnityEngine;
 using Valve.VR;
 using Sirenix.OdinInspector;
-using System;
 
 namespace Gameplay.VR.Player
 {
     public class AgentVRGrabBehaviour : MonoBehaviour
     {
-        [SerializeField] [FoldoutGroup("Testing Data")] float disToPickup = .3f;
-        [SerializeField] [FoldoutGroup("Testing Data")] LayerMask pickupLayer;
-        [SerializeField] [FoldoutGroup("Testing Data")] Rigidbody holdingTarget, thisRb;
-
         [SerializeField] [FoldoutGroup("SteamVR Components")] SteamVR_Input_Sources handSource;
-        [SerializeField] [FoldoutGroup("SteamVR Components")] SteamVR_Behaviour_Pose controllerPose;
+        [SerializeField] [FoldoutGroup("SteamVR Components")] SteamVR_Action_Pose controllerPose = SteamVR_Input.GetAction<SteamVR_Action_Pose>("Pose");
         [SerializeField] [FoldoutGroup("SteamVR Components")] SteamVR_Action_Boolean grabAction;
 
-        [SerializeField]
-        [FoldoutGroup("Testing Data")]
-        bool handClosed
-        {
-            get
-            {
-                return grabAction.GetStateDown(handSource);
-            }
-        }
-
+        [SerializeField] [FoldoutGroup("Testing Data")] float disToPickup = .3f;
+        [SerializeField] [FoldoutGroup("Testing Data")] LayerMask pickupLayer;
+        [SerializeField] [FoldoutGroup("Testing Data")] Rigidbody holdingTarget;
+        [SerializeField] [FoldoutGroup("SteamVR Components")] Transform controllerPosition;
+               
         private void Awake()
         {
-            grabAction.AddOnStateDownListener(Pickup, handSource);
+            controllerPosition = this.transform;
+            grabAction.AddOnStateDownListener(TryPickup, handSource);
             grabAction.AddOnStateUpListener(Release, handSource);
-            thisRb = GetComponent<Rigidbody>();
         }
 
-        private void Pickup(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
+        internal void TryPickup(SteamVR_Action_Boolean action, SteamVR_Input_Sources fromSource)
         {
-            Collider[] colliders = Physics.OverlapSphere(controllerPose.transform.position, disToPickup, pickupLayer);
+            Collider[] colliders = Physics.OverlapSphere(controllerPosition.position, disToPickup, pickupLayer);
             if (colliders.Length > 0)
-                holdingTarget = colliders[0].transform.root.GetComponent<Rigidbody>();
+            {
+                for (int i = 0; i < colliders.Length; i++)
+                {
+                    if (colliders[i].CompareTag("Grabbable"))
+                        holdingTarget = colliders[i].transform.GetComponent<Rigidbody>();
+                }
+            }                
 
             if (holdingTarget != null)
             {
-                holdingTarget.transform.parent = controllerPose.transform;
+                holdingTarget.transform.parent = controllerPosition;
                 holdingTarget.isKinematic = true;
             }
         }
 
-        private void Release(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
+        void Release(SteamVR_Action_Boolean action, SteamVR_Input_Sources fromSource)
         {
             Debug.Log("FLY");
             holdingTarget.isKinematic = false;
+            holdingTarget.velocity = controllerPose[handSource].velocity;
+            holdingTarget.angularVelocity = controllerPose[handSource].angularVelocity;
+
             holdingTarget.transform.SetParent(null);
-            holdingTarget.velocity = controllerPose.GetVelocity();
-            holdingTarget.angularVelocity = controllerPose.GetAngularVelocity();
-
             holdingTarget = null;
-        }
-
-        private void FixedUpdate()
-        {
-            if (controllerPose == null) controllerPose = GetComponent<SteamVR_Behaviour_Pose>();
-
-
-            /*else
-            {
-                if (holdingTarget)
-                {
-                    // ajdust velocity to move around
-                    holdingTarget.velocity = (controllerPose.transform.position - holdingTarget.transform.position) / Time.fixedDeltaTime;
-
-                    // ajust velocity to rotate to hand
-                    holdingTarget.maxAngularVelocity = 20;
-                    Quaternion deltRot = transform.rotation * Quaternion.Inverse(holdingTarget.transform.rotation);
-                    Vector3 eulerRot = new Vector3(Mathf.DeltaAngle(0, deltRot.eulerAngles.x), Mathf.DeltaAngle(0, deltRot.eulerAngles.y), Mathf.DeltaAngle(0, deltRot.eulerAngles.z));
-                    eulerRot *= 0.95f;
-                    eulerRot *= Mathf.Deg2Rad;
-                    holdingTarget.angularVelocity = eulerRot / Time.fixedDeltaTime;
-                }
-            }*/
         }
     }
 }

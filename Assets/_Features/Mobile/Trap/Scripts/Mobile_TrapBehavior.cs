@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace Gameplay.Mobile
 {
-    public class TrapBehavior : MonoBehaviour, ISwitchable
+    public class Mobile_TrapBehavior : MonoBehaviour, ISwitchable
     {
         [Range(0, 1), SerializeField] private int state;
         [Range(0, 1), SerializeField] private int power;

@@ -5,6 +5,7 @@ using Gameplay.AI;
 
 public class SoundObject : MonoBehaviour
 {
+    public LayerMask layerMask;
     public float radius;
 
     private void OnTriggerEnter(Collider other)
@@ -17,10 +18,11 @@ public class SoundObject : MonoBehaviour
 
     public void _Distraction()
     {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, radius, layerMask);
 
         foreach(Collider col in colliders)
         {
+            Debug.Log(col.name);
             if (col.transform.parent.tag == "Enemy")
             {
                 AgentManager agent = col.transform.parent.GetComponent<AgentManager>();

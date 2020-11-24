@@ -6,7 +6,7 @@ using Sirenix.OdinInspector;
 
 namespace Gameplay.VR.Player
 {
-    public class AgentTeleportationManager : MonoBehaviour
+    public class AgentVRTeleportationManager : MonoBehaviour
     {
         [SerializeField] [FoldoutGroup("Teleportation Transition")] float tweenDuration = .25f;
         [SerializeField] [FoldoutGroup("Teleportation Transition")] ParticleSystem particleDash;
@@ -24,6 +24,7 @@ namespace Gameplay.VR.Player
         [SerializeField] [FoldoutGroup("Teleportation")] float maxDistance = 10f;
         [SerializeField] [FoldoutGroup("Teleportation")] float castingHeight = 2f;
         [SerializeField] [FoldoutGroup("Teleportation")] float minControllerAngle = 30f, maxControllerAngle = 150f;
+        [SerializeField] [FoldoutGroup("Teleportation")] LayerMask layerMask;
 
         [SerializeField] [FoldoutGroup("Teleportation Pointer")] LineRenderer bezierVisualization;
         [SerializeField] [FoldoutGroup("Teleportation Pointer")] float lineWidth;
@@ -37,7 +38,7 @@ namespace Gameplay.VR.Player
         GameObject pointer;
         internal Transform pointerOrigin;
 
-        private void Awake()
+        private void Start()
         {
             pointer = GameObject.CreatePrimitive(PrimitiveType.Sphere);
             pointer.GetComponent<Collider>().enabled = false;
@@ -46,10 +47,8 @@ namespace Gameplay.VR.Player
             bezierVisualization.endWidth = lineWidth;
             bezierVisualization.useWorldSpace = true;
             bezierVisualization.positionCount = smoothness;
-        }
 
-        private void Start()
-        {
+
             delegateTween = TweenManagerLibrary.GetTweenFunction((int)tweenFunction);
         }
 
@@ -153,7 +152,6 @@ namespace Gameplay.VR.Player
 
         void ShowRayPointer()
         {
-
             // assign the Ray values
 #if isDebugging
             horizontalRay.origin = pointerOrigin.position;
@@ -166,11 +164,11 @@ namespace Gameplay.VR.Player
             tallRay.direction = (pointAlongRay - castingPosition).normalized;
 
             // if you hit something with the Tall Ray, define it as the endpoint
-            if (Physics.Raycast(tallRay, out hitTallRay))
+            if (Physics.Raycast(tallRay, out hitTallRay, 500, layerMask))
                 pointer.transform.position = hitTallRay.point;
 
             // otherwise, the endpoint must be on the horizontal axis
-            else if (Physics.Raycast(horizontalRay, out hitHorizontal))
+            else if (Physics.Raycast(horizontalRay, out hitHorizontal, 500, layerMask))
                 pointer.transform.position = hitHorizontal.point;
 
             Debug.DrawRay(horizontalRay.origin, horizontalRay.direction * 20f, Color.blue); // draw the initial horizontal Ray

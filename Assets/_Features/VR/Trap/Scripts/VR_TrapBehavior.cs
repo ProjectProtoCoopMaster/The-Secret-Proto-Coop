@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Gameplay.VR
 {
-    public class TrapBehavior : MonoBehaviour, ISwitchable
+    public class VR_TrapBehavior : MonoBehaviour, ISwitchable
     {
         [Range(0, 1), SerializeField] private int state;
         [Range(0, 1), SerializeField] private int power;
@@ -29,7 +29,7 @@ namespace Gameplay.VR
         private void OnTriggerEnter(Collider other)
         {
             if (other.GetComponent<IKillable>() != null)
-                other.GetComponent<IKillable>().Die();
+                other.GetComponent<IKillable>().GE_Die();
         }
 
     }
