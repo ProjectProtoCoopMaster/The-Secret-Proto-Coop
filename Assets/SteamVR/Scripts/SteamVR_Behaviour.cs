@@ -35,7 +35,7 @@ namespace Valve.VR
 
         public bool initializeSteamVROnAwake = true;
 
-        public bool doNotDestroy = true;
+        public bool doNotDestroy = false;
 
         [HideInInspector]
         public SteamVR_Render steamvr_render;
@@ -85,8 +85,8 @@ namespace Valve.VR
                     _instance = behaviourInstance;
                 }
 
-                if (_instance != null && _instance.doNotDestroy)
-                    GameObject.DontDestroyOnLoad(_instance.transform.root.gameObject);
+                /*if (_instance != null && _instance.doNotDestroy)
+                    GameObject.DontDestroyOnLoad(_instance.transform.root.gameObject);*/
 
                 initializing = false;
             }

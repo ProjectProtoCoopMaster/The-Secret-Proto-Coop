@@ -5,7 +5,7 @@ namespace Gameplay.VR
 {
     public  interface IKillable
     {
-        void Die();
+        void GE_Die();
         
     }
 }

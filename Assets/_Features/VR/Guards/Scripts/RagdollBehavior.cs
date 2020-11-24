@@ -11,8 +11,15 @@ namespace Gameplay.VR
         public float velocity;
         public GameObject go;
 
+        /*[ExecuteAlways]
+        void GetRB()
+        {
+            allRB = GetComponentsInChildren<Rigidbody>();
+        }*/
+
         private void Awake()
         {
+
             for (int i = 0; i < allRB.Length; i++)
             {
                 allRB[i].isKinematic = true;
