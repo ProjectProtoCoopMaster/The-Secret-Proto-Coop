@@ -10,15 +10,13 @@ namespace Gameplay.VR.Player
         [SerializeField] [FoldoutGroup("Testing Data")] float disToPickup = .3f;
         [SerializeField] [FoldoutGroup("Testing Data")] LayerMask pickupLayer;
         [SerializeField] [FoldoutGroup("Testing Data")] Rigidbody holdingTarget;
-        //SteamVR_Behaviour_Pose controllerPose = null;
 
         internal void TryPickup(Transform controllerPos)
         {
             //controllerPose = _controllerPose;
 
             Collider[] colliders = Physics.OverlapSphere(controllerPos.position, disToPickup, pickupLayer);
-            if (colliders.Length > 0)
-                holdingTarget = colliders[0].transform.root.GetComponent<Rigidbody>();
+            if (colliders.Length > 0) holdingTarget = colliders[0].transform.GetComponent<Rigidbody>();
 
             if (holdingTarget != null)
             {
@@ -31,10 +29,10 @@ namespace Gameplay.VR.Player
         {
             Debug.Log("FLY");
             holdingTarget.isKinematic = false;
-            holdingTarget.transform.SetParent(null);
             holdingTarget.velocity = velocity;
             holdingTarget.angularVelocity = angularVelocity;
 
+            holdingTarget.transform.SetParent(null);
             holdingTarget = null;
         }
     }
