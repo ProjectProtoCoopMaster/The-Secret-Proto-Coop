@@ -2336,17 +2336,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1298543070}
     m_Modifications:
-    - target: {fileID: 2868061133586548391, guid: b425c849f40da154991333de9348fcaf, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: _Distraction
-      objectReference: {fileID: 0}
     - target: {fileID: 6141657805777543834, guid: b425c849f40da154991333de9348fcaf, type: 3}
       propertyPath: m_Name
       value: Diversion Throw Object
-      objectReference: {fileID: 0}
-    - target: {fileID: 6141657805777543834, guid: b425c849f40da154991333de9348fcaf, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6141657805777543837, guid: b425c849f40da154991333de9348fcaf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2392,20 +2384,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 45
       objectReference: {fileID: 0}
-    - target: {fileID: 6141657805777543837, guid: b425c849f40da154991333de9348fcaf, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6141657805777543837, guid: b425c849f40da154991333de9348fcaf, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6141657805777543838, guid: b425c849f40da154991333de9348fcaf, type: 3}
-      propertyPath: radius
-      value: 10
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2868061133586548391, guid: b425c849f40da154991333de9348fcaf, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b425c849f40da154991333de9348fcaf, type: 3}
 --- !u!1001 &7876338440376453732
 PrefabInstance:

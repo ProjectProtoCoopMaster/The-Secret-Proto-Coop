@@ -9,6 +9,8 @@ namespace Gameplay.AI
     {
         public float rotateSpeed;
 
+        public Transform target;
+
         private bool watch = false;
 
         private List<Vector3> directions;
@@ -46,8 +48,8 @@ namespace Gameplay.AI
         {
             currentDirection = directions[index];
 
-            Vector3 target = transform.position + currentDirection;
-            Vector3 position = target - transform.position;
+            Vector3 _position = target.position + currentDirection;
+            Vector3 position = _position - target.position;
             position.y = 0.0f;
 
             currentRotation = Quaternion.LookRotation(position, Vector3.up);
@@ -65,7 +67,7 @@ namespace Gameplay.AI
             {
                 WatchDirection();
 
-                if (transform.rotation.eulerAngles.y >= angles[0] && transform.rotation.eulerAngles.y <= angles[1])
+                if (target.rotation.eulerAngles.y >= angles[0] && target.rotation.eulerAngles.y <= angles[1])
                 {
                     NextDirection();
                 }
@@ -76,10 +78,10 @@ namespace Gameplay.AI
         {
             time += (Time.deltaTime * rotateSpeed);
 
-            transform.rotation = Quaternion.Lerp(transform.rotation, currentRotation, time);
+            target.rotation = Quaternion.Lerp(target.rotation, currentRotation, time);
 
-            //Debug.Log(currentRotation.eulerAngles + " for " + gameObject.name);
-            //Debug.Log(transform.rotation.eulerAngles + " for " + gameObject.name);
+            //Debug.Log(currentRotation.eulerAngles + " for " + target.parent.name);
+            //Debug.Log(target.rotation.eulerAngles + " for " + target.parent.name);
         }
         #endregion
 

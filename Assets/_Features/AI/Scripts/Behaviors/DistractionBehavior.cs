@@ -24,8 +24,6 @@ namespace Gameplay.AI
                 { ActionType.Move, moveBehavior },
                 { ActionType.Wait, waitBehavior }
             };
-
-            actions = new List<_Action>();
         }
 
         public void SetDistraction(Vector3 direction)

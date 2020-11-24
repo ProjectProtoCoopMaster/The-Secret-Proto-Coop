@@ -6,12 +6,9 @@ namespace Gameplay.AI
 {
     public enum StateType { Patrol, Distraction, Search, Chase, None, Standby }
 
-    public class AgentManager : MonoBehaviour
+    public abstract class AgentManager : MonoBehaviour
     {
-        public PatrolBehavior patrolBehavior;
-        public DistractionBehavior distractionBehavior;
-
-        public Dictionary<StateType, AgentBehavior> agentBehaviors;
+        public Dictionary<StateType, AgentBehavior> agentBehaviors = new Dictionary<StateType, AgentBehavior>();
 
         public StateType currentState { get; set; }
         public StateType previousState { get; set; }
@@ -21,14 +18,7 @@ namespace Gameplay.AI
             InitializeAgent();
         }
 
-        private void InitializeAgent()
-        {
-            agentBehaviors = new Dictionary<StateType, AgentBehavior>()
-            {
-                { StateType.Patrol, patrolBehavior },
-                { StateType.Distraction, distractionBehavior }
-            };
-        }
+        protected abstract void InitializeAgent();
 
         void Start()
         {

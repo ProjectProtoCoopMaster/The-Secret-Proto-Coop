@@ -21,7 +21,11 @@ namespace Gameplay.AI
                 { ActionType.Watch, watchBehavior }
             };
 
-            actions = ConvertPath(path);
+            string msg = "There is no path attached to " + gameObject.name + " patrol behavior, the behavior did not initalize";
+            if (Utility.SafeCheck(path, msg))
+            {
+                actions = ConvertPath(path);
+            }
         }
 
         public List<_Action> ConvertPath(PatrolPath _path)

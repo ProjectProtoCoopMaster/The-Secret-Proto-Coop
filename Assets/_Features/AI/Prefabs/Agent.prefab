@@ -135,7 +135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionType: 2
-  rotateSpeed: 0.02
+  rotateSpeed: 0.05
+  target: {fileID: 7036071765249521782}
 --- !u!1 &1700274677522408296
 GameObject:
   m_ObjectHideFlags: 0
