@@ -34,10 +34,11 @@ namespace Gameplay.VR.Player
 
             if (Physics.SphereCast(controllerPosition.position, 0.25f, controllerPosition.forward, out hit, 100f, shootingLayer))
             {
+                Debug.Log("Bullet FUCKING shot " + hit.collider.name);
                 if (hit.collider.gameObject.CompareTag("Enemy"))
                 {
                     hit.collider.GetComponent<GuardBehaviour>().Shot();
-                    Debug.Log("Bullet struck " + hit.collider.name);
+                    Debug.Log("Bullet MOTHAFUCKIN struck " + hit.collider.name);
                 }
 
                 else Debug.Log("Bullet missed and hit " + hit.collider.name);

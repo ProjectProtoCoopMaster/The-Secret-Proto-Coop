@@ -18,7 +18,6 @@ namespace Gameplay.VR
         public void Shot()
         {
             gameObject.name = "DEAD";
-            killed.Raise();
             GE_Die();
         }
 
