@@ -9,7 +9,6 @@ namespace Gameplay.VR.Player
     {
         [SerializeField] [FoldoutGroup("Shooting")] LayerMask shootingLayer;
         [SerializeField] [FoldoutGroup("Shooting")] ParticleSystem shotTrail;
-        [SerializeField] [FoldoutGroup("SteamVR Components")] SteamVR_Action_Pose controllerPose = SteamVR_Input.GetAction<SteamVR_Action_Pose>("Pose");
         [SerializeField] [FoldoutGroup("SteamVR Components")] Transform controllerPosition;
 
         RaycastHit hit;
@@ -32,14 +31,16 @@ namespace Gameplay.VR.Player
 
             shotTrail.Play();
             Debug.Log("Shooting");
-            Debug.DrawRay(controllerPosition.position, controllerPosition.forward * 50f, Color.magenta);
 
             if (Physics.SphereCast(controllerPosition.position, 0.25f, controllerPosition.forward, out hit, 100f, shootingLayer))
             {
-                if (hit.collider.gameObject.CompareTag("Guard") || hit.collider.gameObject.CompareTag("Enemy"))
+                if (hit.collider.gameObject.CompareTag("Enemy"))
+                {
                     hit.collider.GetComponent<GuardBehaviour>().Shot();
+                    Debug.Log("Bullet struck " + hit.collider.name);
+                }
 
-                else Debug.Log("Bullet hit " + hit.collider.name);
+                else Debug.Log("Bullet missed and hit " + hit.collider.name);
             }
         }
     }
