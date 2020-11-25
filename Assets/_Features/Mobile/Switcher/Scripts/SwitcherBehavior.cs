@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using DG.Tweening;
 namespace Gameplay
 {
     public class SwitcherBehavior : MonoBehaviour, ISwitchable
@@ -12,6 +12,7 @@ namespace Gameplay
         public CallableFunction _sendSwitcherChange = default;
         [SerializeField] private Button button;
         [SerializeField] private Image image;
+        [SerializeField] private Text timerDisplayer;
         public List<Object> nodes = default;
 
         [Header("---IMPORTANT---")]
@@ -24,6 +25,7 @@ namespace Gameplay
         public SwitchTimer switchTimer = default;
         [HideInInspector]
         public float timer = 0;
+        private float currentTimer = 0;
         public int State 
         { 
             get { return state; } 
@@ -59,7 +61,16 @@ namespace Gameplay
         public GameObject MyGameObject { get { return this.gameObject; } set { MyGameObject = value; } }
 
 
-        private void Start() => Power = power;
+
+        private void Start() 
+        {
+            if (switchTimer == SwitchTimer.Fixed) { timerDisplayer.transform.parent.gameObject.SetActive(true); ResetTimer(); }
+            else timerDisplayer.transform.parent.gameObject.SetActive(false);
+            
+
+            Power = power;
+        }
+
 
         public void CallSwitchManager()
         { 
@@ -85,6 +96,8 @@ namespace Gameplay
             if(switchTimer == SwitchTimer.Fixed)
             {
                 StartCoroutine(DelaySwitchNode());
+                DOTween.To(() => currentTimer, x => currentTimer = x, timer, timer).SetEase(Ease.Linear).OnUpdate(SetTimerDisplayer).OnComplete(ResetTimer);
+
             }
             else
             {
@@ -125,6 +138,7 @@ namespace Gameplay
             yield return new WaitForSeconds(timer);
             SwitchNode();
             TurnOn();
+            
             yield break;
         }
 
@@ -145,24 +159,34 @@ namespace Gameplay
 
         public void TurnOn()
         {
-            ChangeSwitch(true, Color.white);
+            ChangeSwitch(true);
 
         }
 
         public void TurnOff()
         {
-            ChangeSwitch(false, Color.black);
+            ChangeSwitch(false);
             
-            //SwitchNode();
         }
 
-        void ChangeSwitch(bool buttonState, Color buttonColor)
+        void ChangeSwitch(bool buttonState)
         {
             if (button != null)
                 button.interactable = buttonState;
         }
 
+        private void SetTimerDisplayer()
+        {
+            timerDisplayer.text = ((int)(timer - currentTimer)).ToString() + "s";
+        }
 
+        private void ResetTimer() 
+        {
+            
+            currentTimer = 0;
+            timerDisplayer.text = timer.ToString() + "s";
+
+        }
     }
 
 }

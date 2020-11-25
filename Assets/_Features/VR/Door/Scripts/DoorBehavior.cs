@@ -14,6 +14,7 @@ namespace Gameplay.VR
         [SerializeField] private Collider collider;
         [SerializeField] private Material red, orange, blue;
         [SerializeField] private Renderer keyPassRenderer;
+        [SerializeField] private Animator anim;
         public int State
         {
             get { return state; }
@@ -39,23 +40,34 @@ namespace Gameplay.VR
 
         public void TurnOn()
         {
-            if (lockState == LockState.Locked) { keyPassRenderer.material = orange; collider.enabled = false; }
-            else Unlock();
+            //if (lockState == LockState.Locked) { keyPassRenderer.material = orange; collider.enabled = false; }
+            //else Unlock();
+            Unlock();
         }
 
         public void TurnOff()
         {
-            if (lockState == LockState.Locked) { keyPassRenderer.material = red; collider.enabled = false; }
+            //if (lockState == LockState.Locked) { keyPassRenderer.material = red; collider.enabled = false; }
+            Lock();
         }
 
         [Button("Unlock")]
         public void Unlock()
         {
-
-            collider.enabled = true;
-            keyPassRenderer.material = blue;
+            anim.SetTrigger("Open");
+            //collider.enabled = true;
+            //keyPassRenderer.material = blue;
             lockState = LockState.Unlocked;
         }
+        [Button("Lock")]
+        public void Lock()
+        {
+            anim.SetTrigger("Close");
+            //collider.enabled = true;
+            //keyPassRenderer.material = blue;
+            lockState = LockState.Locked;
+        }
+
     }
 
 }

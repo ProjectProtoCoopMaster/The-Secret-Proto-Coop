@@ -8,7 +8,7 @@ namespace Gameplay.Mobile
 {
     public class ElectricalLineBehavior : MonoBehaviour, ISwitchable
     {
-        private Color2 color;
+        [SerializeField] private Color2 color;
         [Range(0, 1), SerializeField] private int state;
         [Range(0, 1), SerializeField] private int power;
         [SerializeField] private LineRenderer line;
@@ -26,8 +26,9 @@ namespace Gameplay.Mobile
         }
         private void OnEnable()
         {
-            Power = power;
             color = new Color2(Color.white, Color.white);
+            Power = power;
+            
         }
 
         public void TurnOff()
