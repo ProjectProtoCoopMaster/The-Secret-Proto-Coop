@@ -1,8 +1,5 @@
-﻿using Gameplay;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using Sirenix.OdinInspector;
 
 namespace Gameplay.AI
 {
@@ -10,7 +7,6 @@ namespace Gameplay.AI
     {
         public MoveAction moveBehavior;
         public WaitAction waitBehavior;
-        public WatchAction watchBehavior;
 
         private Vector3 distractionPosition;
         private Vector3 returnPosition;
@@ -23,8 +19,7 @@ namespace Gameplay.AI
             actionBehaviors = new Dictionary<ActionType, ActionBehavior>
             {
                 { ActionType.Move, moveBehavior },
-                { ActionType.Wait, waitBehavior },
-                { ActionType.Watch, watchBehavior }
+                { ActionType.Wait, waitBehavior }
             };
         }
 
@@ -39,9 +34,8 @@ namespace Gameplay.AI
                 new _Action { actionType = ActionType.Move, destination = distractionPosition },
 
                 new _Action { actionType = ActionType.Wait, timeToWait = searchTime },
-                new _Action { actionType = ActionType.Move, destination = returnPosition },
-                new _Action { actionType = ActionType.Watch, }
+                new _Action { actionType = ActionType.Move, destination = returnPosition }
             };
         }
-    } 
+    }
 }
