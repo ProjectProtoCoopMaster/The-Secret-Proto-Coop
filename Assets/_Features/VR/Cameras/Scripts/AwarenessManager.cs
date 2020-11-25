@@ -16,6 +16,7 @@ namespace Gameplay.VR
 
     public class AwarenessManager : MonoBehaviour
     {
+        /*
         public List<OverwatchBehavior> overwatchBehaviors = new List<OverwatchBehavior>();
         public List<OverwatchEntityInfo> overwatchEntities = new List<OverwatchEntityInfo>();
         float distanceToFriendly;
@@ -69,7 +70,7 @@ namespace Gameplay.VR
                     }
                 }
             }
-        }
+        }*/
 
 
 
