@@ -33,5 +33,15 @@ namespace Gameplay.AI
             if (previousState != StateType.None) agentBehaviors[currentState].previousBehavior = agentBehaviors[previousState];
             agentBehaviors[currentState].Begin();
         }
+
+        public void Stop()
+        {
+            foreach(AgentBehavior agentBehavior in agentBehaviors.Values)
+            {
+                agentBehavior.Stop();
+            }
+
+            currentState = StateType.None;
+        }
     }
 }

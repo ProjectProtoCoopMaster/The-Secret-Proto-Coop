@@ -10,6 +10,7 @@ namespace Gameplay.AI
     {
         public MoveAction moveBehavior;
         public WaitAction waitBehavior;
+        public WatchAction watchBehavior;
 
         private Vector3 distractionPosition;
         private Vector3 returnPosition;
@@ -22,7 +23,8 @@ namespace Gameplay.AI
             actionBehaviors = new Dictionary<ActionType, ActionBehavior>
             {
                 { ActionType.Move, moveBehavior },
-                { ActionType.Wait, waitBehavior }
+                { ActionType.Wait, waitBehavior },
+                { ActionType.Watch, watchBehavior }
             };
         }
 
@@ -38,6 +40,7 @@ namespace Gameplay.AI
 
                 new _Action { actionType = ActionType.Wait, timeToWait = searchTime },
                 new _Action { actionType = ActionType.Move, destination = returnPosition },
+                new _Action { actionType = ActionType.Watch, }
             };
         }
     } 

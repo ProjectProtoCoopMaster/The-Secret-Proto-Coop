@@ -2439,6 +2439,7 @@ MonoBehaviour:
   loop: 0
   moveBehavior: {fileID: 4185697356536058214}
   waitBehavior: {fileID: 1528943946634902071}
+  watchBehavior: {fileID: 0}
   awarenessTime: 1
   searchTime: 2
 --- !u!195 &8580329911492162689
@@ -2556,9 +2557,9 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Gameplay.VR.AwarenessManager, Assembly-CSharp
-        m_MethodName: GE_KillAlarmRaiser
+      - m_Target: {fileID: 8756684457115575558}
+        m_TargetAssemblyTypeName: Gameplay.AI.AgentManager, Assembly-CSharp
+        m_MethodName: Stop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
