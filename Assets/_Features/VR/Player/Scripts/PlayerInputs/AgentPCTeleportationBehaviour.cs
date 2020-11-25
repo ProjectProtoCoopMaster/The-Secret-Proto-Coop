@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if UNITY_STANDALONE
+using UnityEngine;
 
 namespace Gameplay.VR.Player
 {
@@ -47,4 +48,5 @@ namespace Gameplay.VR.Player
             playerHead.transform.parent.Rotate(Vector3.up, mouseX);
         }
     }
-}
+} 
+#endif

@@ -1,4 +1,5 @@
-﻿
+﻿#if UNITY_STANDALONE
+
 using Valve.VR;
 using UnityEngine;
 
@@ -39,3 +40,5 @@ public class ActionsTest : MonoBehaviour
     }
 }
 
+
+#endif

@@ -1,4 +1,5 @@
-﻿using Sirenix.OdinInspector;
+﻿#if UNITY_STANDALONE
+using Sirenix.OdinInspector;
 using UnityEngine;
 using Valve.VR;
 
@@ -17,13 +18,13 @@ namespace Gameplay.VR.Player
         [SerializeField] [FoldoutGroup("SteamVR Components")] SteamVR_Action_Boolean shootAction;
         // a reference to the hand
         [SerializeField] [FoldoutGroup("SteamVR Components")] SteamVR_Input_Sources handType;
-        
+
         private void Start()
         {
             controllerPosition = this.transform;
             shootAction.AddOnStateUpListener(TriggerRelease, handType);
         }
-        
+
         private void TriggerRelease(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
         {
             shotTrail.transform.position = controllerPosition.position;
@@ -32,7 +33,7 @@ namespace Gameplay.VR.Player
             shotTrail.Play();
             Debug.Log("Shooting");
             Debug.DrawRay(controllerPosition.position, controllerPosition.forward * 50f, Color.magenta);
-            
+
             if (Physics.SphereCast(controllerPosition.position, 0.25f, controllerPosition.forward, out hit, 100f, shootingLayer))
             {
                 if (hit.collider.gameObject.CompareTag("Guard"))
@@ -42,4 +43,5 @@ namespace Gameplay.VR.Player
             }
         }
     }
-}
+} 
+#endif

@@ -1,4 +1,5 @@
-﻿//#define isDebugging
+﻿#if UNITY_STANDALONE
+//#define isDebugging
 using System.Collections;
 using UnityEngine;
 using Valve.VR;
@@ -229,4 +230,5 @@ namespace Gameplay.VR.Player
             particleDash.Stop();
         }
     }
-}
+} 
+#endif

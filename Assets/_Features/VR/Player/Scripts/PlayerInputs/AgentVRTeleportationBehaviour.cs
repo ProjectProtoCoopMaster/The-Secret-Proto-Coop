@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if UNITY_STANDALONE
+using UnityEngine;
 using Valve.VR;
 using Sirenix.OdinInspector;
 
@@ -20,7 +21,7 @@ namespace Gameplay.VR.Player
 
         void ShowLaserPointer(SteamVR_Action_Boolean action, SteamVR_Input_Sources source)
         {
-           if(teleportationManager == null) 
+            if (teleportationManager == null)
                 teleportationManager = FindObjectOfType<AgentVRTeleportationManager>();
 
             teleportationManager.TallRayPointer(controllerPose);
@@ -28,10 +29,11 @@ namespace Gameplay.VR.Player
 
         void Teleport(SteamVR_Action_Boolean action, SteamVR_Input_Sources source)
         {
-            if (teleportationManager == null) 
+            if (teleportationManager == null)
                 teleportationManager = FindObjectOfType<AgentVRTeleportationManager>();
 
             teleportationManager.TryTeleporting();
         }
     }
-}
+} 
+#endif
