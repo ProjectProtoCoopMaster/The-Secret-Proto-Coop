@@ -1,5 +1,4 @@
 ﻿#if UNITY_STANDALONE
-//#define isDebugging
 using System.Collections;
 using UnityEngine;
 using Valve.VR;
@@ -43,12 +42,12 @@ namespace Gameplay.VR.Player
         {
             pointer = GameObject.CreatePrimitive(PrimitiveType.Sphere);
             pointer.GetComponent<Collider>().enabled = false;
+            pointer.GetComponent<Renderer>().enabled = false;
 
             bezierVisualization.startWidth = lineWidth;
             bezierVisualization.endWidth = lineWidth;
             bezierVisualization.useWorldSpace = true;
             bezierVisualization.positionCount = smoothness;
-
 
             delegateTween = TweenManagerLibrary.GetTweenFunction((int)tweenFunction);
         }
@@ -64,11 +63,8 @@ namespace Gameplay.VR.Player
         {
             get
             {
-#if isDebugging
-                return playerHead.transform.forward;
-#else 
-                return controllerPose.transform.forward;
-#endif
+                if (VRPlatform) return controllerPose.transform.forward;
+                else return playerHead.transform.forward;
             }
         }
 
@@ -136,6 +132,8 @@ namespace Gameplay.VR.Player
                 return playerHead.position + Vector3.up * castingHeight;
             }
         }
+
+        public bool VRPlatform { get; private set; }
         #endregion
 
         // 1. fire a ray pointing in the direction of the controller
@@ -147,6 +145,9 @@ namespace Gameplay.VR.Player
         // show the pointer, using the referenced controller's transform.forward
         internal void TallRayPointer(SteamVR_Behaviour_Pose _controllerPose)
         {
+            if (_controllerPose != null && VRPlatform == false)
+                VRPlatform = true;
+
             controllerPose = _controllerPose;
             showRayPointer = true;
         }
@@ -154,11 +155,10 @@ namespace Gameplay.VR.Player
         void ShowRayPointer()
         {
             // assign the Ray values
-#if isDebugging
-            horizontalRay.origin = pointerOrigin.position;
-#else 
-            horizontalRay.origin = controllerPose.transform.position;
-#endif
+
+            if (VRPlatform) horizontalRay.origin = controllerPose.transform.position;
+            else horizontalRay.origin = pointerOrigin.position;
+
             horizontalRay.direction = horizontalDirection;
 
             tallRay.origin = castingPosition;
@@ -181,13 +181,18 @@ namespace Gameplay.VR.Player
 
             p1 = p2 = pointer.transform.position;
 
-#if isDebugging
-            p0 = pointerOrigin.transform.position;
-            p1.y = pointerOrigin.position.y;
-#else
-            p0 = controllerPose.transform.position;
-            p1.y = controllerPose.transform.position.y;
-#endif
+            if (VRPlatform)
+            {
+                p0 = controllerPose.transform.position;
+                p1.y = controllerPose.transform.position.y;
+            }
+
+            else
+            {
+                p0 = pointerOrigin.transform.position;
+                p1.y = pointerOrigin.position.y;
+            }
+
             for (int i = 0; i < smoothness; i++)
             {
                 t = i / (smoothness - 1.0f);
@@ -230,5 +235,5 @@ namespace Gameplay.VR.Player
             particleDash.Stop();
         }
     }
-} 
+}
 #endif
