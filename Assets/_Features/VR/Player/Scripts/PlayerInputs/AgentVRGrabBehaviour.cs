@@ -39,6 +39,7 @@ namespace Gameplay.VR.Player
             {
                 holdingTarget.transform.parent = controllerPosition;
                 holdingTarget.isKinematic = true;
+                holdingTarget.GetComponent<SoundObject>().Grab();
             }
         }
 

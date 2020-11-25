@@ -171,9 +171,14 @@ namespace Gameplay.VR.Player
             {
                 Debug.Log(hitTallInfo.collider.gameObject.layer);
                 if (hitTallInfo.collider.gameObject.layer == LayerMask.NameToLayer("TeleportAreas"))
+                {
                     canTeleport = true;
-                else canTeleport = false;
-                pointer.transform.position = hitTallInfo.point;
+                    pointer.transform.position = hitTallInfo.point;
+                }
+                else
+                {
+                    canTeleport = false;
+                }
             }
 
             // otherwise, the endpoint must be on the horizontal axis
