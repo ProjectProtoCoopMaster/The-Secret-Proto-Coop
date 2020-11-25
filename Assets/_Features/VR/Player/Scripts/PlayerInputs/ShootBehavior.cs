@@ -19,7 +19,7 @@ namespace Gameplay.VR.Player
         // a reference to the hand
         [SerializeField] [FoldoutGroup("SteamVR Components")] SteamVR_Input_Sources handType;
 
-        private void Start()
+        private void Awake()
         {
             controllerPosition = this.transform;
             shootAction.AddOnStateUpListener(TriggerRelease, handType);
@@ -36,7 +36,7 @@ namespace Gameplay.VR.Player
 
             if (Physics.SphereCast(controllerPosition.position, 0.25f, controllerPosition.forward, out hit, 100f, shootingLayer))
             {
-                if (hit.collider.gameObject.CompareTag("Guard"))
+                if (hit.collider.gameObject.CompareTag("Guard") || hit.collider.gameObject.CompareTag("Enemy"))
                     hit.collider.GetComponent<GuardBehaviour>().Shot();
 
                 else Debug.Log("Bullet hit " + hit.collider.name);
