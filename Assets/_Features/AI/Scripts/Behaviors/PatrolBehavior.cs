@@ -36,7 +36,7 @@ namespace Gameplay.AI
 
             foreach (Waypoint _waypoint in _waypoints)
             {
-                list.Add(new _Action { actionType = ActionType.Move, destination = _waypoint.position });
+                list.Add(new _Action { actionType = ActionType.Move, destination = _waypoint.position, area = 0.1f });
 
                 _waypoint.InitializeWatch();
 

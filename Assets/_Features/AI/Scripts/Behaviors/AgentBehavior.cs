@@ -39,6 +39,7 @@ namespace Gameplay.AI
 
         [ShowIf("type", ActionType.Move)]
         public Vector3 destination;
+        public float area;
 
         [ShowIf("type", ActionType.Wait)]
         public float timeToWait;

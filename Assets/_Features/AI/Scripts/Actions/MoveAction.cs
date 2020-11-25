@@ -9,9 +9,11 @@ namespace Gameplay.AI
         public Transform target;
 
         public Vector3 destination { get; set; }
+        public float area { get; set; }
 
         public override void StartActionBehavior(_Action action)
         {
+            area = action.area;
             SetMove(action.destination, true);
         }
 
@@ -23,7 +25,7 @@ namespace Gameplay.AI
 
         public override bool Check()
         {
-            if (IsInArea(target.position, destination, 0.1f))
+            if (IsInArea(target.position, destination, area))
             {
                 SetMove(target.position, false);
 

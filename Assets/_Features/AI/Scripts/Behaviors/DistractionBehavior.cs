@@ -41,10 +41,10 @@ namespace Gameplay.AI
             actions = new List<_Action>
             {
                 new _Action { actionType = ActionType.Wait, timeToWait = awarenessTime },
-                new _Action { actionType = ActionType.Move, destination = distractionPosition },
+                new _Action { actionType = ActionType.Move, destination = distractionPosition, area = 0.8f },
 
                 new _Action { actionType = ActionType.Wait, timeToWait = searchTime },
-                new _Action { actionType = ActionType.Move, destination = returnPosition },
+                new _Action { actionType = ActionType.Move, destination = returnPosition, area = 0.1f },
                 new _Action { actionType = ActionType.Search, watchRotation = returnRotation }
             };
         }
