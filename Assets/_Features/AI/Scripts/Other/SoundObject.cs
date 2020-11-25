@@ -8,9 +8,11 @@ public class SoundObject : MonoBehaviour
     public LayerMask layerMask;
     public float radius;
 
+    private bool active;
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Floor")
+        if (other.tag == "Floor" && active)
         {
             _Distraction();
         }
@@ -33,5 +35,19 @@ public class SoundObject : MonoBehaviour
                 agent.SwitchState(StateType.Distraction);
             }
         }
+
+        active = false;
+    }
+
+    public void Grab()
+    {
+        Wait();
+
+        active = true;
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(1f);
     }
 }
