@@ -35,7 +35,6 @@ namespace Gameplay.VR.Player
             if (Input.GetKeyUp(KeyCode.Space))
             {
                 manager.TryTeleporting();
-                Debug.DrawRay(playerHead.position, playerHead.forward * 500);
             }
 
             float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
