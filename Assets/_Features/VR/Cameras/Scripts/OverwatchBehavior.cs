@@ -9,7 +9,7 @@ namespace Gameplay.VR
 {
     public class OverwatchBehavior : EntityVisionDataInterface
     {
-
+        public int frames;
         public List<GameObject> visibleGuards = new List<GameObject>();
 
 
@@ -18,20 +18,20 @@ namespace Gameplay.VR
 
         private void Awake()
         {
-            guards.AddRange(GameObject.FindGameObjectsWithTag("Guard"));
+            guards.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
         }
 
         private void Start()
         {
             isActive = true;
-            StartCoroutine(PingForGuards());
+            PingForGuards();
         }
-        
+
         // called if
         public void GE_Overwatching()
         {
             raisingAlarm = false;
-            StartCoroutine(PingForGuards());
+            PingForGuards();
         }
 
         // for cameras
@@ -39,15 +39,26 @@ namespace Gameplay.VR
         public void OverwatchOn()
         {
             isActive = true;
-            StartCoroutine(PingForGuards());
+            PingForGuards();
         }
+
         public void OverwatchOff()
         {
             isActive = false;
             StopAllCoroutines();
         }
 
-        IEnumerator PingForGuards()
+        private void Update()
+        {
+            frames++;
+            if (frames % 2 == 0)
+            {
+                frames = 0;
+                PingForGuards();
+            }
+        }
+
+        void PingForGuards()
         {
             visibleGuards.Clear();
             for (int i = 0; i < guards.Count; i++)
@@ -75,9 +86,6 @@ namespace Gameplay.VR
 
                 else continue;
             }
-
-            yield return null;
-            if(!raisingAlarm && isActive) StartCoroutine(PingForGuards());
         }
 
         void CheckGuardState(GameObject guard)
@@ -89,6 +97,7 @@ namespace Gameplay.VR
             // if you see a dead guard
             if (guard.name == "DEAD")
             {
+                Debug.Log("I see a dead friendly !");
                 raisingAlarm = true;
                 raiseAlarm.Raise();
             }
