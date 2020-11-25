@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionType: 0
+  target: {fileID: 7036071765249521782}
   navMeshAgent: {fileID: 8670147132492230180}
   angular: 120
 --- !u!114 &1906744556307357842

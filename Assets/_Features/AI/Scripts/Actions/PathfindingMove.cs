@@ -19,14 +19,14 @@ namespace Gameplay.AI
         #region Set
         void Start()
         {
-            destination = transform.position;
+            destination = target.position;
         }
 
         public override void SetMove(Vector3 direction, bool move)
         {
             destination = direction;
             SetNavAgent(!move);
-            this.move = move;
+            //this.move = move;
         }
 
         public void SetNavAgent(bool locked)
@@ -40,7 +40,8 @@ namespace Gameplay.AI
         #region Loop
         void Update()
         {
-            if (move) SetNavDestination(destination);
+            //if (move)
+            SetNavDestination(destination);
         }
 
         private void SetNavDestination(Vector3 dest)

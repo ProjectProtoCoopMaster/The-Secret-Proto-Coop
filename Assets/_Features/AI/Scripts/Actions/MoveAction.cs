@@ -6,6 +6,8 @@ namespace Gameplay.AI
 {
     public class MoveAction : ActionBehavior
     {
+        public Transform target;
+
         public override void StartActionBehavior(_Action action)
         {
             SetMove(action.destination, true);
@@ -13,14 +15,15 @@ namespace Gameplay.AI
 
         public override void StopActionBehavior()
         {
-            SetMove(transform.position, false);
+            Debug.Log(this);
+            SetMove(target.position, false);
         }
 
         public override bool Check(_Action action)
         {
-            if (IsInArea(transform.position, action.destination, 0.5f))
+            if (IsInArea(target.position, action.destination, 0.5f))
             {
-                SetMove(transform.position, false);
+                SetMove(target.position, false);
 
                 return true;
             }
