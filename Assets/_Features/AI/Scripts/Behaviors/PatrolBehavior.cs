@@ -50,7 +50,10 @@ namespace Gameplay.AI
                     }
                     else if (_action.type == _AType.Watching)
                     {
-                        list.Add(new _Action { actionType = ActionType.Watch, watchDirections = _action.watchDirections });
+                        foreach (Vector3 actionDirection in _action.watchDirections)
+                        {
+                            list.Add(new _Action { actionType = ActionType.Watch, watchDirection = actionDirection });
+                        }
                     }
                 }
             }

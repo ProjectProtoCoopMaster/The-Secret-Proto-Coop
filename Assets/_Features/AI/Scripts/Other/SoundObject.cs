@@ -8,7 +8,7 @@ public class SoundObject : MonoBehaviour
     public LayerMask layerMask;
     public float radius;
 
-    private bool active;
+    private bool active = true;
 
     private void OnTriggerEnter(Collider other)
     {

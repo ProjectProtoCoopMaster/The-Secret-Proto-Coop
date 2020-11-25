@@ -8,6 +8,8 @@ namespace Gameplay.AI
     {
         public Transform target;
 
+        public Vector3 destination { get; set; }
+
         public override void StartActionBehavior(_Action action)
         {
             SetMove(action.destination, true);
@@ -19,9 +21,9 @@ namespace Gameplay.AI
             SetMove(target.position, false);
         }
 
-        public override bool Check(_Action action)
+        public override bool Check()
         {
-            if (IsInArea(target.position, action.destination, 0.5f))
+            if (IsInArea(target.position, destination, 0.1f))
             {
                 SetMove(target.position, false);
 
@@ -30,7 +32,10 @@ namespace Gameplay.AI
             else return false;
         }
 
-        public virtual void SetMove(Vector3 direction, bool move) { }
+        public virtual void SetMove(Vector3 direction, bool move)
+        {
+            destination = direction;
+        }
 
         public bool IsInArea(Vector3 objectPos, Vector3 destPos, float area)
         {
