@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/_Scenes/Managers.unity
     guid: 3bd309a601d0328499c9bfa24ba243a6
   - enabled: 1
-    path: Assets/_Features/Global/Level Saver/Levels/LevelProto/ProtoSceneVR.unity
-    guid: 6ca998051f53a7d45ac0f77340949d4e
+    path: Assets/_Features/AI/_Scenes/Proto VR Test.unity
+    guid: 62bddbcf00b24ed4db3c4549b377f9aa
   - enabled: 1
     path: Assets/_Features/Global/Level Saver/Levels/LevelProto/ProtoSceneMobile.unity
     guid: bc1f38295633dfe4e847afef41e426dc

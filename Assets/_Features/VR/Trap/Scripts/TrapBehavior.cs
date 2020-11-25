@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-namespace Gameplay.Mobile
+namespace Gameplay.VR
 {
-    public class Mobile_TrapBehavior : MonoBehaviour, ISwitchable
+    public class TrapBehavior : MonoBehaviour, ISwitchable
     {
         [Range(0, 1), SerializeField] private int state;
         [Range(0, 1), SerializeField] private int power;
@@ -24,8 +23,15 @@ namespace Gameplay.Mobile
 
         private void Start() => Power = power;
 
-        public void TurnOff() { GetComponent<Image>().color = Color.black; }
-        public void TurnOn() { GetComponent<Image>().color = Color.white; }
-    }
+        public void TurnOff() { GetComponent<BoxCollider>().enabled = false; }
+        public void TurnOn() { GetComponent<BoxCollider>().enabled = true; }
 
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.GetComponent<IKillable>() != null)
+                other.GetComponent<IKillable>().GE_Die();
+        }
+
+    }
 }
+

@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 
 namespace Gameplay
 {
@@ -33,6 +34,7 @@ namespace Gameplay
         private void Test(ChangeEvent<Button> value) => Debug.Log("Helo");
         public void JoinRoom() => _JoinRoom.Raise();
 
+        [Button]
         public void CreateRoom() => _CreateRoom.Raise();
 
         public void OpenScene()

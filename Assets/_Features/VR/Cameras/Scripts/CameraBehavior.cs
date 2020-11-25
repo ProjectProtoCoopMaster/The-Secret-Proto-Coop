@@ -2,7 +2,7 @@
 
 namespace Gameplay.VR
 {
-    public class VR_CameraBehavior : MonoBehaviour, ISwitchable
+    public class CameraBehavior : MonoBehaviour, ISwitchable
     {
         OverwatchBehavior overwatchBehavior;
         DetectionBehavior detectionBehavior;
@@ -17,29 +17,14 @@ namespace Gameplay.VR
             set { state = value; }
 
         }
-
         public int Power
         {
             get { return power; }
             set
             {
                 power = value;
-                if (power == 1)
-                {
-                    if (state == 1)
-                    {
-                        TurnOn();
-
-                    }
-                    else
-                    {
-                        TurnOff();
-                    }
-                }
-                else
-                {
-                    TurnOff();
-                }
+                if (power == 1) if (state == 1) TurnOn(); else TurnOff();
+                else TurnOff();
             }
         }
 

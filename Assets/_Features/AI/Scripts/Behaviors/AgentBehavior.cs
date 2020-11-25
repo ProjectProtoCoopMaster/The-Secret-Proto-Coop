@@ -136,10 +136,12 @@ namespace Gameplay.AI
         {
             actionIndex++;
 
+            Debug.Log(actionIndex + " " + actions.Count + " " + this);
             if (actions.Count == actionIndex)
             {
                 if (loop) Begin();
                 else if (previousBehavior != null) { previousBehavior.Resume(); previousBehavior = null; actionIndex = 0; active = false; }
+                else { actionIndex = 0; active = false; }
             }
 
             else SetAction(actionIndex);

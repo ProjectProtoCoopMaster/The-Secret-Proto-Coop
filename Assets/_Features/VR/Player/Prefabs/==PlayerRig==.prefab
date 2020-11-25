@@ -43,20 +43,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 4229520391900203156}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c073c98b5ed7c24ab56012b57d8b9d6, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b36b63eef8b4b949abad74c155db321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tweenDuration: 0.1
+  tweenDuration: 0.25
   particleDash: {fileID: 0}
-  tweenFunction: 5
+  tweenFunction: 0
   playerHead: {fileID: 0}
   cameraRig: {fileID: 0}
-  maxDistance: 12
-  castingHeight: 5
-  minControllerAngle: 3
+  maxDistance: 10
+  castingHeight: 2
+  minControllerAngle: 30
   maxControllerAngle: 150
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1024
   bezierVisualization: {fileID: 8384332402485342314}
-  lineWidth: 0.02
+  lineWidth: 0.01
   smoothness: 10
 --- !u!114 &8384332402410097314
 MonoBehaviour:
@@ -67,11 +70,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4229520391900203156}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbef23372a9974d49ab73831951b18ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 0305e8d4fbc7ee8458371bcae8a7b065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mouseOrigin: {fileID: 8384332401359644297}
-  mouseSensitivity: 500
+  mouseSensitivity: 0
 --- !u!1 &8384332401359644296
 GameObject:
   m_ObjectHideFlags: 0
