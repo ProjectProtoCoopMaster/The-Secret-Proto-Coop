@@ -91,10 +91,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 247aab258dd18cd48a06e35ad2e6e77b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  usePath: 1
+  usePathColor: 1
   path: {fileID: 3957914246676799556}
   color: {r: 0, g: 0, b: 0, a: 0}
-  useRadius: 0
+  otherRadius: 0
   script: {fileID: 0}
   radius: 1
 --- !u!114 &3957914248167591398

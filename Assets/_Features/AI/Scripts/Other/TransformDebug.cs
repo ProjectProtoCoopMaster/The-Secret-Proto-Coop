@@ -6,13 +6,13 @@ using Gameplay.AI;
 
 public class TransformDebug : MonoBehaviour
 {
-    public bool usePath;
-    [ShowIf("usePath")]
+    public bool usePathColor;
+    [ShowIf("usePathColor")]
     public PatrolPath path;
 
-    [HideIf("usePath")]
+    [HideIf("usePathColor")]
     [SerializeField] private Color color;
-    public Color32 Color { get { if (usePath) { return path.pathColor; } else { return color; } } }
+    public Color32 Color { get { if (usePathColor) { return path.pathColor; } else { return color; } } }
 
     public bool otherRadius;
     [ShowIf("otherRadius")]
