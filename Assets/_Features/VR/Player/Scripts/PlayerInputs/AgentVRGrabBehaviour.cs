@@ -24,7 +24,10 @@ namespace Gameplay.VR.Player
         }
 
         internal void TryPickup(SteamVR_Action_Boolean action, SteamVR_Input_Sources fromSource)
-        {
+        { 
+            if(controllerPosition== null)
+                controllerPosition = this.transform;
+
             Collider[] colliders = Physics.OverlapSphere(controllerPosition.position, disToPickup, pickupLayer);
             if (colliders.Length > 0)
             {

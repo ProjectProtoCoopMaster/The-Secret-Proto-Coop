@@ -26,22 +26,28 @@ namespace Gameplay.VR.Player
 
         private void TriggerRelease(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
         {
-            shotTrail.transform.position = controllerPosition.position;
-            shotTrail.transform.rotation = controllerPosition.rotation;
+            if (shotTrail == null) 
+                shotTrail = GameObject.Find("BulletTrail").GetComponent<ParticleSystem>();
 
-            shotTrail.Play();
-            Debug.Log("Shooting");
-
-            if (Physics.SphereCast(controllerPosition.position, 0.25f, controllerPosition.forward, out hit, 100f, shootingLayer))
+            if(shotTrail)
             {
-                Debug.Log("Bullet FUCKING shot " + hit.collider.name);
-                if (hit.collider.gameObject.CompareTag("Enemy"))
-                {
-                    hit.collider.GetComponent<GuardBehaviour>().Shot();
-                    Debug.Log("Bullet MOTHAFUCKIN struck " + hit.collider.name);
-                }
+                shotTrail.transform.position = controllerPosition.position;
+                shotTrail.transform.rotation = controllerPosition.rotation;
 
-                else Debug.Log("Bullet missed and hit " + hit.collider.name);
+                shotTrail.Play();
+                Debug.Log("Shooting");
+
+                if (Physics.SphereCast(controllerPosition.position, 0.25f, controllerPosition.forward, out hit, 100f, shootingLayer))
+                {
+                    Debug.Log("Bullet FUCKING shot " + hit.collider.name);
+                    if (hit.collider.gameObject.CompareTag("Enemy"))
+                    {
+                        hit.collider.GetComponent<GuardBehaviour>().Shot();
+                        Debug.Log("Bullet MOTHAFUCKIN struck " + hit.collider.name);
+                    }
+
+                    else Debug.Log("Bullet missed and hit " + hit.collider.name);
+                }
             }
         }
     }
