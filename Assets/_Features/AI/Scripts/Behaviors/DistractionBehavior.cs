@@ -8,8 +8,12 @@ namespace Gameplay.AI
         public MoveAction moveBehavior;
         public WaitAction waitBehavior;
 
+        public WatchAction watchBehavior;
+
         private Vector3 distractionPosition;
         private Vector3 returnPosition;
+
+        private Vector3 returnRotation;
 
         public float awarenessTime;
         public float searchTime;
@@ -19,7 +23,8 @@ namespace Gameplay.AI
             actionBehaviors = new Dictionary<ActionType, ActionBehavior>
             {
                 { ActionType.Move, moveBehavior },
-                { ActionType.Wait, waitBehavior }
+                { ActionType.Wait, waitBehavior },
+                { ActionType.Search, watchBehavior }
             };
         }
 
@@ -28,13 +33,16 @@ namespace Gameplay.AI
             distractionPosition = direction;
             returnPosition = transform.position;
 
+            returnRotation = transform.rotation.eulerAngles;
+
             actions = new List<_Action>
             {
                 new _Action { actionType = ActionType.Wait, timeToWait = awarenessTime },
-                new _Action { actionType = ActionType.Move, destination = distractionPosition },
+                new _Action { actionType = ActionType.Move, destination = distractionPosition, area = 0.8f },
 
                 new _Action { actionType = ActionType.Wait, timeToWait = searchTime },
-                new _Action { actionType = ActionType.Move, destination = returnPosition }
+                new _Action { actionType = ActionType.Move, destination = returnPosition, area = 0.1f },
+                new _Action { actionType = ActionType.Search, watchRotation = returnRotation }
             };
         }
     }

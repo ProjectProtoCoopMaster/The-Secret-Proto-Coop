@@ -21,7 +21,7 @@ namespace Gameplay.AI
             wait = false;
         }
 
-        public override bool Check(_Action action)
+        public override bool Check()
         {
             if (currentTime <= 0.0f)
             {

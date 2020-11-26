@@ -39,13 +39,16 @@ namespace Gameplay.AI
 
         [ShowIf("type", ActionType.Move)]
         public Vector3 destination;
+        public float area;
 
         [ShowIf("type", ActionType.Wait)]
         public float timeToWait;
 
         [ShowIf("type", ActionType.Watch)]
-        public List<Orientation> orientations;
-        public List<Vector3> watchDirections { get; set; }
+        public Vector3 watchDirection;
+
+        [ShowIf("type", ActionType.Search)]
+        public Vector3 watchRotation;
     }
 
     public abstract class ActionBehavior : MonoBehaviour
@@ -57,7 +60,7 @@ namespace Gameplay.AI
 
         public abstract void StopActionBehavior();
 
-        public abstract bool Check(_Action action);
+        public abstract bool Check();
     }
 
     public abstract class AgentBehavior : MonoBehaviour
@@ -123,7 +126,7 @@ namespace Gameplay.AI
         {
             if (active)
             {
-                if (actionBehaviors[currentActionType].Check(currentAction))
+                if (actionBehaviors[currentActionType].Check())
                 {
                     NextAction();
                 }
@@ -136,7 +139,7 @@ namespace Gameplay.AI
         {
             actionIndex++;
 
-            //Debug.Log(actionIndex + " " + actions.Count + " " + this);
+            Debug.Log(actionIndex + " " + actions.Count + " " + this);
             if (actions.Count == actionIndex)
             {
                 if (loop) Begin();

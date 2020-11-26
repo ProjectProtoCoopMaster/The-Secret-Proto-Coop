@@ -8,7 +8,7 @@ public class SoundObject : MonoBehaviour
     public LayerMask layerMask;
     public float radius;
 
-    private bool active;
+    private bool active = true;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -22,9 +22,9 @@ public class SoundObject : MonoBehaviour
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius, layerMask);
 
-        foreach(Collider col in colliders)
+        foreach (Collider col in colliders)
         {
-            //Debug.Log(col.name);
+            Debug.Log(col.transform.parent.name);
             if (col.transform.parent.tag == "Enemy")
             {
                 AgentManager agent = col.transform.parent.GetComponent<AgentManager>();

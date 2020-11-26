@@ -6,28 +6,38 @@ namespace Gameplay.AI
 {
     public class MoveAction : ActionBehavior
     {
+        public Transform target;
+
+        public Vector3 destination { get; set; }
+        public float area { get; set; }
+
         public override void StartActionBehavior(_Action action)
         {
+            area = action.area;
             SetMove(action.destination, true);
         }
 
         public override void StopActionBehavior()
         {
-            SetMove(transform.position, false);
+            Debug.Log(this);
+            SetMove(target.position, false);
         }
 
-        public override bool Check(_Action action)
+        public override bool Check()
         {
-            if (IsInArea(transform.position, action.destination, 0.5f))
+            if (IsInArea(target.position, destination, area))
             {
-                SetMove(transform.position, false);
+                SetMove(target.position, false);
 
                 return true;
             }
             else return false;
         }
 
-        public virtual void SetMove(Vector3 direction, bool move) { }
+        public virtual void SetMove(Vector3 direction, bool move)
+        {
+            destination = direction;
+        }
 
         public bool IsInArea(Vector3 objectPos, Vector3 destPos, float area)
         {

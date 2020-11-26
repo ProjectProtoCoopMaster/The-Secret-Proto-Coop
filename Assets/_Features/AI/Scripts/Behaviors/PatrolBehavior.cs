@@ -36,7 +36,7 @@ namespace Gameplay.AI
 
             foreach (Waypoint _waypoint in _waypoints)
             {
-                list.Add(new _Action { actionType = ActionType.Move, destination = _waypoint.position });
+                list.Add(new _Action { actionType = ActionType.Move, destination = _waypoint.position, area = 0.1f });
 
                 _waypoint.InitializeWatch();
 
@@ -50,7 +50,10 @@ namespace Gameplay.AI
                     }
                     else if (_action.type == _AType.Watching)
                     {
-                        list.Add(new _Action { actionType = ActionType.Watch, watchDirections = _action.watchDirections });
+                        foreach (Vector3 actionDirection in _action.watchDirections)
+                        {
+                            list.Add(new _Action { actionType = ActionType.Watch, watchDirection = actionDirection });
+                        }
                     }
                 }
             }

@@ -2340,6 +2340,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Diversion Throw Object
       objectReference: {fileID: 0}
+    - target: {fileID: 6141657805777543834, guid: b425c849f40da154991333de9348fcaf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6141657805777543837, guid: b425c849f40da154991333de9348fcaf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.75

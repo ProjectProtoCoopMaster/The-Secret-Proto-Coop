@@ -13,9 +13,7 @@ namespace Gameplay.AI
 
         private bool watch = false;
 
-        private List<Vector3> directions;
-        private Vector3 currentDirection;
-        private int index;
+        private Vector3 direction;
 
         private Quaternion currentRotation;
         private float[] angles = new float[2];
@@ -25,12 +23,16 @@ namespace Gameplay.AI
 
         public override void StartActionBehavior(_Action action)
         {
-            if (action.watchDirections == null) return;
+            if (action.actionType == ActionType.Watch)
+            {
+                direction = action.watchDirection;
 
-            directions = action.watchDirections;
-            index = 0;
-            SetDirection(index);
-            watch = true;
+                SetWatch();
+            }
+            else if (action.actionType == ActionType.Search)
+            {
+                SetWatch(action.watchRotation);
+            }
         }
 
         public override void StopActionBehavior()
@@ -38,17 +40,20 @@ namespace Gameplay.AI
             watch = false;
         }
 
-        public override bool Check(_Action action)
+        public override bool Check()
         {
-            return !watch;
+            if (target.rotation.eulerAngles.y >= angles[0] && target.rotation.eulerAngles.y <= angles[1])
+            {
+                watch = false;
+                return true;
+            }
+            else return false;
         }
 
         #region Set
-        public void SetDirection(int index)
+        public void SetWatch()
         {
-            currentDirection = directions[index];
-
-            Vector3 _position = target.position + currentDirection;
+            Vector3 _position = target.position + direction;
             Vector3 position = _position - target.position;
             position.y = 0.0f;
 
@@ -57,6 +62,19 @@ namespace Gameplay.AI
             angles[1] = currentRotation.eulerAngles.y + angleOffset;
 
             time = 0.0f;
+
+            watch = true;
+        }
+
+        public void SetWatch(Vector3 angleDirection)
+        {
+            currentRotation = Quaternion.Euler(angleDirection);
+            angles[0] = currentRotation.eulerAngles.y - angleOffset;
+            angles[1] = currentRotation.eulerAngles.y + angleOffset;
+
+            time = 0.0f;
+
+            watch = true;
         }
         #endregion
 
@@ -66,11 +84,6 @@ namespace Gameplay.AI
             if (watch)
             {
                 WatchDirection();
-
-                if (target.rotation.eulerAngles.y >= angles[0] && target.rotation.eulerAngles.y <= angles[1])
-                {
-                    NextDirection();
-                }
             }
         }
 
@@ -82,17 +95,6 @@ namespace Gameplay.AI
 
             //Debug.Log(currentRotation.eulerAngles + " for " + target.parent.name);
             //Debug.Log(target.rotation.eulerAngles + " for " + target.parent.name);
-        }
-        #endregion
-
-        #region Next
-        private void NextDirection()
-        {
-            index++;
-
-            if (directions.Count == index) watch = false;
-
-            else SetDirection(index);
         }
         #endregion
     } 

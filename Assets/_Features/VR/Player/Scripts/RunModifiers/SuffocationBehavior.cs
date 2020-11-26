@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if UNITY_STANDALONE
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,4 +24,5 @@ namespace Gameplay.VR.Player
             if (oxygenInSeconds <= 0) gameOver.Raise();
         }
     }
-}
+} 
+#endif

@@ -10,8 +10,6 @@ namespace Gameplay.AI
     {
         public NavMeshAgent navMeshAgent;
 
-        public Vector3 destination { get; set; }
-
         public bool move { get; set; }
 
         public float angular;
@@ -19,14 +17,17 @@ namespace Gameplay.AI
         #region Set
         void Start()
         {
-            destination = transform.position;
+            destination = target.position;
         }
 
-        public override void SetMove(Vector3 direction, bool move)
+        public override void SetMove(Vector3 direction, bool _move)
         {
-            destination = direction;
-            SetNavAgent(!move);
-            this.move = move;
+            base.SetMove(direction, _move);
+
+            SetNavAgent(!_move);
+            move = _move;
+
+            SetNavDestination(destination);
         }
 
         public void SetNavAgent(bool locked)
@@ -34,13 +35,6 @@ namespace Gameplay.AI
             if (locked) navMeshAgent.angularSpeed = 0.0f;
 
             else navMeshAgent.angularSpeed = angular;
-        }
-        #endregion
-
-        #region Loop
-        void Update()
-        {
-            if (move) SetNavDestination(destination);
         }
 
         private void SetNavDestination(Vector3 dest)
