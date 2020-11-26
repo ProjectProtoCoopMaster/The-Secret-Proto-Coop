@@ -6,6 +6,8 @@ namespace Gameplay.VR
 {
     public class DetectionBehavior : EntityVisionDataInterface
     {
+        private bool isDetected = false;
+
         private void Start()
         {
             // have two seperate methods to 
@@ -71,9 +73,14 @@ namespace Gameplay.VR
             {
                 if (hitInfo.collider.gameObject.name == playerHead.name)
                 {
-                    Debug.DrawLine(transform.position, playerHead.position, Color.green);
-                    Debug.Log("I hit the player");
-                    raiseAlarm.Raise();
+                    if (!isDetected)
+                    {
+                        Debug.DrawLine(transform.position, playerHead.position, Color.green);
+                        Debug.Log("I hit the player");
+                        raiseAlarm.Raise();
+                        isDetected = true;
+                    }
+
                 }
                 else if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Environment"))
                 {

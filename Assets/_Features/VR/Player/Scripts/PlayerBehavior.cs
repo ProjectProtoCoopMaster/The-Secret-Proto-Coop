@@ -7,9 +7,15 @@ namespace Gameplay.VR
     public class PlayerBehavior : MonoBehaviour, IKillable
     {
         [SerializeField] private CallableFunction _GameOver;
+        private bool isDead;
         public void GE_Die()
         {
-            _GameOver.Raise();
+            if (!isDead)
+            {
+                _GameOver.Raise();
+                isDead = true;
+            }
+
         }
 
     }

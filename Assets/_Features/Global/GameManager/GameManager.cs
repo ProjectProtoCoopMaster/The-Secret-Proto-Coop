@@ -10,6 +10,7 @@ namespace Gameplay
         [SerializeField] private bool startGame;
         [SerializeField] private GameEvent _onLose;
         private GameObject loseCanvas;
+        private bool isGameOver = false;
         void Start()
         {
             if(startGame)
@@ -19,8 +20,13 @@ namespace Gameplay
         [Button]
         public void GameOver()
         {
-            loseCanvas = Instantiate(Resources.Load("Lose_Canvas") as GameObject);
-            StartCoroutine(WaitGameOver());
+            if (!isGameOver)
+            {
+                loseCanvas = Instantiate(Resources.Load("Lose_Canvas") as GameObject);
+                StartCoroutine(WaitGameOver());
+                isGameOver = true;
+            }
+
         }
 
         IEnumerator WaitGameOver()
@@ -37,6 +43,8 @@ namespace Gameplay
                 SceneManager.UnloadSceneAsync(1);
                 SceneManager.LoadScene(1, LoadSceneMode.Additive);
             }
+            yield return new WaitForSeconds(.1f);
+            isGameOver = false;
             yield break;
         }
     }

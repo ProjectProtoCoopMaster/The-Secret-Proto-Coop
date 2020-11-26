@@ -28,8 +28,10 @@ namespace Gameplay.VR.Player
         {
             if (shotTrail == null) 
                 shotTrail = GameObject.Find("BulletTrail").GetComponent<ParticleSystem>();
+            if (controllerPosition == null)
+                controllerPosition = this.transform;
 
-            if(shotTrail)
+            if (shotTrail && controllerPosition)
             {
                 shotTrail.transform.position = controllerPosition.position;
                 shotTrail.transform.rotation = controllerPosition.rotation;
@@ -49,6 +51,7 @@ namespace Gameplay.VR.Player
                     else Debug.Log("Bullet missed and hit " + hit.collider.name);
                 }
             }
+            else Debug.Log("Can't find shotTrail or Controller");
         }
     }
 } 

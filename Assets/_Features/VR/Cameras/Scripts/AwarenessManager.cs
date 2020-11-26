@@ -80,7 +80,7 @@ namespace Gameplay.VR
         float time;
         bool killedAlarmRaiser;
         public float timeToAlarm;
-        public GameEvent gameOver;
+        public CallableFunction sendGameOver;
         private int frames;
 
         public void GE_GuardRaisingAlarm()
@@ -100,7 +100,7 @@ namespace Gameplay.VR
         public void GE_CameraRaisedAlarm()
         {
             // TODO : Implement a progressive spotting mechanic, based on distance
-            gameOver.Raise();
+            sendGameOver.Raise();
         }
 
         // countdown to raise the alarm, can be interrupted
@@ -109,7 +109,7 @@ namespace Gameplay.VR
             time = 0f;
             Debug.Log("Raising the Alarm !");
 
-            while (time < timeToAlarm)
+            /*while (time < timeToAlarm)
             {
                 time += Time.deltaTime;
                 if (killedAlarmRaiser)
@@ -119,11 +119,11 @@ namespace Gameplay.VR
                 }
 
                 // if enough time passes uninterrupted, the gameOver event is raised
-                if (time >= timeToAlarm) gameOver.Raise();
+                if (time >= timeToAlarm) 
 
                 yield return null;
-            }
-
+            }*/
+            sendGameOver.Raise();
 
             yield return null;
         }

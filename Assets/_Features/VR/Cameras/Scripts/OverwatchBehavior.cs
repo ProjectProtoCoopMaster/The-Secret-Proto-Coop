@@ -11,10 +11,7 @@ namespace Gameplay.VR
     {
         public int frames;
         public List<GameObject> visibleGuards = new List<GameObject>();
-
-
         bool raisingAlarm;
-
 
         private void Awake()
         {
