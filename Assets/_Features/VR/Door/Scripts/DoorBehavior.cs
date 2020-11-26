@@ -28,7 +28,10 @@ namespace Gameplay.VR
             set
             {
                 power = value;
-                if (power == 1) if (state == 1) TurnOn(); else TurnOff();
+                if (power == 1)
+                    if (state == 1) 
+                        TurnOn(); 
+                    else TurnOff();
                 else TurnOff();
             }
         }
@@ -40,6 +43,8 @@ namespace Gameplay.VR
 
         public void TurnOn()
         {
+            anim.ResetTrigger("Close");
+            anim.SetTrigger("Open");
             //if (lockState == LockState.Locked) { keyPassRenderer.material = orange; collider.enabled = false; }
             //else Unlock();
             Unlock();
@@ -47,6 +52,8 @@ namespace Gameplay.VR
 
         public void TurnOff()
         {
+            anim.ResetTrigger("Open");
+            anim.SetTrigger("Close");
             //if (lockState == LockState.Locked) { keyPassRenderer.material = red; collider.enabled = false; }
             Lock();
         }
@@ -54,6 +61,7 @@ namespace Gameplay.VR
         [Button("Unlock")]
         public void Unlock()
         {
+            anim.ResetTrigger("Close");
             anim.SetTrigger("Open");
             //collider.enabled = true;
             //keyPassRenderer.material = blue;
@@ -62,6 +70,7 @@ namespace Gameplay.VR
         [Button("Lock")]
         public void Lock()
         {
+            anim.ResetTrigger("Open");
             anim.SetTrigger("Close");
             //collider.enabled = true;
             //keyPassRenderer.material = blue;

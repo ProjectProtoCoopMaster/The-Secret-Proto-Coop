@@ -224,7 +224,7 @@ MonoBehaviour:
   shootingLayer:
     serializedVersion: 2
     m_Bits: 3072
-  shotTrail: {fileID: 3166118304854290075, guid: 19b77a28577b0b648a31be70725a228c, type: 3}
+  shotTrail: {fileID: 0}
   controllerPosition: {fileID: 3518703279047370689}
   shootAction:
     actionPath: /actions/default/in/Shoot
@@ -356,7 +356,7 @@ MonoBehaviour:
   shootingLayer:
     serializedVersion: 2
     m_Bits: 3072
-  shotTrail: {fileID: 3166118304854290075, guid: 19b77a28577b0b648a31be70725a228c, type: 3}
+  shotTrail: {fileID: 0}
   controllerPosition: {fileID: 3518703279047426845}
   shootAction:
     actionPath: /actions/default/in/Shoot
@@ -488,8 +488,8 @@ GameObject:
   - component: {fileID: 3549385806311468807}
   - component: {fileID: 3519418509051990836}
   m_Layer: 0
-  m_Name: Camera
-  m_TagString: MainCamera
+  m_Name: Player Head
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -628,7 +628,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7537710708306644135}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5

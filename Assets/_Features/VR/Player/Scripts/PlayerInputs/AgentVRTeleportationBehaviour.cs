@@ -13,7 +13,7 @@ namespace Gameplay.VR.Player
 
         [SerializeField] [FoldoutGroup("Manager")] AgentVRTeleportationManager teleportationManager;
 
-        private void Start()
+        private void Awake()
         {
             teleportAction.AddOnStateDownListener(ShowLaserPointer, handType);
             teleportAction.AddOnStateUpListener(Teleport, handType);

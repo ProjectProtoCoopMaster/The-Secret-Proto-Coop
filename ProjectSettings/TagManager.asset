@@ -13,6 +13,7 @@ TagManager:
   - Enemy
   - Floor
   - Grabbable
+  - Heavy Enemy
   layers:
   - Default
   - TransparentFX
