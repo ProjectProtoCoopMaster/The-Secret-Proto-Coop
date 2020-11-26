@@ -7,7 +7,6 @@ TagManager:
   - projectile
   - FxTemporaire
   - Bullet
-  - Guard
   - Camera/Rotating Camera
   - Camera/Static Camera
   - Camera/Mobile Camera
@@ -24,7 +23,7 @@ TagManager:
   - 
   - 
   - Player
-  - 
+  - TeleportAreas
   - Environment
   - Entity
   - Traps

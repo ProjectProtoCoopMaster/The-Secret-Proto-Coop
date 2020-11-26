@@ -136,7 +136,7 @@ namespace Gameplay.AI
         {
             actionIndex++;
 
-            Debug.Log(actionIndex + " " + actions.Count + " " + this);
+            //Debug.Log(actionIndex + " " + actions.Count + " " + this);
             if (actions.Count == actionIndex)
             {
                 if (loop) Begin();

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if UNITY_STANDALONE
+using UnityEngine;
 using Valve.VR;
 using Sirenix.OdinInspector;
 
@@ -14,7 +15,7 @@ namespace Gameplay.VR.Player
         [SerializeField] [FoldoutGroup("Testing Data")] LayerMask pickupLayer;
         [SerializeField] [FoldoutGroup("Testing Data")] Rigidbody holdingTarget;
         [SerializeField] [FoldoutGroup("SteamVR Components")] Transform controllerPosition;
-               
+
         private void Awake()
         {
             controllerPosition = this.transform;
@@ -32,12 +33,13 @@ namespace Gameplay.VR.Player
                     if (colliders[i].CompareTag("Grabbable"))
                         holdingTarget = colliders[i].transform.GetComponent<Rigidbody>();
                 }
-            }                
+            }
 
             if (holdingTarget != null)
             {
                 holdingTarget.transform.parent = controllerPosition;
                 holdingTarget.isKinematic = true;
+                holdingTarget.GetComponent<SoundObject>().Grab();
             }
         }
 
@@ -52,4 +54,5 @@ namespace Gameplay.VR.Player
             holdingTarget = null;
         }
     }
-}
+} 
+#endif

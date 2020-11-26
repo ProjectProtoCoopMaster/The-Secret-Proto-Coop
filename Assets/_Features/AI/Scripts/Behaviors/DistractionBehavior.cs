@@ -1,8 +1,5 @@
-﻿using Gameplay;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using Sirenix.OdinInspector;
 
 namespace Gameplay.AI
 {
@@ -37,8 +34,8 @@ namespace Gameplay.AI
                 new _Action { actionType = ActionType.Move, destination = distractionPosition },
 
                 new _Action { actionType = ActionType.Wait, timeToWait = searchTime },
-                new _Action { actionType = ActionType.Move, destination = returnPosition },
+                new _Action { actionType = ActionType.Move, destination = returnPosition }
             };
         }
-    } 
+    }
 }

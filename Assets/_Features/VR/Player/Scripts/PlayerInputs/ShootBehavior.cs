@@ -1,4 +1,5 @@
-﻿using Sirenix.OdinInspector;
+﻿#if UNITY_STANDALONE
+using Sirenix.OdinInspector;
 using UnityEngine;
 using Valve.VR;
 
@@ -8,7 +9,6 @@ namespace Gameplay.VR.Player
     {
         [SerializeField] [FoldoutGroup("Shooting")] LayerMask shootingLayer;
         [SerializeField] [FoldoutGroup("Shooting")] ParticleSystem shotTrail;
-        [SerializeField] [FoldoutGroup("SteamVR Components")] SteamVR_Action_Pose controllerPose = SteamVR_Input.GetAction<SteamVR_Action_Pose>("Pose");
         [SerializeField] [FoldoutGroup("SteamVR Components")] Transform controllerPosition;
 
         RaycastHit hit;
@@ -17,13 +17,13 @@ namespace Gameplay.VR.Player
         [SerializeField] [FoldoutGroup("SteamVR Components")] SteamVR_Action_Boolean shootAction;
         // a reference to the hand
         [SerializeField] [FoldoutGroup("SteamVR Components")] SteamVR_Input_Sources handType;
-        
-        private void Start()
+
+        private void Awake()
         {
             controllerPosition = this.transform;
             shootAction.AddOnStateUpListener(TriggerRelease, handType);
         }
-        
+
         private void TriggerRelease(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
         {
             shotTrail.transform.position = controllerPosition.position;
@@ -31,15 +31,19 @@ namespace Gameplay.VR.Player
 
             shotTrail.Play();
             Debug.Log("Shooting");
-            Debug.DrawRay(controllerPosition.position, controllerPosition.forward * 50f, Color.magenta);
-            
+
             if (Physics.SphereCast(controllerPosition.position, 0.25f, controllerPosition.forward, out hit, 100f, shootingLayer))
             {
-                if (hit.collider.gameObject.CompareTag("Guard"))
+                Debug.Log("Bullet FUCKING shot " + hit.collider.name);
+                if (hit.collider.gameObject.CompareTag("Enemy"))
+                {
                     hit.collider.GetComponent<GuardBehaviour>().Shot();
+                    Debug.Log("Bullet MOTHAFUCKIN struck " + hit.collider.name);
+                }
 
-                else Debug.Log("Bullet hit " + hit.collider.name);
+                else Debug.Log("Bullet missed and hit " + hit.collider.name);
             }
         }
     }
-}
+} 
+#endif

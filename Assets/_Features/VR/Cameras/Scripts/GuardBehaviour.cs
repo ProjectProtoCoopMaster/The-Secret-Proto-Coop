@@ -6,7 +6,7 @@ namespace Gameplay.VR
 {
     public class GuardBehaviour : MonoBehaviour, IKillable
     {
-        [SerializeField] GameEvent killed; 
+        [SerializeField] GameEvent killed;
         RagdollBehavior ragdoll;
 
         private void Awake()
@@ -18,7 +18,6 @@ namespace Gameplay.VR
         public void Shot()
         {
             gameObject.name = "DEAD";
-            killed.Raise();
             GE_Die();
         }
 

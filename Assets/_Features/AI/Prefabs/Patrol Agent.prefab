@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionType: 2
-  rotateSpeed: 0.02
+  rotateSpeed: 0.05
   target: {fileID: 9031857625245746547}
 --- !u!54 &5496145566602802817
 Rigidbody:
@@ -1012,6 +1012,7 @@ MonoBehaviour:
   loop: 0
   moveBehavior: {fileID: 3001036437687432902}
   waitBehavior: {fileID: 469677591619132823}
+  watchBehavior: {fileID: 0}
   awarenessTime: 1
   searchTime: 2
 --- !u!195 &7250852251707986721
@@ -1024,10 +1025,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 1.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 160
+  m_AngularSpeed: 120
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -1129,9 +1130,9 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Gameplay.VR.AwarenessManager, Assembly-CSharp
-        m_MethodName: GE_KillAlarmRaiser
+      - m_Target: {fileID: 6139286018531143521}
+        m_TargetAssemblyTypeName: Gameplay.AI.AgentManager, Assembly-CSharp
+        m_MethodName: Stop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
